@@ -1,0 +1,314 @@
+\chapter{Rekonstruktion von Λ-Baryonen}
+\label{sec:ergebnisse}
+
+\section{Monte Carlo Programme}
+\subsection{MADGRAPH\cite{maddy}}
+% Die simulierten Samples wurden mit dem Ereignisgenerator
+% MADGRAPH\_MC@NLO in f\"uhrender Ordnung von
+% $\symup{\alpha}_{S}$ bei einer Schwerpunktsenergie von
+% $\sqrt{s} = \SI{13}{\tera\electronvolt}$ generiert.
+% Die erzeugten Prozesse sind $pp \rightarrow s\bar{s}$,
+% $pp \rightarrow d\bar{d}$ and $pp \rightarrow u\bar{u}$.
+% Es wurden jeweils $\num{1000000}$ Ereignisse pro Prozess erzeugt.
+% MADGRAPH ist das Standardwerkzeug f\"ur die Erzeugung von Matrixelementen in der Hochenergiephysik.
+% Die FEYNMAN-Graphen der Prozesse sind in den Abbildungen
+% \ref{fig:feyn1}, \ref{fig:feyn2} und \ref{fig:feyn3} referenziert.
+%
+% \input{content/feynman1_2.tex}
+
+\subsection{PYTHIA\cite{pythia82}}
+% PYTHIA ist ein Werkzeug, welches verwendet wird, um Kollisionen
+% im Hochenergiebereich zu erzeugen. Au\ss erdem wird es benutzt um
+% verschiedene physikalische Modelle hin zu komplexen Vielteilchen
+% Endzust\"anden zu generieren.
+% PYTHIA wird meist als \textit{Showerprogramm} verwendet und
+% verf\"ugt \"uber Bibliotheken zu Anfangs- bzw. Endzustands
+% Partonshowern, Teilchenzerf\"allen und vielem mehr.
+%
+% \input{content/delphestheo.tex}
+
+\section{Verzweigungsverh\"altnisse des Λ-Baryons und des $K_{S}$}
+
+% Das Verzweigungsverh\"altnis des dominanten Zerfalls des Kaons
+% wird zuerst bestimmt, um einen Konsistenztest mit den Ergebnissen des
+% PDG(particle data group) anzufertigen.
+% Im Anschluss wird auch das Verzweigungsverhältnis des dominanten
+% Zerfalls des $\symup{\Lambda}$-Baryons bestimmt.
+% Damit kann die Validit\"at des Datensatzes \"uberpr\"uft werden.
+%
+% Hierzu werden die Truth-Informationen der Teilchen verwendet.
+% Beginnend mit den $K_{S}$ wird ein
+% TLV\footnote{TLorentzVector: Memberfunktion aus ROOT \cite{rootyboy}}
+% angelegt welcher den Transversalimpuls, das $\eta$, das $\phi$ und eine
+% Massenhypothese speichert. Zwischen diesem Kandidaten und dem Jet mit
+% dem h\"ochsten $p_{T}$ wird ein Abstand $\symup{\Delta R}$ von 0.5 definiert,
+% der nicht \"uberschritten werden darf.
+% Darauffolgend wird \"uberpr\"uft, ob beide Tochterteilchen
+% entgegengesetzt geladene Pionen sind. Nur diese werden gez\"ahlt.
+% Am Ende wird der Wert der $\pi^{+} \pi^{-}$ Endzust\"ande gez\"ahlt
+% und durch die Gesamtanzahl geteilt, um das Verzweigungsverhältnis
+% zu erhalten.
+%
+% \"Ahnlich wird f\"ur die $\symup{\Lambda}$-Baryonen verfahren. Es wird
+% wieder gez\"ahlt wie viele Tochterteilchenpaare aus
+% $p \pi^{-}$ bzw. $\pi^{-} p$ bestehen und wie viele Paare
+% insgesamt vorhanden sind.
+% Der Bruchteil
+% \begin{equation}
+%   \text{BR} = \frac{\text{Counts}(p \pi^{-} + \pi^{-} p)}{\text{Counts(all)}}
+% \end{equation}
+% ist das Verzweigungsverhältnis mit der h\"ochsten Wahrscheinlichkeit
+% f\"ur den $\symup{\Lambda}$-Zerfall.
+% Dies wird f\"ur jedes der drei generierten Samples
+% $\symup{pp}\rightarrow\symup{s\bar{s}}$,
+% $\symup{pp}\rightarrow\symup{d\bar{d}}$
+% und $\symup{pp}\rightarrow\symup{u\bar{u}}$ durchgef\"uhrt.
+%
+% Die dazugeh\"origen Messwerte befinden sich in Tabelle \ref{tab:truthBR}.
+% \begin{table}
+% \centering
+% \caption{Zerfallsbreiten f\"ur das $K_S$ und das  $\symup{\Lambda}_0$-Baryon \cite{kaonPDG}, \cite{lambdaPDG}.}
+% \label{tab:truthBR}
+% \begin{tabular}{c|c c|c c}
+% \toprule
+% $\text{Sample}$
+% & \multicolumn{2}{c}{$\Lambda \rightarrow p\pi^{-}$}
+% & \multicolumn{2}{c}{$K_S \rightarrow \pi^{+}\pi^{-}$} \\
+% $\text{Prozess}$ & $\text{BR}$ & $\text{BR(PDG)}$
+% & $\text{BR}$ & $\text{BR(PDG)}$ \\
+% \midrule
+% $\text{pp} \rightarrow s\bar{s}$ & $\SI{65.26}{\percent}$ & $\SI{63.90(05)}{\percent}$ & $\SI{70.95}{\percent}$ & $\SI{69.20(05)}{\percent}$ \\
+% $\text{pp} \rightarrow d\bar{d}$ & $\SI{64.90}{\percent}$ & $\SI{63.90(05)}{\percent}$ & $\SI{71.11}{\percent}$ & $\SI{69.20(05)}{\percent}$ \\
+% $\text{pp} \rightarrow u\bar{u}$ & $\SI{65.04}{\percent}$ & $\SI{63.90(05)}{\percent}$ & $\SI{70.96}{\percent}$ & $\SI{69.20(05)}{\percent}$ \\
+% \bottomrule
+% \end{tabular}
+% \end{table}
+%
+% Die berechneten Verzweigungsverhältnisse des $\symup{\Lambda}$-Zerfalls
+% weichen alle jeweils um $\left(\num{1} - \num{2}\right)\si{\percent}$
+% von den Werten im PDG ab. Dies kann an der relativ kleinen Statistik
+% liegen. Es wurden in jedem Sample nur eine Millionen Ereignisse
+% generiert. Demnach ist diese Abweichung plausibel, sodass
+% eine gute Konsistenz mit dem PDG vorliegt.
+% Die berechneten Verzeigungsverh\"altnisse des dominanten $\symup{K}_{S}$-Zerfalls weichen auch um wenige Prozent von den PDG-Werten ab.
+% Dies liegt wahrscheinlich ebenfalls an der kleinen Statistik und ist dadurch erkl\"arbar.
+% Zusammenfassend bedeutet das, dass die Samples valide sind und eine weitere Analyse keine grundlegend falschen Ergebnisse liefern sollte.
+
+\newpage
+
+\section{Ereignisselektion und Objektselektion}
+\label{sec:ereignissel}
+
+% Einleitend in die Rekonstruktion des $\symup{\Lambda}$-Baryons ist der dominante
+% Zerfall in Abbildung \ref{fig:ldecay} dargestellt.
+%
+% \input{content/feynmann_lambda.tex}
+%
+% Mein Auswertungsprogramm zur $\symup{\Lambda}$-Rekonstruktion wurde mit dem Hochenergieframework ROOT f\"ur C++ geschrieben, demnach werden viele Methoden aus diesem verwendet.
+%
+% % charge criteria of track pairs
+% Das $\symup{\Lambda}$-Baryon ist ein neutral geladenes Baryon, welches in zwei Tochterteilchen zerf\"allt.
+% Demnach m\"ussen diese entgegengesetzt geladen oder beide neutral geladen sein.
+%
+% Da der Zerfall $\symup{\Lambda} \rightarrow \symup{n}\pi^{0}$ aufgrund von neutral geladenen Spuren des Neutrons und des $\pi^{0}$ nicht von DELPHES simuliert werden kann ist der einzige zu betrachtene Zerfall
+% $\symup{\Lambda} \rightarrow \symup{p}\pi^{-}$.
+% Demnach werden weiter nur Spurpaare verwendet, welche eine
+% multiplizierte Ladung von -1 haben, also unterschiedlich geladen sind.
+%
+% % reference lambda
+% Nun wurde ein \textit{TLV} f\"ur ein $\symup{\Lambda}$-Baryon erstellt. Dieses wird als
+% Referenz f\"ur jegliche Vergleiche und Kriterien verwendet.
+% Dieser \textit{TLV} enth\"alt Informationen \"uber den Transversalimpuls $\symup{p}_{\symup{T}}$,
+% die Pseudorapidit\"at $\eta$, den Azimutalwinkel $\phi$ und eine Massenhypothese.
+%
+% Im Anschluss werden Kandidaten f\"ur $\symup{\Lambda}$-Baryonen erzeugt.
+% Diese bestehen aus zwei Spuren korrespondierend f\"ur zwei Tochterteilchen.
+% Erzeugt werden diese wieder mit Hilfe eines \textit{TLorentzVector}
+% f\"ur jeweils den ersten und zweiten Eintrag eines Spurpaares.
+% In diesen stecken die Hypothesen der Protonenmasse f\"ur Spur 1 und die
+% der Pionmasse f\"ur Spur 2.
+% Das liegt daran, dass das Proton in den meisten F\"allen mit
+% dem h\"oheren Transversalimpuls eingeht \cite{stquelle}.
+% Der Kandidat besteht nun aus der Summe der beiden Spuren.
+% Dieser weist nun vier Parameter auf. $\symup{p}_{\symup{T}}$, $\eta$, $\phi$ und
+% einer Masse, welche aus dem Spurpaar durch Addition beider \textit{TLV} gebildet wird.
+% Es werden au\ss erdem nur Kandidaten ausgew\"ahlt, welche einen Abstand
+% $\symup{\Delta R}$ zur Jetachse haben, mit $\symup{\Delta R} < \num{0.5}$.
+% Dabei ist $\symup{\Delta R} =
+% \sqrt{\Delta\phi^{2} + \Delta\eta^{2}}$, $\eta$ ist die
+% Pseudorapidit\"at und $\phi$ ist der Azimutalwinkel.
+% Der Grund daf\"ur ist ein "geometrisches Matching" des Kandidaten mit
+% dem s- oder $\bar{s}$-Jet, weshalb $|\symup{\Delta R}| < \num{0.5}$
+% sein muss.
+% Zus\"atzlich soll der Transversalimpuls der Kandidaten  gr\"o\ss er als
+% $\SI{1}{\giga\electronvolt}$ sein, da daf\"ur die Effizienz des Trackers
+% $\SI{95}{\percent}$ ist \cite{jerdmannTagger}.
+% Au\ss erdem muss der Transversalimpuls der Jets gr\"o\ss er als
+% $\SI{20}{\giga\electronvolt}$ sein, bei einem maximalen
+% $\eta(\text{Jet}) = \num{2.5}$.
+% Danach werden die PIDs(particle Identification) der beiden Spuren der Kandidaten betrachtet.
+% Damit keine $\pi^{+}\pi^{-}$ Endzustände weiterverwendet werden, werden alle
+% Spurpaare mit $\text{PDGID}\footnote{particle data group Identification: Jedes
+% Teilchen tr\"agt eine individuelle Nummer}(Spur 1) = \pm \num{211}$ und
+% $\text{PDGID}(Spur 2) = \mp \num{211}$ verworfen.
+% Um zu garantieren, dass keine $\symup{\Lambda}$-Antibaryonen im reduzierten
+% Sample verbleiben, werden au\ss erdem die Spurpaare entfernt die
+% $\text{PDGID}(\text{Spur} 1) = \text{PDGID}(\text{Antiproton})$ und $\text{PDGID}(\text{Spur} 2) = \text{PDGID}(\pi^{+})$ tragen.
+
+\newpage
+
+\section{Auswahl von Diskriminanten}
+\label{sec:disk}
+%$\symbf{hier\, muss\, einiges\, nochmal\, neu\, geschrieben\, werden...}$\\
+
+% Aus den in Kapitel \ref{sec:ereignissel} genannten Objekten werden
+% die ausgewählt, die eine diskriminierende Wirkung zwischen
+% den Datensätzen, zeigen könnten.
+%
+% Vorüberlegungen ergeben, dass zum ersten $X_{\Lambda}$, also
+% $\frac{p_{T}(\Lambda)}{p_{T}(\text{Jet})}$ als Diskriminator
+% fungieren könnte.
+% Bei der Betrachtung der FEYNMAN-Graphen in den Abbildungen
+% \ref{fig:feyn1}, \ref{fig:feyn2} und \ref{fig:feyn3} gibt es einen entscheidenden Unterschied.
+% In dem Prozess $pp \rightarrow s\bar{s}$ ist es m\"oglich,
+% dass die Strange-Quarks nach der Hadronisierung und Parton-Showern
+% Bestandteil eines $\symup{\Lambda}$-Baryons sind.
+% Das bedeutet, dass sie ihren vollen Transversalimpuls in das
+% $\symup{\Lambda}$ tragen.
+% Wohingegen $\symup{\Lambda}$, die nach der Hadronisierung aus dem
+% Prozess $pp \rightarrow d\bar{d}(u\bar{u})$ enstehen, ein
+% Strange-Quark ben\"otigen.
+% Dieses kann nur w\"ahrend der Hadronisierung entstehen.
+% Bis sich ein $\symup{\Lambda}$-Baryon gebildet hat, kann das Strange-Quark aber
+% noch Teile seines Transversalimpulses abgeben, wodurch im Mittel
+% der Gesamttransversalimpuls niedriger sein m\"usste als der von den $\symup{\Lambda}$-Baryonen die durch den Prozess $pp \rightarrow s\bar{s}$ initiiert wurden.
+%
+% Zum Zweiten wurde $\symup{\Delta R}$, welches der Abstand
+% zweier Spuren oder eines gesuchten Teilchens und eines Jets in
+% der $\eta$ - $\phi$ - Ebene beschreibt, gew\"ahlt.
+% Wenn das in Abbildung \ref{fig:feyn1} erzeugte Strange-Quark f\"ur ein
+% $\symup{\Lambda}$-Baryon verwendet wird, liegt der Jet weitestgehend in Richtung der
+% Hadronisierung, das bedeutet, dass $\symup{\Delta R}$ in den meisten F\"allen kleiner ist, als wenn ein Strange-Quark aus der Hadronisierung Bestandteil eines $\symup{\Lambda}$-Baryons sein w\"urde.
+% Wenn die Quarks, welche gem\"a\ss\, Abbildung \ref{fig:feyn2} und \ref{fig:feyn3}
+% erzeugt werden, Bestandteile eines $\symup{\Lambda}$-Baryons werden, werden die Abst\"ande zwischen dem gesuchten Teilchen und dem dazugeh\"origen Jet gr\"o\ss er sein. Somit ergibt sich vermutlich auch eine diskriminierende Wirkung. Die \"Uberlegung, die Masse des $\symup{\Lambda}$ zu verwenden, l\"asst sich leicht als Sackgasse
+% identifizieren, da die Verteilungsfunktion der Masse f\"ur alle drei Datens\"atze fast exakt \"ubereinander liegen sollten, da die Masse nicht vom Erzeugungszeitpunkt abh\"angen darf. Demnach ist hier keine diskriminierende Wirkung zu erwarten.
+%
+% In den Abbildungen \ref{fig:deltaR}, \ref{fig:xlambda} und
+% \ref{fig:massL} sind die Plots der jeweiligen Diskriminante
+% gegen die H\"aufigkeit aufgetragen. In Abbildung
+% \ref{fig:deltaR} ist zu erkennen, dass $\symup{\Lambda}$-Baryonen mit Strange-Quark aus dem Prozess
+% $pp \rightarrow s\bar{s}$ weniger weit von der Jetachse abweichen als $\symup{\Lambda}$-Baryonen die ein Strange-Quarks nach der Hadronisierung verwenden.
+% Dies bekr\"aftigt auch die Hypothese
+% aus Kapitel \ref{sec:disk}. In Abbildung \ref{fig:xlambda} ist
+% die Verteilung von $X_{\Lambda}$ gegen\"uber
+% der H\"aufigkeit dargestellt. Es ist klar
+% zu erkennen, dass $\symup{\Lambda}$-Baryonen, welche aus $pp \rightarrow s\bar{s}$ Prozessen initiiert werden
+% h\"aufiger h\"ohere Transversalimpulse haben
+% (schwarze Kurve), als solche, die auf die anderen beiden Arten entstehen.
+%
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{../../../../../../bscnilsbreer_new/BA_NilsBreer_2019/output/DeltaR_A3.pdf}
+%   \caption{Plot f\"ur den Abstand $\symup{\Delta R}$ zwischen dem Jet in f\"uhrender $\symup{p}_{\symup{T}}$ Ordnung und dem Rekonstruierten $\symup{\Lambda}$-Baryon.}
+%   \label{fig:deltaR}
+% \end{figure}
+%
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{../../../../../../bscnilsbreer_new/BA_NilsBreer_2019/output/XLambda.pdf}
+%   \caption{Plot f\"ur das Transversalimpulsverh\"altnis des $\symup{\Lambda}$-Baryons zum Jet-Transversalimpuls.}
+%   \label{fig:xlambda}
+% \end{figure}
+%
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{../../../../../../bscnilsbreer_new/BA_NilsBreer_2019/output/LInvMass_true_p_pi.pdf}
+%   \caption{Invariante $\symup{\Lambda}$-Baryon-Masse $\sqrt{\symup{s}}$ in $\si{\mega\electronvolt}$.}
+%   \label{fig:massL}
+% \end{figure}
+%
+% \newpage
+
+\section{Bestimmung der G\"ute der Diskriminanten}
+
+% Da ein Algorithmus zur Rekonstruktion von $K_{S}$ bereits zur Verf\"ugung
+% stand, wurden f\"ur diese ROC-Kurven im Hinblick auf
+% die selben Diskriminanten wie f\"ur die $\symup{\Lambda}$-Baryonen erstellt.
+% Das Ziel ist es, diese Ergebnisse als Vergleich bzw. f\"ur einen
+% Konsistenztest zu verwenden.
+%
+% Die erstellten Kurven befinden sich in den Abbildungen
+% \ref{fig:kaon_roc_sd} und \ref{fig:kaon_roc_su}.
+% Aufgetragen auf der y-Achse ist
+% die Sensitivit\"at des Strange-Quark Monte-Carlo-Samples, welche
+% der Bruchteil der "true positives" \"uber der Gesamtzahl ist.
+% Sie ist ein Ma\ss\, f\"ur die Signaleffizienz (SE). Auf der x-Achse ist
+% 1-Spezifizit\"at des Down-Quark Monte-Carlo-Samples aufgetragen. Sie entspricht der Hintergrundeffizienz(BE).
+% Die rote Kurve stellt die Linie dar, bei welcher der Algorithmus Zufallswerte liefern w\"urde. Liegt die Kurve dar\"uber, arbeitet der Algorithmus gut. Liegt die Kurve darunter arbeitet er dementsprechend schlechter.
+%
+% In beiden Abbildungen ist zu erkennen, dass die Variablen $X_{K}$ und
+% $\symup{\Delta R}$, wie bei den $\symup{\Lambda}$-Baryonen, ziemlich gut
+% diskriminieren und gut f\"ur die Rekonstruktion geeignet sind.
+% Es ist auch zu sehen, dass mithilfe der Masse keine Aussage bez\"uglich
+% der Signaleffizienz getroffen werden kann.
+%
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{../../../../../../bscnilsbreer_new/BA_NilsBreer_2019/py_output/kaon_ROC_s_d.pdf}
+%   \caption{ROC Kurve f\"ur den Vergleich zwischen $\text{s}\bar{\text{s}}$ und $\text{d}\bar{\text{d}}$ Sample f\"ur Kaonen.}
+%   \label{fig:kaon_roc_sd}
+% \end{figure}
+%
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{../../../../../../bscnilsbreer_new/BA_NilsBreer_2019/py_output/kaon_ROC_s_u.pdf}
+%   \caption{ROC Kurve f\"ur den Vergleich zwischen $\text{s}\bar{\text{s}}$ und $\text{u}\bar{\text{u}}$ Sample f\"ur Kaonen.}
+%   \label{fig:kaon_roc_su}
+% \end{figure}
+%
+% Um nun etwas \"uber die Aussagekr\"aftigkeit der Diskriminanten
+% bez\"uglich des $\symup{\Lambda}$-Baryons zu sagen,
+% wurden auch ROC-Kurven, zusehen in
+% den Abbildungen \ref{fig:roc_sd} und \ref{fig:roc_su}
+% %\cite{roccy1}, \cite{roccy2}
+% angefertig, welche die Ergebnisse veranschaulichen und
+% G\"ute der Diskriminanten validieren sollen. Dazu wurden die
+% Ergebnisse resultierend aus dem Datensatz mit $s\bar{s}$ im
+% Endzustand mit jeweils einem der beiden anderen verglichen.
+%
+% Dargestellt sind die Diskriminanten $X_{\Lambda}$,
+% $\symup{\Delta R}$ und $M_{\Lambda}$.
+% An der schwarzen Kurve ist zu erkennen, dass sie relativ weit \"uber der
+% roten Kurve liegt, $X_{\Lambda}$ also als diskriminierende Variable
+% zu gebrauchen ist.
+% Es ist auch zu erkennen, dass bei kleiner werdender SE die BE auch kleiner wird, doch in einem st\"arkeren Ma\ss.
+%
+% Die blaue Kurve von $\symup{\Delta R}$ liegt auch noch \"uber
+% der roten Kurve, aber nicht mehr so weit wie die schwarze. $\symup{\Delta R}$
+% ist also noch als Diskriminator zu verwenden.
+% Die gr\"une Kurve liegt sehr genau auf
+% der roten Kurve, weshalb diese Variable nicht als Diskriminante
+% zu verwenden ist.
+%
+% Wie zu erwarten arbeiten $\symup{\Delta R}$ und $X_{\Lambda}$
+% gut als Diskriminanten.
+%
+% \newpage
+%
+% \begin{figure}
+% \centering
+% \begin{subfigure}{\textwidth}
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{../../../../../../bscnilsbreer_new/BA_NilsBreer_2019/py_output/ROC_s_d.pdf}
+%   \caption{ROC-Kurve f\"ur $\symup{\Lambda}$-Baryonen zwischen Samples mit $s\bar{s}$ Endzustand und $d\bar{d}$ Endzustand.}
+%   \label{fig:roc_sd}
+% \end{subfigure}
+% \begin{subfigure}{\textwidth}
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{../../../../../../bscnilsbreer_new/BA_NilsBreer_2019/py_output/ROC_s_u.pdf}
+%   \caption{ROC-Kurve f\"ur $\symup{\Lambda}$-Baryonen zwischen Samples mit $s\bar{s}$ Endzustand und $u\bar{u}$ Endzustand.}
+%   \label{fig:roc_su}
+% \end{subfigure}
+% \caption{ROC-Kurven f\"ur $\symup{\Lambda}$-Baryonen.}
+% \label{fig:ROCCY}
+% \end{figure}

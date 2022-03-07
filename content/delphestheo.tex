@@ -1,0 +1,61 @@
+\subsection{DELPHES \cite{delph}}
+% DELPHES Version 3.4.1 ist ein Simulationsprogramm für radialsymmetrische
+% Teilchendetektoren. Hier wird ein Detektor,
+% welcher dem CMS-Detektor
+% \"ahnelt, verwendet als Beispiel f\"ur einen Multifunktionsdetektor des LHC
+% \cite{jerdmannTagger}.
+% Es simuliert einen Spurdetektor(Tracker)
+% im Inneren eines Magnetfeldes, ein elektromagnetisches(ECAL) und
+% ein hadronisches Kalorimeter(HCAL) und außerdem einen Myon-Detektor.
+% Es können so physikalische Objekte durch die simulierten
+% Detektorantworten rekonstruiert werden. Dafür stehen
+% Kalorimetereinträge, Informationen zu Isolationskriterien für
+% Elektronen, Tau-Leptonen, sowie Jets und Informationen zur
+% fehlenden Energie zur Verfügung. Zur Funktionsweise der einzelnen
+% Detektoren, im Spurdetektor werden Teilchenpropagationen betrachtet.
+% Dafür wird zwischen geladenen und ungeladenen Teilchen unterschieden.
+% Ungeladene Teilchen folgen einer linearen Trajektorie, wohingegen
+% geladene Teilchen einer gekrümmten Bahn, abhängig vom Magnetfeld
+% folgen. Außerhalb des Trackers startende Teilchenspuren
+% werden ignoriert. Für geladene Teilchen kann der Benutzer
+% eine Rekonstruktionswahrscheinlichkeit einstellen, mit
+% welcher ein Teilchen als Spur im Tracker rekonstruiert
+% wird. Die Winkelauflösung sei dabei exakt und der
+% Transversalimpuls gemäß einer Gaußkurve verschmiert. Die
+% Kalorimeter verschmieren die Energieanteile $f_{\text{ECAL}}$ und $f_{\text{HCAL}}$
+% unkorreliert voneinander.
+%
+% Hinsichtlich der Kalorimeter ist das ECAL für die Energiebestimmung von
+% Elektronen und Photonen zuständig und das HCAL für (un-)geladene Hadronen.
+% Dies gilt nur für "langlebige" Hadronen. Hierzu zählen $\symup{\Lambda}$-Baryonen und
+% Kaonen. Obwohl sie nur eine endliche Lebensdauer haben, gelten sie als stabil.
+% Da sie einen nicht zu vernachläßigbaren Anteil ihrer Energie auch im
+% ECAL deponieren würden, werden ihre Energiedepositionsanteile zu
+% $f_{ECAL} = 0.3$ und $f_{HCAL} = 0.7$ definiert.
+% Elektronen und Photonen deponieren ihre gesamte Energie im
+% elektromagnetischen Kalorimeter.
+%
+% In der Objektrekonstruktion werden diverse Annahmen bzgl. der
+% Teilchenarten getroffen. Zu den geladenen Leptonen zählen nur
+% Elektronen und Myonen, da die Tau-Leptonen zu schnell zerfallen.
+% Photonen werden so rekonstruiert, dass Elektronen und Photonen ohne Spur als
+% Photon gewertet werden.
+% Außerdem kann ein Teilchen isoliert sein. Das ist dann der Fall, wenn sein
+% Abstand zu anderen Teilchen kleiner ist als ein definierter Abstand L.
+% Ein sehr wichtiger Teil der Objektrekonstruktion ist die der Jets, da diese die
+% häufigsten Endzustände bilden.
+% DELPHES bietet drei große Jetklassen, welche sich in ihrem Input unterscheiden.
+% Zum einen die \textit{Generated Jets}, welche aus langlebigen Teilchen nach
+% den Parton-Showern und Hadronisierungsprozessen entstehen. Hierbei werden
+% keine Detektorsimulations- bzw. Rekonstruktionsinformationen beachtet.
+% Zum Zweiten die \textit{Calorimeter Jets}, welche Kalorimetereinträge als
+% Eingabe erhalten und zum Dritten die \textit{particle flow jets}, welche das
+% Resultat von Zusammenschlüssen von particle-flow Spuren sind.
+% Abschließend werden Informationen über fehlende Transversalenergie
+% $\symup{\vec{E}_{T}^{\text{miss}}}$ zurate gezogen, um Aussagen über Teilchen wie die
+% Neutrinos zu treffen.
+% Dabei ist die fehlende Transversalenergie als
+% \begin{equation}
+%   \symup{\vec{E}_{T}^{\text{miss}}} = -\sum_{i} \vec{p}_{T}(i)
+% \end{equation}
+% definiert.

@@ -1,0 +1,21 @@
+\chapter{Abbildungen und Tabellen}
+\begin{figure}
+    \centering
+    \includegraphics[scale=1]{./Plots/Histogramm.pdf}
+    \caption{Ein Histogramm mit Fehlerbalken für zwei Datensätze, Schriftgröße und -art entsprechen der des Dokuments.}
+    \label{fig:bsp}
+\end{figure}
+\begin{table}
+    \centering
+    \caption{Beispieltabelle mit willkürlichen Werten, für die Zahlenwerte wurde die S-Option aus \texttt{siunitx} verwendet.}
+    \label{tab:bsp}
+    \begin{tabular}{S[table-format=4.2] S[table-format=3.2]}
+        \toprule
+        {$p \mathrel{/} \si{\pascal}$}  & {$T \mathrel{/} \si{\kelvin}$} \\
+        \midrule
+        1024,23 & 273,15 \\
+        1025,31 & 274,5 \\
+        1026,27 & 276,2 \\
+        \bottomrule
+    \end{tabular}
+\end{table}

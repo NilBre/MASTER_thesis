@@ -1,0 +1,15 @@
+some physics plots where i compared low to normal luminosities
+one folder is with clusterbias hack active the other one without hack active
+
+one plot comparing 8 samples of 100mu translation misalignment -> no visible change
+
+then showing the difference when removing constraints 
+--> (the y axis is weird because every curve is practically 1.3062 and the change is round 
+     about 1e-5)
+
+the plot with the horizontal curves show the global difference in chi2 over dofs between low 
+and normal lumi but with a better y axis. they are flat since the changes are so small
+
+----------
+i wanted to do physics plots comparing the first to the last iteration for some clusterbias hack 
+samples i ran but the visible change was basically 0. 

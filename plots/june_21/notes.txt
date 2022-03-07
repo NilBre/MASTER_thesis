@@ -1,0 +1,8 @@
+here i tested what would happen if i removed the rotation constraints.
+only constrain Tx and Tz (no Rx and no Rz)
+-> removing rotation constraint worked quite good
+later: constraining Tx and Rz maybe compare that too
+
+i also tested what would happen if i constrain all stations in comparison to
+on T3.
+-> T3 worked much better

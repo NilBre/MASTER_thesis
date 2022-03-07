@@ -1,0 +1,37 @@
+\chapter{Wichtige Hinweise zum Dokument}\label{make}
+\begin{itemize}
+    \item \textbf{Abschnitte und Zeilenumbrüche} \\
+        Es sollten im Fließtext keine Zeilenumbrüche mit \textbackslash\textbackslash \ erzwungen werden.
+        Schreiben Sie höchsten einen Satz in eine Code-Zeile.
+        Absätze werden im Code mit einer Leerzeile markiert und dann entsprechend der Einstellung von \texttt{parskip} in der Dokumentenklasse gesetzt.
+    \item \textbf{Kursiv/Aufrecht} \\
+        \begin{itemize}
+            \item Variablen und physikalische Größen werden kursiv gesetzt.
+            \item Einheiten werden immer aufrecht und mit einem halben Leerzeichen Abstand zur Zahl gesetzt. Nutzen Sie \texttt{siunitx}!
+            \item Mathematische Konstanten und Funktionen werden ebenfalls aufrecht gesetzt. Zum Beispiel die Eulersche Zahl e, das imaginäre i und das infinitesimale d.
+                Im Mathematikmodus können Sie dies mit dem Befehl \verb_\mathrm{}_ erreichen. Für die Funktionen stellt \LaTeX \ Befehle bereit, z.B. \verb+\arccos+.
+            \item Integrand und ein $\mathrm{d}x$ sollten ebenfalls durch ein kleines Leerzeichen (\verb+\,+) getrennt werden.
+        \end{itemize}
+\end{itemize}
+\begin{table}
+    \centering
+    \caption{Beispiele für siunitx}
+    \label{tab:si}
+    \begin{tabular}{l r}
+        \toprule
+        Befehl     &   Ergebnis \\
+        \midrule
+        \verb+\num{1.2345}+ & \num{1.2345} \\
+        \verb+\num{1.2e3}+ & \num{1.2e3} \\
+        \verb_\num{1.2 +- 0.2}_ & \num{1.2+-0.2} \\
+        \verb+\num{10000}+ & \num{10000} \\
+        \verb+\si{\meter\per\second}+ & \si{\meter\per\second} \\
+        \verb+\SI{1.2(1)}{\micro\ampere}+ & \SI{1.2(1)}{\micro\ampere} \\
+        \verb+\SI{1.2\pm0.1e3}{\kilo\gram\per\cubic\meter}+ & \SI{1.2\pm0.1e3}{\kilo\gram\per\cubic\meter} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+Im Text können Sie mit \verb_\cite{kürzel}_ zitieren. Seitenzahlen geben Sie in eckigen Klammern an:
+\verb_\cite[10]{kürzel}_.
+Ein Beispiel für das Zitieren eines Buches lautet so \cite{handbook_adhesives},
+wissenschaftliche Artikel hingegen werden so \cite{einstein} zitiert.

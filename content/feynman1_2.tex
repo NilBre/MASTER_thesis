@@ -1,0 +1,30 @@
+%FEYNMAN-Diagramm f\"ur die Erzeugung des ersten Datensatzes.
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.3\textwidth}
+\feynmandiagram [horizontal=a to b]{
+i1 --[gluon, edge label=\(g\)] a --[gluon, edge label=\(g\)] i2,
+a --[gluon, edge label=\(g\)] b,
+f1 --[fermion, edge label=\(\bar{s}\)] b --[fermion, edge label=\(s\)] f2,
+};
+\caption{\label{fig:feyn1}}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+\feynmandiagram [horizontal=a to b]{
+i1 --[gluon, edge label=\(g\)] a --[gluon, edge label=\(g\)] i2,
+a --[gluon, edge label=\(g\)] b,
+f1 --[fermion, edge label=\(\bar{d}\)] b --[fermion, edge label=\(d\)] f2,
+};
+\caption{\label{fig:feyn2}}
+\end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+\feynmandiagram [horizontal=a to b]{
+i1 --[gluon, edge label=\(g\)] a --[gluon, edge label=\(g\)] i2,
+a --[gluon, edge label=\(g\)] b,
+f1 --[fermion, edge label=\(\bar{u}\)] b --[fermion, edge label=\(u\)] f2,
+};
+\caption{\label{fig:feyn3}}
+\end{subfigure}
+\caption{FEYNMAN-Diagramme f\"ur die Erzeugung der Datens\"atze.}
+\label{fig:allFeyn}
+\end{figure}
