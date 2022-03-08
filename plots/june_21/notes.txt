@@ -4,5 +4,5 @@ only constrain Tx and Tz (no Rx and no Rz)
 later: constraining Tx and Rz maybe compare that too
 
 i also tested what would happen if i constrain all stations in comparison to
-on T3.
+only T3.
 -> T3 worked much better
