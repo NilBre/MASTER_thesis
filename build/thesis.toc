@@ -1,18 +1,20 @@
 \selectlanguage *{german}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Theorie}{2}{chapter.2}%
-\contentsline {chapter}{\numberline {3}The LHCb Experiment}{3}{chapter.3}%
-\contentsline {section}{\numberline {3.1}the Scintillating Fibre Tracker}{3}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Alignment}{4}{chapter.4}%
-\contentsline {section}{\numberline {4.1}what is alignment used for?}{4}{section.4.1}%
-\contentsline {section}{\numberline {4.2}when does alignment happen?}{4}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Alignment Methods}{4}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}using tracks fitted with kalman}{4}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}'global' alignment with collision data}{5}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Alignment goals}{5}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Alignment Studies}{6}{chapter.5}%
-\contentsline {section}{\numberline {5.1}all plots}{6}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}june plots}{6}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}july plots}{6}{subsection.5.1.2}%
-\contentsline {chapter}{\numberline {6}Conclusion}{11}{chapter.6}%
+\contentsline {chapter}{\numberline {2}The Large Hadron Collider\blx@tocontentsinit {0}\cite {lhcInfo}}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The LHCb Experiment\blx@tocontentsinit {0}\cite {lhcbInfo}}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}the Scintillating Fibre Tracker\blx@tocontentsinit {0}\cite {scifiInfo}}{3}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Alignment}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}what is alignment used for?}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}when does alignment happen?}{5}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Alignment Methods}{5}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}using tracks fitted with kalman}{5}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}'global' alignment with collision data}{5}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Alignment goals}{6}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Alignment Studies}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}all plots}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}june plots}{7}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}july plots}{7}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}august plots}{11}{subsection.4.1.3}%
+\contentsline {chapter}{\numberline {5}Conclusion}{12}{chapter.5}%
+\contentsline {chapter}{\nonumberline Literatur}{13}{chapter*.13}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

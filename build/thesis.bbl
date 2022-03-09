@@ -16,5 +16,74 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{facilityCERN}{online}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeltitlesource}{title}
+      \field{title}{A diagram showing the complete structure of the LHC facility at CERN}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/figure/A-diagram-showing-the-complete-structure-of-the-LHC-facility-at-CERN-There-are-the-4_fig8_348806406
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/figure/A-diagram-showing-the-complete-structure-of-the-LHC-facility-at-CERN-There-are-the-4_fig8_348806406
+      \endverb
+    \endentry
+    \entry{lhcInfo}{online}{}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeltitlesource}{title}
+      \field{title}{LHC Machine}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/1129806/files/jinst8_08_s08001.pdf
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/1129806/files/jinst8_08_s08001.pdf
+      \endverb
+    \endentry
+    \entry{scifiInfo}{online}{}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeltitlesource}{title}
+      \field{title}{LHCb Tracker Upgrade Technical Design Report}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/1647400/files/LHCB-TDR-015.pdf
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/1647400/files/LHCB-TDR-015.pdf
+      \endverb
+    \endentry
+    \entry{lhcbInfo}{online}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labeltitlesource}{title}
+      \field{title}{The LHCb Detector at the LHC}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/1129809/files/jinst8_08_s08005.pdf
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/1129809/files/jinst8_08_s08005.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
