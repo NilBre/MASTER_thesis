@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.2.5)  10 MAR 2022 18:39
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.2.5)  11 MAR 2022 13:02
  restricted system commands enabled.
 **thesis.tex
 (./thesis.tex
@@ -454,66 +454,6 @@ braces):
 Package polyglossia Info: Default language is latex.
 Package polyglossia Info: Setting LuaTeX font renderer to Harfbuzz.
 )
-(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/polyglossia/gloss-german.l
-df
-File: gloss-german.ldf polyglossia: module for german
-The property list \polyglossia@langsetup contains the pairs (without outer
-braces):
->  {latex/script}  =>  {latin}
->  {latex/lcscript}  =>  {latin}
->  {latex/scripttag}  =>  {}
->  {latex/language}  =>  {Latex}
->  {latex/langtag}  =>  {ENG}
->  {latex/bcp47}  =>  {}
->  {latex/hyphennames}  =>  {english}
->  {latex/direction}  =>  {LR}
->  {latex/hyphenmins}  =>  {2,3}
->  {latex/frenchspacing}  =>  {false}
->  {latex/indentfirst}  =>  {false}
->  {latex/fontsetup}  =>  {true}
->  {latex/envname}  =>  {latex}
->  {latex/babelname}  =>  {latex}
->  {latex/localnumeral}  =>  {polyglossia@C@localnumeral}
->  {latex/Localnumeral}  =>  {polyglossia@C@localnumeral}
->  {german/script}  =>  {latin}
->  {german/lcscript}  =>  {latin}
->  {german/scripttag}  =>  {}
->  {german/language}  =>  {German}
->  {german/langtag}  =>  {DEU}
->  {german/bcp47}  =>  {de-DE}
->  {german/hyphennames}  =>  {}
->  {german/direction}  =>  {LR}
->  {german/hyphenmins}  =>  {2,2}
->  {german/frenchspacing}  =>  {true}
->  {german/indentfirst}  =>  {false}
->  {german/fontsetup}  =>  {true}
->  {german/envname}  =>  {german}
->  {german/babelname}  =>  {ngerman}
->  {german/localnumeral}  =>  {polyglossia@C@localnumeral}
->  {german/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-Module polyglossia Info: Language data for german
-(polyglossia)            hyphenation	
-(polyglossia)            loader	loadhyph-de-1901.tex
-(polyglossia)            patterns	hyph-de-1901.pat.txt
-(polyglossia)            synonyms	
-(polyglossia)            righthyphenmin	2
-(polyglossia)            lefthyphenmin	2 on input line 10
-Module polyglossia Info: Language german was not yet loaded; created with id 2 o
-n input line 10
-Package polyglossia Info: Option: German, spelling=new.
-Package polyglossia Info: Option: German, script=latin.
-Package polyglossia Info: Option: German, variant=german.
-Package polyglossia Info: Option: German, variant=german.
-Package polyglossia Info: Option: German, spelling=new.
-Package polyglossia Info: Option: German, script=latin.
- (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/polyglossia/babelsh.def
-File: babelsh.def 2019/09/30 Babel common definitions for shorthands
- Taken verbatim from babel files (2019/09/27 v3.34)
-)
-Package polyglossia Info: Making " an active character on input line 177.
-)
-Package polyglossia Info: Default language is german.
-
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/polyglossia/gloss-english.
 ldf
 File: gloss-english.ldf polyglossia: module for english
@@ -535,22 +475,6 @@ braces):
 >  {latex/babelname}  =>  {latex}
 >  {latex/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {latex/Localnumeral}  =>  {polyglossia@C@localnumeral}
->  {german/script}  =>  {latin}
->  {german/lcscript}  =>  {latin}
->  {german/scripttag}  =>  {}
->  {german/language}  =>  {German}
->  {german/langtag}  =>  {DEU}
->  {german/bcp47}  =>  {de-DE}
->  {german/hyphennames}  =>  {}
->  {german/direction}  =>  {LR}
->  {german/hyphenmins}  =>  {2,2}
->  {german/frenchspacing}  =>  {true}
->  {german/indentfirst}  =>  {false}
->  {german/fontsetup}  =>  {true}
->  {german/envname}  =>  {german}
->  {german/babelname}  =>  {ngerman}
->  {german/localnumeral}  =>  {polyglossia@C@localnumeral}
->  {german/Localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/script}  =>  {latin}
 >  {english/lcscript}  =>  {latin}
 >  {english/scripttag}  =>  {}
@@ -568,6 +492,82 @@ braces):
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Package polyglossia Info: Option: English, variant=american.
+)
+Package polyglossia Info: Default language is english.
+
+(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/polyglossia/gloss-german.l
+df
+File: gloss-german.ldf polyglossia: module for german
+The property list \polyglossia@langsetup contains the pairs (without outer
+braces):
+>  {latex/script}  =>  {latin}
+>  {latex/lcscript}  =>  {latin}
+>  {latex/scripttag}  =>  {}
+>  {latex/language}  =>  {Latex}
+>  {latex/langtag}  =>  {ENG}
+>  {latex/bcp47}  =>  {}
+>  {latex/hyphennames}  =>  {english}
+>  {latex/direction}  =>  {LR}
+>  {latex/hyphenmins}  =>  {2,3}
+>  {latex/frenchspacing}  =>  {false}
+>  {latex/indentfirst}  =>  {false}
+>  {latex/fontsetup}  =>  {true}
+>  {latex/envname}  =>  {latex}
+>  {latex/babelname}  =>  {latex}
+>  {latex/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {latex/Localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {english/script}  =>  {latin}
+>  {english/lcscript}  =>  {latin}
+>  {english/scripttag}  =>  {}
+>  {english/language}  =>  {English}
+>  {english/langtag}  =>  {ENG}
+>  {english/bcp47}  =>  {en-US}
+>  {english/hyphennames}  =>  {english,american,usenglish,USenglish}
+>  {english/direction}  =>  {LR}
+>  {english/hyphenmins}  =>  {2,3}
+>  {english/frenchspacing}  =>  {false}
+>  {english/indentfirst}  =>  {false}
+>  {english/fontsetup}  =>  {true}
+>  {english/envname}  =>  {english}
+>  {english/babelname}  =>  {american}
+>  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {german/script}  =>  {latin}
+>  {german/lcscript}  =>  {latin}
+>  {german/scripttag}  =>  {}
+>  {german/language}  =>  {German}
+>  {german/langtag}  =>  {DEU}
+>  {german/bcp47}  =>  {de-DE}
+>  {german/hyphennames}  =>  {}
+>  {german/direction}  =>  {LR}
+>  {german/hyphenmins}  =>  {2,2}
+>  {german/frenchspacing}  =>  {true}
+>  {german/indentfirst}  =>  {false}
+>  {german/fontsetup}  =>  {true}
+>  {german/envname}  =>  {german}
+>  {german/babelname}  =>  {ngerman}
+>  {german/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {german/Localnumeral}  =>  {polyglossia@C@localnumeral}.
+Module polyglossia Info: Language data for german
+(polyglossia)            righthyphenmin	2
+(polyglossia)            loader	loadhyph-de-1901.tex
+(polyglossia)            synonyms	
+(polyglossia)            hyphenation	
+(polyglossia)            patterns	hyph-de-1901.pat.txt
+(polyglossia)            lefthyphenmin	2 on input line 10
+Module polyglossia Info: Language german was not yet loaded; created with id 2 o
+n input line 10
+Package polyglossia Info: Option: German, spelling=new.
+Package polyglossia Info: Option: German, script=latin.
+Package polyglossia Info: Option: German, variant=german.
+Package polyglossia Info: Option: German, variant=german.
+Package polyglossia Info: Option: German, spelling=new.
+Package polyglossia Info: Option: German, script=latin.
+ (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/polyglossia/babelsh.def
+File: babelsh.def 2019/09/30 Babel common definitions for shorthands
+ Taken verbatim from babel files (2019/09/27 v3.34)
+)
+Package polyglossia Info: Making " an active character on input line 177.
 ) (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
 \csq@reset=\count290
@@ -577,6 +577,7 @@ Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
 \csq@maxlvl=\count294
 \csq@tshold=\count295
 \csq@ltx@everypar=\toks25
+
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
 )
@@ -1922,9 +1923,9 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 151.
 LaTeX Font Info:    ... okay on input line 151.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 151.
 LaTeX Font Info:    ... okay on input line 151.
-Package scrbase Info: activating german \contentsname on input line 151.
-Package scrbase Info: activating german \listfigurename on input line 151.
-Package scrbase Info: activating german \listtablename on input line 151.
+Package scrbase Info: activating english \contentsname on input line 151.
+Package scrbase Info: activating english \listfigurename on input line 151.
+Package scrbase Info: activating english \listtablename on input line 151.
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -2020,14 +2021,6 @@ Package unicode-math Warning: I'm going to overwrite the following commands
 
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/translations/translations-
-basic-dictionary-german.trsl
-File: translations-basic-dictionary-german.trsl (german translation file `trans
-lations-basic-dictionary')
-)
-Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `german'. on input line 151.
-
-(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/translations/translations-
 basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
@@ -2035,27 +2028,19 @@ nslations-basic-dictionary')
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 151.
 
+(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/translations/translations-
+basic-dictionary-german.trsl
+File: translations-basic-dictionary-german.trsl (german translation file `trans
+lations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `german'. on input line 151.
+
 
 Package tikz-feynman Warning: Consider loading TikZ-Feynman with \usepackage[co
 mpat=1.1.0]{tikz-feynman} so that you can be warned if TikZ-Feynman changes. on
  input line 151.
 
-Package biblatex Info: Trying to load language 'american'...
-Package biblatex Info: ... file 'american.lbx' found.
-(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/lbx/american.lbx
-File: american.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
-
-(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
-)
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
-
-(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
-))
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
@@ -2066,11 +2051,11 @@ Package biblatex Info: ... file 'german.lbx' found.
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 File: german.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 Module polyglossia Info: Language data for ngerman
-(polyglossia)            hyphenation	
-(polyglossia)            loader	loadhyph-de-1996.tex
-(polyglossia)            patterns	hyph-de-1996.pat.txt
-(polyglossia)            synonyms	
 (polyglossia)            righthyphenmin	2
+(polyglossia)            loader	loadhyph-de-1996.tex
+(polyglossia)            synonyms	
+(polyglossia)            hyphenation	
+(polyglossia)            patterns	hyph-de-1996.pat.txt
 (polyglossia)            lefthyphenmin	2 on input line 580
 Module polyglossia Info: Language ngerman was not yet loaded; created with id 4 
 on input line 580
@@ -2086,6 +2071,23 @@ Module polyglossia Info: Language ngerman already loaded; id is 4 on input line
 Module polyglossia Info: Language ngerman already loaded; id is 4 on input line 
 19
 )
+Package biblatex Info: Trying to load language 'american'...
+Package biblatex Info: ... file 'american.lbx' found.
+
+(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/lbx/american.lbx
+File: american.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+))
 Package biblatex Info: LuaTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
@@ -2094,7 +2096,6 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = thesis.bcf
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' not found.
-
 No file thesis.bbl.
 Package biblatex Info: Reference section=0 on input line 151.
 Package biblatex Info: Reference segment=0 on input line 151.
@@ -2117,8 +2118,6 @@ LaTeX Info: Redefining \nameref on input line 151.
 LaTeX Info: Redefining \rmfamily on input line 151.
 LaTeX Info: Redefining \sffamily on input line 151.
 LaTeX Info: Redefining \ttfamily on input line 151.
-Module polyglossia Info: Language ngerman already loaded; id is 4 on input line 
-151
 <logos/tu-logo.pdf, id=7, 339.2675pt x 55.20625pt>
 File: logos/tu-logo.pdf Graphic file (type pdf)
 <use logos/tu-logo.pdf>
@@ -2245,24 +2244,116 @@ LaTeX Warning: Citation 'lhcbInfo' on page 3 undefined on input line 42.
 
 [3<./plots/LHCb_facility.jpg>]
 
-! Package siunitx Error: Invalid number '1-2e33'.
+LaTeX Warning: Citation 'scifiInfo' on page 4 undefined on input line 52.
 
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.47 ...1-2e33}{\per\centi\metre\squared\per\second}
-                                                  $. The bunch spacing will ...
+
+LaTeX Warning: Citation 'lhcInfo' on page 4 undefined on input line 61.
+
+[4]
+chapter 3.
+) (./content/main_part.tex [5
+
+] [6]
+chapter 4.
+<plots/june_21/Tx_noRota_allT_1000MU.png, id=94, 418.56375pt x 292.09125pt>
+File: plots/june_21/Tx_noRota_allT_1000MU.png Graphic file (type png)
+<use plots/june_21/Tx_noRota_allT_1000MU.png>
+Package luatex.def Info: plots/june_21/Tx_noRota_allT_1000MU.png  used on input
+ line 20.
+(luatex.def)             Requested size: 315.48541pt x 220.15538pt.
+<plots/june_21/Tx_noRota_allT_7000MU.png, id=95, 426.09187pt x 295.85532pt>
+File: plots/june_21/Tx_noRota_allT_7000MU.png Graphic file (type png)
+<use plots/june_21/Tx_noRota_allT_7000MU.png>
+Package luatex.def Info: plots/june_21/Tx_noRota_allT_7000MU.png  used on input
+ line 27.
+(luatex.def)             Requested size: 315.48541pt x 219.06944pt.
+
+LaTeX Warning: Reference `fig:june_3' on page 7 undefined on input line 32.
+
+<plots/june_21/allT_halfT3_n20_Tx.png, id=96, 453.19313pt x 301.8778pt>
+File: plots/june_21/allT_halfT3_n20_Tx.png Graphic file (type png)
+<use plots/june_21/allT_halfT3_n20_Tx.png>
+Package luatex.def Info: plots/june_21/allT_halfT3_n20_Tx.png  used on input li
+ne 35.
+(luatex.def)             Requested size: 315.48541pt x 210.14763pt.
+<plots/june_21/allT_halfT3_Tx_vs_Flo.png, id=97, 453.19313pt x 301.8778pt>
+File: plots/june_21/allT_halfT3_Tx_vs_Flo.png Graphic file (type png)
+<use plots/june_21/allT_halfT3_Tx_vs_Flo.png>
+Package luatex.def Info: plots/june_21/allT_halfT3_Tx_vs_Flo.png  used on input
+ line 42.
+(luatex.def)             Requested size: 315.48541pt x 210.14763pt.
+
+LaTeX Warning: Reference `fig:june_4' on page 7 undefined on input line 47.
+
+
+LaTeX Warning: Reference `fig:june_5' on page 7 undefined on input line 47.
+
+<plots/june_21/CA_allT_halfT3_Tz.png, id=98, 455.45157pt x 301.125pt>
+File: plots/june_21/CA_allT_halfT3_Tz.png Graphic file (type png)
+<use plots/june_21/CA_allT_halfT3_Tz.png>
+Package luatex.def Info: plots/june_21/CA_allT_halfT3_Tz.png  used on input lin
+e 50.
+(luatex.def)             Requested size: 315.48541pt x 208.58974pt.
+[7
+
+<./plots/june_21/Tx_noRota_allT_1000MU.png>] [8<./plots/june_21/Tx_noRota_allT_7
+000MU.png><./plots/june_21/allT_halfT3_n20_Tx.png>]
+<plots/june_21/CA_allT_halfT3_Tx.png, id=118, 450.9347pt x 305.64188pt>
+File: plots/june_21/CA_allT_halfT3_Tx.png Graphic file (type png)
+<use plots/june_21/CA_allT_halfT3_Tx.png>
+Package luatex.def Info: plots/june_21/CA_allT_halfT3_Tx.png  used on input lin
+e 58.
+(luatex.def)             Requested size: 315.48541pt x 213.84523pt.
+
+
+LaTeX Warning: Reference `fig:june_6' on page 9 undefined on input line 63.
+
+<plots/july_28/Tx.png, id=119, 332.74312pt x 231.86626pt>
+File: plots/july_28/Tx.png Graphic file (type png)
+<use plots/july_28/Tx.png>
+Package luatex.def Info: plots/july_28/Tx.png  used on input line 72.
+(luatex.def)             Requested size: 118.30777pt x 82.43869pt.
+<plots/july_28/Tz.png, id=120, 331.99031pt x 231.11343pt>
+File: plots/july_28/Tz.png Graphic file (type png)
+<use plots/july_28/Tz.png>
+Package luatex.def Info: plots/july_28/Tz.png  used on input line 78.
+(luatex.def)             Requested size: 118.30777pt x 82.35793pt.
+<plots/july_28/Rx.png, id=121, 335.75438pt x 232.61906pt>
+File: plots/july_28/Rx.png Graphic file (type png)
+<use plots/july_28/Rx.png>
+Package luatex.def Info: plots/july_28/Rx.png  used on input line 84.
+(luatex.def)             Requested size: 118.30777pt x 81.96451pt.
+[9<./plots/june_21/allT_halfT3_Tx_vs_Flo.png>] [10<./plots/june_21/CA_allT_halfT
+3_Tz.png><./plots/june_21/CA_allT_halfT3_Tx.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 96.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 96.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 96.
+
+! Improper alphabetic constant.
+<to be read again> 
+\mitchi 
+l.96 \section{$\chi^2$ analysis}
+                              
 
 Here is how much of LuaTeX's memory you used:
- 68224 strings out of 477811
+ 68400 strings out of 477811
  100000,3417909 words of node,token memory allocated
- 8136 words of node memory still in use:
-   21 hlist, 1 vlist, 2 rule, 94 disc, 4 local_par, 2 dir, 2 math, 135 glue, 42 
-kern, 8 penalty, 9 margin_kern, 729 glyph, 20 attribute, 74 glue_spec, 20 attrib
-ute_list, 2 temp nodes
-   avail lists: 1:9,2:554,3:170,4:101,5:262,6:69,7:4086,8:15,9:424,10:25,11:393,
+ 5036 words of node memory still in use:
+   55 hlist, 10 vlist, 19 rule, 3 mark, 23 disc, 16 local_par, 1 dir, 2 math, 12
+8 glue, 16 kern, 39 penalty, 7 margin_kern, 226 glyph, 137 attribute, 74 glue_sp
+ec, 137 attribute_list, 10 if_stack, 3 write, 4 pdf_dest, 32 pdf_colorstack, 3 p
+df_setmatrix, 3 pdf_save, 3 pdf_restore nodes
+   avail lists: 1:10,2:560,3:193,4:90,5:290,6:74,7:4461,8:70,9:419,10:18,11:297,
 12:1
- 87039 multiletter control sequences out of 65536+600000
- 92 fonts using 28755211 bytes
+ 87128 multiletter control sequences out of 65536+600000
+ 94 fonts using 29018471 bytes
  122i,20n,114p,10601b,2454s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

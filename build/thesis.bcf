@@ -159,7 +159,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortlocale</bcf:key>
-      <bcf:value>ngerman</bcf:value>
+      <bcf:value>american</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortingtemplatename</bcf:key>
@@ -2349,3 +2349,5 @@
     <bcf:citekey order="3">lhcbInfo</bcf:citekey>
     <bcf:citekey order="4">scifiInfo</bcf:citekey>
     <bcf:citekey order="5">lhcbInfo</bcf:citekey>
+    <bcf:citekey order="6">scifiInfo</bcf:citekey>
+    <bcf:citekey order="7">lhcInfo</bcf:citekey>
