@@ -1,11 +1,93 @@
-\chapter{Partciles and The Large Hadron Collider}
+\chapter{Particles and The Large Hadron Collider}
 \label{sec:particleslhc}
+Spin-$\frac{1}{2}$-fermions are called leptons, if they do not interact via the strong interaction. The three generations e, μ and τ are also called flavors.
+In each of these families there is a charged lepton, which is present in both (h\"andigkeiten) and a corresponding left-handed neutrino. A particle
+is called left-handed if its spin direction is opposite to the direction of flight.
+Right-handed particles have a spin direction pointing with the direction of flight. Per
+family, a left-handed isospin doublet and a right-handed singlet are formed.
+Neutrinos interact, unlike the charged leptons, only via the weak
+interaction.
+The quarks are spin-$\frac{1}{2}$-particles and carry an electric charge. In each of the
+three generations there is one isospin doublet. The quarks are ordered by ascending
+mass. In the first generation are the two lightest quarks,
+up and down quark in the second generation the charm- and strange quark and
+in the third generation the top- and bottom quark doublet.
+Quarks carry a color charge, red, green or blue, which is an artificially introduced degree of freedom to guarantee the distinguishability. There are eight
+quark color states.
+%There is also a nineth state, costructed by the superposition of all three colors resulting in a colorless state. generatoren der SU(3) = 3^2 - 1 = 8
+%are composed of an octet and a singlet. The colorless or white singlet does not belong to the generators of the color group.
+%color group, because it cannot transfer any color in the interaction.
+The octet forms the generators of the SU(3) (special unitary group of dimension
+3) which is generated from the eight quark color states.
+Since there are no free quarks, they come together to form bonding states, the
+so called hadrons. On the one hand there are the mesons, which consist of a quark
+and an antiquark.
+
+\begin{equation}
+	|\symup{M}\!> = | q\, \bar{q}'\!>
+\end{equation}
+
+These may be from the same family (i.e. [u,d], [c,s], [t,b]), or from
+different families. Mesons have a baryon number of 0. Accordingly, quarks carry the baryon number $\frac{1}{3}$. The quarks constructing a meson therefore carry color and the corresponding anticolor.
+The second type are baryons. The content consists of either three quarks or
+three antiquarks. However, it cannot be that one quark and two antiquarks
+and vice versa occur, because baryons must have the baryon number $\symup{B} = 1$. Because baryons are stable final states as well as the mesons, the sum of their quark colors must be white. Therfore, every (anti)color must occur once in a baryon.
+
+\begin{align}
+	|\symup{B}\!> &= |q q' q''\!> \\
+	|\symup{B}\!> &= |\bar{q} \bar{q}' \bar{q}''\!> \,
+\end{align}
 
 \section{The Standard Modell}
 \label{sec:sm}
 
+The standard model of particle physics describes the known elementary particles and their interactions.
+It consists of 12 matter particles, the fermions
+and five interaction particles, which are called vector bosons. The
+fermions can be grouped in two categories, to six quarks and
+six leptons. The quarks as well as the leptons are divided into three generations.
+Each matter particle also has an antiparticle, with an opposite charge.
+The interactions are obtained from the vector bosons mentioned above. There
+exist three relevant interactions. The electromagnetic interaction,
+the weak interaction and the strong interaction. Gravitation is
+is not considered here, because it does not make a significant contribution.
+By the em(electromagnetic) interaction one understands the exchange
+of a photon between the particles.
+% here, a feynman diagram would be nice. as well as for every other force
+The strength of one of those interactions is
+described by a coupling constant. In the em interaction this is the
+fine structure constant\cite{alphas}. The range of the em-interaction is in principle
+infinite, but decreases with increasing distance between the interacting particles.
+The em interaction is described by quantum electrodynamics.
+The potentials are described by operators, which create and annihilate the photons.
+
+The exchange particles of the weak interaction are on the one hand the $W^{\pm}$-bosons and on the other hand the Z-boson. The weak interaction processes are called currents.
+Changing the charge during the interaction by a W-boson is called charged current.
+The exchange reaction of a Z boson in, for example, processes such as $e_{\nu} \mu \to e_{\nu} \mu$ is called neutral current.
+Analogous to the electromagnetic interaction, the potentials are again understood as
+operators, but here there are no propagators. Propagators are
+used in \textit{FEYNMAN}-diagrams of QED to represent the interaction particles.
+A so-called V-A structure is used here instead. Here, V stands for vectorboson and A is the axialvector.
+This structure is needed to disregard the right-handed particles and left-handed
+antiparticles, since these lead to the charge-parity violation. Thus one adjusts the Lorentz factors in the following way
+\begin{equation*}
+  \gamma_{\mu} \to \gamma_{\mu}(1 - \gamma_5)
+\end{equation*}
+In the strong interaction, the exchange particles are the eight different
+gluons. The strong interaction is described by quantum chromodynamics (QCD).
+According to this, color is transfered during the interaction. Gluons
+have no mass and are spin-1 particles. Gluons carry a color and a different anti-color. Gluons can also couple to themselves. Moreover, the coupling constant $\alpha_s \approx 0.1$. The interaction with quarks is described with a potential.
+\begin{align}
+  \symup{V}_{q\bar{q}} &= -\frac{4 \alpha_{s}}{3 r} + \sigma\cdot r
+  \intertext{mit}
+  \sigma &= \SI{1}{\giga\electronvolt\per\femto\metre}
+\end{align}
+Quarks thus tend to attract each other very strongly. If now
+quark and antiquark are moved away from each other, a lot of energy has to be expended. This energy can become so large that new particles can be created.
+
 \section{particle decays and hadrons}
 \label{sec:decays}
+For you, this is because the bending and momentum of particles (and the location where they decay) is important to the way we can align things. Which sorts of particles can produce long tracks? etc.
 
 \section{The LHC and LHCb}
 \label{sec:lhcandB}
@@ -69,3 +151,24 @@ A right-handed coordinate system is used with positive $z$ pointing away from th
 \label{sec:datacycle}
 
 (not sure if that's a good name, but like, an explanation of how electrical information is turned into hits and then tracks, and also when alignment runs in the system of data taking)
+
+%%% from bachelor thesis %%%
+
+% \section{Die CKM-Matrix\cite{ckm}}
+% Die CKM-Matrix, benannt nach Cabibbo, Kobayashi und Maskawa, ist auch als
+% Quarkmischungsmatrix bekannt. Sie enth\"allt 3 Winkel und eine komplexe Phase.
+% Die Elemente auf der Hauptreihe beschreiben die Zerf\"alle innerhalb der Familie
+% und sind demnach nahe an 1. Die \"ubrigen Elemente sind etwas kleiner f\"ur
+% Zerf\"alle zwischen benachbarter Familien und sehr stark unterdr\"uckt f\"ur
+% Zerf\"alle zwischen der ersten und dritten Familie, wie zum Beispiel das hier
+% nicht zu vernachl\"assigende Element $|\symup{V}_{us}|$. \\
+% $\left(|\symup{V_{ij}}|\right) = \left[\begin{array}{rrr}
+% 0.97446 & 0.22452 & 0.00365 \\
+% 0.22438 & 0.97359 & 0.04214 \\
+% 0.00896 & 0.04133 & 0.999105 \\
+% \end{array}\right] =
+% \left[\begin{array}{rrr}
+% \symup{V}_{ud} & \symup{V}_{us} & \symup{V}_{ub} \\
+% \symup{V}_{cd} & \symup{V}_{cs} & \symup{V}_{cb} \\
+% \symup{V}_{td} & \symup{V}_{ts} & \symup{V}_{tb} \\
+% \end{array}\right]$

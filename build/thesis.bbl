@@ -67,6 +67,22 @@
       \verb https://cds.cern.ch/record/1647400/files/LHCB-TDR-015.pdf
       \endverb
     \endentry
+    \entry{alphas}{online}{}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeltitlesource}{title}
+      \field{title}{Physical Constants}
+      \field{urlday}{11}
+      \field{urlmonth}{8}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://pdg.lbl.gov/2019/mobile/reviews/pdf/rpp2018-rev-phys-constants-m.pdf
+      \endverb
+      \verb{url}
+      \verb http://pdg.lbl.gov/2019/mobile/reviews/pdf/rpp2018-rev-phys-constants-m.pdf
+      \endverb
+    \endentry
     \entry{lhcbInfo}{online}{}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
