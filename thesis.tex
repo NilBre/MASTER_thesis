@@ -33,10 +33,10 @@
 
 % german language
 \usepackage{polyglossia}
-\setdefaultlanguage{english}
+\setdefaultlanguage{german}
 
 % for english abstract and english titles in the toc
-\setotherlanguages{german}
+\setotherlanguages{english}
 
 % intelligent quotation marks, language and nesting sensitive
 \usepackage[autostyle]{csquotes}
@@ -88,7 +88,7 @@
 %------------------------------------------------------------------------------
 
 \usepackage{graphicx}
-\usepackage{rotating}
+%\usepackage{rotating}
 \usepackage{grffile}
 \usepackage{tikz}
 \usepackage{circuitikz}
@@ -163,10 +163,14 @@
 \mainmatter
 % Hier beginnt der Inhalt mit Seite 1 in arabischen Ziffern
 \input{content/einleitung.tex}
-\input{content/theorie.tex}
-% main part und ergebniss basically the same
-\input{content/main_part.tex}
-%\input{content/ergebnisse.tex}
+% theory
+\input{content/particles_and_lhc.tex}
+\input{content/alignment_theory.tex}
+% main part
+\input{content/story.tex}
+\input{content/continuing_work.tex}
+\input{content/future_work.tex}
+% conclusion and outlook
 \input{content/conclusion.tex}
 
 \appendix
