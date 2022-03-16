@@ -21,7 +21,8 @@ infinite, but decreases with increasing distance between the interacting particl
 The em interaction is described by quantum electrodynamics.
 The potentials are described by operators, which create and annihilate the photons.
 
-The exchange particles of the weak interaction are on the one hand the $W^{\pm}$-bosons and on the other hand the Z-boson. The weak interaction processes are called currents.
+The exchange particles of the weak interaction are on the one hand the $W^{\pm}$-bosons and on the other hand the Z-boson.
+The weak interaction processes are called currents.
 Changing the charge during the interaction by a W-boson is called charged current.
 The exchange reaction of a Z boson in, for example, processes such as $e_{\nu} \mu \to e_{\nu} \mu$ is called neutral current.
 Analogous to the electromagnetic interaction, the potentials are again understood as
@@ -46,27 +47,27 @@ Quarks thus tend to attract each other very strongly. If now
 quark and antiquark are moved away from each other, a lot of energy has to be expended. This energy can become so large that new particles can be created.
 
 % now particles
-Spin-$\frac{1}{2}$-fermions are called leptons, if they do not interact via the strong interaction. The three generations e, μ and τ are also called flavors.
-In each of these families there is a charged lepton, which is present in both (h\"andigkeiten) and a corresponding left-handed neutrino. A particle
-is called left-handed if its spin direction is opposite to the direction of flight.
-Right-handed particles have a spin direction pointing with the direction of flight. Per
-family, a left-handed isospin doublet and a right-handed singlet are formed.
-Neutrinos interact, unlike the charged leptons, only via the weak
-interaction.
-The quarks are spin-$\frac{1}{2}$-particles and carry an electric charge. In each of the
-three generations there is one isospin doublet. The quarks are ordered by ascending
-mass. In the first generation are the two lightest quarks,
-up and down quark in the second generation the charm- and strange quark and
+The standard model houses 12 spin-$\frac{1}{2}$ fermions. Six are called leptons and they are sorted into three families, also called falvor (e, μ and τ). Each of those families has a charged lepton\footnote{can have both h\"ndigkeiten} and a left-handed neutrino.
+A particle is called left-handed if its spin direction is opposite to the direction of flight.cRight-handed particles have a spin direction pointing with the direction of flight. Therefore, a left-handed isospin doublet and a right-handed singlet is constructed.
+The leptons can couple via the weak-interaction and if they are charged, also via the em-interaction. Neutrinos can only couple via the weak interaction.
+
+The quarks are spin-$\frac{1}{2}$-fermions and carry an electric charge as well. In each of the three generations there is one isospin doublet. The quarks are ordered by ascending mass. In the first generation are the two lightest quarks,
+up- and down quark, in the second generation the charm- and strange quark and
 in the third generation the top- and bottom quark doublet.
-Quarks carry a color charge, red, green or blue, which is an artificially introduced degree of freedom to guarantee the distinguishability. There are eight
-quark color states.
-%There is also a nineth state, costructed by the superposition of all three colors resulting in a colorless state. generatoren der SU(3) = 3^2 - 1 = 8
-%are composed of an octet and a singlet. The colorless or white singlet does not belong to the generators of the color group.
-%color group, because it cannot transfer any color in the interaction.
-The octet forms the generators of the SU(3) (special unitary group of dimension
-3) which is generated from the eight quark color states.
-Since there are no free quarks, they come together to form bonding states, the
-so called hadrons. On the one hand there are the mesons, which consist of a quark
+Quarks carry a color charge, red, green or blue, which is an artificially introduced degree of freedom to guarantee the distinguishability.
+Quarks couple via the strong interaction which is described by the quantum chromodynamic (QCD). The Eichgroup of the QCD is $SU\left(N = 3\right)$ where N is the number of introduced colors. The number of generators is therefore $N^2 -1 = 8$.
+The generators are called gluons and they carry "color" and "anticolor".
+The common eight gluon-wavefunctions are
+\begin{align*}
+  \psi_1 &= |r\bar{g}> & \psi_2 &= |r\bar{b}> \\
+  \psi_3 &= |g\bar{r}> & \psi_4 &= |g\bar{b}> \\
+  \psi_5 &= |b\bar{r}> & \psi_6 &= |b\bar{g}> \\
+  \psi_7 &= \frac{1}{\sqrt{2}}\left(|r\bar{r}> - |g\bar{g}>\right) & \psi_8 &= \frac{1}{\sqrt{6}}\left(|r\bar{r}> + |g\bar{g}> - 2|b\bar{b}>\right) \\
+\end{align*}
+% hier zitieren wo ich das her hab. besser nicht wikipedia!
+The second wavefunction describes a gluon interaction with a blue quark and changing the color to red.
+
+Due to the Confinement, quarks cannot exist alone. Instead they form bonding states, so called hadrons. On the one hand there are the mesons, which consist of a quark
 and an antiquark.
 
 \begin{equation}
@@ -74,7 +75,7 @@ and an antiquark.
 \end{equation}
 
 These may be from the same family (i.e. [u,d], [c,s], [t,b]), or from
-different families. Mesons have a baryon number of 0. Accordingly, quarks carry the baryon number $\frac{1}{3}$. The quarks constructing a meson therefore carry color and the corresponding anticolor.
+different families. Mesons have a baryon number of 0. Accordingly, quarks carry the baryon number $\frac{1}{3}$. The quarks constructing a meson therefore carries color and the corresponding anticolor.
 The second type are baryons. The content consists of either three quarks or
 three antiquarks. However, it cannot be that one quark and two antiquarks
 and vice versa occur, because baryons must have the baryon number $\symup{B} = 1$. Because baryons are stable final states as well as the mesons, the sum of their quark colors must be white. Therfore, every (anti)color must occur once in a baryon.
@@ -134,40 +135,25 @@ The SciFi Tracker replaced the inner Tracker (IT) and the outer Tracker (OT) and
 The instantaneous luminosity after the upgrade is expected to be $\SIrange{1}{2e33}{\per\centi\metre\squared\per\second}$. The bunch spacing will be $\SI{25}{\nano\second}$ and the number of proton-proton interactions per bunch crossing will be $\nu = 3.8$ during the ramp-up phase of the LHC and $\nu = 7.6$ "during the active phase." (how can i write this differently?)
 
 % layout
-\subsection{Layout of the Detector}
-The SciFi Tracker consists of three (T-)stations T1, T2 and T3 with each having four Layers ($X1, U, V, X2$). The orientation of these planes with respect to the vertical axis are ($\SI{0}{\degree}, \SI{+5}{\degree}, \SI{-5}{\degree}, \SI{0}{\degree}$).
+\subsection{Layout of the SciFi Tracker}
+The SciFi Tracker consists of three (T-)stations T1, T2 and T3 with each having four layers ($X1, U, V, X2$). The orientation of these planes with respect to the vertical axis are ($\SI{0}{\degree}, \SI{+5}{\degree}, \SI{-5}{\degree}, \SI{0}{\degree}$).
 The tilted layers are called stereo layers and serve the purpose of 3D hit localization.
-Each layer consists of 8 fibremats
+The layers are $\SI{20}{\milli\metre}$ apart from each other in $z$-direction within each station.
+Each layer has four quarters with each quarter having five\footnote{six for the last (T-)station.} modules. Each module is constructed from four fibre mats.
 A right-handed coordinate system is used with positive $z$ pointing away from the interaction point following the beam direction. positive $y$ points upwards, towards the surface and positive $x$ and negative $x$ are defined as A-Side and C-Side\cite{scifiInfo}.
 
-% \begin{enumerate}
-%   \item layout
-%   \item how does it work?
-%   \item what else?
-% \end{enumerate}
+To ensure an optimal alignment, a well known geometry is key. Therefore, the fibres must aligned within $\SI{1}{2}{\micro\metre}$ in $x$-direction and must not be more than $\SI{300}{\micro\metre}$ bent in $z$-direction.
+% here a picture of the scifi
+
+\subsection{Scintillating Fibres}
+The scintillating fibre material is a polymer with an organic flourescent dye added to the polystyrene structure to enhance the yield during the scintillation process.
+In order to produce and register a photon signal, the ionisation energy is deposited in the fibre core firstly. The amount of energy need for the polymer to reach an excited state is just a few electronvolts.
+The added dye has the particular structure to match the excitation energy.
+The energy is transferred via the Förster Transfer.
+The dye generates excited energy states when particles hit the fibre and deposit their energy. When the states relax, a photon is emitted which then excites other parts of the dye to eventually transfer the energy to the silicon photomultipliers (SiPMs) which are mounted on the outer(?) end of the mats.
+The other end of the fibre mats is a full reflective mirror to send the photons towards the SiPMs.
 
 \section{The LHC data cycle}
 \label{sec:datacycle}
 
 (not sure if that's a good name, but like, an explanation of how electrical information is turned into hits and then tracks, and also when alignment runs in the system of data taking)
-
-%%% from bachelor thesis %%%
-
-% \section{Die CKM-Matrix\cite{ckm}}
-% Die CKM-Matrix, benannt nach Cabibbo, Kobayashi und Maskawa, ist auch als
-% Quarkmischungsmatrix bekannt. Sie enth\"allt 3 Winkel und eine komplexe Phase.
-% Die Elemente auf der Hauptreihe beschreiben die Zerf\"alle innerhalb der Familie
-% und sind demnach nahe an 1. Die \"ubrigen Elemente sind etwas kleiner f\"ur
-% Zerf\"alle zwischen benachbarter Familien und sehr stark unterdr\"uckt f\"ur
-% Zerf\"alle zwischen der ersten und dritten Familie, wie zum Beispiel das hier
-% nicht zu vernachl\"assigende Element $|\symup{V}_{us}|$. \\
-% $\left(|\symup{V_{ij}}|\right) = \left[\begin{array}{rrr}
-% 0.97446 & 0.22452 & 0.00365 \\
-% 0.22438 & 0.97359 & 0.04214 \\
-% 0.00896 & 0.04133 & 0.999105 \\
-% \end{array}\right] =
-% \left[\begin{array}{rrr}
-% \symup{V}_{ud} & \symup{V}_{us} & \symup{V}_{ub} \\
-% \symup{V}_{cd} & \symup{V}_{cs} & \symup{V}_{cb} \\
-% \symup{V}_{td} & \symup{V}_{ts} & \symup{V}_{tb} \\
-% \end{array}\right]$
