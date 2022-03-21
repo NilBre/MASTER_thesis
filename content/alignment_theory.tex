@@ -20,7 +20,7 @@ The track segments are called track states and are defined by a position in $x$ 
   \vec{r} = \left(\begin{array}{c} x \\ y \\ t_x \\ t_y \\ \frac{q}{p}\end{array}\right) & t_x = \frac{\partial x}{\partial z} & t_y = \frac{\partial y}{\partial z}
 \end{align}
 
-The error of the five-component state vector is a $5\times5$ covariance matrix $C$.
+The uncertainty of the five-component state vector is a $5\times5$ covariance matrix $C$.
 A track state can be anywhere on the trajectory but is easier to choose it at real detection points. Combining the track state with a real measurement point is called \textit{node}.
 The propagation from node $k_{-1}$ to node $k$ is described by a propagation function
 
@@ -34,7 +34,7 @@ Process noise can be caused by any scattering phenomenon that may have happened.
 Depending on the type of propagation, linear or curved, a different propagation function is used.
 for a linear extrapolation, $f_k$ results in
 \begin{equation}
-  f_k \left(\vec{r}_{k-1}\right) = F_k \dot \overrightarrow{r}_{k-1}
+  f_k \left(\vec{r}_{k-1}\right) = F_k \vec{r}_{k-1}
 \end{equation}
 with the transport matrix $F_k$
 \begin{gather}
@@ -61,11 +61,15 @@ Trajectory information for each node is provided by the real measurement where t
 with the projection function $h_k$ and \textit{measurement noise} $\epsilon_k$.
 So if the detector only measures the $y$ coordinate of state, the projection function
 will be
-% \begin{align}
-%   h_k(\vec{r}_k) &= H_k \dot \vec{r}_k & H_k =
-%   \left(\begin{array} 0 & 1 & 0 & 0 & 0\end{array}\right) \\
-%   &= y_k
-% \end{align}
+\begin{equation}
+  h_k(\vec{r}_k) = H_k \vec{r}_k
+\end{equation}
+with
+\begin{gather}
+  H_k = \begin{pmatrix}
+    0 & 1 & 0 & 0 & 0 \\
+  \end{pmatrix}
+\end{gather}\,.
 
 When measuring more parameters the measurement matrix $H_k$ and projection matrix have dimension $n\times5$ with $n$ being the numbers of parameters measured.
 
@@ -73,23 +77,58 @@ With this track model, both noises from the measurement and the process are rand
 They are defined as $W_k \equiv cov(w_k)$ and $V_k \equiv cov(\epsilon_k)$.
 
 % now kalman filter formalism
-\section{The Kalman filter method}
+\section{The Kalman filter method \cite{VanTilburg}}
 In general a track is an ensemble of measurements and track states and the Kalman filter method is used to fit tracks.
 The idea of the Kalman filter is, to have a starting node and add measurements one by one. In between the addition of measurements, the local track state is updated with the new information.
 The Kalman filter method is a $\chi^2$ minimising problem for the measurement of the track. Because of the iterative nature of the method, it is fast und also used in other fields than physics, for example GPS and meteorology.
-The three steps of the Kalman filter will be briefly outlined and later discribed in detail.
+The three steps of the Kalman filter will be briefly outlined and later discribed in further detail.
 
 
-The first step is the $\symbf{Prediction}$: The next track state of the trajectory is predicted based on the track state at the previous node.
-The second step is the $\symbf{Filter}$ procedure: By using filter equations, the prediction is updated with measurement information in this node. The prediction and filter are repeated for each measurement. With more measurements added, the estimate for the best trajectory is the track state after each filter step.
-The final step is called $\symbf{Smoother}$: When the trajectory is complete, smoother equations are applied from the last node to the previous node. Therefore the information from all measurements is used in both forward- and backpropagation which results in a "smoother" track.
+The first step is the $\symbf{\symup{Prediction}}$: The next track state of the trajectory is predicted based on the track state at the previous node.
+The second step is the $\symbf{\symup{Filter}}$ procedure: By using filter equations, the prediction is updated with measurement information in this node. The prediction and filter are repeated for each measurement. With more measurements added, the estimate for the best trajectory is the track state after each filter step.
+The final step is called $\symbf{\symup{Smoother}}$: When the trajectory is complete, smoother equations are applied from the last node to the previous node. Therefore the information from all measurements is used in both forward- and backpropagation which results in a "smoother" track.
 
 \subsection{1. Step: Prediction}
+For a given state vector at node \textit{p-1}, the prediction for the $p^{\text{th}}$ state vector and its covariance matrix results from the propagation relations
+
+\begin{align}
+  \vec{r}_p^{p-1} &= f_p\left( \vec{r}_{p-1} \right) \\
+  C_p^{p-1} &= F_p C_{p-1} F_p^T + Q_k
+\end{align}
+
+The superscript of the statevector shows the number of measurements used in the estimate and can be abbreviated with $\vec{r}_p^p \equiv \vec{r}_p$. For a maximum number of n measurements $\vec{r}_p^n$ is the smoothed state where every measurement is used.
+$Q_p$ is the process noise in matrix form and it is part of the predicted covariance matrix $C_p^{p-1}$.
+Because the first state cannot take measurements from the previous state, an initial prediction is taken from the track finding algorithm instead.
+The predicted residual between the measurement, $m_p$ and the state vector results in
+\begin{equation}
+  \text{res}_p^{p-1} = m_p - h_p\left( \vec{r}_p^{p-1} \right)
+\end{equation}
+and the corresponding covariance matrix is defined as
+\begin{equation}
+  \text{Cov}_{\text{res},p}^{p-1} = V_p + H_p C_p^{p-1} H_P^T
+\end{equation}\,.
+
+Here, $V_p$ is the measurement variance. With these metrics the minimal $\chi^2$ for the optimal track states can be calculated via
+\begin{equation}
+  \left( \chi^2 \right)_p^{p-1} = \text{res}_p^{p-1} \left(\text{Cov}_{\text{res},p}^{p-1}\right)^{-1} \text{res}_p^{p-1}
+\end{equation}
 
 \subsection{2. Step: Filter}
+During the filter step, the track state is updated with the measurement information.
+\begin{itemize}
+  \item gain matrix
+  \item add measurement -> calculate chi2
+  \item until all measurements are added to track (until full track reconstructed)
+  \item k=n: best estimate: k<n no so good -> smoother step
+\end{itemize}
 
 \subsection{3. Step: Smoother}
-
+\begin{itemize}
+  \item Rauch-Tung-Striebel smoother
+  \item smoothed residuals and cov matrix
+  \item calc total track chi2 = sum of smoothed chi2
+  \item resolution: compare fit to MC track
+\end{itemize}
 
 \section{Alignment using derivatives}
 \label{sec:derivatives}

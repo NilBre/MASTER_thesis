@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.2.5)  17 MAR 2022 18:46
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.2.5)  21 MAR 2022 15:10
  restricted system commands enabled.
 **thesis.tex
 (./thesis.tex
@@ -494,10 +494,10 @@ braces):
 Module polyglossia Info: Language data for german
 (polyglossia)            lefthyphenmin	2
 (polyglossia)            loader	loadhyph-de-1901.tex
-(polyglossia)            hyphenation	
-(polyglossia)            synonyms	
+(polyglossia)            patterns	hyph-de-1901.pat.txt
 (polyglossia)            righthyphenmin	2
-(polyglossia)            patterns	hyph-de-1901.pat.txt on input line 10
+(polyglossia)            hyphenation	
+(polyglossia)            synonyms	 on input line 10
 Module polyglossia Info: Language german was not yet loaded; created with id 2 o
 n input line 10
 Package polyglossia Info: Option: German, spelling=new.
@@ -1890,7 +1890,24 @@ Package: extdash 2018/06/24 v1.3 Extended Dash Package (NCC)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'polyglossia' package.
 
-(./build/thesis.aux)
+(./build/thesis.aux
+LaTeX Info: Redefining \rmfamily on input line 23.
+LaTeX Info: Redefining \sffamily on input line 23.
+LaTeX Info: Redefining \ttfamily on input line 23.
+Module polyglossia Info: Language data for ngerman
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            loader	loadhyph-de-1996.tex
+(polyglossia)            patterns	hyph-de-1996.pat.txt
+(polyglossia)            righthyphenmin	2
+(polyglossia)            hyphenation	
+(polyglossia)            synonyms	 on input line 23
+Module polyglossia Info: Language ngerman was not yet loaded; created with id 4 
+on input line 23
+
+
+LaTeX Warning: Label `fig:june_2' multiply defined.
+
+)
 \openout1 = thesis.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 151.
@@ -2055,15 +2072,8 @@ Package biblatex Info: ... file 'german.lbx' found.
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 File: german.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
-Module polyglossia Info: Language data for ngerman
-(polyglossia)            lefthyphenmin	2
-(polyglossia)            loader	loadhyph-de-1996.tex
-(polyglossia)            hyphenation	
-(polyglossia)            synonyms	
-(polyglossia)            righthyphenmin	2
-(polyglossia)            patterns	hyph-de-1996.pat.txt on input line 580
-Module polyglossia Info: Language ngerman was not yet loaded; created with id 4 
-on input line 580
+Module polyglossia Info: Language ngerman already loaded; id is 4 on input line 
+580
 )
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
@@ -2083,12 +2093,13 @@ Package biblatex Info: Automatic encoding selection.
 
 \openout4 = thesis.bcf
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'thesis.bbl' not found.
+Package biblatex Info: ... file 'thesis.bbl' found.
 
-No file thesis.bbl.
+(./build/thesis.bbl)
 Package biblatex Info: Reference section=0 on input line 151.
 Package biblatex Info: Reference segment=0 on input line 151.
 Package hyperref Info: Link coloring OFF on input line 151.
+
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -2158,6 +2169,11 @@ logos/tu-logo.pdf>] [2
 ]
 Package tocbasic Info: character protrusion at toc deactivated on input line 16
 1.
+ (./build/thesis.toc
+LaTeX Info: Redefining \rmfamily on input line 1.
+LaTeX Info: Redefining \sffamily on input line 1.
+LaTeX Info: Redefining \ttfamily on input line 1.
+)
 \tf@toc=\write5
 
 \openout5 = thesis.toc
@@ -2172,9 +2188,6 @@ chapter 1.
 
 ]
 chapter 2.
-
-LaTeX Warning: Citation 'alphas' on page 2 undefined on input line 19.
-
 [2
 
 ]
@@ -2196,73 +2209,235 @@ Underfull \vbox (badness 2556) has occurred while \output is active []
  [3
 Missing character: There is no μ (U+03BC) in font [lmroman10-regular]:+tlig;!
 Missing character: There is no τ (U+03C4) in font [lmroman10-regular]:+tlig;!
-]
-
-LaTeX Warning: Citation 'lhcInfo' on page 4 undefined on input line 96.
-
-
-LaTeX Warning: Reference `fig:CERN' on page 4 undefined on input line 97.
-
-
-LaTeX Warning: Citation 'facilityCERN' on page 4 undefined on input line 97.
-
-[4]
+] [4]
 warning  (file plots/CERN_layout.pdf) (pdf inclusion): PDF inclusion: found PDF 
 version '1.7', but at most version '1.5' allowed
-<plots/CERN_layout.pdf, id=78, 597.55246pt x 845.07724pt>
+<plots/CERN_layout.pdf, id=112, 597.55246pt x 845.07724pt>
 File: plots/CERN_layout.pdf Graphic file (type pdf)
 <use plots/CERN_layout.pdf>
 Package luatex.def Info: plots/CERN_layout.pdf  used on input line 101.
 (luatex.def)             Requested size: 597.551pt x 845.07518pt.
 [5<./plots/CERN_layout.pdf>]
-<plots/LHCb_facility.jpg, id=88, 637.38126pt x 327.2225pt>
+<plots/LHCb_facility.jpg, id=125, 637.38126pt x 327.2225pt>
 File: plots/LHCb_facility.jpg Graphic file (type jpg)
 <use plots/LHCb_facility.jpg>
 Package luatex.def Info: plots/LHCb_facility.jpg  used on input line 117.
 (luatex.def)             Requested size: 197.17763pt x 101.22821pt.
 
 
-LaTeX Warning: Citation 'lhcbInfo' on page 6 undefined on input line 122.
-
-
-LaTeX Warning: Reference `fig:LHCb' on page 6 undefined on input line 122.
-
-
-LaTeX Warning: Citation 'scifiInfo' on page 6 undefined on input line 125.
-
-
 LaTeX Warning: Command \c invalid in math mode on input line 129.
 
 Missing character: There is no ̧ (U+0327) in font cmmi10!
-[6<./plots/LHCb_facility.jpg>]
-
-LaTeX Warning: Citation 'scifiInfo' on page 7 undefined on input line 143.
-
-) (./content/alignment_theory.tex [7] [8]
+[6<./plots/LHCb_facility.jpg>]) (./content/alignment_theory.tex [7] [8]
 chapter 3.
-
-LaTeX Warning: Citation 'VanTilburg' on page 9 undefined on input line 17.
-
 [9
 
+] [10]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cite' on input line 80.
+
+[11]) (./content/story.tex [12]
+chapter 4.
+<plots/june_21/Tx_noRota_allT_1000MU.png, id=193, 418.56375pt x 292.09125pt>
+File: plots/june_21/Tx_noRota_allT_1000MU.png Graphic file (type png)
+<use plots/june_21/Tx_noRota_allT_1000MU.png>
+Package luatex.def Info: plots/june_21/Tx_noRota_allT_1000MU.png  used on input
+ line 23.
+(luatex.def)             Requested size: 315.48541pt x 220.15538pt.
+<plots/june_21/Tx_noRota_allT_7000MU.png, id=194, 426.09187pt x 295.85532pt>
+File: plots/june_21/Tx_noRota_allT_7000MU.png Graphic file (type png)
+<use plots/june_21/Tx_noRota_allT_7000MU.png>
+Package luatex.def Info: plots/june_21/Tx_noRota_allT_7000MU.png  used on input
+ line 30.
+(luatex.def)             Requested size: 315.48541pt x 219.06944pt.
+<plots/june_21/allT_halfT3_n20_Tx.png, id=196, 453.19313pt x 301.8778pt>
+File: plots/june_21/allT_halfT3_n20_Tx.png Graphic file (type png)
+<use plots/june_21/allT_halfT3_n20_Tx.png>
+Package luatex.def Info: plots/june_21/allT_halfT3_n20_Tx.png  used on input li
+ne 38.
+(luatex.def)             Requested size: 315.48541pt x 210.14763pt.
+<plots/june_21/allT_halfT3_Tx_vs_Flo.png, id=197, 453.19313pt x 301.8778pt>
+File: plots/june_21/allT_halfT3_Tx_vs_Flo.png Graphic file (type png)
+<use plots/june_21/allT_halfT3_Tx_vs_Flo.png>
+Package luatex.def Info: plots/june_21/allT_halfT3_Tx_vs_Flo.png  used on input
+ line 45.
+(luatex.def)             Requested size: 315.48541pt x 210.14763pt.
+<plots/june_21/CA_allT_halfT3_Tz.png, id=200, 455.45157pt x 301.125pt>
+File: plots/june_21/CA_allT_halfT3_Tz.png Graphic file (type png)
+<use plots/june_21/CA_allT_halfT3_Tz.png>
+Package luatex.def Info: plots/june_21/CA_allT_halfT3_Tz.png  used on input lin
+e 53.
+(luatex.def)             Requested size: 315.48541pt x 208.58974pt.
+[13
+
+<./plots/june_21/Tx_noRota_allT_1000MU.png>] [14<./plots/june_21/Tx_noRota_allT_
+7000MU.png><./plots/june_21/allT_halfT3_n20_Tx.png>]
+<plots/june_21/CA_allT_halfT3_Tx.png, id=220, 450.9347pt x 305.64188pt>
+File: plots/june_21/CA_allT_halfT3_Tx.png Graphic file (type png)
+<use plots/june_21/CA_allT_halfT3_Tx.png>
+Package luatex.def Info: plots/june_21/CA_allT_halfT3_Tx.png  used on input lin
+e 61.
+(luatex.def)             Requested size: 315.48541pt x 213.84523pt.
+<plots/july_28/Tx.png, id=222, 332.74312pt x 231.86626pt>
+File: plots/july_28/Tx.png Graphic file (type png)
+<use plots/july_28/Tx.png>
+Package luatex.def Info: plots/july_28/Tx.png  used on input line 75.
+(luatex.def)             Requested size: 118.30777pt x 82.43869pt.
+<plots/july_28/Tz.png, id=223, 331.99031pt x 231.11343pt>
+File: plots/july_28/Tz.png Graphic file (type png)
+<use plots/july_28/Tz.png>
+Package luatex.def Info: plots/july_28/Tz.png  used on input line 81.
+(luatex.def)             Requested size: 118.30777pt x 82.35793pt.
+<plots/july_28/Rx.png, id=224, 335.75438pt x 232.61906pt>
+File: plots/july_28/Rx.png Graphic file (type png)
+<use plots/july_28/Rx.png>
+Package luatex.def Info: plots/july_28/Rx.png  used on input line 87.
+(luatex.def)             Requested size: 118.30777pt x 81.96451pt.
+)
+(./content/continuing_work.tex [15<./plots/june_21/allT_halfT3_Tx_vs_Flo.png>]
+[16<./plots/june_21/CA_allT_halfT3_Tz.png><./plots/june_21/CA_allT_halfT3_Tx.png
+>] [17<./plots/july_28/Tx.png><./plots/july_28/Tz.png><./plots/july_28/Rx.png>]
+
+chapter 5.
+) (./content/future_work.tex [18
+
 ]
-! Missing { inserted.
-<to be read again> 
-\Umathaccent 
-l.37 ...c{r}_{k-1}\right) = F_k \dot \overrightarrow
-                                                  {r}_{k-1}
+chapter 6.
+) (./content/conclusion.tex [19
+
+]
+chapter 7.
+) [20
+
+]
+chapter without number
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+(./content/danksagung.tex [21
+
+
+]) [22
+
+] (./content/eid_versicherung.tex
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+)
+The property list \polyglossia@langsetup contains the pairs (without outer
+braces):
+>  {latex/script}  =>  {latin}
+>  {latex/lcscript}  =>  {latin}
+>  {latex/scripttag}  =>  {}
+>  {latex/language}  =>  {Latex}
+>  {latex/langtag}  =>  {ENG}
+>  {latex/bcp47}  =>  {}
+>  {latex/hyphennames}  =>  {english}
+>  {latex/direction}  =>  {LR}
+>  {latex/hyphenmins}  =>  {2,3}
+>  {latex/frenchspacing}  =>  {false}
+>  {latex/indentfirst}  =>  {false}
+>  {latex/fontsetup}  =>  {true}
+>  {latex/envname}  =>  {latex}
+>  {latex/babelname}  =>  {latex}
+>  {latex/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {latex/Localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {german/script}  =>  {latin}
+>  {german/lcscript}  =>  {latin}
+>  {german/scripttag}  =>  {}
+>  {german/language}  =>  {German}
+>  {german/langtag}  =>  {DEU}
+>  {german/bcp47}  =>  {de-DE}
+>  {german/hyphennames}  =>  {}
+>  {german/direction}  =>  {LR}
+>  {german/hyphenmins}  =>  {2,2}
+>  {german/frenchspacing}  =>  {true}
+>  {german/indentfirst}  =>  {false}
+>  {german/fontsetup}  =>  {true}
+>  {german/envname}  =>  {german}
+>  {german/babelname}  =>  {ngerman}
+>  {german/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {german/Localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {english/script}  =>  {latin}
+>  {english/lcscript}  =>  {latin}
+>  {english/scripttag}  =>  {}
+>  {english/language}  =>  {English}
+>  {english/langtag}  =>  {ENG}
+>  {english/bcp47}  =>  {en-US}
+>  {english/hyphennames}  =>  {english,american,usenglish,USenglish}
+>  {english/direction}  =>  {LR}
+>  {english/hyphenmins}  =>  {2,3}
+>  {english/frenchspacing}  =>  {false}
+>  {english/indentfirst}  =>  {false}
+>  {english/fontsetup}  =>  {true}
+>  {english/envname}  =>  {english}
+>  {english/babelname}  =>  {american}
+>  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
+ [23
+
+
+] (./build/thesis.aux
+LaTeX Info: Redefining \rmfamily on input line 23.
+LaTeX Info: Redefining \sffamily on input line 23.
+LaTeX Info: Redefining \ttfamily on input line 23.
+)
+Package rerunfilecheck Info: File `thesis.aux' has not changed.
+(rerunfilecheck)             Checksum: 3280641B567CA2363F461A34D5DC9D7D;15042.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `thesis.toc' has not changed.
+(rerunfilecheck)             Checksum: C447D0B208A2A3DC533DE8F4330C79ED;1906.
+Package logreq Info: Writing requests to 'thesis.run.xml'.
+
+\openout1 = thesis.run.xml
+)
 
 Here is how much of LuaTeX's memory you used:
- 68181 strings out of 477811
+ 68538 strings out of 477811
  100000,3417909 words of node,token memory allocated
- 7447 words of node memory still in use:
-   52 hlist, 5 vlist, 2 rule, 71 disc, 5 local_par, 2 dir, 24 math, 121 glue, 49
- kern, 20 penalty, 1 choice, 16 noad, 2 accent, 2 fence, 12 math_char, 4 sub_box
-, 7 sub_mlist, 2 delim, 5 margin_kern, 531 glyph, 81 attribute, 73 glue_spec, 81
- attribute_list, 1 temp, 5 pdf_dest nodes
-   avail lists: 1:9,2:669,3:128,4:97,5:323,6:67,7:5736,8:49,9:844,10:15,11:584,1
-2:1
- 86976 multiletter control sequences out of 65536+600000
- 91 fonts using 28623407 bytes
- 122i,20n,114p,10601b,2454s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 877 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 1 local_par, 7 glue, 4 kern, 1 penalty, 2 sub_mlist
+, 1 margin_kern, 4 glyph, 39 attribute, 79 glue_spec, 39 attribute_list, 2 write
+, 5 pdf_action nodes
+   avail lists: 1:8,2:857,3:322,4:220,5:369,6:105,7:6382,8:138,9:888,10:15,11:65
+4,12:1
+ 87146 multiletter control sequences out of 65536+600000
+ 94 fonts using 29011519 bytes
+ 122i,20n,114p,10601b,3224s stack positions out of 5000i,500n,10000p,200000b,80000s
+</home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-reg
+ular.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmr
+omancaps10-regular.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype
+/public/lm/lmroman9-bold.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/op
+entype/public/lm-math/latinmodern-math.otf></home/nils/.local/texlive/2021/texmf
+-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/nils/.local/texlive/202
+1/texmf-dist/fonts/opentype/public/lm/lmroman9-regular.otf></home/nils/.local/te
+xlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></home/nils/
+.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></h
+ome/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmromanslant10-
+regular.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/
+lmroman10-italic.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/p
+ublic/lm-math/latinmodern-math.otf></home/nils/.local/texlive/2021/texmf-dist/fo
+nts/opentype/public/lm-math/latinmodern-math.otf></home/nils/.local/texlive/2021
+/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/nils/.local/te
+xlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/nils
+/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></hom
+e/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.ot
+f>
+Output written on thesis.pdf (29 pages, 1023715 bytes).
+
+PDF statistics: 445 PDF objects out of 1000 (max. 8388607)
+ 340 compressed objects within 4 object streams
+ 98 named destinations out of 1000 (max. 131072)
+ 136 words of extra memory for PDF output out of 10000 (max. 100000000)
+
