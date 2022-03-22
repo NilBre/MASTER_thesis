@@ -115,6 +115,21 @@ Here, $V_p$ is the measurement variance. With these metrics the minimal $\chi^2$
 
 \subsection{2. Step: Filter}
 During the filter step, the track state is updated with the measurement information.
+Iteratively, each measurement is added and the filtered state $\vec{r}_p$ and the corresponding covariance matrix is calculated via
+\begin{align}
+  \vec{r}_p &= \\
+  C_p &=
+\end{align}\,.
+
+Afterwards the residuals and its covariance matrix are calculated and the filtered $\chi^2$ for this measurement step is
+\begin{equation}
+
+\end{equation}\,.
+
+The prediction and filter procedure is continued for all measurements until the track is fully reconstructed.
+Because the last node at $p \, = \, n$ has the most information in it, a backward update is performed to infuse the previous nodes with the same information as in last node.
+This is called \textit{smoother}-step.
+
 \begin{itemize}
   \item gain matrix
   \item add measurement -> calculate chi2
@@ -132,8 +147,6 @@ During the filter step, the track state is updated with the measurement informat
 
 \section{Alignment using derivatives}
 \label{sec:derivatives}
-
-
 
 
 
