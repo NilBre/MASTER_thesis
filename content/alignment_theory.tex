@@ -93,7 +93,7 @@ For a given state vector at node \textit{p-1}, the prediction for the $p^{\text{
 
 \begin{align}
   \vec{r}_p^{p-1} &= f_p\left( \vec{r}_{p-1} \right) \\
-  C_p^{p-1} &= F_p C_{p-1} F_p^T + Q_k
+  \text{Cov}_p^{p-1} &= F_p C_{p-1} F_p^T + Q_k
 \end{align}
 
 The superscript of the statevector shows the number of measurements used in the estimate and can be abbreviated with $\vec{r}_p^p \equiv \vec{r}_p$. For a maximum number of n measurements $\vec{r}_p^n$ is the smoothed state where every measurement is used.
@@ -117,42 +117,48 @@ Here, $V_p$ is the measurement variance. With these metrics the minimal $\chi^2$
 During the filter step, the track state is updated with the measurement information.
 Iteratively, each measurement is added and the filtered state $\vec{r}_p$ and the corresponding covariance matrix is calculated via
 \begin{align}
-  \vec{r}_p &= \\
-  C_p &=
-\end{align}\,.
-
-Afterwards the residuals and its covariance matrix are calculated and the filtered $\chi^2$ for this measurement step is
+  \vec{r}_p &= \vec{r}_p^{p-1} + G_p \text{res}+p^{p-1} \\
+  \text{Cov}_p &= \left(\mathbb{1} - G_p H_p\right) \text{Cov}_p^{p-1}
+\end{align}\,,
+where $G_p$ is the gain matrix of dimension $5\times1$ and is defined as
 \begin{equation}
+  G_p = C_p^{p-1} H_p^T \left( \text{Cov}_{\text{res},p}^{p-1} \right)^{-1}
+\end{equation}
 
+Afterwards the residuals and its covariance matrix are calculated and the filtered total $\chi^2$ is defined as
+\begin{equation}
+  \left( \chi^2_{\text{filter}} \right)_p = \text{res}_p \text{Cov}_{\text{res},p}^{-1} \text{res}_p
 \end{equation}\,.
 
 The prediction and filter procedure is continued for all measurements until the track is fully reconstructed.
 Because the last node at $p \, = \, n$ has the most information in it, a backward update is performed to infuse the previous nodes with the same information as in last node.
 This is called \textit{smoother}-step.
 
-% \begin{itemize}
-%   \item gain matrix
-%   \item add measurement -> calculate chi2
-%   \item until all measurements are added to track (until full track reconstructed)
-%   \item k=n: best estimate: k<n no so good -> smoother step
-% \end{itemize}
-
 \subsection{3. Step: Smoother}
 The smoother function returns the best possible estimate for track states at
-the previous nodes. The method used is called \textit{Rauch_tung-Striebel}-smoother.
+the previous nodes. The method used is called \textit{Rauch-Tung-Striebel}-smoother.
+The idea is to used backward information and construct a smoothed state vector and covariance matrix
+\begin{align}
+  \tilde{r}_p^n &= \vec{r}_p + S_p \left( \vec{r}_{p+1}^n - \vec{r}_{p+1}^p \right) \\
+  \tilde{C}_p^n &= C_p
+\end{align}
+and the Smoother-matrix $S_p$ of dimension $5\times5$
+\begin{equation}
+  S_p = C_p F_{p+1}^T \left( C_{p+1}^p \right)^{-1}
+\end{equation}\,.
 
-% \begin{itemize}
-%   \item Rauch-Tung-Striebel smoother
-%   \item smoothed residuals and cov matrix
-%   \item calc total track chi2 = sum of smoothed chi2
-%   \item resolution: compare fit to MC track
-% \end{itemize}
+In order to calculate the smoothed $\chi^2$ the residual and correspending covariance matrix are
+\begin{align}
+  \res{r}_p &= m_p - h_p \vec{h}_p^n \\
+  \text{Cov}_{\text{res},p}^n &= V_p - H_p C_p^n H_p^T
+\end{align}
+An in depth explanation is given in \cite{RTS}.
+
+The $\chi^2$ is calculated analogously to the one during the filter step with the difference being the new residuals and covariances.
 
 \section{Alignment using derivatives}
 \label{sec:derivatives}
-
-
-
+% wouter
 
 
 
