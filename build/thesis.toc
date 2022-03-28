@@ -14,11 +14,11 @@
 \contentsline {section}{\numberline {3.2}The Kalman filter method \blx@tocontentsinit {0}\cite {VanTilburg}}{11}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}1. Step: Prediction}{11}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}2. Step: Filter}{12}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}3. Step: Smoother}{12}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Alignment using derivatives}{12}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Main part}{13}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Continuing Work}{18}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Future Work}{19}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusion and Outlook}{20}{chapter.7}%
-\contentsline {chapter}{\nonumberline Literatur}{21}{chapter*.13}%
+\contentsline {subsection}{\numberline {3.2.3}3. Step: Smoother}{13}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Alignment using derivatives}{13}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Main part}{14}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Continuing Work}{19}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Future Work}{20}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusion and Outlook}{21}{chapter.7}%
+\contentsline {chapter}{\nonumberline Literatur}{22}{chapter*.13}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

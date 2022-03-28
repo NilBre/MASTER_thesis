@@ -83,6 +83,22 @@
       \verb http://pdg.lbl.gov/2019/mobile/reviews/pdf/rpp2018-rev-phys-constants-m.pdf
       \endverb
     \endentry
+    \entry{RTS}{online}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labeltitlesource}{title}
+      \field{title}{The invariant Rauch-Tung-Striebel Smoother}
+      \field{urlday}{24}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://ras.papercept.net/images/temp/IROS/files/2526.pdf
+      \endverb
+      \verb{url}
+      \verb http://ras.papercept.net/images/temp/IROS/files/2526.pdf
+      \endverb
+    \endentry
     \entry{lhcbInfo}{online}{}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
