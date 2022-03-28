@@ -1,7 +1,11 @@
 \chapter{Main part}
 \label{sec:story}
 
-%We need to take a break for a bit to go to the simulation & reconstruction meeting now, but I'd like you to think about the work you have been doing on the alignment and what things have been investigated and what conclusions you have made. You want to build the story one piece at a time, so I think it will start with testing some of the constraints from the null tests and going from there. With the type of work you have been doing, you will also have a much larger "future work" and "continuing work" section, I would put it before the conclusion. This will be discussing things like the way we discovered the cluster bias and the way that it is linked to the rotational degrees of freedom, etc. And it can outline the things you know about the way the real detector will be aligned starting very soon.
+% I'd like you to think about the work you have been doing on the alignment and what things have been investigated and what conclusions you have made. You want to build the story one piece at a time, so I think it will start with testing some of the constraints from the null tests and going from there. With the type of work you have been doing, you will also have a much larger "future work" and "continuing work" section, I would put it before the conclusion. This will be discussing things like the way we discovered the cluster bias and the way that it is linked to the rotational degrees of freedom, etc. And it can outline the things you know about the way the real detector will be aligned starting very soon.
+% \begin{itemize}
+%   \item testing some of the constraints from the null tests
+%   \item future work: discovered cluster bias + link to rotational degrees of freedom
+% \end{itemize}
 
 taking notes for now so i know what plots to use
 \begin{enumerate}
@@ -11,13 +15,10 @@ taking notes for now so i know what plots to use
   \item
 \end{enumerate}
 
-%\section{all plots}
-%\subsection{june plots}
+% need to be sorted to according part of the story.
 
-need to be sorted to according part of the story.
-
-compare 1000 to 7000 events for Tx flo versus my constraints.
-what exactly were flo's changes?
+% compare 1000 to 7000 events for Tx flo versus my constraints.
+% what exactly were flo's changes?
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/june_21/Tx_noRota_allT_1000MU.png}
@@ -91,7 +92,164 @@ test 3:
 \end{figure}
 
 %\subsection{august plots}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/august_13/C_ASide_config5.png}
+  \caption{old config 5, plotted C and ASide.}
+  \label{fig:aug13_CA_old}
+\end{figure}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/august_13/CA_side_newconfig5.png}
+  \caption{new config 5, plotted C and ASide.}
+  \label{fig:aug13_CA_new}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/august_13/2019_c5_old_vs_withRz_MU.png}
+  \caption{config5 versus config 5 with Rz constraint for rotational improvement.}
+  \label{fig:withRz}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/august_13/combi5_layers_averaged.png}
+  \caption{flo with full layer constraint versus config 5}
+  \label{fig:floFullL_c5}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/august_13/new_combi5_config.png}
+  \caption{constraints for combi 5 used.}
+  \label{fig:constraints_c5}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/august_13/newCombi5.png}
+  \caption{original new config 5, should be the first good plot to show!!}
+  \label{fig:OGconfig5}
+\end{figure}
+
+% october plots
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/oct_4/TxRz_config5_backlayer.png}
+  \caption{dofs Tx Rz and backlayer constraints.}
+  \label{fig:oct4}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/oct_6/combi5_added_RZ_backlayer.png}
+  \caption{combi 5 with Rz backlayer constraint.}
+  \label{fig:oct6}
+\end{figure}
+
+% november plots
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/nov_19/Figure_2.png}
+  \caption{chi2 vs iteration count.}
+  \label{fig:fig2}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/nov_21/chi2_vs_iter_all.png}
+  \caption{chi2 versus iteration count.}
+  \label{fig:chi2iter}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/nov_21/chi2_vs_ntracks_all.png}
+  \caption{chi2 versus number of tracks.}
+  \label{fig:chi2tracks}
+\end{figure}
+
+% december plots
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/LHCB_week_dec/chi2_vs_iter_normal.png}
+  \caption{chi2 versus iteration count normal(?).}
+  \label{fig:chi2iterdec}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/LHCB_week_dec/chi2_vs_tracks_normal.png}
+  \caption{chi2 versus number of tracks normal.}
+  \label{fig:chi2tracksdec}
+\end{figure}
+
+% january plats
+january 17th plots are for luminosity comparisons.
+nu for ramp up luminosity versus lumi during data taking.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/jan_17_2022/chi2_iter_low_vs_normal.png}
+  \caption{compare different luminosities and plot chi2 versus iteration number as a measurement for weakmodes and alignment.}
+  \label{fig:chi2iter_lumi_normal}
+\end{figure}
+
+for figure \ref{fig:chi2iter_lumi_normal} redo the plot with correct labels!!
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/jan_17_2022/chi2_tracks_modulesOnly.png}
+  \caption{compare different luminosities and plot chi2 versus number of tracks as a measurement for weakmodes and alignment.}
+  \label{fig:chi2tracks_lumi_normal}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/jan_17_2022/tracks_vs_iterations_modulesOnly.png}
+  \caption{compare different luminosities and plot number of tracks versus iteration number as a measurement for weakmodes and alignment.}
+  \label{fig:chi2iter_lumi_normal}
+\end{figure}
+
+january 24th: show that there is a visible difference between low and normal luminosity however the difference is not big enough to differentiate between the two phases during the ramp up and full run. therefore, for the upcoming analysis steps only the "normal/low" luminosity is taken into consideration.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/jan_24_2022/compare_with_without_hack.png}
+  \caption{because of the clusterbias hack the difference between a measurement with the hack we implemented active and without is shown.}
+  \label{fig:cbhack_on_off}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/jan_24_2022/low_normal_with_hack.png}
+  \caption{show difference between low and normal luminosity with clusterbias hack active.}
+  \label{fig:lumi_low_normal_hack_on}
+\end{figure}
+
+% february plots
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/feb_2_2022/GL_modules_c5_cb_hackactive_low_normal_lumi.png}
+  \caption{GoodLong tracks for module alignment and config 5 active. also the clusterbias hack is active comparing low and normal luminosity.}
+  \label{fig:GL_lumi_low_normal_hack_on}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/feb_6_2022/100mu_misalignment_samples_compared.png}
+  \caption{100mu translation misalignment comparison for different misalignment samples.}
+  \label{fig:100muT}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png}
+  \caption{impact of removing constraints from exisiting studies regarding chi2.}
+  \label{fig:removeConst}
+\end{figure}
 
 %%% layout %%%
 %\section{Null tests and optimization of alignment parameters}
