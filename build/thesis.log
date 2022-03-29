@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.2.5)  28 MAR 2022 15:50
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.2.5)  29 MAR 2022 14:36
  restricted system commands enabled.
 **thesis.tex
 (./thesis.tex
@@ -492,12 +492,12 @@ braces):
 >  {german/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {german/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Module polyglossia Info: Language data for german
-(polyglossia)            righthyphenmin	2
-(polyglossia)            loader	loadhyph-de-1901.tex
-(polyglossia)            lefthyphenmin	2
 (polyglossia)            patterns	hyph-de-1901.pat.txt
 (polyglossia)            hyphenation	
-(polyglossia)            synonyms	 on input line 10
+(polyglossia)            synonyms	
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            loader	loadhyph-de-1901.tex
+(polyglossia)            righthyphenmin	2 on input line 10
 Module polyglossia Info: Language german was not yet loaded; created with id 2 o
 n input line 10
 Package polyglossia Info: Option: German, spelling=new.
@@ -1894,27 +1894,7 @@ Package: extdash 2018/06/24 v1.3 Extended Dash Package (NCC)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'polyglossia' package.
 
-(./build/thesis.aux
-LaTeX Info: Redefining \rmfamily on input line 23.
-LaTeX Info: Redefining \sffamily on input line 23.
-LaTeX Info: Redefining \ttfamily on input line 23.
-Module polyglossia Info: Language data for ngerman
-(polyglossia)            righthyphenmin	2
-(polyglossia)            loader	loadhyph-de-1996.tex
-(polyglossia)            lefthyphenmin	2
-(polyglossia)            patterns	hyph-de-1996.pat.txt
-(polyglossia)            hyphenation	
-(polyglossia)            synonyms	 on input line 23
-Module polyglossia Info: Language ngerman was not yet loaded; created with id 4 
-on input line 23
-
-
-LaTeX Warning: Label `fig:june_2' multiply defined.
-
-
-LaTeX Warning: Label `fig:chi2iter_lumi_normal' multiply defined.
-
-)
+(./build/thesis.aux)
 \openout1 = thesis.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
@@ -2079,8 +2059,15 @@ Package biblatex Info: ... file 'german.lbx' found.
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 File: german.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
-Module polyglossia Info: Language ngerman already loaded; id is 4 on input line 
-580
+Module polyglossia Info: Language data for ngerman
+(polyglossia)            patterns	hyph-de-1996.pat.txt
+(polyglossia)            hyphenation	
+(polyglossia)            synonyms	
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            loader	loadhyph-de-1996.tex
+(polyglossia)            righthyphenmin	2 on input line 580
+Module polyglossia Info: Language ngerman was not yet loaded; created with id 4 
+on input line 580
 )
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
@@ -2100,13 +2087,12 @@ Package biblatex Info: Automatic encoding selection.
 
 \openout4 = thesis.bcf
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'thesis.bbl' found.
+Package biblatex Info: ... file 'thesis.bbl' not found.
 
-(./build/thesis.bbl)
+No file thesis.bbl.
 Package biblatex Info: Reference section=0 on input line 152.
 Package biblatex Info: Reference segment=0 on input line 152.
 Package hyperref Info: Link coloring OFF on input line 152.
-
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -2176,11 +2162,6 @@ logos/tu-logo.pdf>] [2
 ]
 Package tocbasic Info: character protrusion at toc deactivated on input line 16
 2.
- (./build/thesis.toc
-LaTeX Info: Redefining \rmfamily on input line 1.
-LaTeX Info: Redefining \sffamily on input line 1.
-LaTeX Info: Redefining \ttfamily on input line 1.
-)
 \tf@toc=\write5
 
 \openout5 = thesis.toc
@@ -2195,6 +2176,9 @@ chapter 1.
 
 ]
 chapter 2.
+
+LaTeX Warning: Citation 'alphas' on page 2 undefined on input line 19.
+
 [2
 
 ]
@@ -2216,388 +2200,89 @@ Underfull \vbox (badness 2556) has occurred while \output is active []
  [3
 Missing character: There is no μ (U+03BC) in font [lmroman10-regular]:+tlig;!
 Missing character: There is no τ (U+03C4) in font [lmroman10-regular]:+tlig;!
-] [4]
+]
+
+LaTeX Warning: Citation 'lhcInfo' on page 4 undefined on input line 96.
+
+
+LaTeX Warning: Reference `fig:CERN' on page 4 undefined on input line 97.
+
+
+LaTeX Warning: Citation 'facilityCERN' on page 4 undefined on input line 97.
+
+[4]
 warning  (file plots/CERN_layout.pdf) (pdf inclusion): PDF inclusion: found PDF 
 version '1.7', but at most version '1.5' allowed
-<plots/CERN_layout.pdf, id=112, 597.55246pt x 845.07724pt>
+<plots/CERN_layout.pdf, id=78, 597.55246pt x 845.07724pt>
 File: plots/CERN_layout.pdf Graphic file (type pdf)
 <use plots/CERN_layout.pdf>
 Package luatex.def Info: plots/CERN_layout.pdf  used on input line 101.
 (luatex.def)             Requested size: 597.551pt x 845.07518pt.
 [5<./plots/CERN_layout.pdf>]
-<plots/LHCb_facility.jpg, id=125, 637.38126pt x 327.2225pt>
+<plots/LHCb_facility.jpg, id=88, 637.38126pt x 327.2225pt>
 File: plots/LHCb_facility.jpg Graphic file (type jpg)
 <use plots/LHCb_facility.jpg>
 Package luatex.def Info: plots/LHCb_facility.jpg  used on input line 117.
 (luatex.def)             Requested size: 197.17763pt x 101.22821pt.
 
 
+LaTeX Warning: Citation 'lhcbInfo' on page 6 undefined on input line 122.
+
+
+LaTeX Warning: Reference `fig:LHCb' on page 6 undefined on input line 122.
+
+
+LaTeX Warning: Citation 'scifiInfo' on page 6 undefined on input line 125.
+
+
 LaTeX Warning: Command \c invalid in math mode on input line 129.
 
 Missing character: There is no ̧ (U+0327) in font cmmi10!
-[6<./plots/LHCb_facility.jpg>]) (./content/alignment_theory.tex [7] [8]
+[6<./plots/LHCb_facility.jpg>]
+
+LaTeX Warning: Citation 'scifiInfo' on page 7 undefined on input line 143.
+
+) (./content/alignment_theory.tex [7] [8]
 chapter 3.
+
+LaTeX Warning: Citation 'VanTilburg' on page 9 undefined on input line 17.
+
 [9
 
 ] [10]
 
+LaTeX Warning: Citation 'VanTilburg' on page 11 undefined on input line 80.
+
+
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\cite' on input line 80.
 
-[11] [12]) (./content/story.tex [13]
+
+LaTeX Warning: Citation 'VanTilburg' on page 11 undefined on input line 103.
+
+[11] [12]
+
+LaTeX Warning: Citation 'RTS' on page 13 undefined on input line 155.
+
+) (./content/story.tex [13]
 chapter 4.
-<plots/june_21/Tx_noRota_allT_1000MU.png, id=209, 418.56375pt x 292.09125pt>
-File: plots/june_21/Tx_noRota_allT_1000MU.png Graphic file (type png)
-<use plots/june_21/Tx_noRota_allT_1000MU.png>
-Package luatex.def Info: plots/june_21/Tx_noRota_allT_1000MU.png  used on input
- line 24.
-(luatex.def)             Requested size: 315.48541pt x 220.15538pt.
-<plots/june_21/Tx_noRota_allT_7000MU.png, id=210, 426.09187pt x 295.85532pt>
-File: plots/june_21/Tx_noRota_allT_7000MU.png Graphic file (type png)
-<use plots/june_21/Tx_noRota_allT_7000MU.png>
-Package luatex.def Info: plots/june_21/Tx_noRota_allT_7000MU.png  used on input
- line 31.
-(luatex.def)             Requested size: 315.48541pt x 219.06944pt.
-<plots/june_21/allT_halfT3_n20_Tx.png, id=212, 453.19313pt x 301.8778pt>
-File: plots/june_21/allT_halfT3_n20_Tx.png Graphic file (type png)
-<use plots/june_21/allT_halfT3_n20_Tx.png>
-Package luatex.def Info: plots/june_21/allT_halfT3_n20_Tx.png  used on input li
-ne 39.
-(luatex.def)             Requested size: 315.48541pt x 210.14763pt.
-<plots/june_21/allT_halfT3_Tx_vs_Flo.png, id=213, 453.19313pt x 301.8778pt>
-File: plots/june_21/allT_halfT3_Tx_vs_Flo.png Graphic file (type png)
-<use plots/june_21/allT_halfT3_Tx_vs_Flo.png>
-Package luatex.def Info: plots/june_21/allT_halfT3_Tx_vs_Flo.png  used on input
- line 46.
-(luatex.def)             Requested size: 315.48541pt x 210.14763pt.
-<plots/june_21/CA_allT_halfT3_Tz.png, id=216, 455.45157pt x 301.125pt>
-File: plots/june_21/CA_allT_halfT3_Tz.png Graphic file (type png)
-<use plots/june_21/CA_allT_halfT3_Tz.png>
-Package luatex.def Info: plots/june_21/CA_allT_halfT3_Tz.png  used on input lin
-e 54.
-(luatex.def)             Requested size: 315.48541pt x 208.58974pt.
-<plots/june_21/CA_allT_halfT3_Tx.png, id=217, 450.9347pt x 305.64188pt>
-File: plots/june_21/CA_allT_halfT3_Tx.png Graphic file (type png)
-<use plots/june_21/CA_allT_halfT3_Tx.png>
-Package luatex.def Info: plots/june_21/CA_allT_halfT3_Tx.png  used on input lin
-e 62.
-(luatex.def)             Requested size: 315.48541pt x 213.84523pt.
-[14
-
-<./plots/june_21/Tx_noRota_allT_1000MU.png>] [15<./plots/june_21/Tx_noRota_allT_
-7000MU.png><./plots/june_21/allT_halfT3_n20_Tx.png>] [16<./plots/june_21/allT_ha
-lfT3_Tx_vs_Flo.png><./plots/june_21/CA_allT_halfT3_Tz.png>]
-<plots/july_28/Tx.png, id=247, 332.74312pt x 231.86626pt>
-File: plots/july_28/Tx.png Graphic file (type png)
-<use plots/july_28/Tx.png>
-Package luatex.def Info: plots/july_28/Tx.png  used on input line 76.
-(luatex.def)             Requested size: 118.30777pt x 82.43869pt.
-<plots/july_28/Tz.png, id=248, 331.99031pt x 231.11343pt>
-File: plots/july_28/Tz.png Graphic file (type png)
-<use plots/july_28/Tz.png>
-Package luatex.def Info: plots/july_28/Tz.png  used on input line 82.
-(luatex.def)             Requested size: 118.30777pt x 82.35793pt.
-<plots/july_28/Rx.png, id=249, 335.75438pt x 232.61906pt>
-File: plots/july_28/Rx.png Graphic file (type png)
-<use plots/july_28/Rx.png>
-Package luatex.def Info: plots/july_28/Rx.png  used on input line 88.
-(luatex.def)             Requested size: 118.30777pt x 81.96451pt.
-<plots/august_13/C_ASide_config5.png, id=250, 867.99281pt x 628.59843pt>
-File: plots/august_13/C_ASide_config5.png Graphic file (type png)
-<use plots/august_13/C_ASide_config5.png>
-Package luatex.def Info: plots/august_13/C_ASide_config5.png  used on input lin
-e 97.
-(luatex.def)             Requested size: 315.48541pt x 228.47255pt.
-<plots/august_13/CA_side_newconfig5.png, id=251, 863.47594pt x 654.94687pt>
-File: plots/august_13/CA_side_newconfig5.png Graphic file (type png)
-<use plots/august_13/CA_side_newconfig5.png>
-Package luatex.def Info: plots/august_13/CA_side_newconfig5.png  used on input 
-line 104.
-(luatex.def)             Requested size: 315.48541pt x 239.28847pt.
-<plots/august_13/2019_c5_old_vs_withRz_MU.png, id=252, 881.54344pt x 657.2053pt
->
-File: plots/august_13/2019_c5_old_vs_withRz_MU.png Graphic file (type png)
-<use plots/august_13/2019_c5_old_vs_withRz_MU.png>
-Package luatex.def Info: plots/august_13/2019_c5_old_vs_withRz_MU.png  used on 
-input line 111.
-(luatex.def)             Requested size: 315.48541pt x 235.19981pt.
-<plots/august_13/combi5_layers_averaged.png, id=253, 871.75688pt x 630.85687pt>
-
-File: plots/august_13/combi5_layers_averaged.png Graphic file (type png)
-<use plots/august_13/combi5_layers_averaged.png>
-Package luatex.def Info: plots/august_13/combi5_layers_averaged.png  used on in
-put line 118.
-(luatex.def)             Requested size: 315.48541pt x 228.30193pt.
-<plots/august_13/new_combi5_config.png, id=254, 693.34032pt x 514.17094pt>
-File: plots/august_13/new_combi5_config.png Graphic file (type png)
-<use plots/august_13/new_combi5_config.png>
-Package luatex.def Info: plots/august_13/new_combi5_config.png  used on input l
-ine 125.
-(luatex.def)             Requested size: 315.48541pt x 233.96384pt.
-<plots/august_13/newCombi5.png, id=255, 869.49844pt x 652.68843pt>
-File: plots/august_13/newCombi5.png Graphic file (type png)
-<use plots/august_13/newCombi5.png>
-Package luatex.def Info: plots/august_13/newCombi5.png  used on input line 132.
-
-(luatex.def)             Requested size: 315.48541pt x 236.82007pt.
-<plots/oct_4/TxRz_config5_backlayer.png, id=256, 904.1278pt x 654.94687pt>
-File: plots/oct_4/TxRz_config5_backlayer.png Graphic file (type png)
-<use plots/oct_4/TxRz_config5_backlayer.png>
-Package luatex.def Info: plots/oct_4/TxRz_config5_backlayer.png  used on input 
-line 140.
-(luatex.def)             Requested size: 315.48541pt x 228.53528pt.
-<plots/oct_6/combi5_added_RZ_backlayer.png, id=257, 901.86937pt x 655.69969pt>
-File: plots/oct_6/combi5_added_RZ_backlayer.png Graphic file (type png)
-<use plots/oct_6/combi5_added_RZ_backlayer.png>
-Package luatex.def Info: plots/oct_6/combi5_added_RZ_backlayer.png  used on inp
-ut line 147.
-(luatex.def)             Requested size: 315.48541pt x 229.36826pt.
-<plots/nov_19/Figure_2.png, id=258, 462.528pt x 346.896pt>
-File: plots/nov_19/Figure_2.png Graphic file (type png)
-<use plots/nov_19/Figure_2.png>
-Package luatex.def Info: plots/nov_19/Figure_2.png  used on input line 155.
-(luatex.def)             Requested size: 315.48541pt x 236.6272pt.
-<plots/nov_21/chi2_vs_iter_all.png, id=259, 462.528pt x 346.896pt>
-File: plots/nov_21/chi2_vs_iter_all.png Graphic file (type png)
-<use plots/nov_21/chi2_vs_iter_all.png>
-Package luatex.def Info: plots/nov_21/chi2_vs_iter_all.png  used on input line 
-162.
-(luatex.def)             Requested size: 315.48541pt x 236.6272pt.
-<plots/nov_21/chi2_vs_ntracks_all.png, id=260, 462.528pt x 346.896pt>
-File: plots/nov_21/chi2_vs_ntracks_all.png Graphic file (type png)
-<use plots/nov_21/chi2_vs_ntracks_all.png>
-Package luatex.def Info: plots/nov_21/chi2_vs_ntracks_all.png  used on input li
-ne 169.
-(luatex.def)             Requested size: 315.48541pt x 236.6272pt.
-<plots/LHCB_week_dec/chi2_vs_iter_normal.png, id=261, 956.07187pt x 375.65344pt
->
-File: plots/LHCB_week_dec/chi2_vs_iter_normal.png Graphic file (type png)
-<use plots/LHCB_week_dec/chi2_vs_iter_normal.png>
-Package luatex.def Info: plots/LHCB_week_dec/chi2_vs_iter_normal.png  used on i
-nput line 177.
-(luatex.def)             Requested size: 315.48541pt x 123.95454pt.
-<plots/LHCB_week_dec/chi2_vs_tracks_normal.png, id=262, 874.76813pt x 378.66469
-pt>
-File: plots/LHCB_week_dec/chi2_vs_tracks_normal.png Graphic file (type png)
-<use plots/LHCB_week_dec/chi2_vs_tracks_normal.png>
-Package luatex.def Info: plots/LHCB_week_dec/chi2_vs_tracks_normal.png  used on
- input line 184.
-(luatex.def)             Requested size: 315.48541pt x 136.56763pt.
-<plots/jan_17_2022/chi2_iter_low_vs_normal.png, id=263, 613.54219pt x 353.06906
-pt>
-File: plots/jan_17_2022/chi2_iter_low_vs_normal.png Graphic file (type png)
-<use plots/jan_17_2022/chi2_iter_low_vs_normal.png>
-Package luatex.def Info: plots/jan_17_2022/chi2_iter_low_vs_normal.png  used on
- input line 195.
-(luatex.def)             Requested size: 315.48541pt x 181.54974pt.
-<plots/jan_17_2022/chi2_tracks_modulesOnly.png, id=265, 613.54219pt x 354.57469
-pt>
-File: plots/jan_17_2022/chi2_tracks_modulesOnly.png Graphic file (type png)
-<use plots/jan_17_2022/chi2_tracks_modulesOnly.png>
-Package luatex.def Info: plots/jan_17_2022/chi2_tracks_modulesOnly.png  used on
- input line 204.
-(luatex.def)             Requested size: 315.48541pt x 182.32396pt.
-<plots/jan_17_2022/tracks_vs_iterations_modulesOnly.png, id=266, 619.56468pt x 
-355.3275pt>
-File: plots/jan_17_2022/tracks_vs_iterations_modulesOnly.png Graphic file (type
- png)
-<use plots/jan_17_2022/tracks_vs_iterations_modulesOnly.png>
-Package luatex.def Info: plots/jan_17_2022/tracks_vs_iterations_modulesOnly.png
-  used on input line 211.
-(luatex.def)             Requested size: 315.48541pt x 180.93268pt.
- [17<./plots/june_21/CA_allT_halfT3_Tx.png><./plots/july_28/Tx.png><./plots/july
-_28/Tz.png><./plots/july_28/Rx.png>] [18<./plots/august_13/C_ASide_config5.png><
-./plots/august_13/CA_side_newconfig5.png>] [19<./plots/august_13/2019_c5_old_vs_
-withRz_MU.png><./plots/august_13/combi5_layers_averaged.png>] [20<./plots/august
-_13/new_combi5_config.png><./plots/august_13/newCombi5.png>] [21<./plots/oct_4/T
-xRz_config5_backlayer.png><./plots/oct_6/combi5_added_RZ_backlayer.png>] [22<./p
-lots/nov_19/Figure_2.png><./plots/nov_21/chi2_vs_iter_all.png>] [23<./plots/nov_
-21/chi2_vs_ntracks_all.png><./plots/LHCB_week_dec/chi2_vs_iter_normal.png>] [24
-<./plots/LHCB_week_dec/chi2_vs_tracks_normal.png><./plots/jan_17_2022/chi2_iter_
-low_vs_normal.png>] [25<./plots/jan_17_2022/chi2_tracks_modulesOnly.png><./plots
-/jan_17_2022/tracks_vs_iterations_modulesOnly.png>]
-<plots/jan_24_2022/compare_with_without_hack.png, id=345, 913.16156pt x 650.43p
-t>
-File: plots/jan_24_2022/compare_with_without_hack.png Graphic file (type png)
-<use plots/jan_24_2022/compare_with_without_hack.png>
-Package luatex.def Info: plots/jan_24_2022/compare_with_without_hack.png  used 
-on input line 220.
-(luatex.def)             Requested size: 315.48541pt x 224.70625pt.
-<plots/jan_24_2022/low_normal_with_hack.png, id=346, 435.12563pt x 648.92438pt>
-
-File: plots/jan_24_2022/low_normal_with_hack.png Graphic file (type png)
-<use plots/jan_24_2022/low_normal_with_hack.png>
-Package luatex.def Info: plots/jan_24_2022/low_normal_with_hack.png  used on in
-put line 227.
-(luatex.def)             Requested size: 315.48541pt x 470.52249pt.
-<plots/feb_2_2022/GL_modules_c5_cb_hackactive_low_normal_lumi.png, id=347, 854.
-44218pt x 502.87875pt>
-File: plots/feb_2_2022/GL_modules_c5_cb_hackactive_low_normal_lumi.png Graphic 
-file (type png)
-<use plots/feb_2_2022/GL_modules_c5_cb_hackactive_low_normal_lumi.png>
-Package luatex.def Info: plots/feb_2_2022/GL_modules_c5_cb_hackactive_low_norma
-l_lumi.png  used on input line 235.
-(luatex.def)             Requested size: 315.48541pt x 185.67088pt.
-<plots/feb_6_2022/100mu_misalignment_samples_compared.png, id=348, 477.28313pt 
-x 355.3275pt>
-File: plots/feb_6_2022/100mu_misalignment_samples_compared.png Graphic file (ty
-pe png)
-<use plots/feb_6_2022/100mu_misalignment_samples_compared.png>
-Package luatex.def Info: plots/feb_6_2022/100mu_misalignment_samples_compared.p
-ng  used on input line 242.
-(luatex.def)             Requested size: 315.48541pt x 234.86928pt.
-<plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png, id=349, 688.82344
-pt x 353.06906pt>
-File: plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png Graphic file 
-(type png)
-<use plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png>
-Package luatex.def Info: plots/feb_6_2022/low_lumi_removed_constraints_vs_norma
-l.png  used on input line 249.
-(luatex.def)             Requested size: 315.48541pt x 161.70798pt.
-) (./content/continuing_work.tex
-[26<./plots/jan_24_2022/compare_with_without_hack.png>] [27<./plots/jan_24_2022/
-low_normal_with_hack.png>] [28<./plots/feb_2_2022/GL_modules_c5_cb_hackactive_lo
-w_normal_lumi.png><./plots/feb_6_2022/100mu_misalignment_samples_compared.png>]
- [29<./plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png>]
-chapter 5.
-) (./content/future_work.tex [30
-
-]
-chapter 6.
-) (./content/conclusion.tex [31
-
-]
-chapter 7.
-) [32
-
-]
-chapter without number
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-(./content/danksagung.tex [33
-
-
-]) [34
-
-] (./content/eid_versicherung.tex
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
-)
-The property list \polyglossia@langsetup contains the pairs (without outer
-braces):
->  {latex/script}  =>  {latin}
->  {latex/lcscript}  =>  {latin}
->  {latex/scripttag}  =>  {}
->  {latex/language}  =>  {Latex}
->  {latex/langtag}  =>  {ENG}
->  {latex/bcp47}  =>  {}
->  {latex/hyphennames}  =>  {english}
->  {latex/direction}  =>  {LR}
->  {latex/hyphenmins}  =>  {2,3}
->  {latex/frenchspacing}  =>  {false}
->  {latex/indentfirst}  =>  {false}
->  {latex/fontsetup}  =>  {true}
->  {latex/envname}  =>  {latex}
->  {latex/babelname}  =>  {latex}
->  {latex/localnumeral}  =>  {polyglossia@C@localnumeral}
->  {latex/Localnumeral}  =>  {polyglossia@C@localnumeral}
->  {german/script}  =>  {latin}
->  {german/lcscript}  =>  {latin}
->  {german/scripttag}  =>  {}
->  {german/language}  =>  {German}
->  {german/langtag}  =>  {DEU}
->  {german/bcp47}  =>  {de-DE}
->  {german/hyphennames}  =>  {}
->  {german/direction}  =>  {LR}
->  {german/hyphenmins}  =>  {2,2}
->  {german/frenchspacing}  =>  {true}
->  {german/indentfirst}  =>  {false}
->  {german/fontsetup}  =>  {true}
->  {german/envname}  =>  {german}
->  {german/babelname}  =>  {ngerman}
->  {german/localnumeral}  =>  {polyglossia@C@localnumeral}
->  {german/Localnumeral}  =>  {polyglossia@C@localnumeral}
->  {english/script}  =>  {latin}
->  {english/lcscript}  =>  {latin}
->  {english/scripttag}  =>  {}
->  {english/language}  =>  {English}
->  {english/langtag}  =>  {ENG}
->  {english/bcp47}  =>  {en-US}
->  {english/hyphennames}  =>  {english,american,usenglish,USenglish}
->  {english/direction}  =>  {LR}
->  {english/hyphenmins}  =>  {2,3}
->  {english/frenchspacing}  =>  {false}
->  {english/indentfirst}  =>  {false}
->  {english/fontsetup}  =>  {true}
->  {english/envname}  =>  {english}
->  {english/babelname}  =>  {american}
->  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
->  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
- [35
-
-
-] (./build/thesis.aux
-LaTeX Info: Redefining \rmfamily on input line 23.
-LaTeX Info: Redefining \sffamily on input line 23.
-LaTeX Info: Redefining \ttfamily on input line 23.
-)
-Package rerunfilecheck Info: File `thesis.aux' has not changed.
-(rerunfilecheck)             Checksum: DDA301D6C46822AAB795AA29208720EE;22053.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package rerunfilecheck Info: File `thesis.toc' has not changed.
-(rerunfilecheck)             Checksum: 7D5487F0DAF9BFDA689AECD3654FBA93;1906.
-Package logreq Info: Writing requests to 'thesis.run.xml'.
-
-\openout1 = thesis.run.xml
-)
+! Undefined control sequence.
+<argument> \radiant 
+         
+l.27 ...scale for the rotations being $\si{\radiant}
+                                                  $. A survey uncertainty of...
 
 Here is how much of LuaTeX's memory you used:
- 68886 strings out of 477811
+ 68257 strings out of 477811
  100000,3417909 words of node,token memory allocated
- 953 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 1 local_par, 7 glue, 4 kern, 1 penalty, 8 sub_mlist
-, 1 margin_kern, 4 glyph, 52 attribute, 79 glue_spec, 52 attribute_list, 2 write
-, 6 pdf_action nodes
-   avail lists: 1:8,2:1674,3:474,4:289,5:369,6:147,7:6383,8:138,9:888,10:15,11:6
-54,12:1
- 87316 multiletter control sequences out of 65536+600000
- 94 fonts using 29011635 bytes
- 122i,20n,114p,10601b,3224s stack positions out of 5000i,500n,10000p,200000b,80000s
-</home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-reg
-ular.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmr
-omancaps10-regular.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype
-/public/lm/lmroman9-bold.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/op
-entype/public/lm-math/latinmodern-math.otf></home/nils/.local/texlive/2021/texmf
--dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/nils/.local/texlive/202
-1/texmf-dist/fonts/opentype/public/lm/lmroman9-regular.otf></home/nils/.local/te
-xlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></home/nils/
-.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></h
-ome/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmromanslant10-
-regular.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/
-lmroman10-italic.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/p
-ublic/lm-math/latinmodern-math.otf></home/nils/.local/texlive/2021/texmf-dist/fo
-nts/opentype/public/lm-math/latinmodern-math.otf></home/nils/.local/texlive/2021
-/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/nils/.local/te
-xlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/nils
-/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></hom
-e/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.ot
-f>
-Output written on thesis.pdf (41 pages, 2303682 bytes).
-
-PDF statistics: 575 PDF objects out of 1000 (max. 8388607)
- 415 compressed objects within 5 object streams
- 141 named destinations out of 1000 (max. 131072)
- 136 words of extra memory for PDF output out of 10000 (max. 100000000)
-
+ 9393 words of node memory still in use:
+   23 hlist, 4 vlist, 2 rule, 2 mark, 39 disc, 5 local_par, 2 dir, 2 math, 229 g
+lue, 23 kern, 24 penalty, 8 sub_mlist, 11 margin_kern, 848 glyph, 89 attribute, 
+73 glue_spec, 89 attribute_list, 2 temp, 6 write, 2 pdf_dest, 6 pdf_colorstack n
+odes
+   avail lists: 1:9,2:656,3:139,4:90,5:349,6:71,7:5333,8:72,9:874,10:15,11:616,1
+2:1
+ 87004 multiletter control sequences out of 65536+600000
+ 91 fonts using 28623523 bytes
+ 122i,21n,114p,10601b,2454s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

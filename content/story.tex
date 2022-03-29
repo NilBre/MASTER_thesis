@@ -7,15 +7,50 @@
 %   \item future work: discovered cluster bias + link to rotational degrees of freedom
 % \end{itemize}
 
-taking notes for now so i know what plots to use
-\begin{enumerate}
-  \item started with null tests.
-  \item which constraint does what?
-  \item which degree of freedom moves what part of the scifi?
-  \item
-\end{enumerate}
+% taking notes for now so i know what plots to use
+% \begin{enumerate}
+%   \item started with null tests.
+%   \item which constraint does what?
+%   \item which degree of freedom moves what part of the scifi?
+% \end{enumerate}
+\section{general info}
 
-% need to be sorted to according part of the story.
+Alignment using tracks and vertices regarding stations layers and modules. testing constraints for different degrees of freedom with the goal to find the "perfect" configuration of constraints and alignable degrees of freedom.
+Used the pre-installed alignment conditions with the survey constraints being
+"FT : 0 0 0 0 0 0 : 1 1 1 0.0003 0.0003 0.0003”\\
+"FT/T. : 0 0 0 0 0 0 : 1 1 1 0.0003 0.0003 0.0003”\\
+"FT/T./Layer(X1|U|V|X2) : 0 0 0 0 0 0 : 0.2 0.2 0.2 0.0001 0.0001 0.0001”\\
+"FT/.*Module. : 0 0 0 0 0 0 : 0.1 0.1 0.1 0.001 0.001 0.001"\\
+"FT/.*Mat. : 0 0 0 0 0 0 : 0.05 0.05 0.05 0.1 0.1 0.1”\,.
+
+The string is the name of the element, the first set of six numbers are hardcoded parameters for each of the 3 translation degrees of freedom and 3 rotational degrees of freedom (Tx, Ty, Tz, Rx, Ry, Rz) and the second set of six parameters are the corresponding uncertainties.
+The scale for the translations are $\si{\milli\metre}$ and the scale for the rotations being $\si{\radiant}$. A survey uncertainty of $\num{0.0001}$ stands for $\SI{0.1}{\milli\radiant}$.
+
+The alignments have been performed with gaudisplititer.
+
+During the Alignment, lagrange constraints can be utilized to minimize the
+$\chi^2$ under the condition
+\begin{equation}
+  f(\alpha) = 0
+\end{equation}
+and adding the lagrange parameter $\Lambda$ to get
+\begin{equation}
+  \Delta \chi^2 = \Lambda f(\alpha)
+\end{equation}\,.
+
+Lagrange constraints are added to fix losely constrained degrees of freedom and can be used for any linear combination of movements.
+
+include table from https://twiki.cern.ch/twiki/bin/view/LHCb/TAlignmentManual.
+
+\section{Nulltests and software tests}
+
+As a starting point, Alignment v17r1 was used for 5000 events with the magnet in upward position and \textit{GoodLongTracks} (was sind goodlong tracks? definition von cuts etc.)
+
+Results: (sort under the right plots) \\
+\begin{itemize}
+  \item Alignment with Rz (and Rx) takes lots of iterations to converge
+  \item increasing nEvents does not improve it \to weak mode?
+\end{itemize}
 
 % compare 1000 to 7000 events for Tx flo versus my constraints.
 % what exactly were flo's changes?
@@ -135,6 +170,17 @@ test 3:
 \end{figure}
 
 % october plots
+update: constraining backlayer and also aligning it (append dofs by : Rx Rz)
+Results: \\
+\begin{itemize}
+  \item improves null tests for Rz but not the only reason why its shifted (cluster bias! expand later)
+  \item shearing and scaling constraints do NOT improve this
+\end{itemize}
+
+Results of 100mu translation misalignment: \\
+100mu translation misalignment matches expected survey uncertainty. BUT layers shifted from 0 !
+TODO: FTTrackmonitor to study later splitting in track output
+
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/oct_4/TxRz_config5_backlayer.png}
@@ -150,6 +196,18 @@ test 3:
 \end{figure}
 
 % november plots
+\section{$\chi^2$ tests and weak modes}
+In this section, $\chi^2$ are performed in order to study the "goodness" of the alignment since the better the $\chi^2$ after the alignment the better.
+The second aspect i want to cover is the impact of potential weak modes also known as "correlated alignment parameters". There are several weak modes that could occur namely \textit{global translation}, \textit{shearing} and \textit{curvature bias}.
+weak modes are unaffected by the $\chi^2$ since the residuals do not change.
+The effect weak modes have on the alignment are biases regarding track parameters and late convergences.
+There are different solutions that can be utilized to reduce the effect from weakmodes such as
+\begin{itemize}
+  \item \symbf{using other configurations like magnet off or mass plots for off-axis events}
+  \item \symbf{utilizing other survey data sets}
+  \item \symbf{using kinematic and vertex constraints}
+\end{itemize}\,.
+
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/nov_19/Figure_2.png}
@@ -251,7 +309,6 @@ january 24th: show that there is a visible difference between low and normal lum
   \label{fig:removeConst}
 \end{figure}
 
-%%% layout %%%
-%\section{Null tests and optimization of alignment parameters}
-%\section{\texorpdfstring{$\chi^2$}{chi2} analysis}
-%\section{Misalignment tests}
+% plan on how to sort things
+% sources from me:   1. little notebook for first part
+% after it was full: 2. sheets with dates
