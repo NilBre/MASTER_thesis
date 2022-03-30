@@ -24,7 +24,7 @@ Used the pre-installed alignment conditions with the survey constraints being
 "FT/.*Mat. : 0 0 0 0 0 0 : 0.05 0.05 0.05 0.1 0.1 0.1”\,.
 
 The string is the name of the element, the first set of six numbers are hardcoded parameters for each of the 3 translation degrees of freedom and 3 rotational degrees of freedom (Tx, Ty, Tz, Rx, Ry, Rz) and the second set of six parameters are the corresponding uncertainties.
-The scale for the translations are $\si{\milli\metre}$ and the scale for the rotations being $\si{\radiant}$. A survey uncertainty of $\num{0.0001}$ stands for $\SI{0.1}{\milli\radiant}$.
+The scale for the translations are $\si{\milli\metre}$ and the scale for the rotations being $\si{\radian}$. A survey uncertainty of $\num{0.0001}$ stands for $\SI{0.1}{\milli\radian}$.
 
 The alignments have been performed with gaudisplititer.
 
@@ -196,16 +196,16 @@ TODO: FTTrackmonitor to study later splitting in track output
 \end{figure}
 
 % november plots
-\section{$\chi^2$ tests and weak modes}
+\section{chi2 tests and weak modes}
 In this section, $\chi^2$ are performed in order to study the "goodness" of the alignment since the better the $\chi^2$ after the alignment the better.
 The second aspect i want to cover is the impact of potential weak modes also known as "correlated alignment parameters". There are several weak modes that could occur namely \textit{global translation}, \textit{shearing} and \textit{curvature bias}.
 weak modes are unaffected by the $\chi^2$ since the residuals do not change.
 The effect weak modes have on the alignment are biases regarding track parameters and late convergences.
 There are different solutions that can be utilized to reduce the effect from weakmodes such as
 \begin{itemize}
-  \item \symbf{using other configurations like magnet off or mass plots for off-axis events}
-  \item \symbf{utilizing other survey data sets}
-  \item \symbf{using kinematic and vertex constraints}
+  \item $\symbf{using other configurations like magnet off or mass plots for off-axis events}$
+  \item $\symbf{utilizing other survey data sets}$
+  \item $\symbf{using kinematic and vertex constraints}$
 \end{itemize}\,.
 
 \begin{figure}
