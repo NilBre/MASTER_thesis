@@ -18,9 +18,9 @@
 \contentsline {chapter}{\numberline {4}Main part}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}general info}{13}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Nulltests and software tests}{14}{section.4.2}%
-\contentsline {section}{\numberline {4.3}chi2 tests and weak modes}{22}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Continuing Work}{31}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Future Work}{32}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusion and Outlook}{33}{chapter.7}%
-\contentsline {chapter}{\nonumberline Literatur}{34}{chapter*.34}%
+\contentsline {section}{\numberline {4.3}chi2 tests and weak modes}{24}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Continuing Work}{32}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Future Work}{33}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusion and Outlook}{34}{chapter.7}%
+\contentsline {chapter}{\nonumberline Literatur}{35}{chapter*.34}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

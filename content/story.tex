@@ -15,15 +15,17 @@
 % \end{enumerate}
 \section{general info}
 
-Alignment using tracks and vertices regarding stations layers and modules. testing constraints for different degrees of freedom with the goal to find the "perfect" configuration of constraints and alignable degrees of freedom.
-Used the pre-installed alignment conditions with the survey constraints being
+Alignment using tracks and vertices regarding stations, layers and modules. Testing constraints for different degrees of freedom with the goal to find the "perfect" configuration of constraints and alignable degrees of freedoms.
+The following pre-installed alignment conditions with the survey constraints being\\
 "FT : 0 0 0 0 0 0 : 1 1 1 0.0003 0.0003 0.0003”\\
 "FT/T. : 0 0 0 0 0 0 : 1 1 1 0.0003 0.0003 0.0003”\\
 "FT/T./Layer(X1|U|V|X2) : 0 0 0 0 0 0 : 0.2 0.2 0.2 0.0001 0.0001 0.0001”\\
 "FT/.*Module. : 0 0 0 0 0 0 : 0.1 0.1 0.1 0.001 0.001 0.001"\\
-"FT/.*Mat. : 0 0 0 0 0 0 : 0.05 0.05 0.05 0.1 0.1 0.1”\,.
+"FT/.*Mat. : 0 0 0 0 0 0 : 0.05 0.05 0.05 0.1 0.1 0.1”\\
+were used.
 
 The string is the name of the element, the first set of six numbers are hardcoded parameters for each of the 3 translation degrees of freedom and 3 rotational degrees of freedom (Tx, Ty, Tz, Rx, Ry, Rz) and the second set of six parameters are the corresponding uncertainties.
+
 The scale for the translations are $\si{\milli\metre}$ and the scale for the rotations being $\si{\radian}$. A survey uncertainty of $\num{0.0001}$ stands for $\SI{0.1}{\milli\radian}$.
 
 The alignments have been performed with gaudisplititer.
@@ -33,27 +35,61 @@ $\chi^2$ under the condition
 \begin{equation}
   f(\alpha) = 0
 \end{equation}
-and adding the lagrange parameter $\Lambda$ to get
+and adding the lagrange parameter $\lambda$ to get
 \begin{equation}
-  \Delta \chi^2 = \Lambda f(\alpha)
+  \Delta \chi^2 = \lambda f(\alpha)
 \end{equation}\,.
 
 Lagrange constraints are added to fix losely constrained degrees of freedom and can be used for any linear combination of movements.
 
-include table from https://twiki.cern.ch/twiki/bin/view/LHCb/TAlignmentManual.
+%include table from https://twiki.cern.ch/twiki/bin/view/LHCb/TAlignmentManual.
 
 \section{Nulltests and software tests}
 
-As a starting point, Alignment v17r1 was used for 5000 events with the magnet in upward position and \textit{GoodLongTracks} (was sind goodlong tracks? definition von cuts etc.)
-
-Results: (sort under the right plots) \\
+As a starting point, Alignment v17r1 was used with 5000 events, magnet in upward position and \textit{GoodLongTracks}.
+The \textit{GoodLongTracks} have the following cuts and parameters:
 \begin{itemize}
-  \item Alignment with Rz (and Rx) takes lots of iterations to converge
-  \item increasing nEvents does not improve it \to weak mode?
+  \item minimum $P_{\text{total}} = 5000$ (units? 5000 MeV?)
+  \item maximum $P_{\text{total}} = 200 000$ (units? 200 000 MeV = 200 GeV?)
+  \item minimum $p_T = 200$ (units?)
+  \item maximum $\chi^2 = 5$
+  \item track type should be categorized as "long" (what does that mean -> hits in every subdetector)
+  \item maximum number of THoles? is 1
 \end{itemize}
 
-% compare 1000 to 7000 events for Tx flo versus my constraints.
-% what exactly were flo's changes?
+and for the later used \textit{HighMomentumTTracks} the cuts and parameters are:
+\begin{itemize}
+  \item minimum $P_{\text{total}} = 50000$ (units?)
+  \item track type should be categorized as "Ttrack"
+  \item maximum $\chi^2 = 5$
+\end{itemize}
+
+% source: https://gitlab.cern.ch/lhcb/Alignment/-/blob/master/Alignment/TAlignment/python/TAlignment/TrackSelections.py
+
+% Results: (sort under the right plots) \\
+% \begin{itemize}
+%   \item Alignment with Rz (and Rx) takes lots of iterations to converge
+%   \item increasing nEvents does not improve it \to weak mode?
+% \end{itemize}
+
+At first, a series of tests regarding different degrees of freedom and lagrange constraints is performed to find the optimal solution for the SciFi. This called Nulltests.
+
+The real detector layers are all centered around the beampipe with no shifting in any direction and the goal is to align the layers in the software to mirror the real layers, therefore reduce the shifting as close to zero as possible.
+
+As a baseline the configuration from Florian Reiss is used and improved.
+In this part, the steps of testing different configurations is described and analysed.
+%What is florians configuration?? -> lxplus, one of the first plots.
+%Then describe the configuration i chose.
+Figure \ref{dofs} is used to demonstrate which degrees of freedeom can be used
+to describe a point in the detector or a shift in coordinates.
+
+Florian made a crucial change in the code in form of a bug fix which resulted
+in the following configuration:
+\begin{itemize}
+  \item dofs: Tx and Rz
+  \item constraints: unconstrained
+\end{itemize}
+
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/june_21/Tx_noRota_allT_1000MU.png}
@@ -61,12 +97,24 @@ Results: (sort under the right plots) \\
   \label{fig:june_2}
 \end{figure}
 
+The measurement points are the mean of each layer, therefore the errorbars on Florians measurement are root-mean-square errors and come from the difference between the C-side and the A-side of the detector layer and is NOT the measurement uncertainty.
+The green measurement used the following configuration:
+\begin{itemize}
+  \item here my config for the green plots -> see lxplus i guess
+\end{itemize}
+The constraints are selected because... (first of all look them up, then describe)
+This measurement only used 1000 events and is only used as a guideline to what the actual distribution could look like.
+
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/june_21/Tx_noRota_allT_7000MU.png}
   \caption{comparison of different configurations without rotational constraints in all stations, magnet up and 7000 events. plotted is x translation versus global z.}
-  \label{fig:june_2}
+  \label{fig:june_2_1}
 \end{figure}
+
+In figure \ref{fig:june_2_1} the same measurement is performed for 7000 events to get a better picture. In comparison to \ref{fig:june_2} an overall improvement in Florians configuration is visible and the layer-splitting is reduced but still prominent. The green measurement shows no direct improvement since the layers are already pretty close to zero in x-direction, where we want them.
+
+The following measurements used 3000 events because the performance did not change much when using 5000 or even 7000 events. Also, the time the computer needed to finish an alignment run for 7000 events and 10 iterations was a lot longer than for 3000 events.
 
 maybe show this plot \ref{fig:june_3}
 \begin{figure}
