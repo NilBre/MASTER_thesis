@@ -822,9 +822,12 @@ INPUT ./plots/oct_4/TxRz_config5_backlayer.png
 INPUT ./plots/oct_6/combi5_added_RZ_backlayer.png
 INPUT ./plots/oct_6/combi5_added_RZ_backlayer.png
 INPUT ./plots/oct_6/combi5_added_RZ_backlayer.png
+INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-bold.luc
+INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-bold.luc
 INPUT ./plots/nov_19/Figure_2.png
 INPUT ./plots/nov_19/Figure_2.png
 INPUT ./plots/nov_19/Figure_2.png
+INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-regular.luc
 INPUT ./plots/nov_21/chi2_vs_iter_all.png
 INPUT ./plots/nov_21/chi2_vs_iter_all.png
 INPUT ./plots/nov_21/chi2_vs_iter_all.png

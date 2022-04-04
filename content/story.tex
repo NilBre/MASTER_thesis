@@ -17,6 +17,7 @@
 
 Alignment using tracks and vertices regarding stations, layers and modules. Testing constraints for different degrees of freedom with the goal to find the "perfect" configuration of constraints and alignable degrees of freedoms.
 The following pre-installed alignment conditions with the survey constraints being\\
+\\
 "FT : 0 0 0 0 0 0 : 1 1 1 0.0003 0.0003 0.0003”\\
 "FT/T. : 0 0 0 0 0 0 : 1 1 1 0.0003 0.0003 0.0003”\\
 "FT/T./Layer(X1|U|V|X2) : 0 0 0 0 0 0 : 0.2 0.2 0.2 0.0001 0.0001 0.0001”\\
@@ -226,12 +227,17 @@ In comparison to what florians configuration looks like against the new proposed
 
 It is good to see that the layer separation in $Rz$ is mostly fixed. But there is still an offset from 0 that is troublesome. This will most certainly have something to do with the clusterbias. Regarding Tx, we(I) have managed to bring down the x-translation to roughly 0 which is a good improvement for the null tests of Tx.
 
+Translation constraints as well as rotation constraints are not the only constraints tested. There are also scaling- and shearing constraints that were tested but
+resulted in no improvement therefore they are just mentioned.
+
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/august_13/new_combi5_config.png}
   \caption{constraints for combi 5 used.}
   \label{fig:constraints_c5}
 \end{figure}
+
+In figure \ref{fig:constraints_c5} the constraints used for the original config5 are used (link to the plot? i don't know which one it exactly was so better not include it or look it up on laptop)
 
 \begin{figure}
   \centering
@@ -240,17 +246,19 @@ It is good to see that the layer separation in $Rz$ is mostly fixed. But there i
   \label{fig:OGconfig5}
 \end{figure}
 
-% october plots
-update: constraining backlayer and also aligning it (append dofs by : Rx Rz)
-Results: \\
-\begin{itemize}
-  \item improves null tests for Rz but not the only reason why its shifted (cluster bias! expand later)
-  \item shearing and scaling constraints do NOT improve this
-\end{itemize}
+\ref{fig:OGconfig5} only used Tx and Rx as dofs -> bad, dont show this plot (mark for removal)
 
-Results of 100mu translation misalignment: \\
-100mu translation misalignment matches expected survey uncertainty. BUT layers shifted from 0 !
-TODO: FTTrackmonitor to study later splitting in track output
+% october plots
+% update: constraining backlayer and also aligning it (append dofs by : Rx Rz)
+% Results: \\
+% \begin{itemize}
+%   \item improves null tests for Rz but not the only reason why its shifted (cluster bias! expand later)
+%   \item shearing and scaling constraints do NOT improve this
+% \end{itemize}
+
+% Results of 100mu translation misalignment: \\
+% 100mu translation misalignment matches expected survey uncertainty. BUT layers shifted from 0 !
+% TODO: FTTrackmonitor to study later splitting in track output
 
 \begin{figure}
   \centering
@@ -266,6 +274,8 @@ TODO: FTTrackmonitor to study later splitting in track output
   \label{fig:oct6}
 \end{figure}
 
+TODO: redo the plots for \ref{fig:oct4} and \ref{fig:oct6} and don't use florian but instead use a different config5 to compare with!
+
 % november plots
 \section{chi2 tests and weak modes}
 In this section, $\chi^2$ are performed in order to study the "goodness" of the alignment since the better the $\chi^2$ after the alignment the better.
@@ -274,59 +284,59 @@ weak modes are unaffected by the $\chi^2$ since the residuals do not change.
 The effect weak modes have on the alignment are biases regarding track parameters and late convergences.
 There are different solutions that can be utilized to reduce the effect from weakmodes such as
 \begin{itemize}
-  \item $\symbf{using other configurations like magnet off or mass plots for off-axis events}$
-  \item $\symbf{utilizing other survey data sets}$
-  \item $\symbf{using kinematic and vertex constraints}$
+  \item $\textbf{using other configurations like magnet off or mass plots for off-axis events}$
+  \item $\textbf{utilizing other survey data sets}$
+  \item $\textbf{using kinematic and vertex constraints}$
 \end{itemize}\,.
 
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/nov_19/Figure_2.png}
-  \caption{chi2 vs iteration count.}
+  \caption{$\chi^2$-test versus iteration number of different degrees of freedom, alignables and data samples.}
   \label{fig:fig2}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/nov_21/chi2_vs_iter_all.png}
-  \caption{chi2 versus iteration count.}
+  \caption{$\chi^2$-test versus iteration number of different degrees of freedom, alignables and data samples but fewer (redo with grid).}
   \label{fig:chi2iter}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/nov_21/chi2_vs_ntracks_all.png}
-  \caption{chi2 versus number of tracks.}
+  \caption{$\chi^2$-test versus number of tracks of different degrees of freedom, alignables and data samples but fewer (redo with grid).}
   \label{fig:chi2tracks}
 \end{figure}
 
 % december plots
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{plots/LHCB_week_dec/chi2_vs_iter_normal.png}
+  \includegraphics[width=\textwidth]{plots/LHCB_week_dec/chi2_vs_iter_normal.png}
   \caption{chi2 versus iteration count normal(?).}
   \label{fig:chi2iterdec}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{plots/LHCB_week_dec/chi2_vs_tracks_normal.png}
+  \includegraphics[width=\textwidth]{plots/LHCB_week_dec/chi2_vs_tracks_normal.png}
   \caption{chi2 versus number of tracks normal.}
   \label{fig:chi2tracksdec}
 \end{figure}
 
 % january plats
-january 17th plots are for luminosity comparisons.
-nu for ramp up luminosity versus lumi during data taking.
+% january 17th plots are for luminosity comparisons.
+% nu for ramp up luminosity versus lumi during data taking.
 
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/jan_17_2022/chi2_iter_low_vs_normal.png}
-  \caption{compare different luminosities and plot chi2 versus iteration number as a measurement for weakmodes and alignment.}
+  \caption{compare different luminosities and plot $\chi^2$ versus iteration number as a measurement for weak modes and alignment.}
   \label{fig:chi2iter_lumi_normal}
 \end{figure}
 
-for figure \ref{fig:chi2iter_lumi_normal} redo the plot with correct labels!!
+for figure \ref{fig:chi2iter_lumi_normal} redo the plot with correct labels and legend !!
 
 \begin{figure}
   \centering
@@ -342,7 +352,15 @@ for figure \ref{fig:chi2iter_lumi_normal} redo the plot with correct labels!!
   \label{fig:chi2iter_lumi_normal}
 \end{figure}
 
-january 24th: show that there is a visible difference between low and normal luminosity however the difference is not big enough to differentiate between the two phases during the ramp up and full run. therefore, for the upcoming analysis steps only the "normal/low" luminosity is taken into consideration.
+% january 24th:
+\section{impact of the cluster bias}
+
+As mentioned earlier the clusterbias most certainly causes the shift in the rotation around z for each layer so it does not reach 0.
+To test that a momentary fix was found and implemented. The workaround was to a add a scaling to the value ... (look in laptop) by $\num{0.95}$.
+
+Figure \ref{fig:cbhack_on_off} shows the impact of the cluster bias
+hack regarding the rotation around $z$.
+% show that there is a visible difference between low and normal luminosity however the difference is not big enough to differentiate between the two phases during the ramp up and full run. therefore, for the upcoming analysis steps only the "normal/low" luminosity is taken into consideration.
 
 \begin{figure}
   \centering
@@ -350,6 +368,17 @@ january 24th: show that there is a visible difference between low and normal lum
   \caption{because of the clusterbias hack the difference between a measurement with the hack we implemented active and without is shown.}
   \label{fig:cbhack_on_off}
 \end{figure}
+
+As we expected, the amount of rotation was reduced to about
+$\SI{0.004}{\milli\radian}$ from the previous $\SI{0.01}{\milli\radian}$ which is more than a factor of 2 improvement. We also know, that the fix for the cluster bias will not be the only source for the shift and we need further analysis to find the other sources.
+
+Now that we know, that the cluster bias can be taken care of we take a closer look at samples of different luminosities since the LHC will not be operated at the maximum luminosity from the start, there is also the ramp up phase where the luminosity will be lower so that is what will be discussed in the following part.
+
+Since we want to know what the shifts in rotation and translation will look like when the cluster bias is fixed we will keep it active for the next studies.
+Figure \ref{fig:lumi_low_normal_hack_on} shows the difference between a sample with ramp-up luminosity and a sample with the luminosity during the measurement phase.
+We see, that the layer separation is much more prominent in station 1 and 3 for the higher luminosity sample but slightly better behaved in station 2 when looking at x-translation.
+Regarding the z-rotation, the lower luminosity sample as slightly lower rotational shifts.
+The difference is so minute that i can be safely disregarded. (not sure about that)
 
 \begin{figure}
   \centering
@@ -359,6 +388,8 @@ january 24th: show that there is a visible difference between low and normal lum
 \end{figure}
 
 % february plots
+
+
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/feb_2_2022/GL_modules_c5_cb_hackactive_low_normal_lumi.png}
