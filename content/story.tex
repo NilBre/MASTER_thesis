@@ -138,7 +138,8 @@ the figure in \ref{fig:june_4} shows that very strict Tx constraints make Tx loo
   \caption{compare C-Side to A-Side for Translation in z direction. (look up exact constraints and dofs)}
   \label{fig:june_5}
 \end{figure}
-a clear layer separation is visible. because of the many constraints that are applied to T3, a compensation is happening in the other two stations.
+a clear layer separation is visible. Because of the many constraints that are
+applied to T3, the RMS uncertainty in the other stations get worse.
 
 \begin{figure}
   \centering
@@ -147,47 +148,60 @@ a clear layer separation is visible. because of the many constraints that are ap
   \label{fig:june_6}
 \end{figure}
 
-Looking at figure \ref{fig:june_6}, the last two layers in station 3 are seperation from the first two. Especially the last station should be fixed around zero with the constraints added. The sum of all translations should be zero with each individual layer movement being small.
+Looking at figure \ref{fig:june_6}, the last two layers in station 3 are
+seperation from the first two regarding x-translation. Especially the last
+station should be fixed around zero with the constraints added. The sum of
+all translations should be zero with each individual layer movement being small.
+
+This layer-separation problem will be looked at at a later stage.
 
 %\subsection{july plots}
+\subsection{rotational constraints}
+The impact of rotational constraints is looked at now. Firstly, comparing
+florians starting configuration versus the new one with added constraints.
+The direct impact to the rotations are quite small but the translations
+in z- and x-direction show a small improvement to the previous configuration
+seen in figure \ref{fig:june_4}.
 
-test 3:
+% test 3:
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.3\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{plots/july_28/Tx.png}
-    \caption{Tx versus global z.}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[b]{0.3\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{plots/july_28/Tz.png}
-    \caption{Tz versus global z.}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[b]{0.3\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{plots/july_28/Rx.png}
-    \caption{Rx versus global z.}
-  \end{subfigure}
-  \caption{Testing a configuration versus florians changes.}
+  \includegraphics[width=\textwidth]{plots/july_28/Tx.png}
+  \caption{Tx versus global z.}
+  % \hfill
+  % \begin{subfigure}[b]{0.3\textwidth}
+  %   \centering
+  %   \includegraphics[width=\textwidth]{plots/july_28/Rx.png}
+  %   \caption{Rx versus global z.}
+  % \end{subfigure}
+  % \caption{Testing a configuration versus florians changes.}
 \end{figure}
 
 %\subsection{august plots}
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{plots/august_13/C_ASide_config5.png}
-  \caption{old config 5, plotted C and ASide.}
-  \label{fig:aug13_CA_old}
-\end{figure}
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{plots/august_13/C_ASide_config5.png}
+%   \caption{old config 5, plotted C and ASide.}
+%   \label{fig:aug13_CA_old}
+% \end{figure}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{plots/august_13/CA_side_newconfig5.png}
-  \caption{new config 5, plotted C and ASide.}
-  \label{fig:aug13_CA_new}
-\end{figure}
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{plots/august_13/CA_side_newconfig5.png}
+%   \caption{new config 5, plotted C and ASide.}
+%   \label{fig:aug13_CA_new}
+% \end{figure}
+
+Now, we have a configuration\footnote{The always used configuration will be
+always called "config5" in the labels} which is quite ok but has a lot more room for improvement but is nevertheless and better representation than the first draft from florian.
+Therefore we will now compare further configuration drafts to the "config5" with the following constraints
+\begin{itemize}
+  \item constraint 1
+  \item constraint 2
+  \item constraint 3
+  \item ...
+\end{itemize}
+and the dataset used is taken from the bookkeeping (what exactly?).
 
 \begin{figure}
   \centering
@@ -196,12 +210,21 @@ test 3:
   \label{fig:withRz}
 \end{figure}
 
+In figure \ref{fig:withRz} config5 is plotted against itself but with and added constraint to Rz.
+The change is the constraint: (fill constraint here).
+The result is a small improvement in Rz of around $\SI{0.005}{\milli\radian}$ in every layer. $Rx$ is mostly unchanged and the small differences in $Tx$ are caused by a nudge in the plotting script so that the data points do not overlap. The rotation around $z$ is correlated to the $z$ translation therefore we see small changes in every layer as well.
+It is noteworthy, that both X-layers in T2 in the x-translation plot have a quite large RMS uncertainty which means the A-side and the C-side in the X-layers are quite far apart but the mean is right around 0. That is expected since the constraint added only brings the mean of the layer to 0. In future analyses another constraint should be added to also keep the side themselves small.
+
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/august_13/combi5_layers_averaged.png}
   \caption{flo with full layer constraint versus config 5}
   \label{fig:floFullL_c5}
 \end{figure}
+
+In comparison to what florians configuration looks like against the new proposed configuration the figure \ref{fig:floFullL_c5} can be looked at.
+
+It is good to see that the layer separation in $Rz$ is mostly fixed. But there is still an offset from 0 that is troublesome. This will most certainly have something to do with the clusterbias. Regarding Tx, we(I) have managed to bring down the x-translation to roughly 0 which is a good improvement for the null tests of Tx.
 
 \begin{figure}
   \centering

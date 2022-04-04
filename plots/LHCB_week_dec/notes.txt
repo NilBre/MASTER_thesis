@@ -11,10 +11,14 @@ deacreasing chi2 / dofs with higher number of tracks is expected
 
 chi2 / dof should not spike, instead decrease with number of iterations
 
-the extended files have a plot with 20 iterations for the red curve because it looked promising.
+the extended files have a plot with 20 iterations for the red curve because it
+looked promising.
 
-in the "chi2_iter_extended" figure, the spikey behavior after iteration 10 maybe due to a programming error, but maybe not. further investigations are needed.
+in the "chi2_iter_extended" figure, the spikey behavior after iteration 10
+maybe due to a programming error, but maybe not. further investigations are needed.
+
 #############################
+
 same files used as in the chi2 plots with the same constraints.
 The dofs used are in the file name as well as in the figure.
 
