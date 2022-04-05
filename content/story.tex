@@ -81,11 +81,12 @@ As a baseline the configuration from Florian Reiss is used and improved.
 In this part, the steps of testing different configurations is described and analysed.
 %What is florians configuration?? -> lxplus, one of the first plots.
 %Then describe the configuration i chose.
-Figure \ref{dofs} is used to demonstrate which degrees of freedeom can be used
+Figure \ref{fig:dofs} is used to demonstrate which degrees of freedeom can be used
 to describe a point in the detector or a shift in coordinates.
 
 Florian made a crucial change in the code in form of a bug fix which resulted
 in the following configuration:
+
 \begin{itemize}
   \item dofs: Tx and Rz
   \item constraints: unconstrained
@@ -223,30 +224,39 @@ It is noteworthy, that both X-layers in T2 in the x-translation plot have a quit
   \label{fig:floFullL_c5}
 \end{figure}
 
-In comparison to what florians configuration looks like against the new proposed configuration the figure \ref{fig:floFullL_c5} can be looked at.
+In comparison to what florians configuration looks like against the new
+proposed configuration the figure \ref{fig:floFullL_c5} can be looked at.
+The alignment was performed for 10 iterations and the alignable degrees of
+freedom are $\symup{Tx}, \symup{Tz}, \symup{Rx}, \symup{Rz}$. The alignable
+elements are the stations and the framelayers.
+The constraints used are: \\
+\\
+"station3 : FT/T3 : Tx Rz Rx Rz" \\
+"backCframeT3 : FT/T3/Layer(V|X2) : Tx Tz" \\
+"FT/T3X1UCSide : /dd/Structure/LHCb/AfterMagnetRegion/T/FT/T3/Layer(X1|U)/Quarter(0|2) : Tx Tz Rx Rz" \\
+"FT/T3VX2CSide : /dd/Structure/LHCb/AfterMagnetRegion/T/FT/T3/Layer(V|X2)/Quarter(0|2) : Tx Tz Rx Rz" \\
+"FT/T3X1UASide : /dd/Structure/LHCb/AfterMagnetRegion/T/FT/T3/Layer(X1|U)/Quarter(1|3) : Tx Tz Rx Rz" \\
+"FT/T3VX2ASide : /dd/Structure/LHCb/AfterMagnetRegion/T/FT/T3/Layer(V|X2)/Quarter(1|3) : Tx Tz Rx Rz" \\
+\\
+The first constraint constraints the overall station 3 in $\symup{Tx}, \symup{Tz},
+\symup{Rx}$ and $\symup{Rz}$. The second constraint restricts the total movement
+of the last C-frame to be 0 but the individual movement can differ.
+The last four constraints are C-frame constraints as well but for each halflayer in station 3.
 
 It is good to see that the layer separation in $Rz$ is mostly fixed. But there is still an offset from 0 that is troublesome. This will most certainly have something to do with the clusterbias. Regarding Tx, we(I) have managed to bring down the x-translation to roughly 0 which is a good improvement for the null tests of Tx.
 
 Translation constraints as well as rotation constraints are not the only constraints tested. There are also scaling- and shearing constraints that were tested but
 resulted in no improvement therefore they are just mentioned.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{plots/august_13/new_combi5_config.png}
-  \caption{constraints for combi 5 used.}
-  \label{fig:constraints_c5}
-\end{figure}
 
-In figure \ref{fig:constraints_c5} the constraints used for the original config5 are used (link to the plot? i don't know which one it exactly was so better not include it or look it up on laptop)
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{plots/august_13/newCombi5.png}
-  \caption{original new config 5, should be the first good plot to show!!}
-  \label{fig:OGconfig5}
-\end{figure}
-
-\ref{fig:OGconfig5} only used Tx and Rx as dofs -> bad, dont show this plot (mark for removal)
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{plots/august_13/newCombi5.png}
+%   \caption{original new config 5, should be the first good plot to show!!}
+%   \label{fig:OGconfig5}
+% \end{figure}
+%
+% \ref{fig:OGconfig5} only used Tx and Rx as dofs -> bad, dont show this plot (mark for removal)
 
 % october plots
 % update: constraining backlayer and also aligning it (append dofs by : Rx Rz)
