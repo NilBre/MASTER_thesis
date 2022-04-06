@@ -248,7 +248,6 @@ It is good to see that the layer separation in $Rz$ is mostly fixed. But there i
 Translation constraints as well as rotation constraints are not the only constraints tested. There are also scaling- and shearing constraints that were tested but
 resulted in no improvement therefore they are just mentioned.
 
-
 % \begin{figure}
 %   \centering
 %   \includegraphics[width=0.8\textwidth]{plots/august_13/newCombi5.png}
@@ -388,7 +387,7 @@ Since we want to know what the shifts in rotation and translation will look like
 Figure \ref{fig:lumi_low_normal_hack_on} shows the difference between a sample with ramp-up luminosity and a sample with the luminosity during the measurement phase.
 We see, that the layer separation is much more prominent in station 1 and 3 for the higher luminosity sample but slightly better behaved in station 2 when looking at x-translation.
 Regarding the z-rotation, the lower luminosity sample as slightly lower rotational shifts.
-The difference is so minute that i can be safely disregarded. (not sure about that)
+The difference is so minute that it can be safely disregarded. (not sure about that)
 
 \begin{figure}
   \centering
@@ -398,7 +397,9 @@ The difference is so minute that i can be safely disregarded. (not sure about th
 \end{figure}
 
 % february plots
-
+With that, we tested if there is a noticable difference in the $\frac{\chi^2}{\text{dof}}$
+and the result is shown in figure \ref{fig:GL_lumi_low_normal_hack_on}. The
+scale is a little bit confusion so i will redo this plot for better readability.
 
 \begin{figure}
   \centering
@@ -414,12 +415,26 @@ The difference is so minute that i can be safely disregarded. (not sure about th
   \label{fig:100muT}
 \end{figure}
 
+Now, since the alignment works quite good with the current configuration we
+tested how translation misalignment effects the convergence by looking at the
+$\chi^2$, portrayed in figure \ref{fig:100muT}. For this figure eight different samples of $\SI{100}{\micro\metre}$ module transaltion misalignment over all translatory
+degrees of freedom. The idea behind using different samples is to reduce errors
+from biased samples. The plot shows the total $\chi^2$ over degrees of freedom
+plotted against the number of iterations. We see no visible difference regarding
+the total $\chi^2$ between the samples which is good.
+Also, the total $\chi^2$ decreases with and increasing number of iterations
+during the alignment.
+
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png}
   \caption{impact of removing constraints from exisiting studies regarding chi2.}
   \label{fig:removeConst}
 \end{figure}
+
+We do want the least amount of constraints in the system so we also tested
+the consequences of rremoving constraints from "config5". In general, removing
+any constraint improves the $\chi^2$
 
 % plan on how to sort things
 % sources from me:   1. little notebook for first part
