@@ -11,7 +11,6 @@ In order to function optimally, the LHCb detector stands before a difficult duty
 The track reconstruction algorithm needs to find the correct hits from each subdetector to build the track. This can be problematic just because of the amount of tracks per events (roughly 100).
 It is crucial to find all particle tracks and also their track parameters which come from the track fit.
 
-
 A good track fit is needed in order to find to best estimates for the track parameters and covariances. The estimates are used in the event reconstruction to find the correct tracks for each particle and the decay products. The info provided is used in the RICH rings, ECAL and HCAL and muon detectors. With these information, particle and track parameters such as the invariant mass can be measured and vertex origins can be found.
 There are several track models that can be used. In general, a track is build from numnerous segments which are either straight or curved because of an active magnetic field. Depending on the environment of the track either model is good.
 The track segments are called track states and are defined by a position in $x$ and $y$ at a given distance $z$ where the hit was located, then a tanget direction $t_{x,y}$ at the hit position and a momentum parameter acquired from the track curve inside the magnetic field.\cite{VanTilburg}
