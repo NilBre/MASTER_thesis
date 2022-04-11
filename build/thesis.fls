@@ -760,7 +760,10 @@ INPUT ./content/einleitung.tex
 INPUT ./content/particles_and_lhc.tex
 INPUT ./content/particles_and_lhc.tex
 INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc
+INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc
+INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc
 INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman9-regular.luc
+INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-regular.luc
 INPUT /home/nils/.local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
 INPUT /home/nils/.local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
 INPUT /home/nils/.local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm
@@ -770,9 +773,6 @@ INPUT /home/nils/.local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbol
 INPUT /home/nils/.local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /home/nils/.local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /home/nils/.local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-regular.luc
-INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc
-INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc
 INPUT ./plots/CERN_layout.pdf
 INPUT ./plots/CERN_layout.pdf
 INPUT ./plots/CERN_layout.pdf

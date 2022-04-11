@@ -1,19 +1,45 @@
 \chapter{Particles and The Large Hadron Collider}
 \label{sec:particleslhc}
 
-Here needs to be an introduction to the matter. why we do what we do.
-why do we need to know about the SM particles?\\
-Why do we want to build an LHC or an LHCb upgrade at all?\\
-What can it help us to learn?\\
-remember!! a big introduction is also needed in the beginning but here needs to be a small one too.\\
+% Here needs to be an introduction to the matter. why we do what we do.
+% why do we need to know about the SM particles? -> check \\
+% Why do we want to build an LHC or an LHCb upgrade at all? -> check \\
+% What can it help us to learn? -> need to think about it \\
+% remember!! a big introduction is also needed in the beginning but here needs to be a small one too.\\
+
+Whenever a new detector is build the position where it is physically mounted is
+roughly where it should be. In order to check this, survey measurements are
+performed to check the position with a precision of $\SI{100}{\micro\metre}$.
+To achieve an even bigger precision, \textit{software alignments} are performed.
+
+% go from small...
+The reason why alignment is of great importance is that a misaligned detector
+yields large momentum resolutions, low reconstruction efficiencies and wrong
+mass estimations.
+The most prominent area of misalignment is asymmetries for a spectrometer.
+In the past, alignment solved problems for example a Muon asymmetry in the
+L0Muon trigger in 2011 and a misalignment in IT boxes which resulted in trigger inefficency regarding $J/\Psi$ in 2012.
+
+With good alignment, studies on all standard modell particles and hadron states
+will improve. Yielding better efficiencies on SM particle measurements will
+result in deeper insights regarding physics beyond the stand modell from high-precision measurements of CP-violating observables as an example.
+
+% to big. maybe change the order around?
+On a grand scheme upgrading the LHCb and therefore the LHC will bring deeper
+insights "for" (wrong word) standard modell processes. To understand the universe even better and eventually yield information about the unsolved question of "dark matter" and
+"dark energy", what is believed to be the bulk of the universes content.
 
 \section{The Standard Modell}
 \label{sec:sm}
 
-%--------- particles----------
-% here a diagram for SM particles explanation is alot easier
+\begin{figure}
+  \centering
+  \includegraphics[width=0.75\textwidth]{plots/SM_2018.png}
+  \caption{The standard model of particle physics.}
+  \label{fig:sm2018}
+\end{figure}
 
-The standard model of particle physics describes the known elementary particles and their interactions. It consists of 12 matter particles, the fermions
+The standard model of particle physics\ref{fig:sm2018} describes the known elementary particles and their interactions. It consists of 12 matter particles, the fermions
 and five interaction particles, which are called vector bosons.
 
 The fermions 12 spin-$\frac{1}{2}$ particles. Six are called leptons and they are sorted into three families, also called flavors (e, $\mu$ and $\tau$) and six are called quarks. Each of those lepton families has a charged lepton\footnote{can have both h\"ndigkeiten} and a left-handed neutrino.
@@ -128,7 +154,7 @@ In this thesis the Scintillating Fibre Tracker (SciFi Tracker) located at the LH
   \label{fig:LHCb}
 \end{figure}
 
-The LHCb experiment\cite{lhcbInfo} is a forward spectrometer covering $2 \less \eta \less 5$ in the pseudorapidity range. This experiments main physics goal is beauty quark physics. For high energies, b- and $\bar{b}$-hadrons are heavily produced in a tight forward direction\footnote{They are also produced in a tight backward direction but the experiment is only build for the forward cone.}. A sideview of the LHCb is shown in figure \ref{fig:LHCb}.
+The LHCb experiment\cite{lhcbInfo} is a forward spectrometer covering $2 \less \eta \less 5$ in the pseudorapidity range. This experiments main physics goal is beauty quark physics. For high energies, b- and $\bar{b}$-hadrons are heavily produced in a tight forward direction\ref{fig:bbforward}\footnote{They are also produced in a tight backward direction but the experiment is only build for the forward cone.}. A sideview of the LHCb is shown in figure \ref{fig:LHCb}.
 The LHCb consists of several smaller detector components namely the Vertex Locator (VELO) right on the intercation point, two Ring Imaging Cherenkov counter (RICH 1 and RICH 2), in front of the spectrometers lies the Trigger Tracker and behind them the SciFi Tracker which is the important part of this thesis. Further back a Scintillator Pad Detector (SPD) and a Preshower (PS) are mounted followed by the electromagnetic calorimeter (ECAL) and the hadronic calorimeter (HCAL). In the very back, several muon chambers are mounted for every track that is yet to be determined.
 
 In this section, a general overview about the requirements for the SciFi Tracker as well as the layout will be discribed based on the presentation in the \textit{technical design report}\cite{scifiInfo} of the upgrade.
