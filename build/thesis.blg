@@ -1,18 +1,18 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'build/thesis.blg'
-[76] biber:340> INFO - === Mon Apr 11, 2022, 16:22:36
-[92] Biber.pm:418> INFO - Reading 'build/thesis.bcf'
-[153] Biber.pm:972> INFO - Found 7 citekeys in bib section 0
-[165] Biber.pm:4383> INFO - Processing section 0
-[174] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
-[177] bibtex.pm:1713> INFO - LaTeX decoding ...
-[189] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
-[232] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[232] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[233] Biber.pm:4203> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[233] Biber.pm:4209> INFO - No sort tailoring available for locale 'de-DE'
-[240] bbl.pm:654> INFO - Writing 'build/thesis.bbl' with encoding 'UTF-8'
-[242] bbl.pm:757> INFO - Output to build/thesis.bbl
-[243] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_bvb9/33e59b5ca9ec342068223d604c3f8d55_273.utf8, line 100, warning: 65 characters of junk seen at toplevel
-[243] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_bvb9/33e59b5ca9ec342068223d604c3f8d55_273.utf8, line 112, warning: 35 characters of junk seen at toplevel
-[243] Biber.pm:132> INFO - WARNINGS: 2
+[68] biber:340> INFO - === Tue Apr 12, 2022, 12:39:55
+[81] Biber.pm:418> INFO - Reading 'build/thesis.bcf'
+[139] Biber.pm:972> INFO - Found 7 citekeys in bib section 0
+[151] Biber.pm:4383> INFO - Processing section 0
+[160] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[164] bibtex.pm:1713> INFO - LaTeX decoding ...
+[176] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[216] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[216] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[217] Biber.pm:4203> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[217] Biber.pm:4209> INFO - No sort tailoring available for locale 'de-DE'
+[225] bbl.pm:654> INFO - Writing 'build/thesis.bbl' with encoding 'UTF-8'
+[226] bbl.pm:757> INFO - Output to build/thesis.bbl
+[227] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_Upoy/33e59b5ca9ec342068223d604c3f8d55_173.utf8, line 100, warning: 65 characters of junk seen at toplevel
+[227] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_Upoy/33e59b5ca9ec342068223d604c3f8d55_173.utf8, line 112, warning: 35 characters of junk seen at toplevel
+[227] Biber.pm:132> INFO - WARNINGS: 2

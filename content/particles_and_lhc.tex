@@ -154,8 +154,30 @@ In this thesis the Scintillating Fibre Tracker (SciFi Tracker) located at the LH
   \label{fig:LHCb}
 \end{figure}
 
-The LHCb experiment\cite{lhcbInfo} is a forward spectrometer covering $2 \less \eta \less 5$ in the pseudorapidity range. This experiments main physics goal is beauty quark physics. For high energies, b- and $\bar{b}$-hadrons are heavily produced in a tight forward direction\ref{fig:bbforward}\footnote{They are also produced in a tight backward direction but the experiment is only build for the forward cone.}. A sideview of the LHCb is shown in figure \ref{fig:LHCb}.
-The LHCb consists of several smaller detector components namely the Vertex Locator (VELO) right on the intercation point, two Ring Imaging Cherenkov counter (RICH 1 and RICH 2), in front of the spectrometers lies the Trigger Tracker and behind them the SciFi Tracker which is the important part of this thesis. Further back a Scintillator Pad Detector (SPD) and a Preshower (PS) are mounted followed by the electromagnetic calorimeter (ECAL) and the hadronic calorimeter (HCAL). In the very back, several muon chambers are mounted for every track that is yet to be determined.
+For high energies, b- and $\bar{b}$-hadrons are heavily produced in a tight forward
+direction\ref{fig:bbforward}\footnote{They are also produced in a tight backward
+direction but the experiment is only build for the forward cone.}.
+The LHCb experiment\cite{lhcbInfo} is a forward spectrometer covering
+$2 \,<\, \eta \,<\, 5$ in the pseudorapidity range. This experiments main
+physics goal is beauty quark physics. A sideview of
+the LHCb is shown in figure \ref{fig:LHCb}.
+The LHCb consists of several smaller detector components namely the Vertex Locator
+(VELO) right on the intercation point, two Ring Imaging Cherenkov counter
+(RICH 1 and RICH 2), in front of the spectrometers lies the Trigger Tracker and
+behind them the SciFi Tracker which is the important part of this thesis. Further
+back a Preshower (PS) is mounted followed
+by the electromagnetic calorimeter (ECAL) and the hadronic calorimeter (HCAL).
+In the very back, several muon chambers are mounted for every track that is yet
+to be determined.
+
+% here talk more about the upgrade and why we need it and why it is a good design
+
+% \begin{figure}
+%   \centering
+%   \includegraphics{plots/forwardbbar.png}
+%   \caption{$b$ and $\bar{b}$-hadrons produced heavily forward.}
+%   \label{fig:bbforward}
+% \end{figure}
 
 In this section, a general overview about the requirements for the SciFi Tracker as well as the layout will be discribed based on the presentation in the \textit{technical design report}\cite{scifiInfo} of the upgrade.
 
@@ -164,32 +186,49 @@ For particle identification the reconstructed trajectories of charged particles 
 The limiting factor for the momentum resolution is multiple scattering for tracks with a momentum lower than $\num{80}frac{\text{GeV}}{\text{c}}$. For tracks with a higher momentum the detector resolution is the limiting factor.
 
 % why is the scifi there
-The SciFi Tracker replaced the inner Tracker (IT) and the outer Tracker (OT) and is located in the same place as the downstream trackers that were previously installed.
+The SciFi Tracker replaced the inner Tracker (IT) and the outer Tracker (OT)
+and is located in the same place as the downstream trackers that were previously installed.
 
 % data and facts
 The instantaneous luminosity after the upgrade is expected to be $\SI{1e33}{\per\centi\metre\squared\per\second}$ to $\SI{2e33}{\per\centi\metre\squared\per\second}$. The bunch spacing will be $\SI{25}{\nano\second}$ and the number of proton-proton interactions per bunch crossing will be $\nu = 3.8$ during the ramp-up phase of the LHC and $\nu = 7.6$ during the active phase.
 
 % layout
 \subsection{Layout of the SciFi Tracker}
+
+% \begin{figure}
+%   \centering
+%   \includegraphics{plots/scifi_tracker.png}
+%   \caption{A Sideview of the SciFi Tracker.}
+%   \label{fig:scifi}
+% \end{figure}
+
 The SciFi Tracker consists of three (T-)stations T1, T2 and T3 with each having four layers ($X1, U, V, X2$). The orientation of these planes with respect to the vertical axis are ($\SI{0}{\degree}, \SI{+5}{\degree}, \SI{-5}{\degree}, \SI{0}{\degree}$).
+Since the beampipe is not exactly parallel to the ground the vertical axis is
+defined as vertical on the z-axis of the beampipe.
 The tilted layers are called stereo layers and serve the purpose of 3D hit localization.
 The layers are $\SI{20}{\milli\metre}$ apart from each other in $z$-direction within each station.
 Each layer has four quarters with each quarter having five\footnote{six for the last (T-)station.} modules. Each module is constructed from four fibre mats.
-A right-handed coordinate system is used with positive $z$ pointing away from the interaction point following the beam direction. positive $y$ points upwards, towards the surface and positive $x$ and negative $x$ are defined as A-Side and C-Side\cite{scifiInfo}.
+A sideview of the SciFi Tracker is displayed in figure\ref{fig:scifi}.
+The global coordinate system used is of right-handed nature with positive $z$ pointing away from the interaction point following the beam direction. positive $y$ points upwards, towards the surface and positive $x$ and negative $x$ are defined as A-Side and C-Side\cite{scifiInfo}.
+For readout purposes the top and bottom half of each element have inverted x- and y-axis.
+(plot for that?)
 
 To ensure an optimal alignment, a well known geometry is key. Therefore, the
 fibres must be aligned within $\SIrange{50}{100}{\micro\metre}$ in $x$-direction and must not be more than $\SI{300}{\micro\metre}$ bent in $z$-direction.
 % here a picture of the scifi
 
 \subsection{Scintillating Fibres}
-The scintillating fibre material is a polymer with an organic fluorescent dye added to the polystyrene structure to enhance the yield during the scintillation process.
-In order to produce and register a photon signal, the ionization energy is deposited in the fibre core firstly. The amount of energy need for the polymer to reach an excited state is just a few electronvolts.
-The added dye has the particular structure to match the excitation energy.
-The energy is transferred via the Förster Transfer(source needs to be added).
-The dye generates excited energy states when particles hit the fibre and deposit their energy. When the states relax, a photon is emitted which then excites other parts of the dye to eventually transfer the energy to the silicon photo multipliers (SiPMs) which are mounted on the outer(?) end of the mats.
-The other end of the fibre mats is a full reflective mirror to send the photons towards the SiPMs.
-
+The scintillating fibre material is a polymer with an organic fluorescent dye
+added to the polystyrene structure to enhance the yield during the scintillation process.
+In order to produce and register a photon signal, the ionization energy is deposited
+in the fibre core firstly. The amount of energy need for the polymer to reach an
+excited state is just a few electronvolts. The added dye has the particular structure
+to match the excitation energy. The energy is transferred via the Förster
+Transfer(source needs to be added). The dye generates excited energy states when
+particles hit the fibre and deposit their energy.
+The long fibre mats and the refractive index make sure total reflection on the inside
+happens which guides the photons to the SiPMs. On the opposite end of the SiPM a
+full reflective mirror is mounted so the photons travelling to the other end do not
+get lost but reflected towards the SiPM.
 %\section{The LHC data cycle}
 %\label{sec:datacycle}
-
-% (not sure if that's a good name, but like, an explanation of how electrical information is turned into hits and then tracks, and also when alignment runs in the system of data taking)

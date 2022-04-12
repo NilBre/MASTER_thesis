@@ -762,6 +762,9 @@ INPUT ./content/particles_and_lhc.tex
 INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc
 INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc
 INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc
+INPUT ./plots/SM_2018.png
+INPUT ./plots/SM_2018.png
+INPUT ./plots/SM_2018.png
 INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman9-regular.luc
 INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-regular.luc
 INPUT /home/nils/.local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
