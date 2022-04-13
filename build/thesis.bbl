@@ -115,6 +115,36 @@
       \verb https://cds.cern.ch/record/1129809/files/jinst8_08_s08005.pdf
       \endverb
     \endentry
+    \entry{qcd}{online}{}
+      \name{author}{1}{}{%
+        {{hash=40c414de89561bc6267ca5502d649c4f}{%
+           family={Thomson},
+           familyi={T\bibinitperiod},
+           given={Prof.\bibnamedelimi Mark},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{40c414de89561bc6267ca5502d649c4f}
+      \strng{fullhash}{40c414de89561bc6267ca5502d649c4f}
+      \strng{bibnamehash}{40c414de89561bc6267ca5502d649c4f}
+      \strng{authorbibnamehash}{40c414de89561bc6267ca5502d649c4f}
+      \strng{authornamehash}{40c414de89561bc6267ca5502d649c4f}
+      \strng{authorfullhash}{40c414de89561bc6267ca5502d649c4f}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Particle Physics}
+      \field{urlday}{13}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.hep.phy.cam.ac.uk/~thomson/lectures/partIIIparticles/Handout8_2009.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.hep.phy.cam.ac.uk/~thomson/lectures/partIIIparticles/Handout8_2009.pdf
+      \endverb
+    \endentry
     \entry{VanTilburg}{thesis}{}
       \name{author}{1}{}{%
         {{hash=b7d0e432f3adfb1de2d422d6dc66aaaa}{%

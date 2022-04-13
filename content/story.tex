@@ -2,6 +2,7 @@
 \label{sec:story}
 
 % I'd like you to think about the work you have been doing on the alignment and what things have been investigated and what conclusions you have made. You want to build the story one piece at a time, so I think it will start with testing some of the constraints from the null tests and going from there. With the type of work you have been doing, you will also have a much larger "future work" and "continuing work" section, I would put it before the conclusion. This will be discussing things like the way we discovered the cluster bias and the way that it is linked to the rotational degrees of freedom, etc. And it can outline the things you know about the way the real detector will be aligned starting very soon.
+
 % \begin{itemize}
 %   \item testing some of the constraints from the null tests
 %   \item future work: discovered cluster bias + link to rotational degrees of freedom
@@ -13,7 +14,6 @@
 %   \item which constraint does what?
 %   \item which degree of freedom moves what part of the scifi?
 % \end{enumerate}
-\section{general info}
 
 Alignment using tracks and vertices regarding stations, layers and modules. Testing constraints for different degrees of freedom with the goal to find the "perfect" configuration of constraints and alignable degrees of freedoms.
 The following pre-installed alignment conditions with the survey constraints being\\
@@ -23,13 +23,14 @@ The following pre-installed alignment conditions with the survey constraints bei
 "FT/T./Layer(X1|U|V|X2) : 0 0 0 0 0 0 : 0.2 0.2 0.2 0.0001 0.0001 0.0001”\\
 "FT/.*Module. : 0 0 0 0 0 0 : 0.1 0.1 0.1 0.001 0.001 0.001"\\
 "FT/.*Mat. : 0 0 0 0 0 0 : 0.05 0.05 0.05 0.1 0.1 0.1”\\
+
 were used.
 
 The string is the name of the element, the first set of six numbers are hardcoded parameters for each of the 3 translation degrees of freedom and 3 rotational degrees of freedom (Tx, Ty, Tz, Rx, Ry, Rz) and the second set of six parameters are the corresponding uncertainties.
 
 The scale for the translations are $\si{\milli\metre}$ and the scale for the rotations being $\si{\radian}$. A survey uncertainty of $\num{0.0001}$ stands for $\SI{0.1}{\milli\radian}$.
 
-The alignments have been performed with gaudisplititer.
+The alignments were performed with gaudisplititer.
 
 During the Alignment, lagrange constraints can be utilized to minimize the
 $\chi^2$ under the condition
@@ -41,7 +42,7 @@ and adding the lagrange parameter $\lambda$ to get
   \Delta \chi^2 = \lambda f(\alpha)
 \end{equation}\,.
 
-Lagrange constraints are added to fix losely constrained degrees of freedom and can be used for any linear combination of movements.
+Lagrange constraints are added to fix losely constrained degrees of freedom and can be used for any linear combination of translations and rotations.
 
 %include table from https://twiki.cern.ch/twiki/bin/view/LHCb/TAlignmentManual.
 
@@ -59,13 +60,12 @@ The \textit{GoodLongTracks} have the following cuts and parameters:
 \end{itemize}
 
 and for the later used \textit{HighMomentumTTracks} the cuts and parameters are:
+
 \begin{itemize}
   \item minimum $P_{\text{total}} = 50000$ (units?)
   \item track type should be categorized as "Ttrack"
   \item maximum $\chi^2 = 5$
 \end{itemize}
-
-% source: https://gitlab.cern.ch/lhcb/Alignment/-/blob/master/Alignment/TAlignment/python/TAlignment/TrackSelections.py
 
 % Results: (sort under the right plots) \\
 % \begin{itemize}
@@ -73,24 +73,47 @@ and for the later used \textit{HighMomentumTTracks} the cuts and parameters are:
 %   \item increasing nEvents does not improve it \to weak mode?
 % \end{itemize}
 
-At first, a series of tests regarding different degrees of freedom and lagrange constraints is performed to find the optimal solution for the SciFi. This called Nulltests.
+\begin{figure}
+  \centering
+  \includegraphics{plots/point_dofs.png}
+  \caption{Different ways of describing a measurement point inside the detector.}
+  \label{fig:dofs}
+\end{figure}
 
-The real detector layers are all centered around the beampipe with no shifting in any direction and the goal is to align the layers in the software to mirror the real layers, therefore reduce the shifting as close to zero as possible.
+At first, a series of tests regarding different degrees of freedom and lagrange constraints is performed to find the optimal solution for the SciFi.
 
-As a baseline the configuration from Florian Reiss is used and improved.
+The real detector layers are all centered around the beam pipe with no shifting
+in any direction and the goal is to align the layers in the software to mirror
+the real layers and reduce the shifting as close to zero as possible.
+
+As a baseline the configuration from Florian Reiss is used.
 In this part, the steps of testing different configurations is described and analysed.
 %What is florians configuration?? -> lxplus, one of the first plots.
-%Then describe the configuration i chose.
 Figure \ref{fig:dofs} is used to demonstrate which degrees of freedeom can be used
 to describe a point in the detector or a shift in coordinates.
+On the left-hand side the measurement point is described through cartesian coordinates and on the right-hand side it is described via polarcoordinates in a way.
 
-Florian made a crucial change in the code in form of a bug fix which resulted
-in the following configuration:
+The degrees of freedom used bz florian are $Tx$ and $Rz$ and he did not use any constraints so what we compare to is an unconstrained detector. He used \textit{GoodLongTracks} and aligned the stations and layers.
+
+The measurement points are the mean of each layer, therefore the errorbars on Florians measurement are root-mean-square errors and come from the difference between the C-side and the A-side of the detector layer and is not the measurement uncertainty.
+The green measurement used the following configuration:
 
 \begin{itemize}
-  \item dofs: Tx and Rz
-  \item constraints: unconstrained
+  \item 1000 events
+  \item GoodLongTracks
+  \item degrees of freedom: Tx Rz Rx Rz
+  \item constraints:
+  \begin{itemize}
+    \item station3 : Tx Tz Rx Rz
+    \item last C-frame : Tx Tz Rx Rz
+  \end{itemize}
 \end{itemize}
+
+At first i used every degree of freedom except for $y$. Although there is a redundancy in information it helps to not lose information. Later on we want as few constraints as possible and only usefull degres of freedom. This measurement only used 1000 events and is only used as a guideline to what the trend of the distribution looks like. The associated graphs for $Tx$ plotted against the group position in $z$ are shown in figure \ref{fig:june_2}.
+A prominent problem we see in the blue graph is the layer separation between the X-layers and
+the stereo layers. This is definitely not how the physical detector is mounted so this is the baseline we want to align.
+The green dots from the first alignment run with 10 iterations looks promising
+but we only used 1000 events so this result only shows a trend how good the alignment worked.
 
 \begin{figure}
   \centering
@@ -99,14 +122,6 @@ in the following configuration:
   \label{fig:june_2}
 \end{figure}
 
-The measurement points are the mean of each layer, therefore the errorbars on Florians measurement are root-mean-square errors and come from the difference between the C-side and the A-side of the detector layer and is NOT the measurement uncertainty.
-The green measurement used the following configuration:
-\begin{itemize}
-  \item here my config for the green plots -> see lxplus i guess
-\end{itemize}
-The constraints are selected because... (first of all look them up, then describe)
-This measurement only used 1000 events and is only used as a guideline to what the actual distribution could look like.
-
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/june_21/Tx_noRota_allT_7000MU.png}
@@ -114,11 +129,15 @@ This measurement only used 1000 events and is only used as a guideline to what t
   \label{fig:june_2_1}
 \end{figure}
 
-In figure \ref{fig:june_2_1} the same measurement is performed for 7000 events to get a better picture. In comparison to \ref{fig:june_2} an overall improvement in Florians configuration is visible and the layer-splitting is reduced but still prominent. The green measurement shows no direct improvement since the layers are already pretty close to zero in x-direction, where we want them.
+In figure \ref{fig:june_2_1} the same measurement was performed for 7000 events to get a better picture. In comparison to \ref{fig:june_2} an overall improvement in Florians configuration is visible and the layer-splitting is reduced but still prominent. The green measurement shows no direct improvement since the layers are already pretty close to zero in x-direction, where we want them.
 
 The following measurements used 3000 events because the performance did not change much when using 5000 or even 7000 events. Also, the time the computer needed to finish an alignment run for 7000 events and 10 iterations was a lot longer than for 3000 events.
+This alignment took 9 iterations to converge so there is also a computing error
+which needs to be sorted out.
 
-maybe show this plot \ref{fig:june_3}
+A clear evidence of this computing error can be seen in figure \ref{fig:june_3}. Here a comparison between a modified configuration from florian shown in the blue dots, and a new configuration using halflayer constraints shown with the orange dots, is performed.
+This new configuration in orange converged after 15 iterations which is not what we want since the alignment will be done with many more events and this would take too much time if there was this error.
+
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/june_21/allT_halfT3_n20_Tx.png}

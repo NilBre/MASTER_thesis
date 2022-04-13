@@ -12,7 +12,6 @@ roughly where it should be. In order to check this, survey measurements are
 performed to check the position with a precision of $\SI{100}{\micro\metre}$.
 To achieve an even bigger precision, \textit{software alignments} are performed.
 
-% go from small...
 The reason why alignment is of great importance is that a misaligned detector
 yields large momentum resolutions, low reconstruction efficiencies and wrong
 mass estimations.
@@ -24,9 +23,9 @@ With good alignment, studies on all standard modell particles and hadron states
 will improve. Yielding better efficiencies on SM particle measurements will
 result in deeper insights regarding physics beyond the stand modell from high-precision measurements of CP-violating observables as an example.
 
-% to big. maybe change the order around?
+% maybe change the order around?
 On a grand scheme upgrading the LHCb and therefore the LHC will bring deeper
-insights "for" (wrong word) standard modell processes. To understand the universe even better and eventually yield information about the unsolved question of "dark matter" and
+insights "for" (wrong word) standard model processes. To understand the universe even better and eventually yield information about the unsolved question of "dark matter" and
 "dark energy", what is believed to be the bulk of the universes content.
 
 \section{The Standard Modell}
@@ -89,14 +88,14 @@ Moreover, the coupling constant $\alpha_s \approx 0.1$. The interaction with qua
   \intertext{with}
   \sigma &= \SI{1}{\giga\electronvolt\per\femto\metre}
 \end{align}
-The common eight gluon-wavefunctions are
+The common eight gluon-wavefunctions\cite{qcd} are
 \begin{align*}
   \psi_1 &= |r\bar{g}> & \psi_2 &= |r\bar{b}> \\
   \psi_3 &= |g\bar{r}> & \psi_4 &= |g\bar{b}> \\
   \psi_5 &= |b\bar{r}> & \psi_6 &= |b\bar{g}> \\
   \psi_7 &= \frac{1}{\sqrt{2}}\left(|r\bar{r}> - |g\bar{g}>\right) & \psi_8 &= \frac{1}{\sqrt{6}}\left(|r\bar{r}> + |g\bar{g}> - 2|b\bar{b}>\right) \\
 \end{align*}
-% hier zitieren wo ich das her hab. besser nicht wikipedia!
+
 The second wavefunction describes a gluon interaction with a blue quark and changing the color to red.
 
 Quarks thus tend to attract each other very strongly. If now
@@ -113,7 +112,7 @@ These may be from the same family (i.e. [u,d], [c,s], [t,b]), or from
 different families. Mesons have a baryon number of 0. Accordingly, quarks carry the baryon number $\frac{1}{3}$. The quarks constructing a meson therefore carries color and the corresponding anticolor.
 The second type are baryons. The content consists of either three quarks or
 three antiquarks. However, it cannot be that one quark and two antiquarks
-and vice versa occur, because baryons must have the baryon number $\symup{B} = 1$. Because baryons are stable final states as well as the mesons, the sum of their quark colors must be white. Therfore, every (anti)color must occur once in a baryon.
+and vice versa occur, because baryons must have the baryon number $\symup{B} = 1$. Because baryons are stable final states as well as the mesons, the sum of their quark colors must be white. Therefore, every (anti)color must occur once in a baryon.
 
 \begin{align}
 	|\symup{B}\!> &= |q q' q''\!> \\
@@ -170,18 +169,19 @@ by the electromagnetic calorimeter (ECAL) and the hadronic calorimeter (HCAL).
 In the very back, several muon chambers are mounted for every track that is yet
 to be determined.
 
-% here talk more about the upgrade and why we need it and why it is a good design
+% more explanations needed still
 
-% \begin{figure}
-%   \centering
-%   \includegraphics{plots/forwardbbar.png}
-%   \caption{$b$ and $\bar{b}$-hadrons produced heavily forward.}
-%   \label{fig:bbforward}
-% \end{figure}
+\begin{figure}
+  \centering
+  \includegraphics{plots/bbar_forward.png}
+  \caption{$b$ and $\bar{b}$-hadrons produced heavily forward.}
+  \label{fig:bbforward}
+\end{figure}
 
 In this section, a general overview about the requirements for the SciFi Tracker as well as the layout will be discribed based on the presentation in the \textit{technical design report}\cite{scifiInfo} of the upgrade.
 
-The upstream and downstream trackers provide a good precision estimate of the momentum of charged particles so that mass resolution of decayed particles can be precisely measured. % this is a sentence i used from the TDR!
+The upstream and downstream trackers provide a good precision estimate of the momentum of charged particles so that mass resolution of decayed particles can be precisely measured.
+% this is a sentence i used from the TDR!
 For particle identification the reconstructed trajectories of charged particles are used as input for the RICH detectors.
 The limiting factor for the momentum resolution is multiple scattering for tracks with a momentum lower than $\num{80}frac{\text{GeV}}{\text{c}}$. For tracks with a higher momentum the detector resolution is the limiting factor.
 
@@ -195,12 +195,12 @@ The instantaneous luminosity after the upgrade is expected to be $\SI{1e33}{\per
 % layout
 \subsection{Layout of the SciFi Tracker}
 
-% \begin{figure}
-%   \centering
-%   \includegraphics{plots/scifi_tracker.png}
-%   \caption{A Sideview of the SciFi Tracker.}
-%   \label{fig:scifi}
-% \end{figure}
+\begin{figure}
+  \centering
+  \includegraphics{plots/SciFi_Tracker.png}
+  \caption{view of the stations and readout order of the modules.}
+  \label{fig:scifi}
+\end{figure}
 
 The SciFi Tracker consists of three (T-)stations T1, T2 and T3 with each having four layers ($X1, U, V, X2$). The orientation of these planes with respect to the vertical axis are ($\SI{0}{\degree}, \SI{+5}{\degree}, \SI{-5}{\degree}, \SI{0}{\degree}$).
 Since the beampipe is not exactly parallel to the ground the vertical axis is
@@ -211,7 +211,6 @@ Each layer has four quarters with each quarter having five\footnote{six for the 
 A sideview of the SciFi Tracker is displayed in figure\ref{fig:scifi}.
 The global coordinate system used is of right-handed nature with positive $z$ pointing away from the interaction point following the beam direction. positive $y$ points upwards, towards the surface and positive $x$ and negative $x$ are defined as A-Side and C-Side\cite{scifiInfo}.
 For readout purposes the top and bottom half of each element have inverted x- and y-axis.
-(plot for that?)
 
 To ensure an optimal alignment, a well known geometry is key. Therefore, the
 fibres must be aligned within $\SIrange{50}{100}{\micro\metre}$ in $x$-direction and must not be more than $\SI{300}{\micro\metre}$ bent in $z$-direction.
@@ -230,5 +229,6 @@ The long fibre mats and the refractive index make sure total reflection on the i
 happens which guides the photons to the SiPMs. On the opposite end of the SiPM a
 full reflective mirror is mounted so the photons travelling to the other end do not
 get lost but reflected towards the SiPM.
+
 %\section{The LHC data cycle}
 %\label{sec:datacycle}

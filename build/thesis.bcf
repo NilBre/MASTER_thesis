@@ -2345,22 +2345,24 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="2">alphas</bcf:citekey>
-    <bcf:citekey order="3">lhcInfo</bcf:citekey>
-    <bcf:citekey order="4">facilityCERN</bcf:citekey>
-    <bcf:citekey order="5">lhcbInfo</bcf:citekey>
-    <bcf:citekey order="6">scifiInfo</bcf:citekey>
+    <bcf:citekey order="3">qcd</bcf:citekey>
+    <bcf:citekey order="4">lhcInfo</bcf:citekey>
+    <bcf:citekey order="5">facilityCERN</bcf:citekey>
+    <bcf:citekey order="6">lhcbInfo</bcf:citekey>
     <bcf:citekey order="7">scifiInfo</bcf:citekey>
-    <bcf:citekey order="8">VanTilburg</bcf:citekey>
+    <bcf:citekey order="8">scifiInfo</bcf:citekey>
     <bcf:citekey order="9">VanTilburg</bcf:citekey>
     <bcf:citekey order="10">VanTilburg</bcf:citekey>
-    <bcf:citekey order="11">RTS</bcf:citekey>
-    <bcf:citekey order="12">alphas</bcf:citekey>
-    <bcf:citekey order="13">lhcInfo</bcf:citekey>
-    <bcf:citekey order="14">facilityCERN</bcf:citekey>
-    <bcf:citekey order="15">lhcbInfo</bcf:citekey>
-    <bcf:citekey order="16">scifiInfo</bcf:citekey>
-    <bcf:citekey order="17">VanTilburg</bcf:citekey>
-    <bcf:citekey order="18">RTS</bcf:citekey>
+    <bcf:citekey order="11">VanTilburg</bcf:citekey>
+    <bcf:citekey order="12">RTS</bcf:citekey>
+    <bcf:citekey order="13">alphas</bcf:citekey>
+    <bcf:citekey order="14">qcd</bcf:citekey>
+    <bcf:citekey order="15">lhcInfo</bcf:citekey>
+    <bcf:citekey order="16">facilityCERN</bcf:citekey>
+    <bcf:citekey order="17">lhcbInfo</bcf:citekey>
+    <bcf:citekey order="18">scifiInfo</bcf:citekey>
+    <bcf:citekey order="19">VanTilburg</bcf:citekey>
+    <bcf:citekey order="20">RTS</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

@@ -5,24 +5,23 @@
 \contentsline {section}{\numberline {2.2}particle decays and hadrons}{5}{section.2.2}%
 \contentsline {section}{\numberline {2.3}The LHC and LHCb}{5}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}The LHC}{5}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}The LHCb}{6}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.2}The LHCb}{7}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Layout of the SciFi Tracker}{8}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Scintillating Fibres}{8}{subsection.2.3.4}%
-\contentsline {chapter}{\numberline {3}The Theory of Alignment}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Track reconstruction}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}The Kalman filter method \blx@tocontentsinit {0}\cite {VanTilburg}}{11}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}first Step: Prediction}{11}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}second Step: Filter}{12}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}third Step: Smoother}{13}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Alignment using derivatives}{13}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Main part}{14}{chapter.4}%
-\contentsline {section}{\numberline {4.1}general info}{14}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Nulltests and software tests}{15}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}rotational constraints}{17}{subsection.4.2.1}%
-\contentsline {section}{\numberline {4.3}chi2 tests and weak modes}{24}{section.4.3}%
-\contentsline {section}{\numberline {4.4}impact of the cluster bias}{29}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Continuing Work}{34}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Future Work}{35}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusion and Outlook}{36}{chapter.7}%
-\contentsline {chapter}{\nonumberline Literatur}{37}{chapter*.31}%
+\contentsline {subsection}{\numberline {2.3.4}Scintillating Fibres}{9}{subsection.2.3.4}%
+\contentsline {chapter}{\numberline {3}The Theory of Alignment}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Track reconstruction}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}The Kalman filter method \blx@tocontentsinit {0}\cite {VanTilburg}}{12}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}first Step: Prediction}{12}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}second Step: Filter}{13}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}third Step: Smoother}{14}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Alignment using derivatives}{14}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Main part}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Nulltests and software tests}{16}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}rotational constraints}{21}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}chi2 tests and weak modes}{26}{section.4.2}%
+\contentsline {section}{\numberline {4.3}impact of the cluster bias}{31}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Continuing Work}{36}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Future Work}{37}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusion and Outlook}{38}{chapter.7}%
+\contentsline {chapter}{\nonumberline Literatur}{39}{chapter*.34}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
