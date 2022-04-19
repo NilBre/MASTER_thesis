@@ -15,13 +15,14 @@
 \contentsline {subsection}{\numberline {3.2.2}second Step: Filter}{13}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}third Step: Smoother}{14}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Alignment using derivatives}{14}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Main part}{15}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Alignment of the SciFi}{15}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Nulltests and software tests}{16}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}rotational constraints}{20}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.1}rotational constraints}{22}{subsection.4.1.1}%
 \contentsline {section}{\numberline {4.2}chi2 tests and weak modes}{26}{section.4.2}%
-\contentsline {section}{\numberline {4.3}impact of the cluster bias}{30}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Continuing Work}{35}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Future Work}{36}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusion and Outlook}{37}{chapter.7}%
-\contentsline {chapter}{\nonumberline Literatur}{38}{chapter*.34}%
+\contentsline {section}{\numberline {4.3}luminosity samples and chi2}{30}{section.4.3}%
+\contentsline {section}{\numberline {4.4}impact of the cluster bias}{32}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Continuing Work}{37}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Future Work}{38}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusion and Outlook}{39}{chapter.7}%
+\contentsline {chapter}{\nonumberline Literatur}{40}{chapter*.33}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

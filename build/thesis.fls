@@ -852,9 +852,6 @@ INPUT ./plots/jan_17_2022/chi2_iter_low_vs_normal.png
 INPUT ./plots/jan_17_2022/chi2_tracks_modulesOnly.png
 INPUT ./plots/jan_17_2022/chi2_tracks_modulesOnly.png
 INPUT ./plots/jan_17_2022/chi2_tracks_modulesOnly.png
-INPUT ./plots/jan_17_2022/tracks_vs_iterations_modulesOnly.png
-INPUT ./plots/jan_17_2022/tracks_vs_iterations_modulesOnly.png
-INPUT ./plots/jan_17_2022/tracks_vs_iterations_modulesOnly.png
 INPUT ./plots/jan_24_2022/compare_with_without_hack.png
 INPUT ./plots/jan_24_2022/compare_with_without_hack.png
 INPUT ./plots/jan_24_2022/compare_with_without_hack.png
