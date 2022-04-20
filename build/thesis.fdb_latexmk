@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber build/thesis"] 1650376773 "build/thesis.bcf" "build/thesis.bbl" "build/thesis" 1650376792
-  "build/thesis.bcf" 1650376792 107939 36724ad8ab29c74b85737cef0ddf04bb "lualatex"
-  "references.bib" 1649856901 6018 8b670c914de1d5a9b7c7db36a55ab37a ""
+["biber build/thesis"] 1650479952 "build/thesis.bcf" "build/thesis.bbl" "build/thesis" 1650479952
+  "build/thesis.bcf" 0 -1 0 "lualatex"
+  "references.bib" 1650460830 6703 3ecd71ee65b5b8b0570a54b96d744d63 ""
   (generated)
   "build/thesis.bbl"
   "build/thesis.blg"
-["lualatex"] 1650376784 "thesis.tex" "build/thesis.pdf" "thesis" 1650376792
+["lualatex"] 1650450467 "thesis.tex" "build/thesis.pdf" "thesis" 1650450475
   "/home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf" 1429396570 733736 0b8cd5044567d896491fd777c12d5cda ""
   "/home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf" 1255129361 64684 15a2082c8e31f411875a86ea2d29a0ee ""
   "/home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf" 1255129361 111240 0af0b64d6d3df41bead3f9de314afbd4 ""
@@ -444,10 +444,10 @@
   "/home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/names/luaotfload-names.luc" 1646737610 1224899 011bf1034b50752cb38fb34d2fec5ae7 ""
   "/home/nils/.local/texlive/2021/texmf-var/tex/generic/config/language.dat.lua" 1644097462 17745 7d542c06defa20bf59071cb47dc3d345 ""
   "/home/nils/.local/texlive/2021/texmf-var/web2c/luahbtex/lualatex.fmt" 1644097551 4555510 f2cb939b2e6bec524b98c695bc199369 ""
-  "build/thesis.aux" 1650376792 24205 fa00f418f7b5d838a36f4393ef6df188 "lualatex"
-  "build/thesis.bbl" 1650376774 6381 8f86eecf78db44d630716fab1caf087c "biber build/thesis"
-  "build/thesis.run.xml" 1650376792 2447 6dc6d7096b36570b09ad9062b6bbc292 "lualatex"
-  "build/thesis.toc" 1650376792 2296 17b1f0052a090ecc58a95c7ce92bca62 "lualatex"
+  "build/thesis.aux" 1650450475 24205 fa00f418f7b5d838a36f4393ef6df188 "lualatex"
+  "build/thesis.bbl" 1650450459 6381 8f86eecf78db44d630716fab1caf087c "biber build/thesis"
+  "build/thesis.run.xml" 1650450475 2447 6dc6d7096b36570b09ad9062b6bbc292 "lualatex"
+  "build/thesis.toc" 1650450475 2296 17b1f0052a090ecc58a95c7ce92bca62 "lualatex"
   "content/abstract.tex" 1646999980 1239 e5b3a859f39e92a65c3afbafd374b3fb ""
   "content/alignment_theory.tex" 1649759916 10359 b08d9b589ad5228546ee88876106a242 ""
   "content/conclusion.tex" 1646999980 33 257c929c1653b88fab9776eb15ee67bd ""
