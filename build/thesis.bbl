@@ -1,0 +1,301 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{facilityLHCb}{online}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeltitlesource}{title}
+      \field{title}{A cross-section showing the LHCb detector’s main elements}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cerncourier.com/a/lhcbs-momentous-metamorphosis/
+      \endverb
+      \verb{url}
+      \verb https://cerncourier.com/a/lhcbs-momentous-metamorphosis/
+      \endverb
+    \endentry
+    \entry{facilityCERN}{online}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeltitlesource}{title}
+      \field{title}{A diagram showing the complete structure of the LHC facility at CERN}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/figure/A-diagram-showing-the-complete-structure-of-the-LHC-facility-at-CERN-There-are-the-4_fig8_348806406
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/figure/A-diagram-showing-the-complete-structure-of-the-LHC-facility-at-CERN-There-are-the-4_fig8_348806406
+      \endverb
+    \endentry
+    \entry{forward}{online}{}
+      \field{sortinit}{b}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labeltitlesource}{title}
+      \field{title}{b-hadron production at LHCb}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/2206834/files/LHCb-TALK-2016-222.pdf
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/2206834/files/LHCb-TALK-2016-222.pdf
+      \endverb
+    \endentry
+    \entry{fonll}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d38166452f9df43fc09b4da37680b482}{%
+           family={Cacciari},
+           familyi={C\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4fd8724de435083a69afd09cb91fb305}{%
+           family={Greco},
+           familyi={G\bibinitperiod},
+           given={Mario},
+           giveni={M\bibinitperiod}}}%
+        {{hash=08565706058718b454be32b190e67d73}{%
+           family={Nason},
+           familyi={N\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{8be32f8c853cf72871d4300504cf17d9}
+      \strng{fullhash}{8be32f8c853cf72871d4300504cf17d9}
+      \strng{bibnamehash}{8be32f8c853cf72871d4300504cf17d9}
+      \strng{authorbibnamehash}{8be32f8c853cf72871d4300504cf17d9}
+      \strng{authornamehash}{8be32f8c853cf72871d4300504cf17d9}
+      \strng{authorfullhash}{8be32f8c853cf72871d4300504cf17d9}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{JHEP}
+      \field{title}{{The P(T) spectrum in heavy flavor hadroproduction}}
+      \field{volume}{05}
+      \field{year}{1998}
+      \field{pages}{007}
+      \range{pages}{1}
+      \verb{eprint}
+      \verb hep-ph/9803400
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/hep-ph/9803400.pdf
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/hep-ph/9803400.pdf
+      \endverb
+    \endentry
+    \entry{scifiupdate20210311}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8f1c6744f1d0e336b995d9e5afd1489d}{%
+           family={Hollitt},
+           familyi={H\bibinitperiod},
+           given={Sophie},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f1c6744f1d0e336b995d9e5afd1489d}
+      \strng{fullhash}{8f1c6744f1d0e336b995d9e5afd1489d}
+      \strng{bibnamehash}{8f1c6744f1d0e336b995d9e5afd1489d}
+      \strng{authorbibnamehash}{8f1c6744f1d0e336b995d9e5afd1489d}
+      \strng{authornamehash}{8f1c6744f1d0e336b995d9e5afd1489d}
+      \strng{authorfullhash}{8f1c6744f1d0e336b995d9e5afd1489d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Current topics in SciFi Alignment}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://indico.cern.ch/event/997932/contributions/4263653/attachments/2206615/3733618/SciFiAlignOverview-11-03.pdf
+      \endverb
+      \verb{url}
+      \verb https://indico.cern.ch/event/997932/contributions/4263653/attachments/2206615/3733618/SciFiAlignOverview-11-03.pdf
+      \endverb
+    \endentry
+    \entry{lhcInfo}{online}{}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeltitlesource}{title}
+      \field{title}{LHC Machine}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/1129806/files/jinst8_08_s08001.pdf
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/1129806/files/jinst8_08_s08001.pdf
+      \endverb
+    \endentry
+    \entry{scifiInfo}{online}{}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeltitlesource}{title}
+      \field{title}{LHCb Tracker Upgrade Technical Design Report}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/1647400/files/LHCB-TDR-015.pdf
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/1647400/files/LHCB-TDR-015.pdf
+      \endverb
+    \endentry
+    \entry{alphas}{online}{}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeltitlesource}{title}
+      \field{title}{Physical Constants}
+      \field{urlday}{11}
+      \field{urlmonth}{8}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://pdg.lbl.gov/2019/mobile/reviews/pdf/rpp2018-rev-phys-constants-m.pdf
+      \endverb
+      \verb{url}
+      \verb http://pdg.lbl.gov/2019/mobile/reviews/pdf/rpp2018-rev-phys-constants-m.pdf
+      \endverb
+    \endentry
+    \entry{sm2018}{online}{}
+      \field{sortinit}{s}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeltitlesource}{title}
+      \field{title}{standard Model}
+      \field{urlday}{11}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.physik.uzh.ch/en/researcharea/lhcb/outreach/StandardModel.html
+      \endverb
+      \verb{url}
+      \verb https://www.physik.uzh.ch/en/researcharea/lhcb/outreach/StandardModel.html
+      \endverb
+    \endentry
+    \entry{RTS}{online}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labeltitlesource}{title}
+      \field{title}{The invariant Rauch-Tung-Striebel Smoother}
+      \field{urlday}{24}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://ras.papercept.net/images/temp/IROS/files/2526.pdf
+      \endverb
+      \verb{url}
+      \verb http://ras.papercept.net/images/temp/IROS/files/2526.pdf
+      \endverb
+    \endentry
+    \entry{lhcbInfo}{online}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labeltitlesource}{title}
+      \field{title}{The LHCb Detector at the LHC}
+      \field{urlday}{9}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/1129809/files/jinst8_08_s08005.pdf
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/1129809/files/jinst8_08_s08005.pdf
+      \endverb
+    \endentry
+    \entry{qcd}{online}{}
+      \name{author}{1}{}{%
+        {{hash=40c414de89561bc6267ca5502d649c4f}{%
+           family={Thomson},
+           familyi={T\bibinitperiod},
+           given={Prof.\bibnamedelimi Mark},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{40c414de89561bc6267ca5502d649c4f}
+      \strng{fullhash}{40c414de89561bc6267ca5502d649c4f}
+      \strng{bibnamehash}{40c414de89561bc6267ca5502d649c4f}
+      \strng{authorbibnamehash}{40c414de89561bc6267ca5502d649c4f}
+      \strng{authornamehash}{40c414de89561bc6267ca5502d649c4f}
+      \strng{authorfullhash}{40c414de89561bc6267ca5502d649c4f}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Particle Physics}
+      \field{urlday}{13}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.hep.phy.cam.ac.uk/~thomson/lectures/partIIIparticles/Handout8_2009.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.hep.phy.cam.ac.uk/~thomson/lectures/partIIIparticles/Handout8_2009.pdf
+      \endverb
+    \endentry
+    \entry{VanTilburg}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=b7d0e432f3adfb1de2d422d6dc66aaaa}{%
+           family={Van\bibnamedelima Tilburg},
+           familyi={V\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7d0e432f3adfb1de2d422d6dc66aaaa}
+      \strng{fullhash}{b7d0e432f3adfb1de2d422d6dc66aaaa}
+      \strng{bibnamehash}{b7d0e432f3adfb1de2d422d6dc66aaaa}
+      \strng{authorbibnamehash}{b7d0e432f3adfb1de2d422d6dc66aaaa}
+      \strng{authornamehash}{b7d0e432f3adfb1de2d422d6dc66aaaa}
+      \strng{authorfullhash}{b7d0e432f3adfb1de2d422d6dc66aaaa}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Presented on 01 Sep 2005}
+      \field{title}{{Track simulation and reconstruction in LHCb}}
+      \field{year}{2005}
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/885750
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/885750
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

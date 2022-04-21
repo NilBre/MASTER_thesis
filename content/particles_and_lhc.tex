@@ -128,12 +128,12 @@ and vice versa occur, because baryons must have the baryon number $\symup{B} = 1
 
 \subsection{The LHC}
 The Large Hadron Collider (LHC)\cite{lhcInfo} is the most powerfull particle-accelerator on planet earth. With a circumference of $26,7\si{\kilo\metre}$ it is also the longest ring accelerator and it lies between $45\si{\metre}$ and $170\si{\metre}$ below the surface near Geneva in Swizerland. The tunnel was constructed for the LEP experiment between 1984 and 1989 and is operated by the European Organization for Nuclear Research (CERN). The LHC can produce centre of mass energies of $\sqrt{s} = \SI{13}{\tera\electronvolt}$ in proton-proton collisions during Run 2. After the upgrade the LHC will collide particles with the centre of mass energy of around $\sqrt{s} = \SI{14}{\tera\electronvolt}$.
-An image of the accelerators and the experiments is shown in fig. \ref{fig:CERN}\cite{facilityCERN}.
+An image of the accelerators and the experiments is shown in fig. \ref{fig:CERN}.
 
 \begin{figure}
   \centering
   \includegraphics[angle=-90, origin=c, width=0.7\textwidth]{plots/CERN_layout.pdf}
-  \caption{an overview of the LHC facilities.}
+  \caption{an overview of the LHC facilities\cite{facilityCERN}.}
   \label{fig:CERN}
 \end{figure}
 
@@ -183,14 +183,16 @@ In this section, a general overview about the requirements for the SciFi Tracker
 The upstream and downstream trackers provide a good precision estimate of the momentum of charged particles so that mass resolution of decayed particles can be precisely measured.
 % this is a sentence i used from the TDR!
 For particle identification the reconstructed trajectories of charged particles are used as input for the RICH detectors.
-The limiting factor for the momentum resolution is multiple scattering for tracks with a momentum lower than $\num{80}frac{\text{GeV}}{\text{c}}$. For tracks with a higher momentum the detector resolution is the limiting factor.
+The limiting factor for the momentum resolution is multiple scattering for tracks with a momentum lower than $\num{80}\frac{\text{GeV}}{\text{c}}$. For tracks with a higher momentum the detector resolution is the limiting factor.
 
 % why is the scifi there
 The SciFi Tracker replaced the inner Tracker (IT) and the outer Tracker (OT)
 and is located in the same place as the downstream trackers that were previously installed.
 
 % data and facts
-The instantaneous luminosity after the upgrade is expected to be $\SI{1e33}{\per\centi\metre\squared\per\second}$ to $\SI{2e33}{\per\centi\metre\squared\per\second}$. The bunch spacing will be $\SI{25}{\nano\second}$ and the number of proton-proton interactions per bunch crossing will be $\nu = 3.8$ during the ramp-up phase of the LHC and $\nu = 7.6$ during the active phase.
+The instantaneous luminosity after the upgrade is expected to be $\SIrange{1}{2e33}{\per\centi\metre\squared\per\second}$ with a bunch spacing of $\SI{25}{\nano\second}$.
+The average number of proton-proton interactions per bunch crossing will be between
+$\nu = 3.8$ and $\nu = 7.6$.
 
 % layout
 \subsection{Layout of the SciFi Tracker}
@@ -202,15 +204,15 @@ The instantaneous luminosity after the upgrade is expected to be $\SI{1e33}{\per
   \label{fig:scifi}
 \end{figure}
 
-The SciFi Tracker consists of three (T-)stations T1, T2 and T3 with each having four layers ($X1, U, V, X2$). The orientation of these planes with respect to the vertical axis are ($\SI{0}{\degree}, \SI{+5}{\degree}, \SI{-5}{\degree}, \SI{0}{\degree}$).
+The SciFi Tracker consists of three stations T1, T2 and T3 each having four layers ($X1, U, V, X2$). The orientation of these planes with respect to the vertical axis are ($\SI{0}{\degree}, \SI{+5}{\degree}, \SI{-5}{\degree}, \SI{0}{\degree}$).
 Since the beampipe is not exactly parallel to the ground the vertical axis is
 defined as vertical on the z-axis of the beampipe.
 The tilted layers are called stereo layers and serve the purpose of 3D hit localization.
 The layers are $\SI{20}{\milli\metre}$ apart from each other in $z$-direction within each station.
 Each layer has four quarters with each quarter having five\footnote{six for the last (T-)station.} modules. Each module is constructed from four fibre mats.
-A sideview of the SciFi Tracker is displayed in figure\ref{fig:scifi}.
-The global coordinate system used is of right-handed nature with positive $z$ pointing away from the interaction point following the beam direction. positive $y$ points upwards, towards the surface and positive $x$ and negative $x$ are defined as A-Side and C-Side\cite{scifiInfo}.
-For readout purposes the top and bottom half of each element have inverted x- and y-axis.
+A frontal view of the SciFi Tracker is displayed in figure\ref{fig:scifi}.
+The global coordinate system used is of right-handed nature with positive $z$ pointing away from the interaction point following the beam direction as seen in figure \ref{fig:LHCb}. positive $y$ points upwards, towards the surface and positive $x$ and negative $x$ are named as A-Side and C-Side respectivly\cite{scifiInfo}.
+For readout purposes the top and bottom half of each element have inverted x- and y-axis as seen in figure \ref{fig:scifi}.
 
 To ensure an optimal alignment, a well known geometry is key. Therefore, the
 fibres must be aligned within $\SIrange{50}{100}{\micro\metre}$ in $x$-direction and must not be more than $\SI{300}{\micro\metre}$ bent in $z$-direction.
@@ -222,13 +224,11 @@ added to the polystyrene structure to enhance the yield during the scintillation
 In order to produce and register a photon signal, the ionization energy is deposited
 in the fibre core firstly. The amount of energy need for the polymer to reach an
 excited state is just a few electronvolts. The added dye has the particular structure
-to match the excitation energy. The energy is transferred via the Förster
-Transfer(source needs to be added). The dye generates excited energy states when
+to match the excitation energy. The dye generates excited energy states when
 particles hit the fibre and deposit their energy.
 The long fibre mats and the refractive index make sure total reflection on the inside
-happens which guides the photons to the SiPMs. On the opposite end of the SiPM a
-full reflective mirror is mounted so the photons travelling to the other end do not
-get lost but reflected towards the SiPM.
+happens which guides the photons to the SiPMs\footnote{Silicon Photomultiplier}.
+On the opposite end of the SiPM a full reflective mirror is mounted so the photons travelling to the other end do not get lost but reflected towards the SiPM.
 
 %\section{The LHC data cycle}
 %\label{sec:datacycle}

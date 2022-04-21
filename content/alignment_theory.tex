@@ -1,5 +1,5 @@
-\chapter{The Theory of Alignment}
-\label{sec:alignTheory}
+\chapter{The Theory of align*ment}
+\label{sec:align*Theory}
 
 short introduction
 
@@ -11,31 +11,33 @@ The track reconstruction algorithm needs to find the correct hits from each subd
 It is crucial to find all particle tracks and also their track parameters which come from the track fit.
 
 A good track fit is needed in order to find to best estimates for the track parameters and covariances. The estimates are used in the event reconstruction to find the correct tracks for each particle and the decay products. The info provided is used in the RICH rings, ECAL and HCAL and muon detectors. With these information, particle and track parameters such as the invariant mass can be measured and vertex origins can be found.
-There are several track models that can be used. In general, a track is build from numnerous segments which are either straight or curved because of an active magnetic field. Depending on the environment of the track either model is good.
-The track segments are called track states and are defined by a position in $x$ and $y$ at a given distance $z$ where the hit was located, then a tanget direction $t_{x,y}$ at the hit position and a momentum parameter acquired from the track curve inside the magnetic field.\cite{VanTilburg}
+There are several track models that can be used. In general, a track is build from numerous segments which are either straight or curved because of an active magnetic field. Depending on the environment of the track either model is good.
+The track segments are called track states and are defined by a position in $x$ and $y$ at a given distance $z$ where the hit was located, then a tanget direction $t_{x,y}$ at the hit position and a momentum parameter acquired from the track curve inside the magnetic field\cite{VanTilburg}.
 
-\begin{align}
+In order to correctly reconstruct the track is is important to know where the hit is localized and for the upcoming hits, where to particle track came from. From the momentum measurement of the track curvature caused by the magnetic field, the parameter $q/p$ is also added.
+
+\begin{align*}
   \vec{r} = \left(\begin{array}{c} x \\ y \\ t_x \\ t_y \\ \frac{q}{p}\end{array}\right) &\,\, t_x = \frac{\partial x}{\partial z} & t_y = \frac{\partial y}{\partial z}
-\end{align}
+\end{align*}
 
 The uncertainty of the five-component state vector is a $5\times5$ covariance matrix $C$.
 A track state can be anywhere on the trajectory but is easier to choose it at real detection points. Combining the track state with a real measurement point is called \textit{node}.
 The propagation from node $k_{-1}$ to node $k$ is described by a propagation function
 
-\begin{equation}
-  \vec{r}_k = f_k(\vec{r}_{k_{-1}}) + \vec{w}_k
-\end{equation}\,.
+\begin{equation*}
+  \vec{r}_k = f_k(\vec{r}_{k_{-1}}) + \vec{w}_k\,.
+\end{equation*}
 
 This means node $k$ is acquired by propagating node $k-1$ through the propagation function $f_k$ and shifting it by the \textit{process noise} $\vec{w}_k$.
 % Process noise can be caused by any scattering phenomenon that may have happened.
 LHCb uses process noise to model the scattering.
 Depending on the type of propagation, linear or curved, a different propagation function is used.
 for a linear extrapolation, $f_k$ results in
-\begin{equation}
+\begin{equation*}
   f_k \left(\vec{r}_{k-1}\right) = F_k \vec{r}_{k-1}
-\end{equation}
+\end{equation*}
 with the transport matrix $F_k$
-\begin{gather}
+\begin{gather*}
   F_K = \begin{pmatrix}
     1 & 0 & \Delta z & 0 & 0 \\
     0 & 1 & 0 & \Delta z & 0 \\
@@ -43,36 +45,36 @@ with the transport matrix $F_k$
     0 & 0 & 0 & 1 & 0 \\
     0 & 0 & 0 & 0 & 1 \\
   \end{pmatrix}
-\end{gather}
+\end{gather*}
 and $\Delta z$ being the difference in z between the nodes
-\begin{equation}
+\begin{equation*}
   \Delta z = z_k - z_{k-1}
-\end{equation}
+\end{equation*}
 
 
 Trajectory information for each node is provided by the real measurement where the relation between measurement $m_k$ and track state at a given node $k$ is defined as
 
-\begin{equation}
+\begin{equation*}
   m_k = h_k(\vec{r}_k) + \epsilon_k
-\end{equation}
+\end{equation*}
 
 with the projection function $h_k$ and \textit{measurement noise} $\epsilon_k$.
 So if the detector only measures the $y$ coordinate of state, the projection function
 will be
-\begin{equation}
+\begin{equation*}
   h_k(\vec{r}_k) = H_k \vec{r}_k
-\end{equation}
+\end{equation*}
 with
-\begin{gather}
+\begin{gather*}
   H_k = \begin{pmatrix}
     0 & 1 & 0 & 0 & 0 \\
   \end{pmatrix}
-\end{gather}\,.
+\end{gather*}\,.
 
 When measuring more parameters the measurement matrix $H_k$ and projection matrix have dimension $n\times5$ with $n$ being the numbers of parameters measured.
 
-With this track model, both noises from the measurement and the process are random and unknown and have an expectation value of zero.
-They are defined as $W_k \equiv cov(w_k)$ and $V_k \equiv cov(\epsilon_k)$.
+With this track model, $\epsilon_k$ and $w_k$ are random and unknown and have an expectation value of zero.
+% They are defined as $W_k \equiv cov(w_k)$ and $V_k \equiv cov(\epsilon_k)$.
 
 % now kalman filter formalism
 \section{The Kalman filter method \cite{VanTilburg}}
@@ -82,79 +84,84 @@ The Kalman filter method is a $\chi^2$ minimising problem for the measurement of
 The three steps of the Kalman filter will be briefly outlined and later discribed in further detail.
 
 
-The first step is the $\symbf{\symup{Prediction}}$: The next track state of the trajectory is predicted based on the track state at the previous node.
-The second step is the $\symbf{\symup{Filter}}$ procedure: By using filter equations, the prediction is updated with measurement information in this node. The prediction and filter are repeated for each measurement. With more measurements added, the estimate for the best trajectory is the track state after each filter step.
-The final step is called $\symbf{\symup{Smoother}}$: When the trajectory is complete, smoother equations are applied from the last node to the previous node. Therefore the information from all measurements is used in both forward- and backpropagation which results in a "smoother" track.
+The first step is the $\symbf{Prediction}$: The next track state of the trajectory is predicted based on the track state at the previous node.
+The second step is the $\symbf{Filter}$ procedure: By using filter equation*s, the prediction is updated with measurement information in this node. The prediction and filter are repeated for each measurement. With more measurements added, the estimate for the best trajectory is the track state after each filter step.
+The final step is called $\symbf{Smoother}$: When the trajectory is complete, smoother equation*s are applied from the last node to the previous node. Therefore the information from all measurements is used in both forward- and backpropagation which results in a more
+defined track.
 
 \subsection{first Step: Prediction}
-For a given state vector at node \textit{p-1}, the prediction for the $p^{\text{th}}$ state vector and its covariance matrix results from the propagation relations
+For a given state vector at node \textit{k-1}, the prediction for the $k^{\text{th}}$ state vector and its covariance matrix results from the propagation relations
 
-\begin{align}
-  \vec{r}_p^{p-1} &= f_p\left( \vec{r}_{p-1} \right) \\
-  \text{Cov}_p^{p-1} &= F_p C_{p-1} F_p^T + Q_k
-\end{align}
+\begin{align*}
+  \vec{r}_p^{k-1} &= f_p\left( \vec{r}_{k-1} \right) \\
+  \text{Cov}_k^{k-1} &= F_k C_{k-1} F_k^T + Q_k
+\end{align*}
 
-The superscript of the statevector shows the number of measurements used in the estimate and can be abbreviated with $\vec{r}_p^p \equiv \vec{r}_p$. For a maximum number of n measurements $\vec{r}_p^n$ is the smoothed state where every measurement is used.
-$Q_p$ is the process noise in matrix form and it is part of the predicted covariance matrix $C_p^{p-1}$.
+The superscript of the statevector shows the amount of information used in the estimate.
+That means $\vec{r}_k^n$ is the smoothed state vector which used all information,
+$\vec{r}_k^k-1$ is the predicted state vector and $\vec{r}_k^k \equiv \vec{r}_k$ is the filtered state.
+
+$Q_k$ is the process noise in matrix form and it is part of the predicted
+covariance matrix $C_k^{k-1}$.
 Because the first state cannot take measurements from the previous state, an initial prediction is taken from the track finding algorithm instead.
-The predicted residual between the measurement, $m_p$ and the state vector results in
-\begin{equation}
-  \text{res}_p^{p-1} = m_p - h_p\left( \vec{r}_p^{p-1} \right)
-\end{equation}
+The predicted residual between the measurement, $m_k$ and the state vector results in
+\begin{equation*}
+  \text{res}_k^{k-1} = m_k - h_k\left( \vec{r}_k^{k-1} \right)
+\end{equation*}
 and the corresponding covariance matrix is defined as
-\begin{equation}
-  \text{Cov}_{\text{res},p}^{p-1} = V_p + H_p C_p^{p-1} H_P^T
-\end{equation}\,.
+\begin{equation*}
+  \text{Cov}_{\text{res},k}^{k-1} = V_k + H_k C_k^{k-1} H_k^T\,.
+\end{equation*}
 
-Here, $V_p$ is the measurement variance. With these metrics the minimal $\chi^2$ for the optimal track states can be calculated via
-\begin{equation}
-  \left( \chi^2 \right)_p^{p-1} = \text{res}_p^{p-1} \left(\text{Cov}_{\text{res},p}^{p-1}\right)^{-1} \text{res}_p^{p-1}
-\end{equation}
+Here, $V_k$ is the measurement variance. With these metrics the minimal $\chi^2$ for the optimal track states can be calculated via
+\begin{equation*}
+  \left( \chi^2 \right)_k^{k-1} =
+  \text{res}_k^{k-1} \left(\text{Cov}_{\text{res},k}^{k-1}\right)^{-1} \text{res}_k^{k-1}
+\end{equation*}
 
 \subsection{second Step: Filter}
 During the filter step, the track state is updated with the measurement information.
-Iteratively, each measurement is added and the filtered state $\vec{r}_p$ and the corresponding covariance matrix is calculated via
-\begin{align}
-  \vec{r}_p &= \vec{r}_p^{p-1} + G_p \text{res}+p^{p-1} \\
-  \text{Cov}_p &= \left(\mathbb{1} - G_p H_p\right) \text{Cov}_p^{p-1}
-\end{align}\,,
-where $G_p$ is the gain matrix of dimension $5\times1$ and is defined as
-\begin{equation}
-  G_p = C_p^{p-1} H_p^T \left( \text{Cov}_{\text{res},p}^{p-1} \right)^{-1}
-\end{equation}
+Iteratively, each measurement is added and the filtered state $\vec{r}_k$ and the corresponding covariance matrix is calculated via
+\begin{align*}
+  \vec{r}_k &= \vec{r}_k^{k-1} + G_p \text{res}+k^{k-1} \\
+  \text{Cov}_k &= \left(\mathbb{1} - G_k H_k\right) \text{Cov}_k^{k-1}\,,
+\end{align*}
+where $G_k$ is the gain matrix of dimension $5\times1$ and is defined as
+\begin{equation*}
+  G_k = C_k^{k-1} H_k^T \left( \text{Cov}_{\text{res},k}^{k-1} \right)^{-1}
+\end{equation*}
 
 Afterwards the residuals and its covariance matrix are calculated and the filtered total $\chi^2$ is defined as
-\begin{equation}
-  \left( \chi^2_{\text{filter}} \right)_p = \text{res}_p \text{Cov}_{\text{res},p}^{-1} \text{res}_p
-\end{equation}\,.
+\begin{equation*}
+  \left( \chi^2_{\text{filter}} \right)_k = \text{res}_k \text{Cov}_{\text{res},k}^{-1} \text{res}_k\,.
+\end{equation*}
 
 The prediction and filter procedure is continued for all measurements until the track is fully reconstructed.
-Because the last node at $p \, = \, n$ has the most information in it, a backward update is performed to infuse the previous nodes with the same information as in last node.
+Because the last node at $k \, = \, n$ has the most information in it, a backward update is performed to infuse the previous nodes with the same information as in last node.
 This is called \textit{smoother}-step.
 
 \subsection{third Step: Smoother}
 The smoother function returns the best possible estimate for track states at
-the previous nodes. The method used is called \textit{Rauch-Tung-Striebel}-smoother.
-The idea is to used backward information and construct a smoothed state vector and covariance matrix
-\begin{align}
-  \tilde{r}_p^n &= \vec{r}_p + S_p \left( \vec{r}_{p+1}^n - \vec{r}_{p+1}^p \right) \\
-  \tilde{C}_p^n &= C_p
-\end{align}
-and the Smoother-matrix $S_p$ of dimension $5\times5$
-\begin{equation}
-  S_p = C_p F_{p+1}^T \left( C_{p+1}^p \right)^{-1}
-\end{equation}\,.
+the previous nodes. The method used is called \textit{Rauch-Tung-Striebel}-smoother\cite{RTS}.
+The idea is to use backward information and construct a smoothed state vector and covariance matrix
+\begin{align*}
+  \tilde{r}_k^n &= \vec{r}_k + S_k \left( \vec{r}_{k+1}^n - \vec{r}_{k+1}^k \right) \\
+  \tilde{C}_k^n &= C_k
+\end{align*}
+and the Smoother-matrix $S_k$ of dimension $5\times5$
+\begin{equation*}
+  S_k = C_k F_{k+1}^T \left( C_{k+1}^p \right)^{-1}\,.
+\end{equation*}
 
 In order to calculate the smoothed $\chi^2$ the residual and correspending covariance matrix are
-\begin{align}
-  \text{res}_p &= m_p - h_p \vec{h}_p^n \\
-  \text{Cov}_{\text{res},p}^n &= V_p - H_p C_p^n H_p^T
-\end{align}
-An in depth explanation is given in \cite{RTS}.
+\begin{align*}
+  \text{res}_k &= m_k - h_k \vec{h}_k^n \\
+  \text{Cov}_{\text{res},k}^n &= V_k - H_k C_k^n H_k^T
+\end{align*}
 
 The $\chi^2$ is calculated analogously to the one during the filter step with the difference being the new residuals and covariances.
 
-\section{Alignment using derivatives}
+\section{alignment using derivatives}
 \label{sec:derivatives}
 % wouter
 
@@ -164,7 +171,7 @@ this will come later. time ran out last week so this will be done later.
 %wouter pdf. quelle herausfinden!
 
 %martinelli pdf! use some of that information
-% -> alignment is a minimizing problem (chi2) thats why i looked at chi2 plots
+% -> align*ment is a minimizing problem (chi2) thats why i looked at chi2 plots
 %
 % -> global translation and sheering motion don't change chi2 values because residuals are unchanged.
 %
@@ -177,8 +184,8 @@ this will come later. time ran out last week so this will be done later.
 % source for now: DPG2021 pdf exact source will be included!
 
 % \begin{enumerate}
-%   \item find the best possible configuration of alignables, degrees of freedom, constraints
+%   \item find the best possible configuration of align*ables, degrees of freedom, constraints
 %   \item check for weak modes (how? chi2, small eigenvalues)
 %   \item null tests as good as possible
-%   \item misalignment tests to check alignment
+%   \item misalign*ment tests to check align*ment
 % \end{enumerate}
