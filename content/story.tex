@@ -15,10 +15,10 @@
 %   \item which degree of freedom moves what part of the scifi?
 % \end{enumerate}
 
-The alignment was performed using tracks and vertices. The alignables are the stations,
-layers and modules.
-The goal is to find the optimal configuration of constraints and degrees of freedom to align the detector to its physical position.
-The following pre-installed alignment conditions with the survey constraints being\\
+The alignment is performed using run2 data.
+The goal is to find the optimal configuration for the SciFi to mirror the real detector.
+A configuration is defined as a set of constraints, degrees of freedoms and aligneble objects such as the stations, layers, halflayers, modules or fibre mats.
+The following pre-installed alignment conditions with the survey constraints are used.\\
 \\
 "FT : 0 0 0 0 0 0 : 1 1 1 0.0003 0.0003 0.0003”\\
 "FT/T. : 0 0 0 0 0 0 : 1 1 1 0.0003 0.0003 0.0003”\\
@@ -26,53 +26,48 @@ The following pre-installed alignment conditions with the survey constraints bei
 "FT/.*Module. : 0 0 0 0 0 0 : 0.1 0.1 0.1 0.001 0.001 0.001"\\
 "FT/.*Mat. : 0 0 0 0 0 0 : 0.05 0.05 0.05 0.1 0.1 0.1”\\
 
-were used.
-
 The string is the name of the element, the first set of six numbers are hardcoded parameters for each of the 3 translation degrees of freedom and 3 rotational degrees of freedom (Tx, Ty, Tz, Rx, Ry, Rz) and the second set of six parameters are the corresponding uncertainties.
 
 The scale for the translations are $\si{\milli\metre}$ and the scale for the rotations being $\si{\radian}$. A survey uncertainty of $\num{0.0001}$ stands for $\SI{0.1}{\milli\radian}$.
 
-The alignment runs were performed with gaudisplititer.
+The alignment runs were performed with alignment specific packages from Alignment/Escher and Alignment/TAlignment\cite{align}.
 
-During the alignment, lagrange constraints can be utilized to minimize the
-$\chi^2$ under the condition
+During the alignment, lagrange constraints can be utilized to minimize alignment
+parameter $\alpha $ under the condition
 \begin{equation}
   f(\alpha) = 0
 \end{equation}
 and adding the lagrange parameter $\lambda$ to get
 \begin{equation}
-  \Delta \chi^2 = \lambda f(\alpha)
-\end{equation}\,.
+  \Delta \chi^2 = \lambda f(\alpha)\,.
+\end{equation}
 
 Lagrange constraints are added to fix losely constrained degrees of freedom and can be used for any linear combination of translations and rotations.
-
-%include table from https://twiki.cern.ch/twiki/bin/view/LHCb/TAlignmentManual.
 
 \section{Nulltests and software tests}
 
 As a starting point, Alignment v17r1 was used with 5000 events, magnet in upward position and \textit{GoodLongTracks}.
 The \textit{GoodLongTracks} have the following cuts and parameters:
 \begin{itemize}
-  \item minimum $P_{\text{total}} = \SI{5000}{\mega\electronvolt}$ %(units? 5000 MeV?)
-  \item maximum $P_{\text{total}} = \SI{200000}{\mega\electronvolt}$ %(units? 200 000 MeV = 200 GeV?)
-  \item minimum $p_T = \SI{200}{\mega\electronvolt}$ %(units?)
+  \item $P_{\text{total, min}} = \SI{5000}{\mega\electronvolt}$ %(units? 5000 MeV?)
+  \item $P_{\text{total, max}} = \SI{200000}{\mega\electronvolt}$ %(units? 200 000 MeV = 200 GeV?)
+  \item $p_{T, min} = \SI{200}{\mega\electronvolt}$ %(units?)
   \item maximum $\chi^2 = 5$
-  \item track type should be categorized as "long" %(what does that mean -> hits in every subdetector)
-%\item maximum number of THoles? is 1
+  \item track type should be categorized as "long"
 \end{itemize}
 
 and for the later used \textit{HighMomentumTTracks} the cuts and parameters are:
 
 \begin{itemize}
-  \item minimum $P_{\text{total}} = \SI{50000}{\mega\electronvolt}$
+  \item $P_{\text{total, min}} = \SI{50000}{\mega\electronvolt}$
   \item track type should be categorized as "TTrack"
   \item maximum $\chi^2 = 5$
 \end{itemize}
 
 \begin{figure}
   \centering
-  \includegraphics{plots/point_dofs.png}
-  \caption{Different ways of describing a measurement point inside the detector.}
+  \includegraphics[width=0.75\textwidth]{plots/point_dofs.png}
+  \caption{Different ways of describing a measurement point inside the detector(quelle gibt es nicht mehr-> selber zeichnen).}
   \label{fig:dofs}
 \end{figure}
 

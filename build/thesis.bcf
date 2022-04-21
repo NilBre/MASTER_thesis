@@ -2344,8 +2344,8 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="2">sm2018</bcf:citekey>
-    <bcf:citekey order="3">sm2018</bcf:citekey>
+    <bcf:citekey order="2">standard2018</bcf:citekey>
+    <bcf:citekey order="3">standard2018</bcf:citekey>
     <bcf:citekey order="4">alphas</bcf:citekey>
     <bcf:citekey order="5">qcd</bcf:citekey>
     <bcf:citekey order="6">lhcInfo</bcf:citekey>
@@ -2366,19 +2366,21 @@
     <bcf:citekey order="21">VanTilburg</bcf:citekey>
     <bcf:citekey order="22">VanTilburg</bcf:citekey>
     <bcf:citekey order="23">RTS</bcf:citekey>
-    <bcf:citekey order="24">sm2018</bcf:citekey>
-    <bcf:citekey order="25">alphas</bcf:citekey>
-    <bcf:citekey order="26">qcd</bcf:citekey>
-    <bcf:citekey order="27">lhcInfo</bcf:citekey>
-    <bcf:citekey order="28">facilityCERN</bcf:citekey>
-    <bcf:citekey order="29">facilityLHCb</bcf:citekey>
-    <bcf:citekey order="30">lhcbInfo</bcf:citekey>
-    <bcf:citekey order="31">forward</bcf:citekey>
-    <bcf:citekey order="32">fonll</bcf:citekey>
-    <bcf:citekey order="33">scifiInfo</bcf:citekey>
-    <bcf:citekey order="34">scifiupdate20210311</bcf:citekey>
-    <bcf:citekey order="35">VanTilburg</bcf:citekey>
-    <bcf:citekey order="36">RTS</bcf:citekey>
+    <bcf:citekey order="24">align</bcf:citekey>
+    <bcf:citekey order="25">standard2018</bcf:citekey>
+    <bcf:citekey order="26">alphas</bcf:citekey>
+    <bcf:citekey order="27">qcd</bcf:citekey>
+    <bcf:citekey order="28">lhcInfo</bcf:citekey>
+    <bcf:citekey order="29">facilityCERN</bcf:citekey>
+    <bcf:citekey order="30">facilityLHCb</bcf:citekey>
+    <bcf:citekey order="31">lhcbInfo</bcf:citekey>
+    <bcf:citekey order="32">forward</bcf:citekey>
+    <bcf:citekey order="33">fonll</bcf:citekey>
+    <bcf:citekey order="34">scifiInfo</bcf:citekey>
+    <bcf:citekey order="35">scifiupdate20210311</bcf:citekey>
+    <bcf:citekey order="36">VanTilburg</bcf:citekey>
+    <bcf:citekey order="37">RTS</bcf:citekey>
+    <bcf:citekey order="38">align</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
