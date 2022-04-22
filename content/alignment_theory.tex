@@ -14,7 +14,7 @@ A good track fit is needed in order to find to best estimates for the track para
 There are several track models that can be used. In general, a track is build from numerous segments which are either straight or curved because of an active magnetic field. Depending on the environment of the track either model is good.
 The track segments are called track states and are defined by a position in $x$ and $y$ at a given distance $z$ where the hit was located, then a tanget direction $t_{x,y}$ at the hit position and a momentum parameter acquired from the track curve inside the magnetic field\cite{VanTilburg}.
 
-In order to correctly reconstruct the track is is important to know where the hit is localized and for the upcoming hits, where to particle track came from. From the momentum measurement of the track curvature caused by the magnetic field, the parameter $q/p$ is also added.
+In order to correctly reconstruct the track it is important to know where the hit is localized and for the upcoming hits, where to particle track came from. From the momentum measurement of the track curvature caused by the magnetic field, the parameter $q/p$ is also added.
 
 \begin{align*}
   \vec{r} = \left(\begin{array}{c} x \\ y \\ t_x \\ t_y \\ \frac{q}{p}\end{array}\right) &\,\, t_x = \frac{\partial x}{\partial z} & t_y = \frac{\partial y}{\partial z}
@@ -22,7 +22,7 @@ In order to correctly reconstruct the track is is important to know where the hi
 
 The uncertainty of the five-component state vector is a $5\times5$ covariance matrix $C$.
 A track state can be anywhere on the trajectory but is easier to choose it at real detection points. Combining the track state with a real measurement point is called \textit{node}.
-The propagation from node $k_{-1}$ to node $k$ is described by a propagation function
+The propagation from node $k-1$ to node $k$ is described by a propagation function
 
 \begin{equation*}
   \vec{r}_k = f_k(\vec{r}_{k_{-1}}) + \vec{w}_k\,.
@@ -50,7 +50,6 @@ and $\Delta z$ being the difference in z between the nodes
 \begin{equation*}
   \Delta z = z_k - z_{k-1}
 \end{equation*}
-
 
 Trajectory information for each node is provided by the real measurement where the relation between measurement $m_k$ and track state at a given node $k$ is defined as
 
@@ -82,7 +81,6 @@ In general a track is an ensemble of measurements and track states and the Kalma
 The idea of the Kalman filter is, to have a starting node and add measurements one by one. In between the addition of measurements, the local track state is updated with the new information.
 The Kalman filter method is a $\chi^2$ minimising problem for the measurement of the track. Because of the iterative nature of the method, it is fast und also used in other fields than physics, for example GPS and meteorology.
 The three steps of the Kalman filter will be briefly outlined and later discribed in further detail.
-
 
 The first step is the $\symbf{Prediction}$: The next track state of the trajectory is predicted based on the track state at the previous node.
 The second step is the $\symbf{Filter}$ procedure: By using filter equation*s, the prediction is updated with measurement information in this node. The prediction and filter are repeated for each measurement. With more measurements added, the estimate for the best trajectory is the track state after each filter step.
