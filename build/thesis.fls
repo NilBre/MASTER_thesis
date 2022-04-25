@@ -594,6 +594,15 @@ INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/placeins/placeins.sty
 INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/koma-script/listings.hak
+INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/koma-script/listings.hak
 INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.sty
 INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.sty
 INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.sty
@@ -793,6 +802,8 @@ INPUT ./content/alignment_theory.tex
 INPUT ./content/alignment_theory.tex
 INPUT ./content/story.tex
 INPUT ./content/story.tex
+INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT ./plots/point_dofs.png
 INPUT ./plots/point_dofs.png
 INPUT ./plots/point_dofs.png
