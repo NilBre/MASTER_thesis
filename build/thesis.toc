@@ -8,8 +8,8 @@
 \contentsline {subsection}{\numberline {2.3.2}The LHCb}{7}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Layout of the SciFi Tracker}{8}{subsection.2.3.3}%
 \contentsline {subsection}{\numberline {2.3.4}Scintillating Fibres}{9}{subsection.2.3.4}%
-\contentsline {chapter}{\numberline {3}The Theory of align*ment}{10}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Track reconstruction}{10}{section.3.1}%
+\contentsline {chapter}{\numberline {3}The Theory of Alignment}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Track Reconstruction}{10}{section.3.1}%
 \contentsline {section}{\numberline {3.2}The Kalman filter method \blx@tocontentsinit {0}\cite {VanTilburg}}{12}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}first Step: Prediction}{13}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}second Step: Filter}{13}{subsection.3.2.2}%

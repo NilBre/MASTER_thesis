@@ -1,92 +1,39 @@
 \chapter{Introduction}
 \label{sec:einleitung}
-% Reihenfolge:\\
-% um was geht es im grossen ganzen? wozu braucht man teilchenidentifikation und Strange tagging?\\
-% was ist die grundidee des Strange-Taggings? (meinen absatz da einf\"ugen)\\
-% dann eventuell b-tagging erkl\"aren\\
-% was ist das ziel meiner studie und wie gehe ich vor? (kurze zusammenfassung meiner struktur hilfreich)\\
 
-% Die Rekonstruktion von Teilchen hat in der Teilchenphysik eine hohe Priorität,
-% da die Analyse dieser nur indirekt erfolgen kann. Deshalb wird auf
-% Programme zurückgegriffen, welche teilchenphysikalische Prozesse zunächst
-% simulieren sollen, um ein besseres Verständnis dafür zu bekommen, worauf
-% das Augenmerk gelegt werden soll.
-% Schaut man nun ein Ereignis in einem Detektor wie ATLAS an
-% wird schnell klar, dass viele Programme zur Teilchenidentifikation
-% notwendig sind, um die resultierenden Spuren auszuwerten.
-%
-% Der ATLAS Detektor ist ein radialer Detektor und besteht aus
-% mehreren Schichten. In der Mitte liegt das Strahlrohr, um welches der Spurdetektor gebaut ist. Ein starkes Magnetfeld befindet sich im gesamten Spurdetektor. Dieser dient dazu, die Spuren geladener Teilchen zu
-% rekonstruieren.
-% Anschlie\ss end findet man ein elektromagnetisches Kalorimeter, worin
-% haupts\"achlich langlebige Leptonen und Photonen ihre Energie
-% deponieren. Dahinter befindet sich das hadronische Kalorimeter, in
-% welchem Hadronen ihren Hauptenergiebetrag deponieren. In der
-% \"au\ss ersten Schicht des Torus und in den Endkappen befinden
-% sich die sogenannten Myonenkammern, welche allein zur
-% Myondetektion beitragen.
-%
-% Wenn neutral geladene Hadronen wie das $\symup{\Lambda}$-Baryon
-% die Detektorschichten passieren, ist es schwierig diese
-% zu identifizieren.
-%
-% Mit Hilfe von Ereignisgeneratoren wie Madgraph, Showerprogrammen wie Pythia und
-% Detektorsimulatoren wie DELPHES können künstlich Teilchenkollisionen
-% simuliert werden.
-% Um ein bestimmtes Teilchen rekonstruieren zu wollen, müssen zunächst
-% bestimmte Kriterien betrachtet werden, das bedeutet es muss gegeben
-% sein, dass dieses Teilchen künstlich generiert werden kann und die
-% Verzweigungsverhältnisse nicht zu klein sind.
-% Hier wird die Rekonstruktion von
-% $\symup{\Lambda}$-Baryonen untersucht. Das bedeutet, dass
-% die Schwierigkeit darin besteht, das Strange-Quark zu kennzeichnen.
-% Das f\"uhrt auf die sogenannten Strange-Tagger.
-% Strange-Tagging Algorithmen helfen dort aus, schwer zu identifizierende
-% Strange-Hadronen, aufgrund kleiner Verzweigungsverhältnisse,
-% besser zu untersuchen.
-%
-% Das Strange-Tagging befasst sich damit, Hadronen mit Strange-Quarks
-% zu identifizieren.
-% Hier werden dazu verschiedene Prozesse betrachtet, bei welchen
-% $\symup{\Lambda}$-Baryonen im Endzustand herauskommen.
-% Hier sind das die Prozesse $pp \rightarrow s\bar{s}$, $pp \rightarrow d\bar{d}$
-% und $pp \rightarrow u\bar{u}$, welche durch den MadGraph Ereignisgenerator erzeugt werden.
-% Durch Betrachtung verschiedener Objekte wie $X_{\Lambda}$ und
-% $\symup{\Delta R}$ kann mittels ROC-Kurven(receiver operating characteristic) Auswertung eine
-% Aussage \"uber die Signaleffizienz der $\symup{\Lambda}$ aus diesen Prozessen
-% getroffen werden.
-% Hier wird nur der Fall betrachtet, in welchem $\symup{\Lambda}$-Baryonen
-% mit dem gr\"o\ss ten Verzweigungsverhältnis in zwei
-% Tochterteilchen zerfallen und dessen Tochterteilchen geladene
-% Hadronen sind.
-%
-% Der Anreiz, solche Methoden und Techniken weiterzustudieren, kommt
-% von der Methodik des b-Taggings zum Nachweis von bottom-Quarks
-% in B-Hadronen.
-%
-% Beim b-tagging \cite{btag1} wird verwendet, dass Jets, welche bottom-Quarks enthalten,
-% im Vergleich zu anderen Jets eine verhältnismäßig lange Lebensdauer
-% von $\SI{1.5}{\pico\second}$ haben. Damit ist die Flugstrecke ein
-% paar Millimeter lang bevor sie in leichtere Hadronen zerfallen.
-% Die zwei hauptsächlich verwendeten \textit{Tagger} sind zum einen
-% der \textit{spatial Tagger} und zum anderen der \textit{soft lepton Tagger}.
-% Beim \textit{spatial Tagger} werden Informationen über die Lebensspanne
-% der Teilchen, wie die Flugstrecke, Stoßparameter und Zerfallsvertizes
-% verwendet. Hierzu werden die Sekundär-Vertizes verwendet, um Aufschlüsse
-% über den Zerfall zu gewinnen.
-% Bei dem \textit{soft lepton Tagger} wird die
-% Rekonstruktion der Leptonen im semileptonischen Zerfall verwendet.
-%
-% Abzielend auf die Rekonstruktion von $\symup{\Lambda}$-Baryonen beginne
-% ich mit einem Konsistenztest, indem ich die Verzweigungsverhältnisse des
-% betrachteten $\symup{\Lambda}$-Zerfalls und des $K_{S}$ Zerfalls nach
-% $\pi^{+}\pi^{-}$, f\"ur welches bereits ein Rekonstruktionsalgorithmus
-% existiert, aus meinen Samples nachrechne.
-% Dies soll Gewissheit schaffen, dass die Samples konsistente Ergebnisse
-% mit dem PDG liefern.
-% Anschlie\ss end wird der bereits vorhandene Algorithmus f\"ur
-% die Rekonstruktion der $K_{S}$ ausgewertet, indem Objekte und ROC-Kurven
-% interpretiert und ausgewertet werden.
-% Im Anschluss werden die Ergebnisse des implementierten Algorithmus
-% der $\symup{\Lambda}$-Rekonstruktion ausgewertet und analysiert.
-% Dies beinhaltet Unterschiede zwischen den Plots herauszulesen und die ROC-Kurven zu interpretieren.
+The beginning of the $20^{\text{th}}$ century many physicists started research on
+elementary particles and the interactions associated with them. The combined
+knowledge lead to the construction of most precisely tested theories: the
+Standard Model (SM) of particles. To this day the measurements are in agreement
+with the model within the theretical and experimental uncertainties.
+The SM describes every fundamental force except for gravity. There are still open
+questions such the matter-antimatter asymmetry in the universe leading to a larger
+charge-parity (CP) violation than the SM predicted.
+To takle these problems, high energy experiments such as the LHCb located at the
+Large Hadron Collider (LHC) at CERN were build for this exact reason.
+The LHCb's main purposes are beauty-quark and charm-quark physics especially
+precision measurements with a focus and decays involving thes quarks.
+These measurements provide insights into CP-violation for massive
+particle decays.
+To detect these phenomena the threshold for statistical uncertainties has to
+be lowered and the amount of data collected needs to be increased. The upgrade
+described in section \ref{sec:upgradeLHCb} will increase the instantaneous
+luminosity by a factor of five to $\num{2e33}$ $\symup{fb}^{-1}$ and
+the detector readout rate will be at $\SI{40}{\mega\hertz}$. To realize these
+hardware challenges the frontend electronics and tracking systems needed upgrades.
+The operate the upgraded Tracker at its full potential the software must be
+calibrated as good as possible to the physical detector.
+\\
+\\
+The Alignment theory will be described in \ref{sec:alignTheory}.
+In chapter \label{sec:story} different sets of constraints, degrees of freedom
+and alignable objects called \textit{configuration} will be tested first in order
+to study how different configurations influence the alignment. Afterwards several
+tests will be performed to analyse the behavior of a misaligned detector and check
+if the chosen configuration converges towards an aligned state. Since the detector
+cannot be aligned the whole time, it is crucial that misalignments do not stay
+permanent but can be reverted.
+The LHC will not run permanently at maximum luminosity therefore tests are performed
+to analyse alignment of different luminosity samples.
+During the alignment studies a bias inside the clustering algorithms was discovered
+which had an impact of the alignment. The exact changes will be discussed in the final section of chapter \ref{sec:story}.

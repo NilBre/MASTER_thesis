@@ -757,6 +757,7 @@ INPUT /home/nils/.local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbol
 INPUT /home/nils/.local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT ./content/abstract.tex
 INPUT ./content/abstract.tex
+INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc
 INPUT ./content/kurzfassung.tex
 INPUT ./content/kurzfassung.tex
 INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmromanslant10-regular.luc
@@ -766,11 +767,10 @@ INPUT build/thesis.toc
 OUTPUT build/thesis.toc
 INPUT ./content/einleitung.tex
 INPUT ./content/einleitung.tex
-INPUT ./content/particles_and_lhc.tex
-INPUT ./content/particles_and_lhc.tex
 INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc
 INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman5-regular.luc
-INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc
+INPUT ./content/particles_and_lhc.tex
+INPUT ./content/particles_and_lhc.tex
 INPUT ./plots/SM_2018.png
 INPUT ./plots/SM_2018.png
 INPUT ./plots/SM_2018.png
