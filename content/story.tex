@@ -69,7 +69,7 @@ and for the later used \textit{HighMomentumTTracks} the cuts and parameters are:
 \begin{figure}
   \centering
   \includegraphics[width=0.75\textwidth]{plots/point_dofs.png}
-  \caption{Different ways of describing a measurement point inside the detector(quelle gibt es nicht mehr-> selber zeichnen).}
+  \caption{Different ways of describing a measurement point inside the detector(quelle gibt es nicht mehr-> selber zeichnen oder anderes bild).}
   \label{fig:dofs}
 \end{figure}
 
@@ -83,32 +83,53 @@ Figure \ref{fig:dofs} is used to demonstrate which degrees of freedom can be use
 to describe a point in the detector or a shift in coordinates.
 On the left-hand side the measurement point is described through cartesian coordinates and on the right-hand side it is described via polarcoordinates in a way.
 
-The starting configuration used from Florian Reiss is called \textit{baseline}.
-The degrees of freedom for the baseline are $Tx$ and $Rz$ with no constraints.
-That way, a comparison to an unconstrained detector can be performed.
-The track type used is \textit{GoodLongTracks} and the alignment was performed
-for the stations and layers.
+The starting point of the analysis was the presentation held by Florian
+Reiss\cite{flo} which contained findings about malfunctioning shearing constraints.
+His analysis was performed with the VELO but the ideas are applicable for the SciFi as well.
+The parameters he used were changed to fit the SciFi and resulted in
+
+\begin{lstlisting}[language=Python]
+    dofs = "TxTyRxRy"
+    elements.FTStations(dofs)
+    elements.FTFrameLayers(dofs)
+    TrackSelections = GoodLongTracks()
+\end{lstlisting}
+
+The alignable objects are the (T-)stations and te layers and the trackselection is chosen to be \textit{GoodLongTracks} as a starting point. This will be called \textit{baseline}\footnote{or baseline configuration}.
+The baseline is unconstrained in order to see what the software geometry of the detector is like before the alignment with constraints.
+
 In this part, the steps of testing different configurations is described and analysed.
 
-The measurement points are the mean of each layer, the errorbars are root-mean-square errors and come from the difference between the C-side and the A-side of the detector layer and is not the measurement uncertainty.
-The green measurement used the following configuration:
+Starting of with the first configuration called "noRotation" tested against the baseline as seen in figure\ref{fig:june_2} for 1000 simulated events used in this particular alignment run and \ref{fig:june_2_1} for 7000 simulated events respectivley.
 
-\begin{itemize}
-  \item 1000 events
-  \item GoodLongTracks
-  \item degrees of freedom: Tx Tz Rx Rz
-  \item constraints:
-  \begin{itemize}
-    \item station3 : Tx Tz Rx Rz
-    \item last C-frame : Tx Tz Rx Rz
-  \end{itemize}
-\end{itemize}
+The measurement points are the mean of each layer, the errorbars are root-mean-square errors (RMS) and come from the difference between the C-side and the A-side of the detector layer and is not the measurement uncertainty.
 
-At first every degree of freedom except for $y$-translation and rotation was used. Although there is a redundancy in information it helps to not lose information. Later on we want as few constraints as possible and only usefull degrees of freedom, so we started with a lot of constraints and degrees of freedom and reduce them as we procede. This measurement only used 1000 events and is only used as a guideline to what the trend of the distribution looks like. The associated graphs for $Tx$ plotted against the group position in $z$ are shown in figure \ref{fig:june_2}.
-A prominent problem we see in the blue graph is the layer separation between the X-layers and
-the stereo layers. This is definitely not how the physical detector is mounted so this is the baseline we want to align.
-The green dots from the first alignment run with 10 iterations looks promising
-but we only used 1000 events so this result only shows a trend how good the alignment worked.
+The "noRotation" configuration is defined as:
+
+\begin{lstlisting}[language=Python]
+    dofs = "TxTz"
+    elements.FTStations(dofs)
+    elements.FTFramelayers(dofs)
+    TrackSelections = GoodLongTracks()
+    constraints = [
+        "station1 : FT/T1 : Tx Tz",
+        "station2 : FT/T2 : Tx Tz",
+        "station3 : FT/T3 : Tx Tz",
+        "frontCSide : FT/T3/Layer(X1|U)/Quarter(0|2) : Tx Tz",
+        "backCSide  : FT/T3/Layer(V|X2)/Quarter(0|2) : Tx Tz",
+        "frontASide : FT/T3/Layer(X1|U)/Quarter(1|3) : Tx Tz",
+        "backASide  : FT/T3/Layer(V|X2)/Quarter(1|3) : Tx Tz"
+    ]
+\end{lstlisting}
+
+Here, only x-translation will be compared since other translatory degrees of freedom will be swapped out for a rotational degree of freedem.
+The first three constraints on all stations regarding translations brings the total movement of the station to around zero which can be seen clearly in figure\ref{fig:june_2}. The last four constraints restrict the movement of each
+side of the C-frame to be centered around zero which brings the x translation in station 3 even closer to zero.
+Even though the alignment improved the amount of constraints cannot recover from potential misalignments because the constraints hinder the stations from moving.
+
+Later on we want as few constraints as possible so that the alignable objects can be aligned and converge towards the optimal position based on the track reconstruction.
+This measurement only used 1000 events and is only used as a guideline to what the trend of the distribution looks like. The associated graphs for $Tx$ plotted against the group position in $z$ are shown in figure \ref{fig:june_2}.
+A prominent problem visible is the layer separation between the X-layers and the stereo layers as well as a separation between the C-frames inside each station.
 
 \begin{figure}
   \centering
@@ -124,19 +145,32 @@ but we only used 1000 events so this result only shows a trend how good the alig
   \label{fig:june_2_1}
 \end{figure}
 
-In figure \ref{fig:june_2_1} the same measurement was performed for 7000 events to get a better picture. In comparison to \ref{fig:june_2} an overall improvement of the baseline is visible and the layer-splitting is reduced but still prominent. The green measurement shows no direct improvement since the layers are already pretty close to zero in x-direction, where we want them.
-Here we studied the impact of not constraining rotations which worked quite good.
+In figure \ref{fig:june_2_1} the same measurement was performed for 7000 events to get a better picture. In comparison to \ref{fig:june_2} an overall improvement of the baseline is visible and the layer-splitting is reduced but still prominent. The green measurement shows no direct improvement since the layers are already pretty close to zero in x-direction.
+Using 7000 events instead of 1000 events showed a more realistic picture but
+took more time to compute especially for 10 alignment iterations.
+For the following configuration, 3000 simulated events were used to shorten the computing time while still yielding an accurate representation of the situation.
 
-The following measurements used 3000 events because the performance did not change much when using 5000 or even 7000 events. Also, the time the computer needed to finish an alignment run for 7000 events and 10 iterations was "a lot longer" than for 3000 events.
-This alignment took 9 iterations to converge so there is also a computing error
-which needs to be sorted out.
+The next configuration tested will be called "half C-frame". This configuration is defined as
 
-A clear evidence of this computing error can be seen in figure \ref{fig:june_3}. Here a comparison between a modified baseline configuration shown in the blue dots, and a new configuration using halflayer constraints shown with the orange dots, is performed.
-Halflayers are, in contrast to full layers, the seperation into C-side and A-side of the layer.
-With that constraints on each half can be implemented seperately.
+\begin{lstlisting}[language=Python]
+    dofs = "TxTzRxRz"
+    elements.FTStations(dofs)
+    elements.FTFramelayers(dofs)
+    TrackSelections = GoodLongTracks()
+    constraints = [
+        "station1 : FT/T1 : Tx Tz",
+        "station2 : FT/T2 : Tx Tz",
+        "station3 : FT/T3 : Tx Tz",
+        "frontCSide : FT/T3/Layer(X1|U)/Quarter(0|2) : Tx Tz : total",
+        "backCSide  : FT/T3/Layer(V|X2)/Quarter(0|2) : Tx Tz : total"
+]
+\end{lstlisting}
 
-This new configuration in orange converged after 15 iterations. Normally, an alignment job should converge after three to five iterations. If the convergence happens later there
-could be a problem with the constraints which prevent the alignment from converging because they are implemented wrongly or weak modes hinder the convergence.
+and the comparison to the baseline is shown in figure \ref{fig:june_3}.
+Here the stations and layers are aligned in $Tx$, $Tz$, $Rx$ and $Rz$ but the stations are still only constrained in their translations. Also, the last station only has one side of each C-frame constrained. The additional keyword \textbf{total} constraints
+the difference of the quarters to zero with respect to the nominal position. As seen in figure \ref{fig:june_3} the first two layers have an average position of zero but the individual position is not. The same is seen in the last two layers of each station.
+
+This new configuration in orange converged after 15 iterations. Normally, an alignment job should converge after three to five iterations. If the convergence happens later there could be a problem with the constraints which prevent the alignment from converging because they are implemented wrongly, are redundant or weak modes hinder the convergence.
 
 \begin{figure}
   \centering
