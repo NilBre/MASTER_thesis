@@ -69,7 +69,7 @@ and for the later used \textit{HighMomentumTTracks} the cuts and parameters are:
 \begin{figure}
   \centering
   \includegraphics[width=0.75\textwidth]{plots/point_dofs.png}
-  \caption{Different ways of describing a measurement point inside the detector(quelle gibt es nicht mehr-> selber zeichnen oder anderes bild).}
+  \caption{Different ways of describing a measurement point inside the detector(draw this again).}
   \label{fig:dofs}
 \end{figure}
 
@@ -93,8 +93,9 @@ The parameters he used were changed to fit the SciFi and resulted in
     elements.FTStations(dofs)
     elements.FTFrameLayers(dofs)
     TrackSelections = GoodLongTracks()
-\end{lstlisting}
+\end{lstlisting}\,.
 
+The dataset used is \textit{upgrade\_DC19\_01\_MinBiasMU} taken from the testfileDB\cite{testDB} and will be used for the upcoming tests until a different set is mentioned.
 The alignable objects are the (T-)stations and te layers and the trackselection is chosen to be \textit{GoodLongTracks} as a starting point. This will be called \textit{baseline}\footnote{or baseline configuration}.
 The baseline is unconstrained in order to see what the software geometry of the detector is like before the alignment with constraints.
 
@@ -122,7 +123,7 @@ The "noRotation" configuration is defined as:
     ]
 \end{lstlisting}
 
-Here, only x-translation will be compared since other translatory degrees of freedom will be swapped out for a rotational degree of freedem.
+Here, only x-translation will be compared since other translatory degrees of freedom will be swapped out for a rotational degree of freedom (DoF).
 The first three constraints on all stations regarding translations brings the total movement of the station to around zero which can be seen clearly in figure\ref{fig:june_2}. The last four constraints restrict the movement of each
 side of the C-frame to be centered around zero which brings the x translation in station 3 even closer to zero.
 Even though the alignment improved the amount of constraints cannot recover from potential misalignments because the constraints hinder the stations from moving.
@@ -150,6 +151,8 @@ Using 7000 events instead of 1000 events showed a more realistic picture but
 took more time to compute especially for 10 alignment iterations.
 For the following configuration, 3000 simulated events were used to shorten the computing time while still yielding an accurate representation of the situation.
 
+% for comparisons include the 3000MU plot from renewed_plots
+
 The next configuration tested will be called "half C-frame". This configuration is defined as
 
 \begin{lstlisting}[language=Python]
@@ -170,48 +173,91 @@ and the comparison to the baseline is shown in figure \ref{fig:june_3}.
 Here the stations and layers are aligned in $Tx$, $Tz$, $Rx$ and $Rz$ but the stations are still only constrained in their translations. Also, the last station only has one side of each C-frame constrained. The additional keyword \textbf{total} constraints
 the difference of the quarters to zero with respect to the nominal position. As seen in figure \ref{fig:june_3} the first two layers have an average position of zero but the individual position is not. The same is seen in the last two layers of each station.
 
-This new configuration in orange converged after 15 iterations. Normally, an alignment job should converge after three to five iterations. If the convergence happens later there could be a problem with the constraints which prevent the alignment from converging because they are implemented wrongly, are redundant or weak modes hinder the convergence.
+This new configuration in orange converged after 12 iterations as seen in figure \ref{fig:conv}. Normally, an alignment job should converge after three to five iterations. If the convergence happens later there could be a problem with the constraints which prevent the alignment from converging because they are implemented wrongly, are redundant or weak modes hinder the convergence.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{plots/scatter_fig_4_4_convergence.png}
+  \caption{convergence after 12 iterations from configuration "half C-frame".}
+  \label{fig:conv}
+\end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/june_21/allT_halfT3_n20_Tx.png}
-  \caption{analysed 20 iterations for x translation behavior (look up exact constraints and dofs)}
+  \caption{analysed 20 iterations for x translation behavior for configuration "half C-frame".}
   \label{fig:june_3}
 \end{figure}
 
+Similar to the "noRotation" configuration the same constraints were used but for different degrees of freedom. The new configuration is called "Full DoF" which uses every degree of freedom and is defined as:
+
+\begin{lstlisting}[language=Python]
+    dofs = "TxTyTzRxRyRz"
+    elements.FTStations(dofs)
+    elements.FTFramelayers(dofs)
+    TrackSelections = GoodLongTracks()
+    constraints = [
+        "station1 : FT/T1 : Tx Ty Tz Rx Ry Rz",
+        "station2 : FT/T2 : Tx Ty Tz Rx Ry Rz",
+        "station3 : FT/T3 : Tx Ty Tz Rx Ry Rz",
+        "frontCSide : FT/T3/Layer(X1|U)/Quarter(0|2) : Tx Ty Tz Rx Ry Rz",
+        "backCSide  : FT/T3/Layer(V|X2)/Quarter(0|2) : Tx Ty Tz Rx Ry Rz",
+        "frontASide : FT/T3/Layer(X1|U)/Quarter(1|3) : Tx Ty Tz Rx Ry Rz",
+        "backASide  : FT/T3/Layer(V|X2)/Quarter(1|3) : Tx Ty Tz Rx Ry Rz"
+        ]
+\end{lstlisting}
+
+In figure \ref{fig:june_4} x-translation and z-translation with regards to
+the group position are shown.
+
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{plots/june_21/allT_halfT3_Tx_vs_Flo.png}
-  \caption{halflayer constraints and full layer constraint, very strict (look up exact constraints and dofs)}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/june_21/allT_halfT3_Tx_vs_Flo.png}
+    \caption{x-translation versus group position in z.}
+    \label{fig:june_4_1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/scatter_fig4_2.png}
+    \caption{z-translation versus group position in z.}
+    \label{fig:june_4_2}
+  \end{subfigure}
+  \caption{"Full DoF" configuration (red) plotted versus baseline configuration (blue) for 3000 events.}
   \label{fig:june_4}
 \end{figure}
 
-The consequences of very strict Tx constraints are shown in figure \ref{fig:june_4}.
-The difference between the configuration used here and the one used in figure
-\ref{fig:june_2_1} are... (comparison todo).
+Figure \ref{fig:june_4_1} still shows layer separation in station 1 more similar to figure \ref{fig:june_3} than to figure \ref{fig:june_2_1}.
+Since the constraints are the same and the amount of degrees of freedoms increased,
+it is visible that using more DoFs makes the alignment worse. Therefore the choice of DoFs must be wisely chosen.
 
-Introducing halflayers as an alignable, they are constrained in station 3 because
-we found that it results in the best alignment.
-Also halflayers are a better representation of the real detector since we describe
-the C-side and A-side seperately.
-This is due to the fact that station 3 is the furthest away from the interaction point (IP) and $q \,/\, p$ has the most impact at that distance.
-Looking at $Tz$ first, the RMS uncertainty is viewed by looking at the A-side and the C-side seperately.
+Regarding the z-translation the plot is only shown to demonstrate the large separation of layers. the baseline was not aligned in $Tz$ so there is no comparison.
+% Will do an alignment run to get it!
+The RMS uncertainty on the measurements is a result of the separation between A-side and C-side. For configuration "Full DoF", a plot showing the C-side and A-side difference in x-translation is shown in figure \ref{fig:june_5} and for z-translation in figure \ref{fig:june_6}.
+
+% Also halflayers are a better representation of the real detector since we describe
+% the C-side and A-side seperately.
+
+% This is due to the fact that station 3 is the furthest away from the interaction point (IP) and $q \,/\, p$ has the most impact at that distance.
+
 A clear layer separation is visible in terms af layer translation along the beam pipe\ref{fig:june_5}.
 The first and third layer in each station move away from the IP and the second and
-fourth layer move away from the IP.
-Because of the many constraints that are applied to T3, the RMS uncertainty in the other stations get worse. Because the last station is overconstrained the track reconstruction moves the other stations accordingly which results and larger RMS uncertainty in station 1 and 2.
+fourth layer move towards the IP.
+Because of the many constraints that are applied to T3, the RMS uncertainty in the other stations get worse. Because the last station is overconstrained the track reconstruction moves the other stations accordingly which results in a larger RMS uncertainty in station 1 and 2.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{plots/june_21/CA_allT_halfT3_Tz.png}
-  \caption{compare C-Side to A-Side for translation in z direction. (look up exact constraints and dofs)}
+  \includegraphics[width=0.8\textwidth]{plots/renewed_plots/CA_allT_halfT3_Tz.png}
+  \caption{compare C-Side to A-Side for translation in z direction.}
   \label{fig:june_5}
 \end{figure}
 On the other hand the x-translation \ref{fig:june_6}
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{plots/june_21/CA_allT_halfT3_Tx.png}
-  \caption{compare C-Side to A-Side for translation in x direction. (look up exact constraints and dofs)}
+  \includegraphics[width=0.8\textwidth]{plots/renewed_plots/CA_allT_halfT3_Tx.png}
+  \caption{compare C-Side to A-Side for translation in x direction.}
   \label{fig:june_6}
 \end{figure}
 

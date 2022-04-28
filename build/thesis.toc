@@ -17,12 +17,12 @@
 \contentsline {section}{\numberline {3.3}alignment using derivatives}{14}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Alignment of the SciFi}{15}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Nulltests and software tests}{16}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}rotational constraints}{21}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}chi2 tests and weak modes}{27}{section.4.2}%
-\contentsline {section}{\numberline {4.3}luminosity samples and chi2}{31}{section.4.3}%
-\contentsline {section}{\numberline {4.4}impact of the cluster bias}{32}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Continuing Work}{37}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Future Work}{38}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusion and Outlook}{39}{chapter.7}%
-\contentsline {chapter}{\nonumberline Literatur}{40}{chapter*.33}%
+\contentsline {subsection}{\numberline {4.1.1}rotational constraints}{23}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}chi2 tests and weak modes}{28}{section.4.2}%
+\contentsline {section}{\numberline {4.3}luminosity samples and chi2}{32}{section.4.3}%
+\contentsline {section}{\numberline {4.4}impact of the cluster bias}{33}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Continuing Work}{38}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Future Work}{39}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusion and Outlook}{40}{chapter.7}%
+\contentsline {chapter}{\nonumberline Literatur}{41}{chapter*.34}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
