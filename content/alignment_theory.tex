@@ -159,31 +159,81 @@ In order to calculate the smoothed $\chi^2$ the residual and correspending covar
 
 The $\chi^2$ is calculated analogously to the one during the filter step with the difference being the new residuals and covariances.
 
-\section{alignment using derivatives}
+\section{Alignment with Kalman filter track fit}
 \label{sec:derivatives}
-% wouter
 
-this will come later. time ran out last week so this will be done later.
+In principal, minimizing the track residuals is the obvious way to align a detector.
+The residual $\vec{\text{res}}_k$ is defined by the difference between a real detector hit and the expected hit position
 
-%%%%%%% notes %%%%%%%
-%wouter pdf. quelle herausfinden!
+\begin{equation}
+  \text{res}_k = m_k - h_k(\vec{r},\vec{\alpha})
+\end{equation}
 
-%martinelli pdf! use some of that information
-% -> align*ment is a minimizing problem (chi2) thats why i looked at chi2 plots
-%
-% -> global translation and sheering motion don't change chi2 values because residuals are unchanged.
-%
-% -> weak modes: presence of weak modes affect the convergence (poor, takes many iterations), bias in track parameters.
-%
-% -> most visible weak modes is the "curvature bias" (sophie has mentioned it sometime. must be on one of my sheets)
-% also look at twiki!
-%
-% goals:
-% source for now: DPG2021 pdf exact source will be included!
+where $\symbf{h}$ is the measurement model, $\vec{r}$ are the track parameters and $\vec{\alpha}$ are the alignment parameters.
+Aligning the SciFi by minimizing the track $\chi^2$ with the same model as used for reconstruction is an advantage. The idea is to use a global covariance matrix in the Kalman filter track fit. Fiiting the tracks will be the form of alignment.
+In the following paragraph this form of alignment is briefly described from the in-depth demonstration from Wouter Hulsbergen\cite{HULSBERGEN1}.
 
-% \begin{enumerate}
-%   \item find the best possible configuration of align*ables, degrees of freedom, constraints
-%   \item check for weak modes (how? chi2, small eigenvalues)
-%   \item null tests as good as possible
-%   \item misalign*ment tests to check align*ment
-% \end{enumerate}
+Starting with a short revisit about the important aspects of the Kalman track reconstruction. The track $\chi^2$ is defined as
+
+\begin{equation}
+  \chi^2 = \vec{\text{res}}^T V^{-1} \vec{\text{res}}\,,
+\end{equation}
+
+where $V$ is the track covariance matrix.
+The condition for $\chi^2$ to be minimal with respect to a track model $h(x,\alpha)$ with track parameters $x_k$ and alignment parameters $\alpha_k$ are
+
+\begin{equation}
+  \frac{\partial\sum_k\chi^2_k}{\partial \alpha} = 0
+\end{equation}
+
+ and
+
+ \begin{equation}
+   \forall_k \frac{\partial\chi^2_k}{\partial x_k} = 0\,.
+ \end{equation}
+
+The subscript $k$ denotes the track not the vector component. For a single track the subscript can be left out. For many tracks to computation is performed in two steps because it is computational too expensive to use a least square expression.
+The first step is to estimate track parameters for a starting set of calibration parameters called $\alpha_0$. The second step is to minimize the total $\chi^2$ with respect to $\alpha$ while also taking $x_k$ and $\alpha$ into account.
+
+The total derivative reads
+\begin{equation}
+  \frac{\symup{d}}{\symup{d}\alpha} = \frac{\partial}{\partial\alpha} +
+  \frac{\symup{d}x}{\symup{d}\alpha}\frac{\partial}{\partial x}\,.
+\end{equation}
+
+$\frac{\symup{d}x}{\symup{d}\alpha}$ is a derivative matrix and results from the minimal track $\chi^2$ condition and can be expressed by
+
+\begin{equation}
+  \frac{\symup{d}}{\symup{d}\alpha}\frac{\partial \chi^2}{\partial x} = 0
+\end{equation}
+
+therefore the derivative matrix is definded as
+\begin{equation}
+  \frac{\symup{d}x}{\symup{d}\alpha} = -\frac{\partial^2\chi^2}{\partial\alpha\partial x} \left( \frac{\partial^2\chi^2}{\partial x^2} \right)^{-1}\,.
+\end{equation}
+
+The total $\chi^2$ for a sample of tracks is minimal with respect to $\alpha$ and $x$ can the be described as
+\begin{equation}
+  \frac{\symup{d}\chi^2}{\symup{d}\alpha} = 0\,.
+\end{equation}
+
+For $N$ alignment parameters a system with $N$ coupled non-linear equations is defined.
+Linearizing the minimum $\chi^2$ condition around the starting values $\alpha_0$ and solving the linear system for $\Delta\alpha$ yields the solution.
+\begin{equation}
+  \frac{\symup{d}^2\chi^2}{\symup{d}\alpha^2}\vert_{\alpha_0} \Delta\alpha =
+  -\frac{\symup{d}\chi^2}{\symup{d}\alpha}\vert_{\alpha_0}
+\end{equation}
+
+Now, with enough constraints inside the alignment the second derivative matrix is invertable and the covariance matrix for $\alpha$ reads
+
+\begin{equation*}
+  \text{Cov}(\alpha) = 2 \left( \frac{\symup{d}^2\chi^2}{\symup{d}\alpha^2} \right)^{-1}\,.
+\end{equation*}
+
+Higher order derivatives in $\alpha$ are neglected here. The difference in the total $\chi^2$ resulting from a change in $\Delta\alpha$ is given by
+
+\begin{equation*}
+  \Delta_{\chi^2} = \frac{1}{2} \left( \frac{\symup{d}\chi^2}{\symup{d}\alpha} \right)^T \Delta\alpha = -\Delta\alpha^T \text{Cov}(\alpha)^{-1}\Delta\alpha
+\end{equation*}
+
+The change in total $\chi^2$ is equivalent to the significance of the alignment correction and $\Delta_{\chi^2}$ is used to follow the convergence of an alignment.

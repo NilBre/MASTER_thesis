@@ -157,6 +157,39 @@
       \verb https://indico.cern.ch/event/997932/contributions/4263653/attachments/2206615/3733618/SciFiAlignOverview-11-03.pdf
       \endverb
     \endentry
+    \entry{HULSBERGEN1}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8e6cadbdb50248df6b0522695c8c442f}{%
+           family={Hulsbergen},
+           familyi={H\bibinitperiod},
+           given={W.D.},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e6cadbdb50248df6b0522695c8c442f}
+      \strng{fullhash}{8e6cadbdb50248df6b0522695c8c442f}
+      \strng{bibnamehash}{8e6cadbdb50248df6b0522695c8c442f}
+      \strng{authorbibnamehash}{8e6cadbdb50248df6b0522695c8c442f}
+      \strng{authornamehash}{8e6cadbdb50248df6b0522695c8c442f}
+      \strng{authorfullhash}{8e6cadbdb50248df6b0522695c8c442f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment}
+      \field{title}{The global covariance matrix of tracks fitted with a Kalman filter and an application in detector alignment}
+      \field{year}{2009}
+      \field{pages}{471\bibrangedash 477}
+      \range{pages}{7}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.nima.2008.11.094
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0168900208017567
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0168900208017567
+      \endverb
+    \endentry
     \entry{lhcInfo}{online}{}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
