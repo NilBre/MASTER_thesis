@@ -189,6 +189,9 @@ This new configuration in orange converged after 12 iterations as seen in figure
   \label{fig:june_3}
 \end{figure}
 
+\section{rotational constraints}
+In the previous section rotations were not used inside the constraints. Now the constraints will include rotational constraints and test the changes.
+
 Similar to the "noRotation" configuration the same constraints were used but for different degrees of freedom. The new configuration is called "Full DoF" which uses every degree of freedom and is defined as:
 
 \begin{lstlisting}[language=Python]
@@ -231,16 +234,11 @@ the group position are shown.
 
 Figure \ref{fig:june_4_1} still shows layer separation in station 1 more similar to figure \ref{fig:june_3} than to figure \ref{fig:june_2_1}.
 Since the constraints are the same and the amount of degrees of freedoms increased,
-it is visible that using more DoFs makes the alignment worse. Therefore the choice of DoFs must be wisely chosen.
+it is visible that using more DoFs makes the alignment worse. Therefore the degrees of freedom must be chosen wisely.
 
 Regarding the z-translation the plot is only shown to demonstrate the large separation of layers. the baseline was not aligned in $Tz$ so there is no comparison.
 % Will do an alignment run to get it!
 The RMS uncertainty on the measurements is a result of the separation between A-side and C-side. For configuration "Full DoF", a plot showing the C-side and A-side difference in x-translation is shown in figure \ref{fig:june_5} and for z-translation in figure \ref{fig:june_6}.
-
-% Also halflayers are a better representation of the real detector since we describe
-% the C-side and A-side seperately.
-
-% This is due to the fact that station 3 is the furthest away from the interaction point (IP) and $q \,/\, p$ has the most impact at that distance.
 
 A clear layer separation is visible in terms af layer translation along the beam pipe\ref{fig:june_5}.
 The first and third layer in each station move away from the IP and the second and
@@ -262,132 +260,147 @@ On the other hand the x-translation \ref{fig:june_6}
 \end{figure}
 
 Looking at figure \ref{fig:june_6}, the last two layers in station 3 are
-seperation from the first two regarding x-translation. Especially the last
+seperated from the first two regarding x-translation. Especially the last
 station should be fixed around zero with the constraints added. The sum of
 all translations should be zero with each individual layer movement being small.
 
 The result is unexpected with the constraints added and the cause of this
 problem is described later.
 
-%\subsection{july plots}
-\subsection{rotational constraints}
-The impact of rotational constraints is looked at in the following chapter.
-Firstly, comparing the baseline versus a new configuration with added constraints.
-The direct impact to the rotations are quite small but the translations
-in z- and x-direction show a small improvement to the previous configuration
-seen in figure \ref{fig:june_4}.
+The Next configuration tested is the result of a series of tests with various constraints, DoFs and alignable objects. In figure \ref{fig:TxZ} a new configuration called "Test3" is introduced and it is defined as
 
+\begin{lstlisting}[language=Python]
+dofs = "TxTzRxRz"
+elements.FTStations(dofs)
+elements.FTFramelayers(dofs)
+TrackSelections = GoodLongTracks()
+constraints = [
+    "station3 : FT/T3 : Tx Tz Rx Rz",
+    "frontCSide : FT/T3/Layer(X1|U)/Quarter(0|2) : Tx Tz Rx Rz",
+    "backCSide  : FT/T3/Layer(V|X2)/Quarter(0|2) : Tx Tz Rx Rz",
+    "frontASide : FT/T3/Layer(X1|U)/Quarter(1|3) : Tx Tz Rx Rz",
+    "backASide  : FT/T3/Layer(V|X2)/Quarter(1|3) : Tx Tz Rx Rz"
+    ]
+\end{lstlisting}
 % test 3:
+
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{plots/july_28/Tx.png}
-  \caption{Tx versus global z.}
-  % \hfill
-  % \begin{subfigure}[b]{0.3\textwidth}
-  %   \centering
-  %   \includegraphics[width=\textwidth]{plots/july_28/Rx.png}
-  %   \caption{Rx versus global z.}
-  % \end{subfigure}
-  % \caption{Testing a configuration versus florians changes.}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/july_28/Tx.png}
+    \caption{x-translation versus group position in z.}
+    \label{fig:TxZ_1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/july_28/Tz.png}
+    \caption{z-translation versus group position in z.}
+    \label{fig:TxZ_2}
+  \end{subfigure}
+  \caption{"Test3" configuration (orange) plotted versus baseline configuration (blue) for 1000 events.}
   \label{fig:TxZ}
 \end{figure}
 
-Now, we have a configuration\footnote{The always used configuration will be
-always called "config5" in the labels} which is quite ok but has a lot more room for improvement but is nevertheless a better representation than the baseline.
-Therefore we will now compare further configuration drafts to the "config5" with the following constraints
-\begin{itemize}
-  \item constraint 1
-  \item constraint 2
-  \item constraint 3
-  \item ...
-\end{itemize}
+Here the last four C-frame constraints have rotational degrees of freedom added.
+Looking at \ref{fig:TxZ_1} each station has a quite low movement in x-direction comparing to the previous configurations. In the last station, the first two layers the C-side and A-side are exactly where they should be inside the detector since the RMS is very close to zero. The last two layers only show a small uncertainty. In station
+two the X-layers are separating from the stereolayers. The X-layers also have a noticable RMS uncertainty. In this configuration the degrees of freedom are chose in a way for the alignment to either use them as two pairs of cartesian coordinates (Tx Tz, and Rx Rz) or interpret them as two pairs of polar coordinates (Tx Rz and Tz Rx).
+This and also the reduction in constraints seemed to help the alignment in terms of x-translation, not so much regarding z-translation. Also this plot only shows the alignment for 1000 events and 10 iterations but overall an improvement was achieved
+when it comes to constructing a good configuration.
 
-and the dataset used is taken from the bookkeeping (which exact one).
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{plots/august_13/2019_c5_old_vs_withRz_MU.png}
-  \caption{config5 versus config 5 with Rz constraint for rotational improvement.}
-  \label{fig:withRz}
-\end{figure}
-
-In figure \ref{fig:withRz} config5 is plotted against itself but with and added constraint to Rz.
-The change is the constraint: (fill constraint here).
-% only show Tx and Rz
-Regarding the goal to reduce the amount of rotation and translation in each station,
-the result is a small improvement in $Rz$ of around $\SI{0.005}{\milli\radian}$ in every layer. $Rx$ is mostly unchanged aswell as $Tx$. The rotation around $z$ is correlated to the $z$ translation therefore we see small changes in every layer as well.
-It is noteworthy, that both X-layers in T2 in the x-translation plot have a quite large RMS uncertainty which means the A-side and the C-side in the X-layers are quite far apart but the mean is right around 0. That is expected since the constraint added only brings the mean of the layer to 0. In future analyses another constraint should be added to also keep the side themselves small.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{plots/august_13/combi5_layers_averaged.png}
-  \caption{flo with full layer constraint versus config 5}
-  \label{fig:floFullL_c5}
-\end{figure}
-
-In comparison to what florians configuration looks like against the new
-proposed configuration the figure \ref{fig:floFullL_c5} can be looked at.
-The alignment was performed for 10 iterations and the alignable degrees of
-freedom are $\symup{Tx}, \symup{Tz}, \symup{Rx}, \symup{Rz}$. The alignable
-elements are the stations and the framelayers.
-The constraints used are: \\
-
+The next configurations are called "config5" (blue) and "config5 Rz" (orange). The plots showing the translations are shown in figure \ref{fig:config5_tra} and the rotations are shown in figure \ref{fig:config5_rot}.
+The blue measurement has the same constraints as "Test3" with an added back C-frame constraint:
 \begin{lstlisting}[language=Python]
-  station3 : FT/T3 : Tx Rz Rx Rz
-  backCframeT3 : FT/T3/Layer(V|X2) : Tx Tz
-  FT/T3X1UCSide : FT/T3/Layer(X1|U)/Quarter(0|2) : Tx Tz Rx Rz
-  FT/T3VX2CSide : FT/T3/Layer(V|X2)/Quarter(0|2) : Tx Tz Rx Rz
-  FT/T3X1UASide : FT/T3/Layer(X1|U)/Quarter(1|3) : Tx Tz Rx Rz
-  FT/T3VX2ASide : FT/T3/Layer(V|X2)/Quarter(1|3) : Tx Tz Rx Rz
+  constraints.append("back_C_frame_T3 : FT/T3/Layer(V|X2) : Tx Tz")
 \end{lstlisting}
 
-The first constraint restricts the overall station 3 movement in $\symup{Tx}, \symup{Tz},
-\symup{Rx}$ and $\symup{Rz}$. The second constraint restricts the total movement
-of the last C-frame to be 0 but the individual movement can differ.
-The last four constraints are C-frame constraints as well but for each halflayer in station 3.
+The orange measurement has a similar constraint added with Rz added to the DoFs inside the constraint:
+\begin{lstlisting}[language=Python]
+  constraints.append("back_C_frame_T3 : FT/T3/Layer(V|X2) : Tx Tz Rz")
+\end{lstlisting}
 
-It is good to see that the layer separation in $Rz$ is mostly fixed. But there is still an offset from 0 that is troublesome. This will most certainly have something to do with the clusterbias. Regarding Tx, we have managed to bring down the x-translation to roughly 0 which is a good improvement for the null tests of Tx.
+Comparing just these two configurations, regarding $Tx$ there is not a big difference.
+The last station has a little more separation in "config5 Rz", station 2 shows roughly the same performance and station one is also more split, in total approximately
+$\SI{0.5}{\micro\metre}$. The overall z-translation regressed by a small amount in every station while the layer spearation in station 3 improved.
+It can be sen, that both X-layers in T2 in the x-translation plot have a quite large RMS uncertainty which means the A-side and the C-side in the X-layers are quite far apart but the mean is right around 0. That is expected since the constraint added only brings the mean of the layer to 0. In future analyses new constraints will be added to bring the sides together.
+% config 5
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/renewed_plots/Tx.png}
+    \caption{x-translation versus group position in z.}
+    \label{fig:config5_Tx}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/renewed_plots/Tz.png}
+    \caption{z-translation versus group position in z.}
+    \label{fig:config5_Tz}
+  \end{subfigure}
+  \caption{"config5" configurations (blue) plotted versus "config5 Rz" configuration (orange) for 5000 events.}
+  \label{fig:config5_tra}
+\end{figure}
 
-Translation constraints as well as rotation constraints are not the only constraints tested. There are also scaling- and shearing constraints that were analysed but seemed to have
-no major impact.
+Rotations around $x$ will not be further analysed because it does not have a huge impact on the alignment quality and is also very well aligned. In $Rz$ a noticable gap
+between the two measurements can be seen. This is a result from the added $Rz$
+constraint on the last two layers. The expected rotation is small than shown in figure \ref{fig:config5_Rz} which is expected to be a result from bias in the clusters.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/renewed_plots/Rx.png}
+    \caption{x-rotation versus group position in z.}
+    \label{fig:config5_Rx}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/renewed_plots/Rz.png}
+    \caption{z-rotation versus group position in z.}
+    \label{fig:config5_Rz}
+  \end{subfigure}
+  \caption{"config5" configurations (blue) plotted versus "config5 Rz" configuration (orange) for 5000 events.}
+  \label{fig:config5_rot}
+\end{figure}
+
+Regarding the goal to reduce the amount of rotation and translation in each station,
+the result is a small improvement in $Rz$ of around $\SI{0.005}{\milli\radian}$ in every layer. $Rx$ is mostly unchanged aswell as $Tx$.
 
 % \begin{figure}
 %   \centering
-%   \includegraphics[width=0.8\textwidth]{plots/august_13/newCombi5.png}
-%   \caption{original new config 5, should be the first good plot to show!!}
-%   \label{fig:OGconfig5}
+%   \includegraphics[width=0.8\textwidth]{plots/august_13/combi5_layers_averaged.png}
+%   \caption{flo with full layer constraint versus config 5}
+%   \label{fig:floFullL_c5}
 % \end{figure}
+
+% In comparison to the baseline against the new proposed configuration the figure \ref{fig:floFullL_c5} can be looked at.
+% The alignment was performed for 10 iterations and the alignable degrees of
+% freedom are $\symup{Tx}, \symup{Tz}, \symup{Rx}, \symup{Rz}$. The alignable
+% elements are the stations and the framelayers.
+% The constraints used are: \\
 %
-% \ref{fig:OGconfig5} only used Tx and Rx as dofs -> bad, dont show this plot (mark for removal)
+% \begin{lstlisting}[language=Python]
+%   station3 : FT/T3 : Tx Rz Rx Rz
+%   backCframeT3 : FT/T3/Layer(V|X2) : Tx Tz
+%   FT/T3X1UCSide : FT/T3/Layer(X1|U)/Quarter(0|2) : Tx Tz Rx Rz
+%   FT/T3VX2CSide : FT/T3/Layer(V|X2)/Quarter(0|2) : Tx Tz Rx Rz
+%   FT/T3X1UASide : FT/T3/Layer(X1|U)/Quarter(1|3) : Tx Tz Rx Rz
+%   FT/T3VX2ASide : FT/T3/Layer(V|X2)/Quarter(1|3) : Tx Tz Rx Rz
+% \end{lstlisting}
 
-% october plots
-% update: constraining backlayer and also aligning it (append dofs by : Rx Rz)
-% Results: \\
-% \begin{itemize}
-%   \item improves null tests for Rz but not the only reason why its shifted (cluster bias! expand later)
-%   \item shearing and scaling constraints do NOT improve this
-% \end{itemize}
+% The first constraint restricts the overall station 3 movement in $\symup{Tx}, \symup{Tz},
+% \symup{Rx}$ and $\symup{Rz}$. The second constraint restricts the total movement
+% of the last C-frame to be 0 but the individual movement can differ.
+% The last four constraints are C-frame constraints as well but for each halflayer in station 3.
+%
+% It is good to see that the layer separation in $Rz$ is mostly fixed. But there is still an offset from 0 that is troublesome. This will most certainly have something to do with the clusterbias. Regarding $Tx$, we have managed to bring down the x-translation to roughly 0 which is a good improvement for the null tests of $Tx$.
 
-% Results of 100mu translation misalignment: \\
-% 100mu translation misalignment matches expected survey uncertainty. BUT layers shifted from 0 !
-% TODO: FTTrackmonitor to study later splitting in track output
+Translation constraints as well as rotation constraints are not the only constraints tested. There are also scaling- and shearing constraints that were analysed but seemed to have no major impact.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{plots/oct_4/TxRz_config5_backlayer.png}
-  \caption{dofs Tx Rz and backlayer constraints.}
-  \label{fig:oct4}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{plots/oct_6/combi5_added_RZ_backlayer.png}
-  \caption{combi 5 with Rz backlayer constraint.}
-  \label{fig:oct6}
-\end{figure}
-
-%TODO: redo the plots for \ref{fig:oct4} and \ref{fig:oct6} and don't use florian
-%but instead use a different config5 to compare with!
 
 % november plots
 \section{chi2 tests and weak modes}
@@ -470,52 +483,35 @@ programming error.
   \label{fig:chi2tracksdec}
 \end{figure}
 
-% january plats
-% january 17th plots are for luminosity comparisons.
-% nu for ramp up luminosity versus lumi during data taking.
-
 \section{luminosity samples and chi2}
 For a cross check regarding upcoming studies the difference in $\chi^2 / dofs$ for samples of different luminosities are looked at.
 Comparing two samples, one with a "ramp-up" luminosity with a parameter $\nu = 3.8$ also referred to as "low luminosity" and one for the luminosity used during the data taking
 with $\nu = 7.6$, called "normal luminosity".
 Plotted are these samples in $\chi^2 / dofs$ versus the iteration number \ref{fig:chi2iter_lumi_normal} and the number of tracks\ref{fig:chi2tracks_lumi_normal}.
 
-in figure \ref{fig:chi2iter_lumi_normal} we see the expected convergence after iteration three and a quite low $\chi^2 / dofs$ of around $\num{1.28595}$ for the normal luminosity sample
-and $\num{1.3067}$ for the low luminosity sample.
+in figure \ref{fig:chi2iter_lumi_normal} we see the expected convergence after iteration three and a quite low $\chi^2 / dofs$ of around $\num{1.28595}$ for the normal luminosity sample and $\num{1.3067}$ for the low luminosity sample.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{plots/jan_17_2022/chi2_iter_low_vs_normal.png}
-  \caption{compare different luminosities and plot $\chi^2$ versus iteration.}
+  \includegraphics[width=0.8\textwidth]{plots/renewed_plots/modules_chi2_c5.png}
+  \caption{compare different luminosities and plot $\chi^2$ versus iteration number.}
   \label{fig:chi2iter_lumi_normal}
 \end{figure}
-
-%for figure \ref{fig:chi2iter_lumi_normal} redo the plot with correct labels and legend !!
 
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/jan_17_2022/chi2_tracks_modulesOnly.png}
-  \caption{compare different luminosities and plot chi2 versus number of tracks as a measurement for weakmodes and alignment.}
+  \caption{compare different luminosities and plot $\chi^2$ versus number of tracks as a measurement for weakmodes and alignment.}
   \label{fig:chi2tracks_lumi_normal}
 \end{figure}
 
-% \begin{figure}
-%   \centering
-%   \includegraphics[width=0.8\textwidth]{plots/jan_17_2022/tracks_vs_iterations_modulesOnly.png}
-%   \caption{compare different luminosities and plot number of tracks versus iteration number as a measurement for weakmodes and alignment.}
-%   \label{fig:chi2iter_lumi_normal}
-% \end{figure}
-
-% january 24th:
 \section{impact of the cluster bias}
 
-As mentioned earlier the clusterbias most certainly causes the shift in the rotation around z for each layer so it does not reach 0.
-To test that a momentary fix was found and implemented. The workaround was to a add a scaling to the value ... (look up in LXPLUS) by $\num{0.95}$.
+As mentioned earlier the clusterbias most certainly causes the shift in the rotation around $z$ for each layer so it does not reach 0.
+To test that a momentary fix was found and implemented. The workaround was to add a scaling for the \textit{m\_airgap}\cite{gap}.
 
-Figure \ref{fig:cbhack_on_off} shows the impact of the cluster bias hack regarding
+Figure \ref{fig:cbhack_on_off} shows the impact of the cluster bias fix regarding
 the rotation around $z$.
-
-% show that there is a visible difference between low and normal luminosity however the difference is not big enough to differentiate between the two phases during the ramp up and full run. therefore, for the upcoming analysis steps only the "normal/low" luminosity is taken into consideration.
 
 \begin{figure}
   \centering
@@ -533,24 +529,21 @@ Since we want to know what the shifts in rotation and translation will look like
 Figure \ref{fig:lumi_low_normal_hack_on} shows the difference between a sample with ramp-up luminosity and a sample with the luminosity during the measurement phase.
 We see, that the layer separation is much more prominent in station 1 and 3 for the higher luminosity sample but slightly better behaved in station 2 when looking at x-translation.
 Regarding the z-rotation, the lower luminosity sample as slightly lower rotational shifts.
-The difference is so minute that it can be safely disregarded. (not sure about that)
+The difference is so minute that it can be safely disregarded.
 
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/jan_24_2022/low_normal_with_hack.png}
-  \caption{show difference between low and normal luminosity with clusterbias hack active.}
+  \caption{show difference between low and normal luminosity with clusterbias fix active.}
   \label{fig:lumi_low_normal_hack_on}
 \end{figure}
 
-% february plots
-With that, we tested if there is a noticable difference in the $\frac{\chi^2}{\text{dof}}$
-and the result is shown in figure \ref{fig:GL_lumi_low_normal_hack_on}.
-% The scale is a little bit confusing so i will redo this plot for better readability.
+With that, we tested if there is a noticable difference in the $\frac{\chi^2}{\text{dof}}$ and the result is shown in figure \ref{fig:GL_lumi_low_normal_hack_on}.
 
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/feb_2_2022/GL_modules_c5_cb_hackactive_low_normal_lumi.png}
-  \caption{GoodLong tracks for module alignment and config 5 active. also the clusterbias hack is active comparing low and normal luminosity.}
+  \caption{GoodLong tracks for module alignment and config 5 active. also the clusterbias fix is active comparing low and normal luminosity.}
   \label{fig:GL_lumi_low_normal_hack_on}
 \end{figure}
 
@@ -582,11 +575,10 @@ We do want the least amount of constraints in the system so we also tested
 the consequences of removing constraints from "config5".
 The results are shown in figure \ref{fig:removeConst}.
 The green curve shows the base config for comparison and in red the removal of the backlayer constraint in station 3 is shown. The blue curve shows the alignment results without the C-frame constraints.
-The data samples used were from 2020 with the normal luminosity and an active clusterbias hack.
-The selected track types are \textit{HighMomentumTTracks}(?) for 10000 events (?).
+The data samples used were from 2020 with the normal luminosity and an active clusterbias fix.
+The selected track types are \textit{HighMomentumTTracks}(?) for 10000 events.
 On the one hand we see an improvement in $\chi^2 / \text{dof}$ when removing these constraints individually even if it is only on a very small scale of $\num{1e-5}$. On the
-other hand we see that the $\chi^2 / \text{dof}$ after the last iteration is the same for the base config and for the blue measurement. The constraint removed in the red measurement seems to have the most impact from what was tested but the peak in iteration 6 has no logical
-explanation for now. Additional analysis regarding constraint removal will be done in the future to analyse this phenomenon further.
+other hand we see that the $\chi^2 / \text{dof}$ after the last iteration is the same for the base config and for the blue measurement. The constraint removed in the red measurement seems to have the most impact from what was tested but the peak in iteration 6 has no logical explanation. Additional analysis regarding constraint removal will be done in the future to analyse this phenomenon further.
 Also the behavior of the not decreasing $\chi^2 / \text{dof}$ requires more testing.
 What can be taken from this is that the removal of some constraints will help
-the alignment but the cause of some abnormalities require more testing.
+the alignment but the cause of these abnormalities require more testing.

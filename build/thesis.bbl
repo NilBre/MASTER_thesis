@@ -127,6 +127,22 @@
       \verb https://arxiv.org/pdf/hep-ph/9803400.pdf
       \endverb
     \endentry
+    \entry{gap}{online}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeltitlesource}{title}
+      \field{title}{DeFTMat.cpp}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://gitlab.cern.ch/lhcb/LHCb/-/blob/master/Det/FTDet/src/Lib/DeFTMat.cpp#63
+      \endverb
+      \verb{url}
+      \verb https://gitlab.cern.ch/lhcb/LHCb/-/blob/master/Det/FTDet/src/Lib/DeFTMat.cpp#63
+      \endverb
+    \endentry
     \entry{scifiupdate20210311}{online}{}
       \name{author}{1}{}{%
         {{hash=8f1c6744f1d0e336b995d9e5afd1489d}{%
