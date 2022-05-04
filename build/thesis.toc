@@ -22,7 +22,6 @@
 \contentsline {section}{\numberline {4.4}luminosity samples and chi2}{32}{section.4.4}%
 \contentsline {section}{\numberline {4.5}impact of the cluster bias}{34}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Continuing Work}{39}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Future Work}{40}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusion and Outlook}{41}{chapter.7}%
-\contentsline {chapter}{\nonumberline Literatur}{42}{chapter*.32}%
+\contentsline {chapter}{\numberline {6}Conclusion}{40}{chapter.6}%
+\contentsline {chapter}{\nonumberline Literatur}{41}{chapter*.32}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

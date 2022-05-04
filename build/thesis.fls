@@ -869,9 +869,9 @@ INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lm
 INPUT ./plots/nov_19/Figure_2.png
 INPUT ./plots/nov_19/Figure_2.png
 INPUT ./plots/nov_19/Figure_2.png
-INPUT ./plots/nov_21/chi2_vs_iter_all.png
-INPUT ./plots/nov_21/chi2_vs_iter_all.png
-INPUT ./plots/nov_21/chi2_vs_iter_all.png
+INPUT ./plots/GL_HM_chi2_2020.png
+INPUT ./plots/GL_HM_chi2_2020.png
+INPUT ./plots/GL_HM_chi2_2020.png
 INPUT ./plots/nov_21/chi2_vs_ntracks_all.png
 INPUT ./plots/nov_21/chi2_vs_ntracks_all.png
 INPUT ./plots/nov_21/chi2_vs_ntracks_all.png
@@ -904,8 +904,6 @@ INPUT ./plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png
 INPUT ./plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png
 INPUT ./content/continuing_work.tex
 INPUT ./content/continuing_work.tex
-INPUT ./content/future_work.tex
-INPUT ./content/future_work.tex
 INPUT ./content/conclusion.tex
 INPUT ./content/conclusion.tex
 INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmromancaps10-regular.luc
