@@ -127,6 +127,35 @@
       \verb https://arxiv.org/pdf/hep-ph/9803400.pdf
       \endverb
     \endentry
+    \entry{techreport}{report}{}
+      \name{author}{1}{}{%
+        {{hash=160e40430227f5a4cdc333d8eeaa87ec}{%
+           family={Collaboration},
+           familyi={C\bibinitperiod},
+           given={LHCb},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{160e40430227f5a4cdc333d8eeaa87ec}
+      \strng{fullhash}{160e40430227f5a4cdc333d8eeaa87ec}
+      \strng{bibnamehash}{160e40430227f5a4cdc333d8eeaa87ec}
+      \strng{authorbibnamehash}{160e40430227f5a4cdc333d8eeaa87ec}
+      \strng{authornamehash}{160e40430227f5a4cdc333d8eeaa87ec}
+      \strng{authorfullhash}{160e40430227f5a4cdc333d8eeaa87ec}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{title}{{LHCb Tracker Upgrade Technical Design Report}}
+      \field{type}{techreport}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/1647400
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/1647400
+      \endverb
+    \endentry
     \entry{gap}{online}{}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
@@ -141,36 +170,6 @@
       \endverb
       \verb{url}
       \verb https://gitlab.cern.ch/lhcb/LHCb/-/blob/master/Det/FTDet/src/Lib/DeFTMat.cpp#63
-      \endverb
-    \endentry
-    \entry{scifiupdate20210311}{online}{}
-      \name{author}{1}{}{%
-        {{hash=8f1c6744f1d0e336b995d9e5afd1489d}{%
-           family={Hollitt},
-           familyi={H\bibinitperiod},
-           given={Sophie},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{8f1c6744f1d0e336b995d9e5afd1489d}
-      \strng{fullhash}{8f1c6744f1d0e336b995d9e5afd1489d}
-      \strng{bibnamehash}{8f1c6744f1d0e336b995d9e5afd1489d}
-      \strng{authorbibnamehash}{8f1c6744f1d0e336b995d9e5afd1489d}
-      \strng{authornamehash}{8f1c6744f1d0e336b995d9e5afd1489d}
-      \strng{authorfullhash}{8f1c6744f1d0e336b995d9e5afd1489d}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Current topics in SciFi Alignment}
-      \field{urlday}{20}
-      \field{urlmonth}{4}
-      \field{urlyear}{2022}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://indico.cern.ch/event/997932/contributions/4263653/attachments/2206615/3733618/SciFiAlignOverview-11-03.pdf
-      \endverb
-      \verb{url}
-      \verb https://indico.cern.ch/event/997932/contributions/4263653/attachments/2206615/3733618/SciFiAlignOverview-11-03.pdf
       \endverb
     \endentry
     \entry{HULSBERGEN1}{article}{}
@@ -266,6 +265,75 @@
       \endverb
       \verb{url}
       \verb https://gitlab.cern.ch/lhcb-datapkg/PRConfig/blob/master/python/PRConfig/TestFileDB.py
+      \endverb
+    \endentry
+    \entry{readout}{article}{}
+      \name{author}{8}{}{%
+        {{hash=4fba6780c2da6f9063c50ac6bf69d4f8}{%
+           family={Mazorra},
+           familyi={M\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b4536f7ea5f730f7cdcc87ca8e7d3075}{%
+           family={Chanal},
+           familyi={C\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4aeb609f1419bf0f34aed76c7227bdf4}{%
+           family={Comerma},
+           familyi={C\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9e307d524e7f695c9d4e14e2ef83e807}{%
+           family={Gascón},
+           familyi={G\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a70413405379a98431401d8e9f456599}{%
+           family={Gómez},
+           familyi={G\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d5f7ae42a563998bd7eccae3eaed6b75}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={X},
+           giveni={X\bibinitperiod}}}%
+        {{hash=6b5a8a084ec86a9582ed7da9a0472247}{%
+           family={Pillet},
+           familyi={P\bibinitperiod},
+           given={N},
+           giveni={N\bibinitperiod}}}%
+        {{hash=0f97032247d5cf0561fee90ea076c957}{%
+           family={Vandaele},
+           familyi={V\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{eee9d20abbf56dbfe25b3a7f7e05d289}
+      \strng{fullhash}{871699665d2294be39b5063c7b9ee1a7}
+      \strng{bibnamehash}{eee9d20abbf56dbfe25b3a7f7e05d289}
+      \strng{authorbibnamehash}{eee9d20abbf56dbfe25b3a7f7e05d289}
+      \strng{authornamehash}{eee9d20abbf56dbfe25b3a7f7e05d289}
+      \strng{authorfullhash}{871699665d2294be39b5063c7b9ee1a7}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{JINST}
+      \field{title}{{PACIFIC: the readout ASIC for the SciFi Tracker of the upgraded LHCb detector}}
+      \field{volume}{11}
+      \field{year}{2016}
+      \field{pages}{C02021}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1748-0221/11/02/C02021
+      \endverb
+      \verb{urlraw}
+      \verb http://cds.cern.ch/record/2266414
+      \endverb
+      \verb{url}
+      \verb http://cds.cern.ch/record/2266414
       \endverb
     \endentry
     \entry{alphas}{online}{}
@@ -421,6 +489,8 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{fig:tikz_cluster}
+  \missing{scifiupdate20210311}
 \endrefsection
 \endinput
 

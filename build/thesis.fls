@@ -814,6 +814,11 @@ INPUT ./plots/SciFi_Tracker.png
 INPUT ./plots/SciFi_Tracker.png
 INPUT ./content/alignment_theory.tex
 INPUT ./content/alignment_theory.tex
+INPUT ./plots/pacific.png
+INPUT ./plots/pacific.png
+INPUT ./plots/pacific.png
+INPUT ./plots/clusters.tex
+INPUT ./plots/clusters.tex
 INPUT ./content/story.tex
 INPUT ./content/story.tex
 INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
