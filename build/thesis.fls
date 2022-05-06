@@ -806,9 +806,9 @@ INPUT ./plots/CERN_layout.pdf
 INPUT ./plots/LHCb_facility.png
 INPUT ./plots/LHCb_facility.png
 INPUT ./plots/LHCb_facility.png
-INPUT ./plots/bbar_forward.png
-INPUT ./plots/bbar_forward.png
-INPUT ./plots/bbar_forward.png
+INPUT ./plots/lhcb_forward.pdf
+INPUT ./plots/lhcb_forward.pdf
+INPUT ./plots/lhcb_forward.pdf
 INPUT ./plots/SciFi_Tracker.png
 INPUT ./plots/SciFi_Tracker.png
 INPUT ./plots/SciFi_Tracker.png

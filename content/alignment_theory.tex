@@ -1,14 +1,13 @@
 \chapter{The Theory of Alignment}
 \label{sec:alignTheory}
 
-Whenever a new detector is build the position where it is physically mounted is
-roughly where it should be. In order to check this, survey measurements are
+Whenever a new detector is built, people are careful to mount it as close to the correct location as they can. In order to check this, survey measurements are
 performed to check the position with a precision of $\SI{100}{\micro\metre}$.
-To achieve an even bigger precision, \textit{software alignments} are performed.
+To achieve an even greater precision, \textit{software alignments} are performed.
 
 The reason why alignment is of great importance is that a misaligned detector
-yields large momentum resolutions, low reconstruction efficiencies and wrong mass estimations and mass peak resolutions.
-The most prominent area of misalignment is asymmetries for a spectrometer.
+yields large momentum resolutions, low reconstruction efficiencies and biased mass estimations and mass peak resolutions.
+The most prominent area of misalignment for a spectrometer is asymmetries.
 In the past, alignment solved problems for example a Muon asymmetry in the
 L0Muon trigger in 2011 and a misalignment in IT boxes which resulted in trigger inefficency regarding $J/\Psi$ in 2012.
 % references
@@ -27,7 +26,7 @@ Three comparators implement the ADC and can be set individually for each channel
     \label{fig:pac}
 \end{figure}
 
-To achieve a reduction in data rate and suppress the signal noise, clusterization is performed. A diagram of the clusterization is shown in Figure \cite{fig:tikz_cluster}
+To achieve a reduction in data rate and suppress the signal noise, clusterization is performed. A diagram of the clusterization is shown in Figure \ref{fig:tikz_cluster}
 
 \input{plots/clusters.tex}
 
@@ -39,10 +38,10 @@ The cluster position is the weighted mean of the contributing channels to this c
 \label{sec:kalman}
 
 In order for LHCb to be used for physics, all of the detector hit information has to be converted into tracks, which is a challenging task.
-The track reconstruction algorithm needs to find the correct hits from each sub detector to build the track. This can be problematic just because of the amount of tracks per events (roughly 100).
+The track reconstruction algorithm needs to find the correct hits from each sub detector to build the track. This can be problematic just because of the amount of tracks per event (roughly 100).
 The aim is to have the track efficiency as high as possible. in order to estimate the track parameters, such as the curvature parameter and track slopes ($t_x$, $t_y$), as accurately as possible.
-A good track fit is needed in order to find to best estimates for the track parameters and covariances. The estimates are used in the event reconstruction to find the correct tracks for each particle and the decay products. The info provided is used in the RICH rings, ECAL and HCAL and muon detectors. With these information, particle and track parameters such as the invariant mass can be measured and vertex origins can be found.
-There are several track models that can be used. In general, a track is build from numerous segments which are either straight or curved because of an active magnetic field. Depending on the environment of the track either model is good.
+A good track fit is needed in order to find to best estimates for the track parameters and covariances. The estimates are used in the event reconstruction to find the correct tracks for each particle and the decay products. The information provided is used in the RICH rings, ECAL and HCAL and muon detectors. With these information, particle and track parameters such as the invariant mass can be measured and vertex origins of particle decays can be found.
+There are several track models that can be used. In general, a track is built from numerous segments which are either straight or curved because of an active magnetic field. Depending on the environment of the track either model is good.
 The track segments are called track states and are defined by a position in $x$ and $y$ at a given distance $z$ where the hit was located, then a slopes $t_{x,y}$ at the hit position and a momentum parameter obtained from the track curvature inside the magnetic field\cite{VanTilburg}.
 
 In order to correctly reconstruct the track it is important to know where the hit is localized and for the upcoming hits, where to particle track came from. From the momentum measurement of the track curvature caused by the magnetic field, the parameter $q/p$ is also added where $q$ stands for the charge of the track that is determined from the direction into which of the track bends.
@@ -61,7 +60,7 @@ The propagation from node $k-1$ to node $k$ is described by a propagation functi
 
 This means node $k$ is acquired by propagating node $k-1$ through the propagation function $f_k$ and shifting it by the \textit{process noise} $\vec{w}_k$.
 
-LHCb uses process noise to model the scattering.
+LHCb uses process noise to model the scattering caused by particle interactions with the detector material.
 Depending on the type of propagation, linear or curved, a different propagation function is used.
 for a linear extrapolation, $f_k$ results in
 \begin{equation*}
@@ -98,8 +97,8 @@ with
 \begin{gather*}
   H_k = \begin{pmatrix}
     0 & 1 & 0 & 0 & 0 \\
-  \end{pmatrix}
-\end{gather*}\,.
+  \end{pmatrix}\,.
+\end{gather*}
 
 When measuring more parameters the measurement matrix $H_k$ and projection matrix have dimension $n\times5$ with $n$ being the numbers of parameters measured.
 
@@ -116,7 +115,7 @@ The second step is the $\symbf{Filter}$ procedure: By using filter equations, th
 The final step is called $\symbf{Smoother}$: When the trajectory is complete, smoother equations are applied from the last node to the previous node. Therefore the information from all measurements is used in both forward- and back-propagation which results in a more
 defined track.
 
-\subsection{first Step: Prediction}
+\subsection{First Step: Prediction}
 For a given state vector at node \textit{k-1}, the prediction for the $k^{\text{th}}$ state vector and its covariance matrix results from the propagation relations
 
 \begin{align*}
@@ -191,7 +190,7 @@ The $\chi^2$ is calculated analogously to the one during the filter step with th
 \section{Alignment with Kalman filter track fit}
 \label{sec:derivatives}
 
-In principal, minimizing the track residuals is the obvious way to align a detector.
+In principle, minimizing the track residuals is the obvious way to align a detector.
 The residual $\vec{\text{res}}_k$ is defined by the difference between a real detector hit and the expected hit position
 
 \begin{equation}
@@ -199,7 +198,9 @@ The residual $\vec{\text{res}}_k$ is defined by the difference between a real de
 \end{equation}
 
 where $\symbf{h}$ is the measurement model, $\vec{r}$ are the track parameters and $\vec{\alpha}$ are the alignment parameters.
-Aligning the SciFi by minimizing the track $\chi^2$ with the same model as used for reconstruction is an advantage. The idea is to use a global covariance matrix in the track fit with the kalman filter. This approach will be used as the type of alignment for the SciFi in this thesis.
+Aligning the SciFi by minimizing the track $\chi^2$ with the same model as used for reconstruction is an advantage. The idea is to use a global covariance matrix in the track fit with the kalman filter.
+%Then part of the alignment can be performed just by fitting the tracks
+This approach will be used as the type of alignment for the SciFi in this thesis.
 In the following paragraph this form of alignment is briefly described\cite{HULSBERGEN1}.
 
 Because of the similarity to the kalman filter method a short revisit of the minimum $\chi^2$ formalism is presented.
@@ -261,7 +262,7 @@ The condition for $\chi^2$ to be minimal with respect to a track model $h(x,\alp
  \end{equation}
 
 The subscript $j$ denotes the track not the vector component. For a single track the subscript can be left out. The more number of tracks, the more number of parameters in the minimizing problem.
-For a large number of tracks a similar expression as in equation \eqref{eqn:lsq} for the least square estimator is used and the computation is performed in two steps since the inverse matrix is computational too expensive to use a least square expression.
+For a large number of tracks a similar expression as in equation \eqref{eqn:lsq} for the least squares estimator is used and the computation is performed in two steps since the inverse matrix is computationally too expensive to use a least squares expression.
 The first step is to estimate track parameters for a starting set of calibration parameters called $\alpha_0$. The second step is to minimize the total $\chi^2$ with respect to $\alpha$ while also taking $x_j$ and $\alpha$ into account.
 
 The total derivative reads

@@ -87,66 +87,6 @@
       \verb https://gitlab.cern.ch/lhcb/Alignment
       \endverb
     \endentry
-    \entry{forward}{online}{}
-      \field{sortinit}{b}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labeltitlesource}{title}
-      \field{title}{b-hadron production at LHCb}
-      \field{urlday}{20}
-      \field{urlmonth}{4}
-      \field{urlyear}{2022}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://cds.cern.ch/record/2206834/files/LHCb-TALK-2016-222.pdf
-      \endverb
-      \verb{url}
-      \verb https://cds.cern.ch/record/2206834/files/LHCb-TALK-2016-222.pdf
-      \endverb
-    \endentry
-    \entry{fonll}{article}{}
-      \name{author}{3}{}{%
-        {{hash=d38166452f9df43fc09b4da37680b482}{%
-           family={Cacciari},
-           familyi={C\bibinitperiod},
-           given={Matteo},
-           giveni={M\bibinitperiod}}}%
-        {{hash=4fd8724de435083a69afd09cb91fb305}{%
-           family={Greco},
-           familyi={G\bibinitperiod},
-           given={Mario},
-           giveni={M\bibinitperiod}}}%
-        {{hash=08565706058718b454be32b190e67d73}{%
-           family={Nason},
-           familyi={N\bibinitperiod},
-           given={Paolo},
-           giveni={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{8be32f8c853cf72871d4300504cf17d9}
-      \strng{fullhash}{8be32f8c853cf72871d4300504cf17d9}
-      \strng{bibnamehash}{8be32f8c853cf72871d4300504cf17d9}
-      \strng{authorbibnamehash}{8be32f8c853cf72871d4300504cf17d9}
-      \strng{authornamehash}{8be32f8c853cf72871d4300504cf17d9}
-      \strng{authorfullhash}{8be32f8c853cf72871d4300504cf17d9}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{JHEP}
-      \field{title}{{The P(T) spectrum in heavy flavor hadroproduction}}
-      \field{volume}{05}
-      \field{year}{1998}
-      \field{pages}{007}
-      \range{pages}{1}
-      \verb{eprint}
-      \verb hep-ph/9803400
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/pdf/hep-ph/9803400.pdf
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/pdf/hep-ph/9803400.pdf
-      \endverb
-    \endentry
     \entry{techreport}{report}{}
       \name{author}{1}{}{%
         {{hash=160e40430227f5a4cdc333d8eeaa87ec}{%
@@ -190,6 +130,36 @@
       \endverb
       \verb{url}
       \verb https://gitlab.cern.ch/lhcb/LHCb/-/blob/master/Det/FTDet/src/Lib/DeFTMat.cpp#63
+      \endverb
+    \endentry
+    \entry{bbangles}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e35335efde8865c4221b1a41c53e76b7}{%
+           family={Elsässer},
+           familyi={E\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{e35335efde8865c4221b1a41c53e76b7}
+      \strng{fullhash}{e35335efde8865c4221b1a41c53e76b7}
+      \strng{bibnamehash}{e35335efde8865c4221b1a41c53e76b7}
+      \strng{authorbibnamehash}{e35335efde8865c4221b1a41c53e76b7}
+      \strng{authornamehash}{e35335efde8865c4221b1a41c53e76b7}
+      \strng{authorfullhash}{e35335efde8865c4221b1a41c53e76b7}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{$\overline{b}b$ production angle plots}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb {\href{https://lhcb.web.cern.ch/lhcb/speakersbureau/html/bb\_ProductionAngles.html}{https://lhcb.web.cern.ch/lhcb/speakersbureau/html/bb\_ProductionAngles.html}}
+      \endverb
+      \verb{url}
+      \verb %7B%5Chref%7Bhttps://lhcb.web.cern.ch/lhcb/speakersbureau/html/bb%5C_ProductionAngles.html%7D%7Bhttps://lhcb.web.cern.ch/lhcb/speakersbureau/html/bb%5C_ProductionAngles.html%7D%7D
       \endverb
     \endentry
     \entry{HULSBERGEN1}{article}{}
@@ -389,6 +359,46 @@
       \strng{authorbibnamehash}{ba569dca40e99e5b749695cfc0c64834}
       \strng{authornamehash}{ba569dca40e99e5b749695cfc0c64834}
       \strng{authorfullhash}{ba569dca40e99e5b749695cfc0c64834}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Physics: Conference Series}
+      \field{month}{7}
+      \field{title}{The {LHCb} Upgrade}
+      \field{volume}{878}
+      \field{year}{2017}
+      \field{pages}{012012}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1742-6596/878/1/012012
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1088/1742-6596/878/1/012012
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1088/1742-6596/878/1/012012
+      \endverb
+    \endentry
+    \entry{Piucci}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ba569dca40e99e5b749695cfc0c64834}{%
+           family={Piucci},
+           familyi={P\bibinitperiod},
+           given={Alessio},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{IOP} Publishing}%
+      }
+      \strng{namehash}{ba569dca40e99e5b749695cfc0c64834}
+      \strng{fullhash}{ba569dca40e99e5b749695cfc0c64834}
+      \strng{bibnamehash}{ba569dca40e99e5b749695cfc0c64834}
+      \strng{authorbibnamehash}{ba569dca40e99e5b749695cfc0c64834}
+      \strng{authornamehash}{ba569dca40e99e5b749695cfc0c64834}
+      \strng{authorfullhash}{ba569dca40e99e5b749695cfc0c64834}
+      \field{extraname}{2}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
@@ -517,9 +527,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{Piucci}
-  \missing{fig:tikz_cluster}
-  \missing{scifiupdate20210311}
 \endrefsection
 \endinput
 
