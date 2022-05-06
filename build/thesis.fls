@@ -803,9 +803,9 @@ INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lm
 INPUT ./plots/CERN_layout.pdf
 INPUT ./plots/CERN_layout.pdf
 INPUT ./plots/CERN_layout.pdf
-INPUT ./plots/LHCb_facility.jpg
-INPUT ./plots/LHCb_facility.jpg
-INPUT ./plots/LHCb_facility.jpg
+INPUT ./plots/LHCb_facility.png
+INPUT ./plots/LHCb_facility.png
+INPUT ./plots/LHCb_facility.png
 INPUT ./plots/bbar_forward.png
 INPUT ./plots/bbar_forward.png
 INPUT ./plots/bbar_forward.png

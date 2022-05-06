@@ -35,20 +35,40 @@
       \verb https://www.researchgate.net/figure/A-diagram-showing-the-complete-structure-of-the-LHC-facility-at-CERN-There-are-the-4_fig8_348806406
       \endverb
     \endentry
-    \entry{facilityLHCb}{online}{}
+    \entry{bbXsection}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=8ca3e82f9358ba6fd01f7c11e88a3b2c}{%
+           family={Aaij},
+           familyi={A\bibinitperiod},
+           given={Roel},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{fullhash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{bibnamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{authorbibnamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{authornamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{authorfullhash}{37166355a0326aa05fdf7eca8f9ad8f3}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{A sideview showing the LHCb detector’s main elements}
-      \field{urlday}{9}
-      \field{urlmonth}{3}
-      \field{urlyear}{2022}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://cerncourier.com/a/lhcbs-momentous-metamorphosis/
+      \field{eprintclass}{hep-ex}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{number}{5}
+      \field{title}{{Measurement of the $b$-quark production cross-section in 7 and 13 TeV $pp$ collisions}}
+      \field{volume}{118}
+      \field{year}{2017}
+      \field{pages}{052002}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.118.052002
       \endverb
-      \verb{url}
-      \verb https://cerncourier.com/a/lhcbs-momentous-metamorphosis/
+      \verb{eprint}
+      \verb 1612.05140
       \endverb
     \endentry
     \entry{align}{online}{}
@@ -352,6 +372,44 @@
       \verb http://pdg.lbl.gov/2019/mobile/reviews/pdf/rpp2018-rev-phys-constants-m.pdf
       \endverb
     \endentry
+    \entry{facilityLHCb}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ba569dca40e99e5b749695cfc0c64834}{%
+           family={Piucci},
+           familyi={P\bibinitperiod},
+           given={Alessio},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{IOP} Publishing}%
+      }
+      \strng{namehash}{ba569dca40e99e5b749695cfc0c64834}
+      \strng{fullhash}{ba569dca40e99e5b749695cfc0c64834}
+      \strng{bibnamehash}{ba569dca40e99e5b749695cfc0c64834}
+      \strng{authorbibnamehash}{ba569dca40e99e5b749695cfc0c64834}
+      \strng{authornamehash}{ba569dca40e99e5b749695cfc0c64834}
+      \strng{authorfullhash}{ba569dca40e99e5b749695cfc0c64834}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Physics: Conference Series}
+      \field{month}{7}
+      \field{title}{The {LHCb} Upgrade}
+      \field{volume}{878}
+      \field{year}{2017}
+      \field{pages}{012012}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1742-6596/878/1/012012
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1088/1742-6596/878/1/012012
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1088/1742-6596/878/1/012012
+      \endverb
+    \endentry
     \entry{flo}{online}{}
       \name{author}{1}{}{%
         {{hash=05656343b08b41af681b2794a1142fdc}{%
@@ -430,36 +488,6 @@
       \verb https://cds.cern.ch/record/1129809/files/jinst8_08_s08005.pdf
       \endverb
     \endentry
-    \entry{qcd}{online}{}
-      \name{author}{1}{}{%
-        {{hash=40c414de89561bc6267ca5502d649c4f}{%
-           family={Thomson},
-           familyi={T\bibinitperiod},
-           given={Prof.\bibnamedelimi Mark},
-           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \strng{namehash}{40c414de89561bc6267ca5502d649c4f}
-      \strng{fullhash}{40c414de89561bc6267ca5502d649c4f}
-      \strng{bibnamehash}{40c414de89561bc6267ca5502d649c4f}
-      \strng{authorbibnamehash}{40c414de89561bc6267ca5502d649c4f}
-      \strng{authornamehash}{40c414de89561bc6267ca5502d649c4f}
-      \strng{authorfullhash}{40c414de89561bc6267ca5502d649c4f}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Particle Physics}
-      \field{urlday}{13}
-      \field{urlmonth}{4}
-      \field{urlyear}{2022}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.hep.phy.cam.ac.uk/~thomson/lectures/partIIIparticles/Handout8_2009.pdf
-      \endverb
-      \verb{url}
-      \verb https://www.hep.phy.cam.ac.uk/~thomson/lectures/partIIIparticles/Handout8_2009.pdf
-      \endverb
-    \endentry
     \entry{VanTilburg}{thesis}{}
       \name{author}{1}{}{%
         {{hash=b7d0e432f3adfb1de2d422d6dc66aaaa}{%
@@ -489,6 +517,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{Piucci}
   \missing{fig:tikz_cluster}
   \missing{scifiupdate20210311}
 \endrefsection
