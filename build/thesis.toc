@@ -3,26 +3,27 @@
 \contentsline {chapter}{\numberline {2}Particles and The Large Hadron Collider}{2}{chapter.2}%
 \contentsline {section}{\numberline {2.1}The Standard Model}{2}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Particle decays and hadrons}{4}{section.2.2}%
-\contentsline {section}{\numberline {2.3}The LHC and LHCb}{4}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}The LHC}{4}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.3}The LHC and LHCb}{5}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}The LHC}{5}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}The LHCb experiment}{6}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Layout of the SciFi Tracker}{8}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Scintillating Fibres}{9}{subsection.2.3.4}%
-\contentsline {chapter}{\numberline {3}The Theory of Alignment}{10}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Clustering of SciFi hits}{10}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Track Reconstruction}{12}{section.3.2}%
-\contentsline {section}{\numberline {3.3}The Kalman filter method}{14}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}First Step: Prediction}{14}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}second Step: Filter}{15}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}third Step: Smoother}{15}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Alignment with Kalman filter track fit}{16}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Alignment of the SciFi}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Nulltests and software tests}{21}{section.4.1}%
-\contentsline {section}{\numberline {4.2}rotational constraints}{26}{section.4.2}%
-\contentsline {section}{\numberline {4.3}chi2 tests and weak modes}{31}{section.4.3}%
-\contentsline {section}{\numberline {4.4}luminosity samples and chi2}{35}{section.4.4}%
-\contentsline {section}{\numberline {4.5}impact of the cluster bias}{37}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Continuing Work}{42}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{43}{chapter.6}%
-\contentsline {chapter}{\nonumberline Literatur}{44}{chapter*.34}%
+\contentsline {section}{\numberline {2.4}The SciFi Tracker}{9}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Layout of the SciFi Tracker}{9}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Scintillating Fibres}{10}{subsection.2.4.2}%
+\contentsline {chapter}{\numberline {3}The Theory of Alignment}{12}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Clustering of SciFi hits}{12}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Track Reconstruction}{14}{section.3.2}%
+\contentsline {section}{\numberline {3.3}The Kalman filter method}{16}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}First Step: Prediction}{16}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}second Step: Filter}{17}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}third Step: Smoother}{17}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Alignment with Kalman filter track fit}{18}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Alignment of the SciFi}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Nulltests and software tests}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}rotational constraints}{28}{section.4.2}%
+\contentsline {section}{\numberline {4.3}chi2 tests and weak modes}{33}{section.4.3}%
+\contentsline {section}{\numberline {4.4}luminosity samples and chi2}{37}{section.4.4}%
+\contentsline {section}{\numberline {4.5}impact of the cluster bias}{39}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Continuing Work}{44}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{45}{chapter.6}%
+\contentsline {chapter}{\nonumberline Literatur}{46}{chapter*.35}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

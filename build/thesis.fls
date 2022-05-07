@@ -800,6 +800,8 @@ INPUT /home/nils/.local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbol
 INPUT /home/nils/.local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /home/nils/.local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-regular.luc
+INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-italic.luc
+INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-italic.luc
 INPUT ./plots/CERN_layout.pdf
 INPUT ./plots/CERN_layout.pdf
 INPUT ./plots/CERN_layout.pdf
@@ -809,9 +811,12 @@ INPUT ./plots/LHCb_facility.png
 INPUT ./plots/lhcb_forward.pdf
 INPUT ./plots/lhcb_forward.pdf
 INPUT ./plots/lhcb_forward.pdf
-INPUT ./plots/SciFi_Tracker.png
-INPUT ./plots/SciFi_Tracker.png
-INPUT ./plots/SciFi_Tracker.png
+INPUT ./plots/scifi_layers.png
+INPUT ./plots/scifi_layers.png
+INPUT ./plots/scifi_layers.png
+INPUT ./plots/stereo_angles.png
+INPUT ./plots/stereo_angles.png
+INPUT ./plots/stereo_angles.png
 INPUT ./content/alignment_theory.tex
 INPUT ./content/alignment_theory.tex
 INPUT ./plots/pacific.png

@@ -35,6 +35,117 @@
       \verb https://www.researchgate.net/figure/A-diagram-showing-the-complete-structure-of-the-LHC-facility-at-CERN-There-are-the-4_fig8_348806406
       \endverb
     \endentry
+    \entry{Bmumu}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=fc900e0322a1c8b4986c2916a3e092b3}{%
+           family={Aaij},
+           familyi={A\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6fd12d569b0ebd9fecb5596aae83668}
+      \strng{fullhash}{f6fd12d569b0ebd9fecb5596aae83668}
+      \strng{bibnamehash}{f6fd12d569b0ebd9fecb5596aae83668}
+      \strng{authorbibnamehash}{f6fd12d569b0ebd9fecb5596aae83668}
+      \strng{authornamehash}{f6fd12d569b0ebd9fecb5596aae83668}
+      \strng{authorfullhash}{f6fd12d569b0ebd9fecb5596aae83668}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ex}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{number}{4}
+      \field{title}{{Analysis of Neutral B-Meson Decays into Two Muons}}
+      \field{volume}{128}
+      \field{year}{2022}
+      \field{pages}{041801}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.128.041801
+      \endverb
+      \verb{eprint}
+      \verb 2108.09284
+      \endverb
+    \endentry
+    \entry{massdiff}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=fc900e0322a1c8b4986c2916a3e092b3}{%
+           family={Aaij},
+           familyi={A\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6fd12d569b0ebd9fecb5596aae83668}
+      \strng{fullhash}{f6fd12d569b0ebd9fecb5596aae83668}
+      \strng{bibnamehash}{f6fd12d569b0ebd9fecb5596aae83668}
+      \strng{authorbibnamehash}{f6fd12d569b0ebd9fecb5596aae83668}
+      \strng{authornamehash}{f6fd12d569b0ebd9fecb5596aae83668}
+      \strng{authorfullhash}{f6fd12d569b0ebd9fecb5596aae83668}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ex}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Nature Phys.}
+      \field{number}{1}
+      \field{title}{{Precise determination of the $B_{\mathrm{s}}^0$–{}$\overline B_{\mathrm{s}}^0$ oscillation frequency}}
+      \field{volume}{18}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1038/s41567-021-01394-x
+      \endverb
+      \verb{eprint}
+      \verb 2104.04421
+      \endverb
+    \endentry
+    \entry{bsll}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=8ca3e82f9358ba6fd01f7c11e88a3b2c}{%
+           family={Aaij},
+           familyi={A\bibinitperiod},
+           given={Roel},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{fullhash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{bibnamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{authorbibnamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{authornamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{authorfullhash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \field{extraname}{3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ex}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{number}{15}
+      \field{title}{{Branching Fraction Measurements of the Rare $B^0_s\rightarrow\phi\mu^+\mu^-$ and $B^0_s\rightarrow f_2^\prime(1525)\mu^+\mu^-$- Decays}}
+      \field{volume}{127}
+      \field{year}{2021}
+      \field{pages}{151801}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.127.151801
+      \endverb
+      \verb{eprint}
+      \verb 2105.14007
+      \endverb
+    \endentry
     \entry{bbXsection}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -51,6 +162,7 @@
       \strng{authorbibnamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
       \strng{authornamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
       \strng{authorfullhash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \field{extraname}{4}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
@@ -85,6 +197,73 @@
       \endverb
       \verb{url}
       \verb https://gitlab.cern.ch/lhcb/Alignment
+      \endverb
+    \endentry
+    \entry{LHCDR}{book}{}
+      \name{author}{7}{}{%
+        {{hash=c9a324bb9a73322510ce6491007589ce}{%
+           family={Brüning},
+           familyi={B\bibinitperiod},
+           given={Oliver\bibnamedelima Sim},
+           giveni={O\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=27c0d70e2ccc0d27aad2e650cc1a8f50}{%
+           family={Collier},
+           familyi={C\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=2582fc5d66afe2e9d4441336bf6f8fd5}{%
+           family={Lebrun},
+           familyi={L\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=5989faab9323b87eba26b48446d8993d}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=004c382fdaca31e6f614dceccc6c4763}{%
+           family={Ostojic},
+           familyi={O\bibinitperiod},
+           given={Ranko},
+           giveni={R\bibinitperiod}}}%
+        {{hash=859574ed2024b812bcae7c9de5af7895}{%
+           family={Poole},
+           familyi={P\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f0740a01ded863cafc5c5a8c10fc9e7b}{%
+           family={Proudlock},
+           familyi={P\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva}%
+      }
+      \list{publisher}{1}{%
+        {CERN}%
+      }
+      \strng{namehash}{8f17260326e9957cf9e7df8d39e7952f}
+      \strng{fullhash}{bd6370d8800b3fed4a534892c9929e09}
+      \strng{bibnamehash}{8f17260326e9957cf9e7df8d39e7952f}
+      \strng{authorbibnamehash}{8f17260326e9957cf9e7df8d39e7952f}
+      \strng{authornamehash}{8f17260326e9957cf9e7df8d39e7952f}
+      \strng{authorfullhash}{bd6370d8800b3fed4a534892c9929e09}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{CERN Yellow Reports: Monographs}
+      \field{title}{{LHC Design Report}}
+      \field{year}{2004}
+      \verb{doi}
+      \verb 10.5170/CERN-2004-003-V-1
+      \endverb
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/782076
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/782076
       \endverb
     \endentry
     \entry{techreport}{report}{}
@@ -524,6 +703,42 @@
       \endverb
       \verb{url}
       \verb https://cds.cern.ch/record/885750
+      \endverb
+    \endentry
+    \entry{Elevel}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4606a8d7308e1ef6001faaefac896bb5}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={T.O.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4606a8d7308e1ef6001faaefac896bb5}
+      \strng{fullhash}{4606a8d7308e1ef6001faaefac896bb5}
+      \strng{bibnamehash}{4606a8d7308e1ef6001faaefac896bb5}
+      \strng{authorbibnamehash}{4606a8d7308e1ef6001faaefac896bb5}
+      \strng{authornamehash}{4606a8d7308e1ef6001faaefac896bb5}
+      \strng{authorfullhash}{4606a8d7308e1ef6001faaefac896bb5}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0168-9002}
+      \field{journaltitle}{Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment}
+      \field{number}{2}
+      \field{title}{Scintillating fibres}
+      \field{volume}{273}
+      \field{year}{1988}
+      \field{pages}{820\bibrangedash 825}
+      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0168-9002(88)90102-7
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0168900288901027
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0168900288901027
       \endverb
     \endentry
   \enddatalist

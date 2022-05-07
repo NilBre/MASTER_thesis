@@ -65,19 +65,7 @@ Quarks couple via the strong interaction which is described by quantum chromodyn
 The generators are called gluons and they carry color and anticolor, have no mass and carry spin 1.
 Gluons can, other than photons, couple to themselves.
 Moreover, the coupling constant is $\alpha_s \approx 0.1$.
-% The interaction with quarks is described with a potential.
-% \begin{align}
-%   \symup{V}_{q\bar{q}} &= -\frac{4 \alpha_{s}}{3 r} + \sigma\cdot r
-%   \intertext{with}
-%   \sigma &= \SI{1}{\giga\electronvolt\per\femto\metre}
-% \end{align}
-% The common eight gluon-wavefunctions\cite{qcd} are
-% \begin{align*}
-%   \psi_1 &= |r\bar{g}> & \psi_2 &= |r\bar{b}> \\
-%   \psi_3 &= |g\bar{r}> & \psi_4 &= |g\bar{b}> \\
-%   \psi_5 &= |b\bar{r}> & \psi_6 &= |b\bar{g}> \\
-%   \psi_7 &= \frac{1}{\sqrt{2}}\left(|r\bar{r}> - |g\bar{g}>\right) & \psi_8 &= \frac{1}{\sqrt{6}}\left(|r\bar{r}> + |g\bar{g}> - 2|b\bar{b}>\right) \\
-% \end{align*}
+
 The second wavefunction describes a gluon interaction with a blue quark and changing the color to red.
 Quarks thus tend to attract each other very strongly. If now
 quark and anti quark are moved away from each other, a lot of energy has to be expended. This energy can become so large that new particles can be created.
@@ -88,28 +76,34 @@ These may be from the same family (i.e. [u,d], [c,s], [t,b]), or from
 different families. Mesons have a baryon number of 0. Accordingly, quarks carry the baryon number $\frac{1}{3}$. The quarks constructing a meson therefore carries color and the corresponding anticolor.
 The second type are baryons. The content consists of either three quarks or
 three antiquarks. However, it cannot be that one quark and two antiquarks
-and vice versa occur, because baryons must have the baryon number $\symup{B} = 1$. Because baryons are stable final states as well as the mesons, the sum of their quark colors must be white. Therefore, every (anti)color must occur once in a baryon.
+and vice versa occur, because baryons must have the baryon number $\symup{B} = 1$.
 
 \section{Particle decays and hadrons}
 \label{sec:decays}
 
-!!!
+The LHCb experiment is especially designed for $\textit{b}$- and $\textit{c}$-hadrons because of the forward production, which is shown in figure \ref{fig:bbforward}.
+Measurements in the heavy quark flavour sector have shown observations of $\textit{B}_s^0 \to \mu^{+} \mu^{-}$ \cite{Bmumu} as well as measurements of the flavour changing neutral current (FCNC) anomaly in the
+$\textit{B}^0 \to \phi \mu^{+} \mu{-}$.
+The former one is a very rare leptonic decay and is CKM suppressed but it is sensitive to new physics.
+New physics can be in penguin decays which are forbidden at tree level in the SM.
+The latter is possible via penguin decays with very small branching fractions\cite{bsll}. The LHCb group also measured the $\textit{B}_s^0$ mass difference\cite{massdiff} $\Delta m_s$ through the oscillation frequency in $\textit{B}_s^0 \to \textit{D}_s^{\mp} \pi^{\pm}$ decays.
+
 
 \section{The LHC and LHCb}
 \label{sec:lhcandB}
 
 \subsection{The LHC}
-The Large Hadron Collider (LHC)\cite{lhcInfo} is the largest particle-accelerator on planet earth. With a circumference of $26.7\si{\kilo\metre}$ it is also the longest ring accelerator and it lies between $45\si{\metre}$ and $170\si{\metre}$ below the surface near Geneva in Switzerland. The tunnel was constructed for the LEP experiment between 1984 and 1989 and is operated by the European Organization for Nuclear Research (CERN). The LHC can produce centre-of-mass energies of $\sqrt{s} = \SI{13}{\tera\electronvolt}$ in proton-proton collisions during Run 2. The design centre-of-mass energy after the upgrade is $\sqrt{s} = \SI{14}{\tera\electronvolt}$.
+The Large Hadron Collider (LHC)\cite{lhcInfo} is the largest particle-accelerator on planet earth. With a circumference of $26.7\si{\kilo\metre}$ it is also the longest ring accelerator and it lies between $45\si{\metre}$ and $170\si{\metre}$ below the surface near Geneva in Switzerland. The tunnel was constructed for the Large Electron-Poitron Collider (LEP) between 1984 and 1989 and was replaced by the LHC, operated by the European Organization for Nuclear Research (CERN). The LHC can collide at centre-of-mass energies of $\sqrt{s} = \SI{13}{\tera\electronvolt}$ in proton-proton collisions during Run 2. The design centre-of-mass energy after the upgrade is $\sqrt{s} = \SI{14}{\tera\electronvolt}$.\cite{LHCDR}
 An image of the accelerators and the experiments is shown in figure \ref{fig:CERN}.
 
 \begin{figure}
   \centering
   \includegraphics[angle=-90, origin=c, width=0.7\textwidth]{plots/CERN_layout.pdf}
-  \caption{an overview of the LHC facilities\cite{facilityCERN}.}
+  \caption{An overview of the LHC facilities\cite{facilityCERN}. The full description is in the main part of this thesis.}
   \label{fig:CERN}
 \end{figure}
 
-By ionizing hydrogen gas, protons are created and accelerated to $\SI{50}{\mega\electronvolt}$ by the linear accelerator (LINAC 2). Afterwards the beam is injected into the Proton Synchrotron and the Super Proton Synchrotron to a maximum of $\SI{450}{\giga\electronvolt}$ before the beam is injected into the LHC.
+By ionizing hydrogen gas, protons are created and accelerated to $\SI{50}{\mega\electronvolt}$ by the linear accelerator (LINAC 2). Afterwards the beam is injected into the Proton Synchrotron (PS) and the Super Proton Synchrotron (SPS) to a maximum of $\SI{450}{\giga\electronvolt}$ before the beam is injected into the LHC.
 The beam consists of several bunches with around $\num{1.15e11}$ protons per bunch and a bunch spacing of $\SI{25}{\nano\second}$.%., which is a collision rate of $\SI{40}{\mega\hertz}$.
 The LHC houses four major experiments. ATLAS and CMS are classified as general purpose detectors with a detection range of close to $4\pi$. The interaction in these detectors is located in the very center so that tracks going in every direction can be reconstructed.These detectors were built for the search for the Higgs Boson, but are used for many other physics studies.
 The other two Experiments located at the LHC are ALICE and LHCb.
@@ -125,17 +119,17 @@ The ALICE experiment mainly studies the quark-gluon plasma during the runs with 
   \label{fig:LHCb}
 \end{figure}
 
-For high energies, $b$- and $\bar{b}$-hadrons are abundantly produced in forward
-direction, as seen in figure \ref{fig:bbforward}\footnote{They are also produced in backward direction but the experiment is only build for the forward cone.} with a production cross section of $144 \pm 1 \pm 21 \si{\micro\barn}$ \cite{bbXsection} for $\SI{13}{\tera\electronvolt}$ from previous measurements.
+For high energies, $b$- and $\bar{b}$-quarks are abundantly boosted into a relatively narrow cone depending on the exact energy, as seen in figure \ref{fig:bbforward}\footnote{They are also produced in backward direction but the experiment is only build for the forward cone.} with a production cross section of $144 \pm 1 \pm 21 \si{\micro\barn}$ \cite{bbXsection} for $\SI{13}{\tera\electronvolt}$ from previous measurements.
 The uncertainties are statistical and systematic, respectively.
-The LHCb experiment\cite{lhcbInfo} is a forward spectrometer covering $2 \,<\, \eta \,<\, 5$ in the pseudorapidity range. The main physics goal of the LHCb experiment is in the beauty- and charm-quark sector. A side-view of the new LHCb is shown in figure \ref{fig:LHCb}.
+The LHCb experiment\cite{lhcbInfo} is a forward spectrometer covering $2 \,<\, \eta \,<\, 5$ in the pseudorapidity range and due to the production angles of heavy flavour it is beneficial to have the geometry as it is. Unfortunately financial resources prevent building a symmetrical detector covering negative $\eta$. The main physics goal of the LHCb experiment is in the beauty- and charm-quark sector. A side-view of the new LHCb is shown in figure \ref{fig:LHCb}.
 
-The Vertex Locator (VELO) is the tracking detector dedicated to primary vertex precision measurements as well as tracking displaced vertices of particles with short lifetimes. The previous VELO used silicon microstrips technology is replaced by 26 tracking layers. The tracking layers use $50\times50\si{\micro\metre}^2$ pixels for a finer hit resolution as well as a better track reconstruction. The previous VELO was $\SI{8.4}{\milli\metre}$ away from the beam pipe. The new VELO will be $\SI{5.1}{\milli\metre}$ away from the beam pipe so that the particles enter the detector earlier and interact with less detector material before the first interaction layer is hit.
+The Vertex Locator (VELO) is the tracking detector dedicated to primary vertex precision measurements as well as tracking displaced vertices of particles with short lifetimes, which are most of the reasonable particles. The upgraded tracking layers use $50\times50\si{\micro\metre}^2$ pixels for a finer hit resolution as well as a better track reconstruction. The previous VELO was $\SI{8.4}{\milli\metre}$ away from the beam pipe. The new VELO will be $\SI{5.1}{\milli\metre}$ away from the beam pipe so that the particles enter the detector earlier and interact with less detector material before the first interaction layer is hit.
 This will improve the impact parameter resolution as well as the tracking resolution of the VELO for tracks with low momentum\cite{Piucci}.
-For Downstream reconstruction of of particles decaying after the VELO the upstream Tracker (UT) will be utilized. The UT is a necessary component for the improvement of the trigger timing and it also contributes to the improvement of momentum resolution. The UT consists of 4 tracking layers using silicon strips. Analogous to the VELO the inner sensors will be closer to the beam axis in comparison to the current tracker.
+The Upstream Tracker (UT) will be utilized for better momentum resolution, ghost suppression and is a necessity for Downstream tracking.
+The UT is a necessary component for the improvement of the trigger timing and it also contributes to the improvement of momentum resolution. The UT consists of 4 tracking layers using silicon strips. Analogous to the VELO the inner sensors will be closer to the beam axis in comparison to the current tracker.
 Due to the expected radiation dose and particle distribution throughout the tracker, the out region uses a $p^{+}$-in-$n$ technology for the strips and the strips in the middle region uses $n^{+}$-in-$p$ technology to better withstand the higher radiation. The strips closest to the beam use $n^{+}$-in-$p$ technology as well.
-The Scintillating Fibre Tracker (SciFi) is located after the magnet region. Therefore measurements regarding particle momentum can be supplied.
-Close to the interaction point (IP) the Ring Imaging Cherenkov counter (RICH) are located. Their purpose is $p$, $\pi$ and $K$ particle identification (PID).
+The Scintillating Fibre Tracker (SciFi) is located downstream of the magnet region. Therefore measurements regarding particle momentum can be provided.A detailed description is presented in section \ref{sec:scitracker}.
+Close to the interaction point (IP) the Ring Imaging Cherenkov counter (RICH1) is located. Its purpose is $p$, $\pi$ and $K$ particle identification (PID).
 The upgraded RICH1 will be able to handle the increasing particle occupancy dude to the increase of the focal length by a factor of $\sqrt{2}$.
 The readout rate will be increased from currently $\SI{1}{\mega\hertz}$ to $\SI{40}{\mega\hertz}$, realized by Multianode Photomultipliers (PMTs).
 The hadronic calorimeter and electromagnetic calorimeter as well as the four muon chambers are used for $p$, $e$, $\gamma$ and $\mu$ PID. The front-end electronics of the calorimeters are being replaced during the upgrade.
@@ -153,28 +147,37 @@ The upstream and downstream trackers provide a good precision estimate of the mo
 For particle identification the reconstructed trajectories of charged particles are used as input for the RICH detectors.
 The limiting factor for the momentum resolution is multiple scattering for tracks with a momentum lower than $\num{80}\frac{\text{GeV}}{\text{c}}$. For tracks with a higher momentum the detector resolution is the limiting factor.
 
-The Scintillating Fibre (SciFi) Tracker replaced the inner Tracker (IT) and the outer Tracker (OT)
+The Scintillating Fibre (SciFi) Tracker replaced the Inner Tracker (IT) and the Outer Tracker (OT)
 and is located in the same place as the downstream trackers that were previously installed.
 
 The instantaneous luminosity after the upgrade is expected to be $\SIrange{1}{2e33}{\per\centi\metre\squared\per\second}$ with a bunch spacing of $\SI{25}{\nano\second}$.
 The average number of proton-proton interactions per bunch crossing will be between
 $\nu = 3.8$ and $\nu = 7.6$ during the startup and the latter is the estimate for the upgrade MC.
 
+\section{The SciFi Tracker}
+\label{sec:scitracker}
 \subsection{Layout of the SciFi Tracker}
 
 \begin{figure}
   \centering
-  \includegraphics{plots/SciFi_Tracker.png}
-  \caption{frontal view of the SciFi geometry and readout order (find an open source picture).}
+  \includegraphics{plots/scifi_layers.png}
+  \caption{Side view of the SciFi geometry. The beam pipe lies in the horizontal slot between the upper and the lower half of the figure.\cite{scifiInfo}}
   \label{fig:scifi}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/stereo_angles.png}
+  \caption{Visualization of the stereo angles of the U- and V-layer with respect to the X-layers.}
+  \label{fig:stereo}
 \end{figure}
 
 The SciFi Tracker consists of three stations T1, T2 and T3 each having four layers ($X1, U, V, X2$). The orientation of these planes with respect to the vertical axis are ($\SI{0}{\degree}, \SI{+5}{\degree}, \SI{-5}{\degree}, \SI{0}{\degree}$).
 Since the beampipe is not exactly parallel to the ground the vertical axis is
 defined as vertical on the z-axis of the beampipe.
-The tilted layers are called stereo layers and serve the purpose of 3D hit localization.
+The tilted layers are called stereo layers and serve the purpose of 3D hit localization. A visualization of the stereo angle is shown in figure \ref{fig:stereo}.
 The layers are $\SI{20}{\milli\metre}$ apart from each other in $z$-direction within each station.
-Each layer has four quarters with each quarter having five\footnote{six for the last (T-)station.} modules. Each module is constructed from four fibre mats.
+Each layer in the first two stations has four quarters with each quarter having five modules, with the layers in station three having six modules. Each module is constructed from four fibre mats.
 A frontal view of the SciFi Tracker is displayed in figure\ref{fig:scifi}.
 The global coordinate system used is of right-handed nature with positive $z$ pointing away from the interaction point following the beam direction as seen in figure \ref{fig:LHCb}. positive $y$ points upwards, towards the surface and positive $x$ and negative $x$ are named as A-Side and C-Side respectively\cite{scifiInfo}.
 For readout purposes the top and bottom half of each element have inverted x- and y-axis as seen in figure \ref{fig:scifi}.
@@ -187,7 +190,7 @@ The scintillating fibre material is a polymer with an organic fluorescent dye
 added to the polystyrene structure to enhance the yield during the scintillation process.
 In order to produce and register a photon signal, the ionization energy is deposited
 in the fibre core. The amount of energy need for the polymer to reach an
-excited state is just a few electronvolts. The added dye has the particular structure
+excited state is just a few electronvolts\cite{Elevel}. The added dye has the particular structure
 to match the excitation energy. The dye generates excited energy states when
 particles hit the fibre and deposit their energy.
 The refractive index difference between the core of the fibre and the outer cladding make sure total internal reflection occurs, which guides the photons to the silicon photomultipliers (SiPMs).
