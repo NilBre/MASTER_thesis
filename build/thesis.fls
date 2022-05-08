@@ -826,11 +826,11 @@ INPUT ./plots/clusters.tex
 INPUT ./plots/clusters.tex
 INPUT ./content/story.tex
 INPUT ./content/story.tex
+INPUT ./plots/point_dofs.png
+INPUT ./plots/point_dofs.png
+INPUT ./plots/point_dofs.png
 INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /home/nils/.local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT ./plots/point_dofs.png
-INPUT ./plots/point_dofs.png
-INPUT ./plots/point_dofs.png
 INPUT ./plots/june_21/Tx_noRota_allT_1000MU.png
 INPUT ./plots/june_21/Tx_noRota_allT_1000MU.png
 INPUT ./plots/june_21/Tx_noRota_allT_1000MU.png
@@ -912,8 +912,6 @@ INPUT ./plots/feb_6_2022/100mu_misalignment_samples_compared.png
 INPUT ./plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png
 INPUT ./plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png
 INPUT ./plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png
-INPUT ./content/continuing_work.tex
-INPUT ./content/continuing_work.tex
 INPUT ./content/conclusion.tex
 INPUT ./content/conclusion.tex
 INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lmromancaps10-regular.luc

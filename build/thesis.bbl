@@ -295,6 +295,51 @@
       \verb https://cds.cern.ch/record/1647400
       \endverb
     \endentry
+    \entry{wmass}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f33df605f578d680164797cf4da7853d}{%
+           family={Collboration},
+           familyi={C\bibinitperiod},
+           given={CDF},
+           giveni={C\bibinitperiod}}}%
+        {{hash=0268fbd92733d98fce896e0bc9bd82a4}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={T.\bibnamedelimi Aaltonen},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{a70d36ac555b8707d1ece602f90ece8a}
+      \strng{fullhash}{a70d36ac555b8707d1ece602f90ece8a}
+      \strng{bibnamehash}{a70d36ac555b8707d1ece602f90ece8a}
+      \strng{authorbibnamehash}{a70d36ac555b8707d1ece602f90ece8a}
+      \strng{authornamehash}{a70d36ac555b8707d1ece602f90ece8a}
+      \strng{authorfullhash}{a70d36ac555b8707d1ece602f90ece8a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{6589}
+      \field{title}{High-precision measurement of the <i>W</i> boson mass with the CDF II detector}
+      \field{volume}{376}
+      \field{year}{2022}
+      \field{pages}{170\bibrangedash 176}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1126/science.abk1781
+      \endverb
+      \verb{eprint}
+      \verb https://www.science.org/doi/pdf/10.1126/science.abk1781
+      \endverb
+      \verb{urlraw}
+      \verb https://www.science.org/doi/abs/10.1126/science.abk1781
+      \endverb
+      \verb{url}
+      \verb https://www.science.org/doi/abs/10.1126/science.abk1781
+      \endverb
+    \endentry
     \entry{gap}{online}{}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
@@ -597,36 +642,6 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1088/1742-6596/878/1/012012
-      \endverb
-    \endentry
-    \entry{flo}{online}{}
-      \name{author}{1}{}{%
-        {{hash=05656343b08b41af681b2794a1142fdc}{%
-           family={Reiss},
-           familyi={R\bibinitperiod},
-           given={Florian},
-           giveni={F\bibinitperiod}}}%
-      }
-      \strng{namehash}{05656343b08b41af681b2794a1142fdc}
-      \strng{fullhash}{05656343b08b41af681b2794a1142fdc}
-      \strng{bibnamehash}{05656343b08b41af681b2794a1142fdc}
-      \strng{authorbibnamehash}{05656343b08b41af681b2794a1142fdc}
-      \strng{authornamehash}{05656343b08b41af681b2794a1142fdc}
-      \strng{authorfullhash}{05656343b08b41af681b2794a1142fdc}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Update on VP alignment constraint issue}
-      \field{urlday}{21}
-      \field{urlmonth}{4}
-      \field{urlyear}{2022}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://indico.cern.ch/event/997937/contributions/4369419/attachments/2248454/3813923/WP45_FReiss_20210520.pdf
-      \endverb
-      \verb{url}
-      \verb https://indico.cern.ch/event/997937/contributions/4369419/attachments/2248454/3813923/WP45_FReiss_20210520.pdf
       \endverb
     \endentry
     \entry{standard2018}{online}{}

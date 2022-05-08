@@ -1,29 +1,29 @@
 \selectlanguage *{german}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Particles and The Large Hadron Collider}{2}{chapter.2}%
-\contentsline {section}{\numberline {2.1}The Standard Model}{2}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Particle decays and hadrons}{4}{section.2.2}%
-\contentsline {section}{\numberline {2.3}The LHC and LHCb}{5}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}The LHC}{5}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}The LHCb experiment}{6}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}The SciFi Tracker}{9}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Layout of the SciFi Tracker}{9}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Scintillating Fibres}{10}{subsection.2.4.2}%
-\contentsline {chapter}{\numberline {3}The Theory of Alignment}{12}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Clustering of SciFi hits}{12}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Track Reconstruction}{14}{section.3.2}%
-\contentsline {section}{\numberline {3.3}The Kalman filter method}{16}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}First Step: Prediction}{16}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}second Step: Filter}{17}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}third Step: Smoother}{17}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Alignment with Kalman filter track fit}{18}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Alignment of the SciFi}{22}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Nulltests and software tests}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}rotational constraints}{28}{section.4.2}%
-\contentsline {section}{\numberline {4.3}chi2 tests and weak modes}{33}{section.4.3}%
-\contentsline {section}{\numberline {4.4}luminosity samples and chi2}{37}{section.4.4}%
-\contentsline {section}{\numberline {4.5}impact of the cluster bias}{39}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Continuing Work}{44}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{45}{chapter.6}%
-\contentsline {chapter}{\nonumberline Literatur}{46}{chapter*.35}%
+\contentsline {chapter}{\numberline {2}Particles and The Large Hadron Collider}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The Standard Model}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Particle decays and hadrons}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}The LHC and LHCb}{6}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}The LHC}{6}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}The LHCb experiment}{7}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}The SciFi Tracker}{10}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Layout of the SciFi Tracker}{10}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Scintillating Fibres}{11}{subsection.2.4.2}%
+\contentsline {chapter}{\numberline {3}The Theory of Alignment}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Clustering of SciFi hits}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Track Reconstruction}{15}{section.3.2}%
+\contentsline {section}{\numberline {3.3}The Kalman filter method}{17}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}First Step: Prediction}{17}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}second Step: Filter}{18}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}third Step: Smoother}{18}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Alignment with Kalman filter track fit}{19}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Alignment of the SciFi}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Alignment Configuration}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Null tests and software tests}{25}{section.4.2}%
+\contentsline {section}{\numberline {4.3}rotational constraints}{30}{section.4.3}%
+\contentsline {section}{\numberline {4.4}chi2 tests and weak modes}{35}{section.4.4}%
+\contentsline {section}{\numberline {4.5}luminosity samples and chi2}{39}{section.4.5}%
+\contentsline {section}{\numberline {4.6}impact of the cluster bias}{41}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Conclusion and Outlook}{46}{chapter.5}%
+\contentsline {chapter}{\nonumberline Literatur}{48}{chapter*.38}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1,20 +1,24 @@
-\chapter{Conclusion}
+\chapter{Conclusion and Outlook}
 
 In order to handle the increasing instantaneous luminosity and read out the data at $\SI{40}{\mega\hertz}$, the LHCb will be upgraded.
 The tracking system will be replaced with a single tracker based on scintillating fibres and is currently commissioned. The physics performance is
 highly dependent on how well the detector is aligned, since poor alignment leads to systematic biases which can have a negative impact on sensitive asymmetry measurements. It can also lead to worse mass resolution. Therefore it is crucial that the SciFi detector is well aligned.
 
-Starting with the Nulltests it was found that constraining $Tx$ and $Tz$ in the last C-frame in station 3 combined with the rotation around $z$-axis yields the best results in terms of bringing down z-rotation and improving the overall alignment of the SciFi Tracker.
-Only constraining station 3 in the given translatory and rotational degrees of freedom improved the alignment for the first two stations regarding $Tz$.
+Starting with the Nulltests, a configuration that can give a good approximation of the real detector and correct for weak modes called "config5 Rz", was found . It was found that constraining $Tx$ and $Tz$ in the last C-frame in station three combined with the rotation around $z$-axis yields the best results in terms of bringing down z-rotation and improving the overall alignment of the SciFi Tracker.
+Only constraining station three in the given translational and rotational degrees of freedom improved the alignment for the first two stations regarding $Tz$.
+
+In terms of misalignment studies, it was found that misaligning the Modules in $Rx$, $Ry$ and $Rz$ for every layer in each station by $\SI{0.01}{\milli\radian}$ resulted in misalignment of the SciFi detector especially seen in $Tz$ and $Rz$. The noticable misalignment in $Rz$ is also enlarged by the cluster bias effect.
+Misaligning the Modules by $\SI{0.1}{\milli\radian}$ is too large of a misalignment for the SciFi to handle.
+On the other hand, misaligning the Modules in $Tx$, $Ty$ and $Tz$ by $\SI{0.001}{\micro\metre}$ or by $\SI{200}{\micro\metre}$ makes no difference and the SciFi cannot fully converge into the state before the misalignments were introduced, but the effects are small enough to be called negligible.
 
 The tests of the different track selections showed a strong correlation between the $\chi^2 / \text{dofs}$ and the number of tracks.
-For the GoodLongTracks, the additional alignment of the modules was found to improve the $\chi^2 / \text{dofs}$ as well as the use of two translational and two rotational degrees of freedom compared to only Tx and Rz.
-The spikey behavior seen in the $\chi^2 / \text{dofs}$ versus iteration number measurement for the \textit{HighMomentumTTracks} still has unknown sources.
+For the GoodLongTracks, the additional alignment of the modules was found to improve the $\chi^2 / \text{dofs}$ as well as the use of two translational and two rotational degrees of freedom compared to only $Tx$ and $Rz$.
 
-The measurements comparing maximum luminosity to ramp-up luminosity show small differences in $Tx$, $Rz$, and $\chi^2 / \text{dofs}$. Furthermore, a fast convergence can be observed which is either due to the absence of weak modes in the data set or to the optimized configuration.
+Furthermore, a cluster bias was detected which was fixed with a temporary correction. The cluster bias has a negative impact on $Rz$ and increases the rotation around $z$ by a factor of 2. This is currently being monitored and will improve the alignment once a solution is implemented.
 
-Furthermore, a cluster bias was detected which was fixed with a temporary correction. The impact of the cluster bias is clearly visible in $Rz$ and will make a significant difference during alignment once it is fixed.
 
-In addition, misalignment tests were performed to determine if the SciFi detector is capable of correcting the misaligned condition. Eight $\SI{100}{\micro\metre}$ translation misalignment samples were tested to exclude further biases. From the convergence it can be seen that the SciFi detector returns to the aligned state in all of the eight cases.
-
-%% nochmal die konlreten ergebnisse ansehen um die conclusion richtig zu schreiben
+% mention continuing work here
+With this analysis there are still more open questions. The cluster bias which prevents the alignment from working correctly is currently being analysed and will require more testing.
+The alignment using particles is an aspect of the alignment that was not mentioned until this point. What impact particles play during the alignment will therefore be analysed.
+Also how particles will help the misalignment of the SciFi detector will be looked at in great detail.
+The analysis of weak modes requires much more attention. Knowing the correlation between alignment parameters is therefore a crucial factor in understanding biases in track parameters.

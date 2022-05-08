@@ -1,39 +1,41 @@
 \chapter{Alignment of the SciFi}
 \label{sec:story}
 
-% I'd like you to think about the work you have been doing on the alignment and what things have been investigated and what conclusions you have made. You want to build the story one piece at a time, so I think it will start with testing some of the constraints from the null tests and going from there. With the type of work you have been doing, you will also have a much larger "future work" and "continuing work" section, I would put it before the conclusion. This will be discussing things like the way we discovered the cluster bias and the way that it is linked to the rotational degrees of freedom, etc. And it can outline the things you know about the way the real detector will be aligned starting very soon.
+For the upgrade the LHCb detector was completely rebuilt. In place of the previous IT and OT a new tracking detector was build which utilizes scintillating fibre called SciFi Tracker. The front-end electronics were also upgraded to handle the increasing data rate. For the new SciFi Tracker a new software is used.
 
-% \begin{itemize}
-%   \item testing some of the constraints from the null tests
-%   \item future work: discovered cluster bias + link to rotational degrees of freedom
-% \end{itemize}
+Because of the introduction of the new software, the alignment configuration needs to be determined from the beginning. The goal is to find a configuration that can accurately reproduce the position of the real detector and can correct for "weak modes".
+With some alignment parameters being highly correlated, detector components may move in the same direction or by the same amount. This is called a "weak mode". The movements do not affect the alignment $\chi^2$ since the residuals have not changed. Results of weak modes are biases in track parameters and poor alignment convergence.
+One of the most visible weak modes is the curvature bias. There a different ways to reduce the effect of weak modes for example using an overlapping detector design or using different data sets to gather more information.
 
-% taking notes for now so i know what plots to use
-% \begin{enumerate}
-%   \item started with null tests.
-%   \item which constraint does what?
-%   \item which degree of freedom moves what part of the scifi?
-% \end{enumerate}
+\section{Alignment Configuration}
 
-The alignment is performed using run2 data as well as Monte Carlo samples.
-The goal is to find the optimal configuration for the SciFi to mirror the real detector.
-A configuration is defined as a set of constraints, degrees of freedoms and aligneble objects such as the stations, layers, halflayers, modules or fibre mats.
-The following pre-installed alignment conditions with the survey constraints are used.\\
+An alignment configuration is a specific selection of detector elements, alignment parameters, constraints and track- and vertex-selections used for the alignment.
+Alignment parameters are the specific degrees of freedom used for the alignment and for each detector element. The Alignment parameters can be any combination of translations and rotations around the $x$, $y$ and $z$ axis($Tx$, $Ty$, $Tz$, $Rx$, $Ry$, $Rz$).
+The configuration that produces the best estimate for the detector position is the best candidate and will be used for the Run 3 data taking.
+A track and vertex reconstruction is performed before the alignment is evaluated. Depending on the tracks used the output can be different. Mainly two different track selections will be used throughout the thesis shown in table \ref{tab:tracks}
 
-\begin{lstlisting}[language=Python]
-  FT : 0 0 0 0 0 0 : 1 1 1 0.0003 0.0003 0.0003
-  FT/T. : 0 0 0 0 0 0 : 1 1 1 0.0003 0.0003 0.0003
-  FT/T./Layer(X1|U|V|X2) : 0 0 0 0 0 0 : 0.2 0.2 0.2 0.0001 0.0001 0.0001
-  FT/.*Module. : 0 0 0 0 0 0 : 0.1 0.1 0.1 0.001 0.001 0.001
-  FT/.*Mat. : 0 0 0 0 0 0 : 0.05 0.05 0.05 0.1 0.1 0.1
-\end{lstlisting}
-
-The string is the name of the element, the first set of six numbers are hardcoded parameters for each of the 3 translation degrees of freedom and 3 rotational degrees of freedom (Tx, Ty, Tz, Rx, Ry, Rz) and the second set of six parameters are the corresponding uncertainties.
-
-The scale for the translations are $\si{\milli\metre}$ and the scale for the rotations being $\si{\radian}$. A survey uncertainty of $\num{0.0001}$ stands for $\SI{0.1}{\milli\radian}$.
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{c|c}
+        \toprule
+            Tracks & Selections \\
+        \midrule
+            GoodLongTracks &  $P_{\text{total, min}} = \SI{5000}{\mega\electronvolt}$ \\
+            & $P_{\text{total, max}} = \SI{200000}{\mega\electronvolt}$ \\
+            & $p_\text{T, min} = \SI{200}{\mega\electronvolt}$ \\
+            & maximum $\chi^2 = 5$ \\
+            & "long" track type \\
+            \hline
+            HighMomentumTTracks & $P_{\text{total, min}} = \SI{50000}{\mega\electronvolt}$ \\
+            & maximum $\chi^2 = 5$ \\
+            & "TTrack" track type \\
+        \bottomrule
+    \end{tabular}
+    \caption{SciFi track selection.}
+    \label{tab:tracks}
+\end{table}
 
 The alignment runs were performed with alignment specific packages from Alignment/Escher and Alignment/TAlignment\cite{align}.
-
 During the alignment, lagrange constraints can be utilized to minimize alignment
 parameter $\alpha $ under the condition
 \begin{equation}
@@ -43,28 +45,50 @@ and adding the lagrange parameter $\lambda$ to get
 \begin{equation}
   \Delta \chi^2 = \lambda f(\alpha)\,.
 \end{equation}
+Lagrange constraints are added to fix losely constrained degrees of freedom and can be used for any linear combination of translations and rotations as shown in table \ref{tab:lagr}
 
-Lagrange constraints are added to fix losely constrained degrees of freedom and can be used for any linear combination of translations and rotations.
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{c|c}
+        \toprule
+            Tx, Ty, Tz & translation in x, y, z \\
+            Rx, Ry, Rz & rotation around x, y, z \\
+            Szx, Szy & shearing of x and y along z \\
+            Szz, Sxx & scaling in x and z \\
+        \bottomrule
+    \end{tabular}
+    \caption{Lagrange constraints that can be used as alignment parameters.}
+    \label{tab:lagr}
+\end{table}
 
-\section{Nulltests and software tests}
+The the software the Langrange constraints are defined by three elements. A name which can be chosen by the user, the detector element and the alignment parameters, seperated by a colon.
 
-As a starting point, the Alignment version v17r1 was used with 5000 events, magnet in upward position and \textit{GoodLongTracks}.
-The \textit{GoodLongTracks} have the following cuts and parameters:
-\begin{itemize}
-  \item $P_{\text{total, min}} = \SI{5000}{\mega\electronvolt}$ %(units? 5000 MeV?)
-  \item $P_{\text{total, max}} = \SI{200000}{\mega\electronvolt}$ %(units? 200 000 MeV = 200 GeV?)
-  \item $p_{T, min} = \SI{200}{\mega\electronvolt}$ %(units?)
-  \item maximum $\chi^2 = 5$
-  \item track type should be categorized as "long"
-\end{itemize}
+The starting constraints are defined as the following table \ref{tab:cond}, which are based on the alignment conditions from the OT and knowledge from experts:
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{c | c | c}
+        \toprule
+            element & positions & uncertainties \\
+        \midrule
+            FT & 0 0 0 0 0 0 & 1 1 1 0.00030.00030.0003 \\
+            $\text{FT/T.}$ & 0 0 0 0 0 0 & 1 1 1 0.00030.00030.0003 \\
+            $\text{FT/T./Layer(X1|U|V|X2)}$ & 0 0 0 0 0 0 & 0.2 0.2 0.2 0.0001 0.0001 0.0001 \\
+            $\text{FT/.*Module.}$ & 0 0 0 0 0 0 & 0.1 0.1 0.1 0.001 0.001 0.001 \\
+            $\text{FT/.*Mat.}$ & 0 0 0 0 0 0 & 0.05 0.05 0.05 0.1 0.1 0.1 \\
+        \bottomrule
+    \end{tabular}
+    \caption{starting condition of the SciFi Tracker.}
+    \label{tab:cond}
+\end{table}
 
-and for the later used \textit{HighMomentumTTracks} the cuts and parameters are:
+The SciFi Tracker is referred to as Forward Tracker (FT) in the software.
+The first element in each row of the starting conditions is the detector element.
+The first set of six numbers are hardcoded parameters for each of the three translation degrees of freedom and three rotational degrees of freedom (Tx, Ty, Tz, Rx, Ry, Rz). They are set to be zero to match the known position of the detector in the Monte Carlo Simulation (MC).
+and the second set of six parameters are the corresponding uncertainties.
 
-\begin{itemize}
-  \item $P_{\text{total, min}} = \SI{50000}{\mega\electronvolt}$
-  \item track type should be categorized as "TTrack"
-  \item maximum $\chi^2 = 5$
-\end{itemize}
+The scale for the translations are $\si{\milli\metre}$ and the scale for the rotations being $\si{\radian}$. A survey uncertainty of $\num{0.0001}$ stands for $\SI{0.1}{\milli\radian}$.
+
+\section{Null tests and software tests}
 
 \begin{figure}
   \centering
@@ -73,20 +97,16 @@ and for the later used \textit{HighMomentumTTracks} the cuts and parameters are:
   \label{fig:dofs}
 \end{figure}
 
-At first, a series of tests regarding different degrees of freedom and lagrange constraints is performed to find the optimal solution for the SciFi.
+At first, a series of tests regarding different degrees of freedom and Lagrange constraints is performed to find the optimal solution for the SciFi Tracker.
 
-The real detector layers are all centered around the beam pipe with no shifting
-in any direction and the goal is to align the layers in the software to mirror
-the real layers and reduce the shifting as close to zero as possible.
+The detector layers in the MC are all centered around the beam pipe with no shifting in any direction and the goal is to align the real detector layers to mirror the layers in the software and reduce the shifting as close to zero as possible.
 
 Figure \ref{fig:dofs} is used to demonstrate which degrees of freedom can be used
 to describe a point in the detector or a shift in coordinates.
-On the left-hand side the measurement point is described through cartesian coordinates and on the right-hand side it is described via polarcoordinates in a way.
+On the left-hand side the measurement point is described through cartesian coordinates and on the right-hand side it is described via polar coordinates in a way.
 
-The starting point of the analysis was the presentation held by Florian
-Reiss\cite{flo} which contained findings about malfunctioning shearing constraints.
-His analysis was performed with the VELO but the ideas are applicable for the SciFi as well.
-The parameters he used were changed to fit the SciFi and resulted in
+Problems with the shearing constraints were seen in the VELO alignment, so that a similar analysis for the SciFi was considered.
+The parameters used for the VELO were changed to fit the SciFi Tracker and resulted in
 
 \begin{lstlisting}[language=Python]
     dofs = "TxTyRxRy"
@@ -95,8 +115,8 @@ The parameters he used were changed to fit the SciFi and resulted in
     TrackSelections = GoodLongTracks()
 \end{lstlisting}\,.
 
-The dataset used is \textit{upgrade\_DC19\_01\_MinBiasMU} taken from the testfileDB\cite{testDB} and will be used for the upcoming tests until a different set is mentioned.
-The alignable objects are the (T-)stations and te layers and the trackselection is chosen to be \textit{GoodLongTracks} as a starting point. This will be called \textit{baseline}\footnote{or baseline configuration}.
+The dataset\footnote{upgrade\_DC19\_01\_MinBiasMU} used taken from the testfileDB\cite{testDB} and will be used for the upcoming tests until a different set is mentioned.
+The alignable objects are the (T-)stations and the layers within a station and the track selection is chosen to be \textit{GoodLongTracks} as a starting point. This will be called \textit{baseline}\footnote{or baseline configuration}.
 The baseline is unconstrained in order to see what the software geometry of the detector is like before the alignment with constraints.
 
 In this part, the steps of testing different configurations is described and analysed.

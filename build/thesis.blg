@@ -1,21 +1,21 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'build/thesis.blg'
-[69] biber:340> INFO - === Sat May  7, 2022, 22:06:55
-[89] Biber.pm:418> INFO - Reading 'build/thesis.bcf'
-[153] Biber.pm:972> INFO - Found 24 citekeys in bib section 0
-[165] Biber.pm:4383> INFO - Processing section 0
-[176] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
-[184] bibtex.pm:1713> INFO - LaTeX decoding ...
-[216] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
-[331] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[331] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[331] Biber.pm:4203> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[331] Biber.pm:4209> INFO - No sort tailoring available for locale 'de-DE'
-[349] bbl.pm:654> INFO - Writing 'build/thesis.bbl' with encoding 'UTF-8'
-[356] bbl.pm:757> INFO - Output to build/thesis.bbl
-[361] Biber.pm:130> WARN - legacy month field 'jul' in entry 'facilityLHCb' is not an integer - this will probably not sort properly.
-[361] Biber.pm:130> WARN - legacy month field 'jul' in entry 'Piucci' is not an integer - this will probably not sort properly.
-[361] Biber.pm:130> WARN - legacy month field 'Feb' in entry 'techreport' is not an integer - this will probably not sort properly.
-[361] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_eFWn/33e59b5ca9ec342068223d604c3f8d55_396.utf8, line 100, warning: 65 characters of junk seen at toplevel
-[361] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_eFWn/33e59b5ca9ec342068223d604c3f8d55_396.utf8, line 133, warning: 1 characters of junk seen at toplevel
-[361] Biber.pm:132> INFO - WARNINGS: 5
+[70] biber:340> INFO - === Sun May  8, 2022, 22:47:39
+[84] Biber.pm:418> INFO - Reading 'build/thesis.bcf'
+[147] Biber.pm:972> INFO - Found 24 citekeys in bib section 0
+[159] Biber.pm:4383> INFO - Processing section 0
+[168] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[177] bibtex.pm:1713> INFO - LaTeX decoding ...
+[212] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[324] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[325] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[325] Biber.pm:4203> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[325] Biber.pm:4209> INFO - No sort tailoring available for locale 'de-DE'
+[342] bbl.pm:654> INFO - Writing 'build/thesis.bbl' with encoding 'UTF-8'
+[349] bbl.pm:757> INFO - Output to build/thesis.bbl
+[355] Biber.pm:130> WARN - legacy month field 'jul' in entry 'facilityLHCb' is not an integer - this will probably not sort properly.
+[355] Biber.pm:130> WARN - legacy month field 'jul' in entry 'Piucci' is not an integer - this will probably not sort properly.
+[355] Biber.pm:130> WARN - legacy month field 'Feb' in entry 'techreport' is not an integer - this will probably not sort properly.
+[355] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_luDe/33e59b5ca9ec342068223d604c3f8d55_1029.utf8, line 100, warning: 65 characters of junk seen at toplevel
+[355] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_luDe/33e59b5ca9ec342068223d604c3f8d55_1029.utf8, line 133, warning: 1 characters of junk seen at toplevel
+[355] Biber.pm:132> INFO - WARNINGS: 5
