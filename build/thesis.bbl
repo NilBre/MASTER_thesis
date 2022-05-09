@@ -199,6 +199,41 @@
       \verb https://gitlab.cern.ch/lhcb/Alignment
       \endverb
     \endentry
+    \entry{1207.4756}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=81b2ede9b1f4a7f5593ab5ed8449df0a}{%
+           family={Amoraal},
+           familyi={A\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{8bcb7b00519a5c16e2d1da3c7f0a42f5}
+      \strng{fullhash}{8bcb7b00519a5c16e2d1da3c7f0a42f5}
+      \strng{bibnamehash}{8bcb7b00519a5c16e2d1da3c7f0a42f5}
+      \strng{authorbibnamehash}{8bcb7b00519a5c16e2d1da3c7f0a42f5}
+      \strng{authornamehash}{8bcb7b00519a5c16e2d1da3c7f0a42f5}
+      \strng{authorfullhash}{8bcb7b00519a5c16e2d1da3c7f0a42f5}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{physics.ins-det}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Nucl. Instrum. Meth. A}
+      \field{title}{{Application of vertex and mass constraints in track-based alignment}}
+      \field{volume}{712}
+      \field{year}{2013}
+      \field{pages}{48\bibrangedash 55}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.nima.2012.11.192
+      \endverb
+      \verb{eprint}
+      \verb 1207.4756
+      \endverb
+    \endentry
     \entry{LHCDR}{book}{}
       \name{author}{7}{}{%
         {{hash=c9a324bb9a73322510ce6491007589ce}{%

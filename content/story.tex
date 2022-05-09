@@ -1,10 +1,10 @@
 \chapter{Alignment of the SciFi}
 \label{sec:story}
 
-For the upgrade the LHCb detector was completely rebuilt. In place of the previous IT and OT a new tracking detector was build which utilizes scintillating fibre called SciFi Tracker. The front-end electronics were also upgraded to handle the increasing data rate. For the new SciFi Tracker a new software is used.
+For the upgrade the LHCb detector was completely rebuilt. In place of the previous IT and OT a new tracking detector was built which utilizes scintillating fibre called SciFi Tracker. The front-end electronics were also upgraded to handle the increasing data rate. For the new SciFi Tracker a new software is used.
 
-Because of the introduction of the new software, the alignment configuration needs to be determined from the beginning. The goal is to find a configuration that can accurately reproduce the position of the real detector and can correct for "weak modes".
-With some alignment parameters being highly correlated, detector components may move in the same direction or by the same amount. This is called a "weak mode". The movements do not affect the alignment $\chi^2$ since the residuals have not changed. Results of weak modes are biases in track parameters and poor alignment convergence.
+Because of the introduction of the new software, the alignment configuration needs to be determined from the beginning. The goal is to find a configuration that can accurately reproduce the position of the real detector and can correct for ``weak modes''.
+With some alignment parameters being highly correlated, detector components may move in the same direction or by the same amount. This is called a ``weak mode''. The movements do not affect the alignment $\chi^2$ since the residuals have not changed. Results of weak modes are biases in track parameters and poor alignment convergence.
 One of the most visible weak modes is the curvature bias. There a different ways to reduce the effect of weak modes for example using an overlapping detector design or using different data sets to gather more information.
 
 \section{Alignment Configuration}
@@ -36,16 +36,16 @@ A track and vertex reconstruction is performed before the alignment is evaluated
 \end{table}
 
 The alignment runs were performed with alignment specific packages from Alignment/Escher and Alignment/TAlignment\cite{align}.
-During the alignment, lagrange constraints can be utilized to minimize alignment
+During the alignment, Lagrange constraints can be utilized to minimize alignment
 parameter $\alpha $ under the condition
 \begin{equation}
   f(\alpha) = 0
 \end{equation}
-and adding the lagrange parameter $\lambda$ to get
+and adding the Lagrange parameter $\lambda$ to get
 \begin{equation}
   \Delta \chi^2 = \lambda f(\alpha)\,.
 \end{equation}
-Lagrange constraints are added to fix losely constrained degrees of freedom and can be used for any linear combination of translations and rotations as shown in table \ref{tab:lagr}
+Lagrange constraints are added to fix loosely constrained degrees of freedom and can be used for any linear combination of translations and rotations as shown in table \ref{tab:lagr}
 
 \begin{table}[!ht]
     \centering
@@ -61,17 +61,26 @@ Lagrange constraints are added to fix losely constrained degrees of freedom and 
     \label{tab:lagr}
 \end{table}
 
-The the software the Langrange constraints are defined by three elements. A name which can be chosen by the user, the detector element and the alignment parameters, seperated by a colon.
+An illustration of shearing is shown in figure \ref{fig:shear}.
 
-The starting constraints are defined as the following table \ref{tab:cond}, which are based on the alignment conditions from the OT and knowledge from experts:
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{plots/shearing.png}
+    \caption{An illustration of shearing.}
+    \label{fig:shear}
+\end{figure}
+
+In the software, a Langrange constraint is defined by three elements. A name which can be chosen by the user, the detector element and the alignment parameters, seperated by a colon.
+
+The starting constraints are defined as the following table \ref{tab:cond}, which are based on the alignment conditions from the OT and knowledge from experts.
 \begin{table}[!ht]
     \centering
     \begin{tabular}{c | c | c}
         \toprule
             element & positions & uncertainties \\
         \midrule
-            FT & 0 0 0 0 0 0 & 1 1 1 0.00030.00030.0003 \\
-            $\text{FT/T.}$ & 0 0 0 0 0 0 & 1 1 1 0.00030.00030.0003 \\
+            $\text{FT}$ & 0 0 0 0 0 0 & 1 1 1 0.0003 0.0003 0.0003 \\
+            $\text{FT/T.}$ & 0 0 0 0 0 0 & 1 1 1 0.0003 0.0003 0.0003 \\
             $\text{FT/T./Layer(X1|U|V|X2)}$ & 0 0 0 0 0 0 & 0.2 0.2 0.2 0.0001 0.0001 0.0001 \\
             $\text{FT/.*Module.}$ & 0 0 0 0 0 0 & 0.1 0.1 0.1 0.001 0.001 0.001 \\
             $\text{FT/.*Mat.}$ & 0 0 0 0 0 0 & 0.05 0.05 0.05 0.1 0.1 0.1 \\
@@ -85,11 +94,11 @@ The SciFi Tracker is referred to as Forward Tracker (FT) in the software.
 The first element in each row of the starting conditions is the detector element.
 The first set of six numbers are hardcoded parameters for each of the three translation degrees of freedom and three rotational degrees of freedom (Tx, Ty, Tz, Rx, Ry, Rz). They are set to be zero to match the known position of the detector in the Monte Carlo Simulation (MC).
 and the second set of six parameters are the corresponding uncertainties.
-
 The scale for the translations are $\si{\milli\metre}$ and the scale for the rotations being $\si{\radian}$. A survey uncertainty of $\num{0.0001}$ stands for $\SI{0.1}{\milli\radian}$.
+During this thesis, the LHC beam was off and the SciFi detector was still being constructed. The alignment tests in this thesis use Monte Carlo simulated data to test the alignment software for the SciFi.
 
 \section{Null tests and software tests}
-
+\subsection{Software configurations and samples}
 \begin{figure}
   \centering
   \includegraphics[width=0.75\textwidth]{plots/point_dofs.png}
@@ -103,27 +112,33 @@ The detector layers in the MC are all centered around the beam pipe with no shif
 
 Figure \ref{fig:dofs} is used to demonstrate which degrees of freedom can be used
 to describe a point in the detector or a shift in coordinates.
-On the left-hand side the measurement point is described through cartesian coordinates and on the right-hand side it is described via polar coordinates in a way.
+On the left-hand side the measurement point is described through cartesian coordinates and on the right-hand side it is described via polar coordinates.
 
 Problems with the shearing constraints were seen in the VELO alignment, so that a similar analysis for the SciFi was considered.
-The parameters used for the VELO were changed to fit the SciFi Tracker and resulted in
+The parameters used for the VELO were changed to fit the SciFi Tracker and resulted in the following configuration:
 
 \begin{lstlisting}[language=Python]
-    dofs = "TxTyRxRy"
+    dofs = "TxTzRxRz"
     elements.FTStations(dofs)
     elements.FTFrameLayers(dofs)
     TrackSelections = GoodLongTracks()
-\end{lstlisting}\,.
+\end{lstlisting}
 
-The dataset\footnote{upgrade\_DC19\_01\_MinBiasMU} used taken from the testfileDB\cite{testDB} and will be used for the upcoming tests until a different set is mentioned.
-The alignable objects are the (T-)stations and the layers within a station and the track selection is chosen to be \textit{GoodLongTracks} as a starting point. This will be called \textit{baseline}\footnote{or baseline configuration}.
-The baseline is unconstrained in order to see what the software geometry of the detector is like before the alignment with constraints.
+The dataset\footnote{upgrade\_DC19\_01\_MinBiasMU} used taken from the TestFileDB\cite{testDB} and will be used for the upcoming tests until a different set is mentioned.
+As the DoFs, x- and z-translation as well as rotations around the x- and z-axis are used and are the only relevant DoFs for the alignment since y-translation and rotations around the y-axis can be constructed from the other degrees of freedom.
+For the alignment runs, ten iterations were used and is not using input misalignment, so a perfectly aligned detector is expected from the MC.
+The alignment constants after each iteration are passed on to the next iteration.
+Convergence of the alignment is defined by the difference between the variation of the alignment parameters of the current iteration to the last iteration. If the variation is sufficiently small, the alignment is converged.
+The alignable objects are the (T-)stations and the frame layers within a station and the track selection is chosen to be \textit{GoodLongTracks} as a starting point. This will be called \textit{baseline} or \textit{baseline configuration}.
+The baseline is unconstrained in order to check the accuracy of the alignment software without constraints and look for weak modes.
+The baseline is completely unconstrained.
+The frame layers, also called half layers, are divided into two quarters which are the top half and bottom half of the frame layer.
 
-In this part, the steps of testing different configurations is described and analysed.
+\subsection{Aligning with translations and constraints}
+The first configuration tested against the baseline is called “noRotation”. Comparisons of this configuration with the baseline are shown in figure \ref{fig:june_2} and figure \ref{fig:june_2_1}, for 1000 and 7000 simulated events respectively.
 
-Starting of with the first configuration called "noRotation" tested against the baseline as seen in figure\ref{fig:june_2} for 1000 simulated events used in this particular alignment run and \ref{fig:june_2_1} for 7000 simulated events respectivley.
-
-The measurement points are the mean of each layer, the errorbars are root-mean-square errors (RMS) and come from the difference between the C-side and the A-side of the detector layer and is not the measurement uncertainty.
+In these plots, the measurement points are the mean position of each layer, and the errorbars are root-mean-square errors (RMS) and come from the difference between the C-side and the A-side of the detector layer and is not the measurement uncertainty.
+The group position is the global position of the stations and layers inside the LHCb experiment, where $z = 0$ is the far left side of the experiment where the VELO begins.
 
 The "noRotation" configuration is defined as:
 
@@ -143,13 +158,12 @@ The "noRotation" configuration is defined as:
     ]
 \end{lstlisting}
 
-Here, only x-translation will be compared since other translatory degrees of freedom will be swapped out for a rotational degree of freedom (DoF).
-The first three constraints on all stations regarding translations brings the total movement of the station to around zero which can be seen clearly in figure\ref{fig:june_2}. The last four constraints restrict the movement of each
-side of the C-frame to be centered around zero which brings the x translation in station 3 even closer to zero.
+The first three constraints on all stations regarding translations brings the movement of the frame layers within a station to around zero which can be seen clearly in figure\ref{fig:june_2}. The last four constraints restrict the sum of the movement of the half-layers inside each C-frame to be zero, which brings the x translation of the half-layers in station three even closer to zero.
 Even though the alignment improved the amount of constraints cannot recover from potential misalignments because the constraints hinder the stations from moving.
 
-Later on we want as few constraints as possible so that the alignable objects can be aligned and converge towards the optimal position based on the track reconstruction.
+In an ideal alignment we want as few constraints as possible so that the alignable objects can be aligned and converge towards the optimal position based on the track reconstruction.
 This measurement only used 1000 events and is only used as a guideline to what the trend of the distribution looks like. The associated graphs for $Tx$ plotted against the group position in $z$ are shown in figure \ref{fig:june_2}.
+
 A prominent problem visible is the layer separation between the X-layers and the stereo layers as well as a separation between the C-frames inside each station.
 
 \begin{figure}
@@ -172,7 +186,7 @@ took more time to compute especially for 10 alignment iterations.
 For the following configuration, 3000 simulated events were used to shorten the computing time while still yielding an accurate representation of the situation.
 
 % for comparisons include the 3000MU plot from renewed_plots
-
+\subsection{Aligning with translations, rotations, and constraints}
 The next configuration tested will be called "half C-frame". This configuration is defined as
 
 \begin{lstlisting}[language=Python]
@@ -189,24 +203,33 @@ The next configuration tested will be called "half C-frame". This configuration 
 ]
 \end{lstlisting}
 
+The degrees of freedom used for this configuration are the same as in the baseline configuration for the same reason.
+We chose to align the stations in the given DoFs to fix their overall position in the SciFi and also align the half-layers since we see a separation between the layers which we want to correct with the following constraints.
+The stations are constrained in $Tx$ and $Tz$ to fix the overall movement inside the SciFi. The second to last constraint (``frontCSide´´) is constraining the first to half-layers in station three in their total movement along the x- and z-axis.
+The last constraint works the same but for the back two half-layers of station three.
+
 and the comparison to the baseline is shown in figure \ref{fig:june_3}.
 Here the stations and layers are aligned in $Tx$, $Tz$, $Rx$ and $Rz$ but the stations are still only constrained in their translations. Also, the last station only has one side of each C-frame constrained. The additional keyword \textbf{total} constraints
 the difference of the quarters to zero with respect to the nominal position. As seen in figure \ref{fig:june_3} the first two layers have an average position of zero but the individual position is not. The same is seen in the last two layers of each station.
 
-This new configuration in orange converged after 12 iterations as seen in figure \ref{fig:conv}. Normally, an alignment job should converge after three to five iterations. If the convergence happens later there could be a problem with the constraints which prevent the alignment from converging because they are implemented wrongly, are redundant or weak modes hinder the convergence.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.5\textwidth]{plots/scatter_fig_4_4_convergence.png}
-  \caption{convergence after 12 iterations from configuration "half C-frame".}
-  \label{fig:conv}
-\end{figure}
+This new configuration in orange converged after 12 iterations as seen in figure \ref{fig:conv}.
+This figure shows the mean of the modules in each station per iteration. The modules of station one are the (colour1) dots, the modules for station two are coloured (colour2) and for station three is coloured (colour3).
+The horizontal red line is the nominal position of the SciFi in MC, where the aligned detector should be.
+The blue, dotted, vertical line marks the point of convergence for the alignment run.
+Normally, an alignment job should converge after three to five iterations. If the convergence happens later there could be a problem with the constraints which prevent the alignment from converging because they are implemented wrongly, are redundant or weak modes hinder the convergence.
 
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/june_21/allT_halfT3_n20_Tx.png}
   \caption{analysed 20 iterations for x translation behavior for configuration "half C-frame".}
   \label{fig:june_3}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.75\textwidth]{plots/scatter_fig_4_4_convergence.png}
+  \caption{convergence of the alignment after 12 iterations from configuration "half C-frame".}
+  \label{fig:conv}
 \end{figure}
 
 \section{rotational constraints}
@@ -230,8 +253,7 @@ Similar to the "noRotation" configuration the same constraints were used but for
         ]
 \end{lstlisting}
 
-In figure \ref{fig:june_4} x-translation and z-translation with regards to
-the group position are shown.
+In figure \ref{fig:june_4} x-translation and z-translation with regards to the group position are shown.
 
 \begin{figure}
   \centering
@@ -254,10 +276,10 @@ the group position are shown.
 
 Figure \ref{fig:june_4_1} still shows layer separation in station 1 more similar to figure \ref{fig:june_3} than to figure \ref{fig:june_2_1}.
 Since the constraints are the same and the amount of degrees of freedoms increased,
-it is visible that using more DoFs makes the alignment worse. Therefore the degrees of freedom must be chosen wisely.
+it is visible that using more DoFs makes the alignment worse. Therefore the degrees of freedom must be chose wisely.
 
 Regarding the z-translation the plot is only shown to demonstrate the large separation of layers. the baseline was not aligned in $Tz$ so there is no comparison.
-% Will do an alignment run to get it!
+
 The RMS uncertainty on the measurements is a result of the separation between A-side and C-side. For configuration "Full DoF", a plot showing the C-side and A-side difference in x-translation is shown in figure \ref{fig:june_5} and for z-translation in figure \ref{fig:june_6}.
 
 A clear layer separation is visible in terms af layer translation along the beam pipe\ref{fig:june_5}.
@@ -279,14 +301,12 @@ On the other hand the x-translation \ref{fig:june_6}
   \label{fig:june_6}
 \end{figure}
 
-Looking at figure \ref{fig:june_6}, the last two layers in station 3 are
-seperated from the first two regarding x-translation. Especially the last
-station should be fixed around zero with the constraints added. The sum of
-all translations should be zero with each individual layer movement being small.
+Looking at figure \ref{fig:june_6}, the last two layers in station 3 are seperated from the first two regarding x-translation. Especially the last
+station should be fixed around zero with the constraints added. The sum of all translations should be zero with each individual layer movement being small.
 
-The result is unexpected with the constraints added and the cause of this
-problem is described later.
+The result is unexpected with the constraints added and the cause of this problem is described later.
 
+\subsection{Checking rotational degrees of freedom}
 The Next configuration tested is the result of a series of tests with various constraints, DoFs and alignable objects. In figure \ref{fig:TxZ} a new configuration called "Test3" is introduced and it is defined as
 
 \begin{lstlisting}[language=Python]
@@ -302,7 +322,6 @@ constraints = [
     "backASide  : FT/T3/Layer(V|X2)/Quarter(1|3) : Tx Tz Rx Rz"
     ]
 \end{lstlisting}
-% test 3:
 
 \begin{figure}
   \centering
@@ -392,15 +411,13 @@ the result is a small improvement in $Rz$ of around $\SI{0.005}{\milli\radian}$ 
 
 Translation constraints as well as rotation constraints are not the only constraints tested. There are also scaling- and shearing constraints that were analysed but seemed to have no major impact.
 
-% november plots
 \section{chi2 tests and weak modes}
-In this section, a $\chi^2$ analysis is performed in order to study the "goodness" of the alignment since the better the $\chi^2$ after the alignment the better.
-The second aspect i want to cover is the impact of potential weak modes also known as "correlated alignment parameters". There are several weak modes that could occur namely \textit{global translation}, \textit{shearing} and \textit{curvature bias}.
-Weak modes are unaffected by the $\chi^2$ since the residuals do not change but they do however show inside the eigenvalues of track parameters.
+In this section, a $\chi^2$ analysis is performed in order to study the ``goodness'' of the alignment and determine the impact of potential weak modes also known as "correlated alignment parameters". There are several weak modes that could occur namely \textit{global translation}, \textit{shearing} and \textit{curvature bias}.
+Weak modes are unaffected by the $\chi^2$ since the residuals do not change but they do however show in terms of the eigenvalues of track parameters.
 The effect weak modes have on the alignment are biases regarding track parameters and late convergences.
-There are different solutions that can be utilized to reduce the effect from weakmodes such as
+There are different solutions that can be utilized to reduce the effect from weak modes such as
 \begin{itemize}
-  \item $\textbf{using other configurations like magnet off or mass plots for off-axis events}$
+  \item $\textbf{using other data-taking configurations like magnet off or mass plots for off-axis events}$
   \item $\textbf{utilizing other survey data sets}$
   \item $\textbf{using kinematic and vertex constraints}$
 \end{itemize}\,.
@@ -412,28 +429,27 @@ There are different solutions that can be utilized to reduce the effect from wea
   \label{fig:fig2}
 \end{figure}
 
-We started with the $\chi^2$-analysis for \textit{HighMomentumTTracks},
+The first test is the $\chi^2$-analysis for \textit{HighMomentumTTracks},
 6500 events and 2020 data plotted versus the iteration number during the
 alignment in figure \ref{fig:fig2}. In blue, stations and layers were aligned in $Tx$,
 $Tz$, $Rx$ and $Rz$ with the constraints being used from "config5". The orange
-measurement is identical except for the degrees of freedoms being only $Tx$ and $Rz$.
+measurement is identical except for the degrees of freedom being only $Tx$ and $Rz$.
 In green and red the same measurements as in blue and orange were performed with
 the difference that that the modules are aligned as well.
 The purple measurement is the only one which covers 16 iterations and is otherwise identical to the orange one. That is also why the orange measurement is not visible since it lies behind the purple one for the first 10 iterations.
 the brown and pink measurements are done for 2019 data and are otherwise identical to the orange and red measurement regarding constraints and alignable degrees of freedom.
 
-The spikey behavior is not what we expected and this might be the result of weak modes since the convergence is quite bad in all of the 2020 data which can be seen by the not
-steadily decreasing $\chi^2 / \text{dofs}$.
+The spiky behavior in this plot is not what we expected and this might be the result of weak modes since the convergence is quite bad in all of the 2020 data which can be seen by the $\chi^2 / dofs$ not steadily decreasing.
 The 2019 measurements were performed as control measurements with and without
 module alignment. Here a clear decrease in the $\chi^2 / dofs$ is visible. This
 indicates that for the 2020 data additional analysis must be performed to gain further knowledge about the dataset since it shows some unclear findings.
 
 The idea to test $Tx$, $Tz$, $Rx$ and $Rz$ versus only one translation and one
-rotational degree of freedom was to analyse the effect regarding the convergence and the $\chi^2 / \text{dofs}$ itself. One could also argue that there was a quick convergence after three iterations when looking at the yellow measurement but something happened afterwards. This will be analysed in a future project.
+rotational degree of freedom was to analyse the effect regarding the convergence and the $\chi^2 / dofs$ itself. One could also argue that there was a quick convergence after three iterations when looking at the yellow measurement but something happened afterwards. This will be analysed in a future project.
 
 In figure \ref{fig:chi2iter} a comparison between GoodLongTracks and HighMomentumTTracks for the same measurements was performed to to study the impact of different track selections. This shows, that the alignment quality for both track selections increases with the number of iterations.
 The identical $\chi^2$ measurements for the HighMomentumTTracks were plotted against the number of tracks as seen in figure \ref{fig:chi2tracks} as an example.
-A clear correlation between the $\chi^2 / \text{dofs}$ and the number of tracks can be seen.
+A clear correlation between the $\chi^2 \ \text{dofs}$ and the number of tracks can be seen.
 
 \begin{figure}
   \centering
@@ -445,11 +461,10 @@ A clear correlation between the $\chi^2 / \text{dofs}$ and the number of tracks 
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/nov_21/chi2_vs_ntracks_all.png}
-  \caption{$\chi^2$-test versus number of tracks of different degrees of freedom, alignables and data samples.}
+  \caption{$\chi^2$-test versus number of tracks of different degrees of freedom, alignables and data samples but fewer (redo with grid).}
   \label{fig:chi2tracks}
 \end{figure}
 
-% december plots
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{plots/LHCB_week_dec/chi2_vs_iter_normal.png}
@@ -458,13 +473,13 @@ A clear correlation between the $\chi^2 / \text{dofs}$ and the number of tracks 
 \end{figure}
 
 In figure \ref{fig:chi2iterdec} a side-by-side view of the same $\chi^2$ measurement
-is shown but for different number of events. Despite the different labels these are the same measurements, only the colors are switched around for red and green and also yellow and blue as a pair. The thing that strikes the eye is the steadily decrease in $\chi^2 / \text{dofs}$ in the red measurement. Unlike our first expectations that $Tx$ and $Rz$ are enough degrees of freedom to describe the system using additional degrees of freedom seemed to help the alignment.
+is shown but for different number of events. Despite the different labels these are the same measurements, only the colors are switched around for red and green and also yellow and blue as a pair. The thing that strikes the eye is the steadily decrease in $\chi^2 / dofs$ in the red measurement. Unlike our first expectations that $Tx$ and $Rz$ are enough degrees of freedom to describe the system using additional degrees of freedom seemed to help the alignment.
 Also, the blue measurement sits behind the orange which might be due to an
 programming error.
 
 In figure \ref{fig:chi2tracksdec} a consistency check for figure
-\ref{fig:chi2iterdec} was performed. The number of tracks correlate good with
-the $\chi^2 / \text{dofs}$. The blue measurement is missing again which seems to be a
+\ref{fig:chi2iterdec} was performed. The number of tracks correlate well with
+the $\chi^2 / dofs$. The blue measurement is missing again which seems to be a
 programming error.
 
 \begin{figure}
@@ -475,12 +490,13 @@ programming error.
 \end{figure}
 
 \section{luminosity samples and chi2}
-For a cross check regarding upcoming studies the difference in $\chi^2 / \text{dofs}$ for samples of different luminosities are looked at.
+For a cross check regarding upcoming studies the difference in $\chi^2 / dofs$ for samples of different luminosities are looked at.
 Comparing two samples, one with a "ramp-up" luminosity with a parameter $\nu = 3.8$ also referred to as "low luminosity" and one for the luminosity used during the data taking
 with $\nu = 7.6$, called "normal luminosity".
-Plotted are these samples in $\chi^2 / \text{dofs}$ versus the iteration number \ref{fig:chi2iter_lumi_normal} and the number of tracks\ref{fig:chi2tracks_lumi_normal}.
+The $\chi^2 / dofs$ of these samples is plotted versus the iteration number \ref{fig:chi2iter_lumi_normal} and the number of tracks\ref{fig:chi2tracks_lumi_normal}.
 
-in figure \ref{fig:chi2iter_lumi_normal} we see the expected convergence after iteration three and a quite low $\chi^2 / \text{dofs}$ of around $\num{1.28595}$ for the normal luminosity sample and $\num{1.3067}$ for the low luminosity sample.
+in figure \ref{fig:chi2iter_lumi_normal} we see the expected convergence after iteration three and a quite low $\chi^2 / dofs$ of around $\num{1.28595}$ for the normal luminosity sample
+and $\num{1.3067}$ for the low luminosity sample.
 
 \begin{figure}
   \centering
@@ -496,13 +512,13 @@ in figure \ref{fig:chi2iter_lumi_normal} we see the expected convergence after i
   \label{fig:chi2tracks_lumi_normal}
 \end{figure}
 
+
 \section{impact of the cluster bias}
 
 As mentioned earlier the clusterbias most certainly causes the shift in the rotation around $z$ for each layer so it does not reach 0.
 To test that a momentary fix was found and implemented. The workaround was to add a scaling for the \textit{m\_airgap}\cite{gap}.
 
-Figure \ref{fig:cbhack_on_off} shows the impact of the cluster bias fix regarding
-the rotation around $z$.
+Figure \ref{fig:cbhack_on_off} shows the impact of the cluster bias fix regarding the rotation around $z$.
 
 \begin{figure}
   \centering
@@ -520,7 +536,7 @@ Since we want to know what the shifts in rotation and translation will look like
 Figure \ref{fig:lumi_low_normal_hack_on} shows the difference between a sample with ramp-up luminosity and a sample with the luminosity during the measurement phase.
 We see, that the layer separation is much more prominent in station 1 and 3 for the higher luminosity sample but slightly better behaved in station 2 when looking at x-translation.
 Regarding the z-rotation, the lower luminosity sample as slightly lower rotational shifts.
-The difference is so minute that it can be safely disregarded.
+The difference is so minute that it can be safely disregarded. (not sure about that)
 
 \begin{figure}
   \centering
@@ -529,7 +545,8 @@ The difference is so minute that it can be safely disregarded.
   \label{fig:lumi_low_normal_hack_on}
 \end{figure}
 
-With that, we tested if there is a noticable difference in the $\frac{\chi^2}{\text{dof}}$ and the result is shown in figure \ref{fig:GL_lumi_low_normal_hack_on}.
+With that, we tested if there is a noticable difference in the $\frac{\chi^2}{\text{dof}}$
+and the result is shown in figure \ref{fig:GL_lumi_low_normal_hack_on}.
 
 \begin{figure}
   \centering
@@ -565,11 +582,15 @@ during the alignment.
 We do want the least amount of constraints in the system so we also tested
 the consequences of removing constraints from "config5".
 The results are shown in figure \ref{fig:removeConst}.
-The green curve shows the base config for comparison and in red the removal of the backlayer constraint in station 3 is shown. The blue curve shows the alignment results without the C-frame constraints.
+The green curve shows the base configuration for comparison and in red the removal of the backlayer constraint in station 3 is shown. The blue curve shows the alignment results without the C-frame constraints.
 The data samples used were from 2020 with the normal luminosity and an active clusterbias fix.
-The selected track types are \textit{HighMomentumTTracks}(?) for 10000 events.
+The selected track types are \textit{HighMomentumTTracks} for 10000 events.
 On the one hand we see an improvement in $\chi^2 / \text{dof}$ when removing these constraints individually even if it is only on a very small scale of $\num{1e-5}$. On the
-other hand we see that the $\chi^2 / \text{dof}$ after the last iteration is the same for the base config and for the blue measurement. The constraint removed in the red measurement seems to have the most impact from what was tested but the peak in iteration 6 has no logical explanation. Additional analysis regarding constraint removal will be done in the future to analyse this phenomenon further.
+other hand we see that the $\chi^2 / \text{dof}$ after the last iteration is the same for the base config and for the blue measurement. The constraint removed in the red measurement seems to have the most impact from what was tested but the peak in iteration 6 has no logical
+explanation. Additional analysis regarding constraint removal will be done in the future to analyse this phenomenon further.
 Also the behavior of the not decreasing $\chi^2 / \text{dof}$ requires more testing.
 What can be taken from this is that the removal of some constraints will help
-the alignment but the cause of these abnormalities require more testing.
+the alignment but the cause of some abnormalities require more testing.
+
+\section{Tests with input misalignments}
+In order to evaluate the performance of the alignment with a given configuration in Monte Carlo simulations, input misalignments are used.
