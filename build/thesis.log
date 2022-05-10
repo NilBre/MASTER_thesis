@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.2.5)  9 MAY 2022 21:48
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.2.5)  10 MAY 2022 22:27
  restricted system commands enabled.
 **thesis.tex
 (./thesis.tex
@@ -492,12 +492,12 @@ braces):
 >  {german/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {german/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Module polyglossia Info: Language data for german
-(polyglossia)            righthyphenmin	2
-(polyglossia)            lefthyphenmin	2
 (polyglossia)            loader	loadhyph-de-1901.tex
+(polyglossia)            synonyms	
+(polyglossia)            lefthyphenmin	2
 (polyglossia)            hyphenation	
 (polyglossia)            patterns	hyph-de-1901.pat.txt
-(polyglossia)            synonyms	 on input line 10
+(polyglossia)            righthyphenmin	2 on input line 10
 Module polyglossia Info: Language german was not yet loaded; created with id 2 o
 n input line 10
 Package polyglossia Info: Option: German, spelling=new.
@@ -1951,12 +1951,12 @@ LaTeX Info: Redefining \rmfamily on input line 23.
 LaTeX Info: Redefining \sffamily on input line 23.
 LaTeX Info: Redefining \ttfamily on input line 23.
 Module polyglossia Info: Language data for ngerman
-(polyglossia)            righthyphenmin	2
-(polyglossia)            lefthyphenmin	2
 (polyglossia)            loader	loadhyph-de-1996.tex
+(polyglossia)            synonyms	
+(polyglossia)            lefthyphenmin	2
 (polyglossia)            hyphenation	
 (polyglossia)            patterns	hyph-de-1996.pat.txt
-(polyglossia)            synonyms	 on input line 23
+(polyglossia)            righthyphenmin	2 on input line 23
 Module polyglossia Info: Language ngerman was not yet loaded; created with id 4 
 on input line 23
 )
@@ -2218,12 +2218,9 @@ logos/tu-logo.pdf>] [2
 
 ] (./content/abstract.tex [3
 
-])
-(./content/kurzfassung.tex) [4
-
-]
+]) [4]
 Package tocbasic Info: character protrusion at toc deactivated on input line 16
-3.
+4.
  (./build/thesis.toc
 LaTeX Info: Redefining \rmfamily on input line 1.
 LaTeX Info: Redefining \sffamily on input line 1.
@@ -2237,8 +2234,7 @@ LaTeX Info: Redefining \ttfamily on input line 1.
 ] [6
 
 
-]
-(./content/einleitung.tex
+] (./content/einleitung.tex
 chapter 1.
 
 Package siunitx Warning: Unit macro \barn has been deprecated in this release.
@@ -2249,78 +2245,78 @@ Package siunitx Warning: Unit macro \barn has been deprecated in this release.
 (siunitx)                
 (siunitx)                \DeclareSIUnit\barn{b}
 
-) (./content/particles_and_lhc.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--1
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--27
 
  []
 
 [1
 
-] [2]
+]) (./content/particles_and_lhc.tex [2]
 chapter 2.
-<plots/SM_2018.png, id=108, 361.35pt x 240.4182pt>
+<plots/SM_2018.png, id=111, 361.35pt x 240.4182pt>
 File: plots/SM_2018.png Graphic file (type png)
 <use plots/SM_2018.png>
-Package luatex.def Info: plots/SM_2018.png  used on input line 17.
+Package luatex.def Info: plots/SM_2018.png  used on input line 21.
 (luatex.def)             Requested size: 295.76645pt x 196.78468pt.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 9.00096pt on input line 25.
+(Font)              scaled to size 9.00096pt on input line 29.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 25.
+(Font)              scaled to size 6.00064pt on input line 29.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 25.
+(Font)              scaled to size 5.00053pt on input line 29.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 8.99904pt on input line 25.
+(Font)              scaled to size 8.99904pt on input line 29.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 25.
+(Font)              scaled to size 5.99936pt on input line 29.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 25.
+(Font)              scaled to size 4.99947pt on input line 29.
 [3
 
 <./plots/SM_2018.png>] [4] [5]
 warning  (file plots/CERN_layout.pdf) (pdf inclusion): PDF inclusion: found PDF 
 version '1.7', but at most version '1.5' allowed
-<plots/CERN_layout.pdf, id=150, 597.55246pt x 845.07724pt>
+<plots/CERN_layout.pdf, id=152, 597.55246pt x 845.07724pt>
 File: plots/CERN_layout.pdf Graphic file (type pdf)
 <use plots/CERN_layout.pdf>
-Package luatex.def Info: plots/CERN_layout.pdf  used on input line 101.
+Package luatex.def Info: plots/CERN_layout.pdf  used on input line 107.
 (luatex.def)             Requested size: 597.551pt x 845.07518pt.
 [6<./plots/CERN_layout.pdf>]
-<plots/LHCb_facility.png, id=164, 344.78813pt x 180.675pt>
+<plots/LHCb_facility.png, id=166, 344.78813pt x 180.675pt>
 File: plots/LHCb_facility.png Graphic file (type png)
 <use plots/LHCb_facility.png>
-Package luatex.def Info: plots/LHCb_facility.png  used on input line 117.
+Package luatex.def Info: plots/LHCb_facility.png  used on input line 123.
 (luatex.def)             Requested size: 354.91733pt x 185.98428pt.
  [7<./plots/LHCb_facility.png>]
-<plots/lhcb_forward.pdf, id=186, 569.12625pt x 552.0625pt>
+<plots/lhcb_forward.pdf, id=188, 569.12625pt x 552.0625pt>
 File: plots/lhcb_forward.pdf Graphic file (type pdf)
 <use plots/lhcb_forward.pdf>
-Package luatex.def Info: plots/lhcb_forward.pdf  used on input line 139.
+Package luatex.def Info: plots/lhcb_forward.pdf  used on input line 145.
 (luatex.def)             Requested size: 315.48541pt x 306.03609pt.
 
-Overfull \hbox (57.68918pt too wide) in paragraph at lines 153--156
+Overfull \hbox (57.68918pt too wide) in paragraph at lines 159--162
 []\TU/lmr/m/n/10.95 The in-stanta-neous lu-mi-no-si-ty af-ter the up-grade is ex
 -pec-ted to be $[] [] [] [] []$
  []
 
 [8] [9<./plots/lhcb_forward.pdf>]
-<plots/scifi_layers.png, id=226, 320.69812pt x 229.60782pt>
+<plots/scifi_layers.png, id=228, 320.69812pt x 229.60782pt>
 File: plots/scifi_layers.png Graphic file (type png)
 <use plots/scifi_layers.png>
-Package luatex.def Info: plots/scifi_layers.png  used on input line 163.
+Package luatex.def Info: plots/scifi_layers.png  used on input line 169.
 (luatex.def)             Requested size: 320.69733pt x 229.60725pt.
-<plots/stereo_angles.png, id=229, 153.57375pt x 115.93312pt>
+<plots/stereo_angles.png, id=231, 153.57375pt x 115.93312pt>
 File: plots/stereo_angles.png Graphic file (type png)
 <use plots/stereo_angles.png>
-Package luatex.def Info: plots/stereo_angles.png  used on input line 170.
+Package luatex.def Info: plots/stereo_angles.png  used on input line 176.
 (luatex.def)             Requested size: 315.48541pt x 238.17566pt.
  [10<./plots/scifi_layers.png>])
 (./content/alignment_theory.tex [11<./plots/stereo_angles.png>] [12]
 chapter 3.
-<plots/pacific.png, id=261, 744.53156pt x 240.9pt>
+<plots/pacific.png, id=262, 744.53156pt x 240.9pt>
 File: plots/pacific.png Graphic file (type png)
 <use plots/pacific.png>
-Package luatex.def Info: plots/pacific.png  used on input line 24.
+Package luatex.def Info: plots/pacific.png  used on input line 23.
 (luatex.def)             Requested size: 315.48541pt x 102.08156pt.
 (./plots/clusters.tex
 Overfull \hbox (31.88326pt too wide) in paragraph at lines 39--40
@@ -2335,13 +2331,13 @@ chapter 4.
 [23
 
 ]
-<plots/shearing.png, id=356, 223.58531pt x 130.23656pt>
+<plots/shearing.png, id=357, 223.58531pt x 130.23656pt>
 File: plots/shearing.png Graphic file (type png)
 <use plots/shearing.png>
 Package luatex.def Info: plots/shearing.png  used on input line 68.
 (luatex.def)             Requested size: 236.61555pt x 137.8295pt.
  [24]
-<plots/point_dofs.png, id=367, 469.00218pt x 161.85469pt>
+<plots/point_dofs.png, id=368, 469.00218pt x 161.85469pt>
 File: plots/point_dofs.png Graphic file (type png)
 <use plots/point_dofs.png>
 Package luatex.def Info: plots/point_dofs.png  used on input line 104.
@@ -2371,13 +2367,13 @@ Overfull \hbox (6.41797pt too wide) in paragraph at lines 157--158
  []
 
 [27]
-<plots/june_21/Tx_noRota_allT_1000MU.png, id=418, 418.56375pt x 292.09125pt>
+<plots/june_21/Tx_noRota_allT_1000MU.png, id=419, 418.56375pt x 292.09125pt>
 File: plots/june_21/Tx_noRota_allT_1000MU.png Graphic file (type png)
 <use plots/june_21/Tx_noRota_allT_1000MU.png>
 Package luatex.def Info: plots/june_21/Tx_noRota_allT_1000MU.png  used on input
  line 171.
 (luatex.def)             Requested size: 315.48541pt x 220.15538pt.
-<plots/june_21/Tx_noRota_allT_7000MU.png, id=419, 426.09187pt x 295.85532pt>
+<plots/june_21/Tx_noRota_allT_7000MU.png, id=420, 426.09187pt x 295.85532pt>
 File: plots/june_21/Tx_noRota_allT_7000MU.png Graphic file (type png)
 <use plots/june_21/Tx_noRota_allT_7000MU.png>
 Package luatex.def Info: plots/june_21/Tx_noRota_allT_7000MU.png  used on input
@@ -2394,13 +2390,13 @@ Overfull \hbox (58.9784pt too wide) in paragraph at lines 202--203
  []
 
 [29<./plots/june_21/Tx_noRota_allT_7000MU.png>]
-<plots/june_21/allT_halfT3_n20_Tx.png, id=450, 453.19313pt x 301.8778pt>
+<plots/june_21/allT_halfT3_n20_Tx.png, id=451, 453.19313pt x 301.8778pt>
 File: plots/june_21/allT_halfT3_n20_Tx.png Graphic file (type png)
 <use plots/june_21/allT_halfT3_n20_Tx.png>
 Package luatex.def Info: plots/june_21/allT_halfT3_n20_Tx.png  used on input li
 ne 223.
 (luatex.def)             Requested size: 315.48541pt x 210.14763pt.
-<plots/scatter_fig_4_4_convergence.png, id=451, 567.62062pt x 317.68687pt>
+<plots/scatter_fig_4_4_convergence.png, id=452, 567.62062pt x 317.68687pt>
 File: plots/scatter_fig_4_4_convergence.png Graphic file (type png)
 <use plots/scatter_fig_4_4_convergence.png>
 Package luatex.def Info: plots/scatter_fig_4_4_convergence.png  used on input l
@@ -2426,162 +2422,168 @@ Overfull \hbox (85.2586pt too wide) in paragraph at lines 252--253
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<plots/june_21/allT_halfT3_Tx_vs_Flo.png, id=461, 453.19313pt x 301.8778pt>
+<plots/june_21/allT_halfT3_Tx_vs_Flo.png, id=462, 453.19313pt x 301.8778pt>
 File: plots/june_21/allT_halfT3_Tx_vs_Flo.png Graphic file (type png)
 <use plots/june_21/allT_halfT3_Tx_vs_Flo.png>
 Package luatex.def Info: plots/june_21/allT_halfT3_Tx_vs_Flo.png  used on input
  line 262.
 (luatex.def)             Requested size: 157.7397pt x 105.0692pt.
-<plots/scatter_fig4_2.png, id=462, 430.60875pt x 283.0575pt>
+<plots/scatter_fig4_2.png, id=463, 430.60875pt x 283.0575pt>
 File: plots/scatter_fig4_2.png Graphic file (type png)
 <use plots/scatter_fig4_2.png>
 Package luatex.def Info: plots/scatter_fig4_2.png  used on input line 269.
 (luatex.def)             Requested size: 157.7397pt x 103.68872pt.
 [31<./plots/scatter_fig_4_4_convergence.png>]
-<plots/renewed_plots/CA_allT_halfT3_Tz.png, id=490, 429.10312pt x 283.81032pt>
-File: plots/renewed_plots/CA_allT_halfT3_Tz.png Graphic file (type png)
-<use plots/renewed_plots/CA_allT_halfT3_Tz.png>
-Package luatex.def Info: plots/renewed_plots/CA_allT_halfT3_Tz.png  used on inp
-ut line 292.
-(luatex.def)             Requested size: 315.48541pt x 208.66519pt.
-<plots/renewed_plots/CA_allT_halfT3_Tx.png, id=492, 423.83344pt x 283.81032pt>
+<plots/renewed_plots/CA_allT_halfT3_Tx.png, id=491, 423.83344pt x 283.81032pt>
 File: plots/renewed_plots/CA_allT_halfT3_Tx.png Graphic file (type png)
 <use plots/renewed_plots/CA_allT_halfT3_Tx.png>
 Package luatex.def Info: plots/renewed_plots/CA_allT_halfT3_Tx.png  used on inp
-ut line 299.
+ut line 292.
 (luatex.def)             Requested size: 315.48541pt x 211.26355pt.
+<plots/renewed_plots/CA_allT_halfT3_Tz.png, id=492, 429.10312pt x 283.81032pt>
+File: plots/renewed_plots/CA_allT_halfT3_Tz.png Graphic file (type png)
+<use plots/renewed_plots/CA_allT_halfT3_Tz.png>
+Package luatex.def Info: plots/renewed_plots/CA_allT_halfT3_Tz.png  used on inp
+ut line 299.
+(luatex.def)             Requested size: 315.48541pt x 208.66519pt.
  [32<./plots/june_21/allT_halfT3_Tx_vs_Flo.png><./plots/scatter_fig4_2.png>] [3
-3<./plots/renewed_plots/CA_allT_halfT3_Tz.png><./plots/renewed_plots/CA_allT_hal
-fT3_Tx.png>]
-Overfull \hbox (26.12813pt too wide) in paragraph at lines 319--320
+3<./plots/renewed_plots/CA_allT_halfT3_Tx.png><./plots/renewed_plots/CA_allT_hal
+fT3_Tz.png>]
+Overfull \hbox (26.12813pt too wide) in paragraph at lines 318--319
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (26.12813pt too wide) in paragraph at lines 320--321
+Overfull \hbox (26.12813pt too wide) in paragraph at lines 319--320
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (26.12813pt too wide) in paragraph at lines 321--322
+Overfull \hbox (26.12813pt too wide) in paragraph at lines 320--321
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (19.55807pt too wide) in paragraph at lines 322--323
+Overfull \hbox (19.55807pt too wide) in paragraph at lines 321--322
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<plots/july_28/Tx.png, id=511, 332.74312pt x 231.86626pt>
+<plots/july_28/Tx.png, id=512, 332.74312pt x 231.86626pt>
 File: plots/july_28/Tx.png Graphic file (type png)
 <use plots/july_28/Tx.png>
-Package luatex.def Info: plots/july_28/Tx.png  used on input line 330.
+Package luatex.def Info: plots/july_28/Tx.png  used on input line 329.
 (luatex.def)             Requested size: 157.7397pt x 109.91824pt.
-<plots/july_28/Tz.png, id=512, 331.99031pt x 231.11343pt>
+<plots/july_28/Tz.png, id=513, 331.99031pt x 231.11343pt>
 File: plots/july_28/Tz.png Graphic file (type png)
 <use plots/july_28/Tz.png>
-Package luatex.def Info: plots/july_28/Tz.png  used on input line 337.
+Package luatex.def Info: plots/july_28/Tz.png  used on input line 336.
 (luatex.def)             Requested size: 157.7397pt x 109.80823pt.
 [34<./plots/july_28/Tx.png><./plots/july_28/Tz.png>]
-Overfull \hbox (45.83829pt too wide) in paragraph at lines 354--355
+Overfull \hbox (45.83829pt too wide) in paragraph at lines 353--354
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (65.54845pt too wide) in paragraph at lines 359--360
+Overfull \hbox (65.54845pt too wide) in paragraph at lines 358--359
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<plots/renewed_plots/Tx.png, id=537, 440.39531pt x 285.31593pt>
-File: plots/renewed_plots/Tx.png Graphic file (type png)
-<use plots/renewed_plots/Tx.png>
-Package luatex.def Info: plots/renewed_plots/Tx.png  used on input line 371.
-(luatex.def)             Requested size: 157.7397pt x 102.19122pt.
-<plots/renewed_plots/Tz.png, id=538, 420.82219pt x 280.79906pt>
-File: plots/renewed_plots/Tz.png Graphic file (type png)
-<use plots/renewed_plots/Tz.png>
-Package luatex.def Info: plots/renewed_plots/Tz.png  used on input line 378.
-(luatex.def)             Requested size: 157.7397pt x 105.25224pt.
-<plots/renewed_plots/Rx.png, id=540, 435.87843pt x 283.0575pt>
-File: plots/renewed_plots/Rx.png Graphic file (type png)
-<use plots/renewed_plots/Rx.png>
-Package luatex.def Info: plots/renewed_plots/Rx.png  used on input line 394.
-(luatex.def)             Requested size: 157.7397pt x 102.43185pt.
-<plots/renewed_plots/Rz.png, id=541, 467.49657pt x 290.58563pt>
-File: plots/renewed_plots/Rz.png Graphic file (type png)
-<use plots/renewed_plots/Rz.png>
-Package luatex.def Info: plots/renewed_plots/Rz.png  used on input line 401.
-(luatex.def)             Requested size: 157.7397pt x 98.04846pt.
-[35<./plots/renewed_plots/Tx.png><./plots/renewed_plots/Tz.png>]
-Overfull \hbox (107.87729pt too wide) in paragraph at lines 420--421
+<plots/renewed_plots/Tx_config5.png, id=538, 434.37282pt x 283.0575pt>
+File: plots/renewed_plots/Tx_config5.png Graphic file (type png)
+<use plots/renewed_plots/Tx_config5.png>
+Package luatex.def Info: plots/renewed_plots/Tx_config5.png  used on input line
+ 370.
+(luatex.def)             Requested size: 157.7397pt x 102.79034pt.
+<plots/renewed_plots/Tz_config5.png, id=539, 421.575pt x 283.81032pt>
+File: plots/renewed_plots/Tz_config5.png Graphic file (type png)
+<use plots/renewed_plots/Tz_config5.png>
+Package luatex.def Info: plots/renewed_plots/Tz_config5.png  used on input line
+ 377.
+(luatex.def)             Requested size: 157.7397pt x 106.19475pt.
+[35<./plots/renewed_plots/Tx_config5.png><./plots/renewed_plots/Tz_config5.png>]
+<plots/renewed_plots/Rx_config5.png, id=556, 435.87843pt x 282.30469pt>
+File: plots/renewed_plots/Rx_config5.png Graphic file (type png)
+<use plots/renewed_plots/Rx_config5.png>
+Package luatex.def Info: plots/renewed_plots/Rx_config5.png  used on input line
+ 393.
+(luatex.def)             Requested size: 157.7397pt x 102.15944pt.
+<plots/renewed_plots/Rz_config5.png, id=557, 478.03593pt x 323.70938pt>
+File: plots/renewed_plots/Rz_config5.png Graphic file (type png)
+<use plots/renewed_plots/Rz_config5.png>
+Package luatex.def Info: plots/renewed_plots/Rz_config5.png  used on input line
+ 400.
+(luatex.def)             Requested size: 157.7397pt x 106.81454pt.
+
+Overfull \hbox (107.87729pt too wide) in paragraph at lines 419--420
 []$[]$ 
  []
 
-<plots/nov_19/Figure_2.png, id=557, 462.528pt x 346.896pt>
+[36<./plots/renewed_plots/Rx_config5.png><./plots/renewed_plots/Rz_config5.png>]
+<plots/nov_19/Figure_2.png, id=565, 462.528pt x 346.896pt>
 File: plots/nov_19/Figure_2.png Graphic file (type png)
 <use plots/nov_19/Figure_2.png>
-Package luatex.def Info: plots/nov_19/Figure_2.png  used on input line 427.
+Package luatex.def Info: plots/nov_19/Figure_2.png  used on input line 426.
 (luatex.def)             Requested size: 315.48541pt x 236.6272pt.
-[36<./plots/renewed_plots/Rx.png><./plots/renewed_plots/Rz.png>] [37<./plots/nov
-_19/Figure_2.png>]
-<plots/GL_HM_chi2_2020.png, id=575, 837.88031pt x 387.69844pt>
+ [37<./plots/nov_19/Figure_2.png>]
+<plots/GL_HM_chi2_2020.png, id=576, 837.88031pt x 387.69844pt>
 File: plots/GL_HM_chi2_2020.png Graphic file (type png)
 <use plots/GL_HM_chi2_2020.png>
-Package luatex.def Info: plots/GL_HM_chi2_2020.png  used on input line 456.
+Package luatex.def Info: plots/GL_HM_chi2_2020.png  used on input line 455.
 (luatex.def)             Requested size: 315.48541pt x 145.97812pt.
-<plots/nov_21/chi2_vs_ntracks_all.png, id=576, 462.528pt x 346.896pt>
+<plots/nov_21/chi2_vs_ntracks_all.png, id=577, 462.528pt x 346.896pt>
 File: plots/nov_21/chi2_vs_ntracks_all.png Graphic file (type png)
 <use plots/nov_21/chi2_vs_ntracks_all.png>
 Package luatex.def Info: plots/nov_21/chi2_vs_ntracks_all.png  used on input li
-ne 463.
+ne 462.
 (luatex.def)             Requested size: 315.48541pt x 236.6272pt.
-<plots/LHCB_week_dec/chi2_vs_iter_normal.png, id=577, 956.07187pt x 375.65344pt
+<plots/LHCB_week_dec/chi2_vs_iter_normal.png, id=578, 956.07187pt x 375.65344pt
 >
 File: plots/LHCB_week_dec/chi2_vs_iter_normal.png Graphic file (type png)
 <use plots/LHCB_week_dec/chi2_vs_iter_normal.png>
 Package luatex.def Info: plots/LHCB_week_dec/chi2_vs_iter_normal.png  used on i
-nput line 470.
+nput line 469.
 (luatex.def)             Requested size: 394.35527pt x 154.94748pt.
-<plots/LHCB_week_dec/chi2_vs_tracks_normal.png, id=581, 874.76813pt x 378.66469
+<plots/LHCB_week_dec/chi2_vs_tracks_normal.png, id=582, 874.76813pt x 378.66469
 pt>
 File: plots/LHCB_week_dec/chi2_vs_tracks_normal.png Graphic file (type png)
 <use plots/LHCB_week_dec/chi2_vs_tracks_normal.png>
 Package luatex.def Info: plots/LHCB_week_dec/chi2_vs_tracks_normal.png  used on
- input line 487.
+ input line 486.
 (luatex.def)             Requested size: 394.35527pt x 170.70377pt.
  [38<./plots/GL_HM_chi2_2020.png>] [39<./plots/nov_21/chi2_vs_ntracks_all.png><.
 /plots/LHCB_week_dec/chi2_vs_iter_normal.png>]
-<plots/renewed_plots/modules_chi2_c5.png, id=601, 510.40688pt x 356.0803pt>
+<plots/renewed_plots/modules_chi2_c5.png, id=602, 510.40688pt x 356.0803pt>
 File: plots/renewed_plots/modules_chi2_c5.png Graphic file (type png)
 <use plots/renewed_plots/modules_chi2_c5.png>
 Package luatex.def Info: plots/renewed_plots/modules_chi2_c5.png  used on input
- line 503.
+ line 502.
 (luatex.def)             Requested size: 315.48541pt x 220.10464pt.
-<plots/jan_17_2022/chi2_tracks_modulesOnly.png, id=602, 613.54219pt x 354.57469
+<plots/jan_17_2022/chi2_tracks_modulesOnly.png, id=603, 613.54219pt x 354.57469
 pt>
 File: plots/jan_17_2022/chi2_tracks_modulesOnly.png Graphic file (type png)
 <use plots/jan_17_2022/chi2_tracks_modulesOnly.png>
 Package luatex.def Info: plots/jan_17_2022/chi2_tracks_modulesOnly.png  used on
- input line 510.
+ input line 509.
 (luatex.def)             Requested size: 315.48541pt x 182.32396pt.
  [40<./plots/LHCB_week_dec/chi2_vs_tracks_normal.png>] [41<./plots/renewed_plots
 /modules_chi2_c5.png><./plots/jan_17_2022/chi2_tracks_modulesOnly.png>]
-<plots/jan_24_2022/compare_with_without_hack.png, id=619, 913.16156pt x 650.43p
+<plots/jan_24_2022/compare_with_without_hack.png, id=620, 913.16156pt x 650.43p
 t>
 File: plots/jan_24_2022/compare_with_without_hack.png Graphic file (type png)
 <use plots/jan_24_2022/compare_with_without_hack.png>
 Package luatex.def Info: plots/jan_24_2022/compare_with_without_hack.png  used 
 on input line 525.
 (luatex.def)             Requested size: 315.48541pt x 224.70625pt.
- [42<./plots/jan_24_2022/compare_with_without_hack.png>]
-<plots/jan_24_2022/low_normal_with_hack.png, id=630, 435.12563pt x 648.92438pt>
+
+[42<./plots/jan_24_2022/compare_with_without_hack.png>]
+<plots/jan_24_2022/low_normal_with_hack.png, id=631, 435.12563pt x 648.92438pt>
 
 File: plots/jan_24_2022/low_normal_with_hack.png Graphic file (type png)
 <use plots/jan_24_2022/low_normal_with_hack.png>
 Package luatex.def Info: plots/jan_24_2022/low_normal_with_hack.png  used on in
 put line 543.
 (luatex.def)             Requested size: 315.48541pt x 470.52249pt.
-<plots/feb_2_2022/GL_modules_c5_cb_hackactive_low_normal_lumi.png, id=632, 854.
+<plots/feb_2_2022/GL_modules_c5_cb_hackactive_low_normal_lumi.png, id=633, 854.
 44218pt x 502.87875pt>
 File: plots/feb_2_2022/GL_modules_c5_cb_hackactive_low_normal_lumi.png Graphic 
 file (type png)
@@ -2589,7 +2591,7 @@ file (type png)
 Package luatex.def Info: plots/feb_2_2022/GL_modules_c5_cb_hackactive_low_norma
 l_lumi.png  used on input line 553.
 (luatex.def)             Requested size: 315.48541pt x 185.67088pt.
-<plots/feb_6_2022/100mu_misalignment_samples_compared.png, id=633, 477.28313pt 
+<plots/feb_6_2022/100mu_misalignment_samples_compared.png, id=634, 477.28313pt 
 x 355.3275pt>
 File: plots/feb_6_2022/100mu_misalignment_samples_compared.png Graphic file (ty
 pe png)
@@ -2597,7 +2599,7 @@ pe png)
 Package luatex.def Info: plots/feb_6_2022/100mu_misalignment_samples_compared.p
 ng  used on input line 560.
 (luatex.def)             Requested size: 315.48541pt x 234.86928pt.
-<plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png, id=635, 688.82344
+<plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png, id=636, 688.82344
 pt x 353.06906pt>
 File: plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png Graphic file 
 (type png)
@@ -2607,11 +2609,10 @@ l.png  used on input line 577.
 (luatex.def)             Requested size: 315.48541pt x 161.70798pt.
  [43] [44<./plots/jan_24_2022/low_normal_with_hack.png>] [45<./plots/feb_2_2022/
 GL_modules_c5_cb_hackactive_low_normal_lumi.png><./plots/feb_6_2022/100mu_misali
-gnment_samples_compared.png>])
-(./content/continuing_work.tex [46<./plots/feb_6_2022/low_lumi_removed_constrain
-ts_vs_normal.png>]
+gnment_samples_compared.png>]) (./content/continuing_work.tex [46<./plots/feb_6_
+2022/low_lumi_removed_constraints_vs_normal.png>]
 chapter 5.
-<plots/curvature_bias.png, id=662, 395.22656pt x 149.05687pt>
+<plots/curvature_bias.png, id=663, 395.22656pt x 149.05687pt>
 File: plots/curvature_bias.png Graphic file (type png)
 <use plots/curvature_bias.png>
 Package luatex.def Info: plots/curvature_bias.png  used on input line 20.
@@ -2620,32 +2621,36 @@ Package luatex.def Info: plots/curvature_bias.png  used on input line 20.
 
 <./plots/curvature_bias.png>]) (./content/conclusion.tex [48]
 chapter 6.
-) [49
+[49
 
 ]
+chapter 7.
+) [50
+
+] [51]
 chapter without number
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (1.10768pt too wide) in paragraph at lines 184--184
+Overfull \hbox (1.10768pt too wide) in paragraph at lines 185--185
 \TU/lmr/m/n/10.95 and $\TU/LatinModernMath(1)/m/n/10.95 𝐵[] → 𝑓[](1525)
 𝜇[]𝜇[]$\TU/lmr/m/n/10.95 - De-cays“. In: \TU/lmr/m/it/10.95 Phys. Rev. 
 Lett. \TU/lmr/m/n/10.95 127.15 (2021), S. 151801.
  []
 
-[50
+[52
 
 
 ]
-Overfull \hbox (3.27199pt too wide) in paragraph at lines 184--184
+Overfull \hbox (3.27199pt too wide) in paragraph at lines 185--185
 \TU/lmtt/m/n/10.95 lhcb . web . cern . ch / lhcb / speakersbureau / html / bb % 5C _ ProductionAngles .
  []
 
-[51] (./content/danksagung.tex [52]) [53
+[53] (./content/danksagung.tex [54]) [55
 
-] [54
+] [56
 
 
 ] (./content/eid_versicherung.tex
@@ -2709,31 +2714,31 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
- [55] (./build/thesis.aux
+ [57] (./build/thesis.aux
 LaTeX Info: Redefining \rmfamily on input line 23.
 LaTeX Info: Redefining \sffamily on input line 23.
 LaTeX Info: Redefining \ttfamily on input line 23.
 )
 Package rerunfilecheck Info: File `thesis.aux' has not changed.
-(rerunfilecheck)             Checksum: 8D90956AC4D65DEFE1E36DB9944CF765;35330.
+(rerunfilecheck)             Checksum: 243BDEF47A3BF7174149059DC70A890F;36058.
 Package rerunfilecheck Info: File `thesis.toc' has not changed.
-(rerunfilecheck)             Checksum: 8CEC4072494267F96819E5D59A876A01;2979.
+(rerunfilecheck)             Checksum: 19A6286C81FCDF3D412678695A4E2F70;3062.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 
 \openout1 = thesis.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 70892 strings out of 477811
+ 70886 strings out of 477811
  100000,3417909 words of node,token memory allocated
  1178 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 1 local_par, 11 glue, 4 kern, 1 penalty, 8 sub_mlis
 t, 3 glyph, 86 attribute, 79 glue_spec, 86 attribute_list, 2 write, 18 pdf_actio
 n nodes
-   avail lists: 1:8,2:1755,3:697,4:254,5:528,6:132,7:7847,8:183,9:1876,10:27,11:
-820,12:1
+   avail lists: 1:8,2:1755,3:697,4:270,5:528,6:135,7:7842,8:183,9:1876,10:30,11:
+819,12:1
  89145 multiletter control sequences out of 65536+600000
- 123 fonts using 39646495 bytes
+ 123 fonts using 39645839 bytes
  122i,20n,114p,10601b,2456s stack positions out of 5000i,500n,10000p,200000b,80000s
 </home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmmono10-reg
 ular.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmr
@@ -2742,22 +2747,22 @@ omancaps10-regular.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype
 entype/public/lm-math/latinmodern-math.otf></home/nils/.local/texlive/2021/texmf
 -dist/fonts/opentype/public/lm/lmroman9-regular.otf></home/nils/.local/texlive/2
 021/texmf-dist/fonts/opentype/public/lm/lmroman6-regular.otf></home/nils/.local/
-texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></hom
-e/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.ot
-f></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmromansla
-nt10-regular.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/publi
-c/lm/lmroman8-regular.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opent
-ype/public/lm-math/latinmodern-math.otf></home/nils/.local/texlive/2021/texmf-di
-st/fonts/opentype/public/lm/lmroman10-italic.otf></home/nils/.local/texlive/2021
+texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/nils/
+.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmromanslant10-regular.o
+tf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-
+regular.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/
+lmroman10-italic.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/p
+ublic/lm-math/latinmodern-math.otf></home/nils/.local/texlive/2021/texmf-dist/fo
+nts/opentype/public/lm-math/latinmodern-math.otf></home/nils/.local/texlive/2021
 /texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/nils/.local/te
 xlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/nils
 /.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></hom
 e/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.ot
 f>
-Output written on thesis.pdf (61 pages, 2368395 bytes).
+Output written on thesis.pdf (63 pages, 2364002 bytes).
 
-PDF statistics: 953 PDF objects out of 1000 (max. 8388607)
- 752 compressed objects within 8 object streams
- 240 named destinations out of 1000 (max. 131072)
- 192 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 965 PDF objects out of 1000 (max. 8388607)
+ 762 compressed objects within 8 object streams
+ 243 named destinations out of 1000 (max. 131072)
+ 200 words of extra memory for PDF output out of 10000 (max. 100000000)
 

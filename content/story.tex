@@ -232,7 +232,7 @@ Normally, an alignment job should converge after three to five iterations. If th
   \label{fig:conv}
 \end{figure}
 
-\section{rotational constraints}
+\section{Null tests with rotational constraints}
 In the previous section rotations were not used inside the constraints. Now the constraints will include rotational constraints and test the changes.
 
 Similar to the "noRotation" configuration the same constraints were used but for different degrees of freedom. The new configuration is called "Full DoF" which uses every degree of freedom and is defined as:
@@ -276,35 +276,34 @@ In figure \ref{fig:june_4} x-translation and z-translation with regards to the g
 
 Figure \ref{fig:june_4_1} still shows layer separation in station 1 more similar to figure \ref{fig:june_3} than to figure \ref{fig:june_2_1}.
 Since the constraints are the same and the amount of degrees of freedoms increased,
-it is visible that using more DoFs makes the alignment worse. Therefore the degrees of freedom must be chose wisely.
+it is visible that using more DoFs makes the alignment worse. Therefore the degrees of freedom must be chosen wisely.
 
 Regarding the z-translation the plot is only shown to demonstrate the large separation of layers. the baseline was not aligned in $Tz$ so there is no comparison.
 
-The RMS uncertainty on the measurements is a result of the separation between A-side and C-side. For configuration "Full DoF", a plot showing the C-side and A-side difference in x-translation is shown in figure \ref{fig:june_5} and for z-translation in figure \ref{fig:june_6}.
+The RMS uncertainty on the measurements is a result of the separation between A-side and C-side. For configuration "Full DoF", a plot showing the C-side and A-side difference in x-translation is presented in figure \ref{fig:june_5} and for z-translation in figure \ref{fig:june_6}.
 
-A clear layer separation is visible in terms af layer translation along the beam pipe\ref{fig:june_5}.
+A clear layer separation is visible in terms of layer translation along the beam pipe\ref{fig:june_5}.
 The first and third layer in each station move away from the IP and the second and
 fourth layer move towards the IP.
-Because of the many constraints that are applied to T3, the RMS uncertainty in the other stations get worse. Because the last station is overconstrained the track reconstruction moves the other stations accordingly which results in a larger RMS uncertainty in station 1 and 2.
+Because of the many constraints that are applied to T3, the RMS uncertainty in the other stations get worse. Because the last station is overconstrained the track reconstruction moves the other stations accordingly which results in a larger RMS uncertainty for the half-layers in station 1 and 2.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/renewed_plots/CA_allT_halfT3_Tx.png}
+  \caption{compare C-Side to A-Side for translation in x direction.}
+  \label{fig:june_5}
+\end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/renewed_plots/CA_allT_halfT3_Tz.png}
   \caption{compare C-Side to A-Side for translation in z direction.}
-  \label{fig:june_5}
-\end{figure}
-On the other hand the x-translation \ref{fig:june_6}
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{plots/renewed_plots/CA_allT_halfT3_Tx.png}
-  \caption{compare C-Side to A-Side for translation in x direction.}
   \label{fig:june_6}
 \end{figure}
 
-Looking at figure \ref{fig:june_6}, the last two layers in station 3 are seperated from the first two regarding x-translation. Especially the last
-station should be fixed around zero with the constraints added. The sum of all translations should be zero with each individual layer movement being small.
+The x-translation in Figure \ref{fig:june_5} also shows some separation, the last two layers in station 3 are separated from the first two regarding z-translation. Especially the half-layers in the last station should be fixed around zero with the constraints added. The sum of all translations should be zero with each individual layer movement being small.
 
-The result is unexpected with the constraints added and the cause of this problem is described later.
+This result is unexpected with the constraints added. In the next sections, more tests are described, while the underlying cause of these unexpected results is described in Section \ref{sec:clusterbias}.
 
 \subsection{Checking rotational degrees of freedom}
 The Next configuration tested is the result of a series of tests with various constraints, DoFs and alignable objects. In figure \ref{fig:TxZ} a new configuration called "Test3" is introduced and it is defined as
@@ -368,14 +367,14 @@ It can be sen, that both X-layers in T2 in the x-translation plot have a quite l
   \centering
   \begin{subfigure}[b]{0.4\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{plots/renewed_plots/Tx.png}
+    \includegraphics[width=\textwidth]{plots/renewed_plots/Tx_config5.png}
     \caption{x-translation versus group position in z.}
     \label{fig:config5_Tx}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.4\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{plots/renewed_plots/Tz.png}
+    \includegraphics[width=\textwidth]{plots/renewed_plots/Tz_config5.png}
     \caption{z-translation versus group position in z.}
     \label{fig:config5_Tz}
   \end{subfigure}
@@ -391,14 +390,14 @@ constraint on the last two layers. The expected rotation is small than shown in 
   \centering
   \begin{subfigure}[b]{0.4\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{plots/renewed_plots/Rx.png}
+    \includegraphics[width=\textwidth]{plots/renewed_plots/Rx_config5.png}
     \caption{x-rotation versus group position in z.}
     \label{fig:config5_Rx}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.4\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{plots/renewed_plots/Rz.png}
+    \includegraphics[width=\textwidth]{plots/renewed_plots/Rz_config5.png}
     \caption{z-rotation versus group position in z.}
     \label{fig:config5_Rz}
   \end{subfigure}
@@ -514,6 +513,7 @@ and $\num{1.3067}$ for the low luminosity sample.
 
 
 \section{impact of the cluster bias}
+\label{sec:clusterbias}
 
 As mentioned earlier the clusterbias most certainly causes the shift in the rotation around $z$ for each layer so it does not reach 0.
 To test that a momentary fix was found and implemented. The workaround was to add a scaling for the \textit{m\_airgap}\cite{gap}.
@@ -528,11 +528,11 @@ Figure \ref{fig:cbhack_on_off} shows the impact of the cluster bias fix regardin
 \end{figure}
 
 As we expected, the amount of rotation was reduced to about
-$\SI{0.004}{\milli\radian}$ from the previous $\SI{0.01}{\milli\radian}$ which is more than a factor of 2 improvement. We also know, that the fix for the cluster bias will not be the only source for the shift and we need further analysis to find the other sources.
+$\SI{0.004}{\milli\radian}$ from the previous $\SI{0.01}{\milli\radian}$ which is more than a factor of 2 improvement. Because the rotation still does not reach zero, we know that this is not a true fix for the cluster bias, and further analysis will be needed to find the true source. That analysis is beyond the scope of this thesis.
 
-Now that we know that the cluster bias can be taken care of we take a closer look at samples of different luminosities since the LHC will not be operated at the maximum luminosity from the start, there is also the ramp up phase where the luminosity will be lower.
+Now that we know that the cluster bias can be reduced we take a closer look at samples of different luminosities since the LHC will not be operated at the maximum luminosity from the start, there is also the ramp up phase where the luminosity will be lower.
 
-Since we want to know what the shifts in rotation and translation will look like when the cluster bias is fixed we will keep it active for the next studies.
+Since we want to know what the shifts in rotation and translation will look like when the cluster bias is fixed we will keep the fix active for the next studies.
 Figure \ref{fig:lumi_low_normal_hack_on} shows the difference between a sample with ramp-up luminosity and a sample with the luminosity during the measurement phase.
 We see, that the layer separation is much more prominent in station 1 and 3 for the higher luminosity sample but slightly better behaved in station 2 when looking at x-translation.
 Regarding the z-rotation, the lower luminosity sample as slightly lower rotational shifts.

@@ -1,30 +1,50 @@
 \chapter*{Abstract}
 \label{sec:abstract}
 
-Due to larger luminosities and higher track multiplicity, detectors with finer granularity are needed.
-The LHCb experiment is undergoing a major upgrade during the long shutdown of the LHCb between 2019 and 2022. The three tracking detectors downstream of the dipole magnets are undergoing a replacement with a detector that consists of scintillating fibers (SciFi).
-The calibration of the new detector to the software regarding
-orientation and position is critical for the subsequent performance. This
-process is called \textit{alignment} and is part of the trigger and is a crucial part of the real-time analysis of the LHCb.
+% New
+Due to larger luminosities and higher track multiplicity for the LHC upgrade, detectors with finer granularity are needed.
+As part of the LHCb upgrade, the Scintillating Fibre Tracker (SciFi) will replace the previous Outer and Inner Tracker. It is crucial to understand which constraints and which parts of of the SciFi have the most impact on the alignment quality.
+The alignment is part of the trigger and a crucial section of the real-time analysis of the LHCb experiment.
 \\
-In this work, the software \textit{alignment} of the SciFi tracker is studied.
-So called \textit{misalignment} tests contributed to determine the quality
-of the alignment. In addition, tests for the identification of weak modes were performed.
-This drew attention to a bias within the SciFi hit clusters which was observed to have an impact on the performance of the alignment procedure.
+Null tests were used to find a configuration that showed a good alignment of the SciFi.
+Through $\chi^2 \ \text{dof}$ tests it was found that especially aligning the modules positively impacts the SciFi alignment.
+A number of misalignment tests showed that translation misalignments can be handled by the SciFi whereas rotation misalignments were more difficult to correct.
+Test for identification of weak modes were performed and drew attention to a cluster bias within the SciFi hit clusters which negatively impacts the rotations around $z$.
+% old
+% Due to larger luminosities and higher track multiplicity, detectors with finer granularity are needed.
+% The LHCb experiment is undergoing a major upgrade during the long shutdown of the LHCb between 2019 and 2022. The three tracking detectors downstream of the dipole magnets are undergoing a replacement with a detector that consists of scintillating fibers (SciFi).
+% The calibration of the new detector to the software regarding
+% orientation and position is critical for the subsequent performance. This
+% process is called \textit{alignment} and is part of the trigger and is a crucial part of the real-time analysis of the LHCb.
+% \\
+% In this work, the software \textit{alignment} of the SciFi tracker is studied.
+% So called \textit{misalignment} tests contributed to determine the quality
+% of the alignment. In addition, tests for the identification of weak modes were performed.
+% This drew attention to a bias within the SciFi hit clusters which was observed to have an impact on the performance of the alignment procedure.
 
-% more precise and give results!
-
-\chapter*{Kurzfassung}
+{\let\clearpage\relax \chapter*{Kurzfassung}}
 \label{sec:kurzf}
 
+% new
 Aufgrund größerer Luminositäten und höherer Spurmultiplizitäten werden Detektoren mit feinerer Granularität benötigt.
-Das LHCb-Experiment wird während der langen Abschaltung des LHCb zwischen 2019 und 2022 einem größeren Umbau unterzogen. Die drei Spurdetektoren hinter den Dipolmagneten werden durch einen Detektor ersetzt, der aus szintillierenden Fasern (SciFi) besteht.
-Die Kalibrierung des neuen Detektors mit der Software hinsichtlich
-Ausrichtung und Position ist entscheidend für die spätere Leistung. Dieser
-Prozess wird \textit{alignment} genannt und ist Teil des Triggers und ein entscheidender Teil der Echtzeitanalyse des LHCb.
+Als Teil des LHCb-Upgrades wird der Scintillating Fibre Tracker (SciFi) den bisherigen Outer und Inner Tracker ersetzen. Es ist von entscheidender Bedeutung zu verstehen, welche Beschränkungen und welche Teile des SciFi den größten Einfluss auf die Qualität der Ausrichtung haben.
+Das \textit{Alignment} ist Teil des Triggers und ein entscheidender Teil der Echtzeitanalyse des LHCb-Experiments.
+Für das SciFi \textit{Alignment}, werden verschiedene Konfigurationen von Freiheitsgraden und Alignment parametern untersucht.
 \\
-In dieser Arbeit wird das Software-\textit{Alignment} des SciFi-Trackers studiert.
-Sogenannte \textit{misalignment}-Tests trugen zur Bestimmung der Qualität
-des Alignments. Darüber hinaus wurden Tests zur Identifizierung von schwachen Moden durchgeführt.
-Dies machte auf einen Bias innerhalb der Cluster aufmerksam welcher einen
-nicht-unwichtigen Einfluss auf das Alignment hat.
+Mehrere Nulltests führten dazu, eine Konfiguration zu finden, die eine gutes \textit{Alignment} des SciFi Detektors zeigte.
+Durch $\chi^2 \ \text{dof}$-Tests wurde festgestellt, dass sich insbesondere das Alignment der Module positiv auf das Alignment des SciFi auswirkt.
+Eine Reihe von \textit{Misalignment}-Tests zeigte, dass \textit{misalignments} in Translationen vom SciFi bewältigt werden können, während \textit{misalignments} in den Rotationen schwieriger zu korrigieren sind.
+Tests zur Identifizierung schwacher Moden wurden durchgeführt und machten auf einen Cluster-Bias innerhalb der SciFi-Treffercluster aufmerksam, der sich negativ auf die Rotationen um $z$ auswirkt.
+
+% old
+% Aufgrund größerer Luminositäten und höherer Spurmultiplizitäten werden Detektoren mit feinerer Granularität benötigt.
+% Das LHCb-Experiment wird während der langen Abschaltung des LHCb zwischen 2019 und 2022 einem größeren Umbau unterzogen. Die drei Spurdetektoren hinter den Dipolmagneten werden durch einen Detektor ersetzt, der aus szintillierenden Fasern (SciFi) besteht.
+% Die Kalibrierung des neuen Detektors mit der Software hinsichtlich
+% Ausrichtung und Position ist entscheidend für die spätere Leistung. Dieser
+% Prozess wird \textit{alignment} genannt und ist Teil des Triggers und ein entscheidender Teil der Echtzeitanalyse des LHCb.
+% \\
+% In dieser Arbeit wird das Software-\textit{Alignment} des SciFi-Trackers studiert.
+% Sogenannte \textit{misalignment}-Tests trugen zur Bestimmung der Qualität
+% des Alignments. Darüber hinaus wurden Tests zur Identifizierung von schwachen Moden durchgeführt.
+% Dies machte auf einen Bias innerhalb der Cluster aufmerksam welcher einen
+% nicht-unwichtigen Einfluss auf das Alignment hat.
