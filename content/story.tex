@@ -306,6 +306,7 @@ The x-translation in Figure \ref{fig:june_5} also shows some separation, the las
 This result is unexpected with the constraints added. In the next sections, more tests are described, while the underlying cause of these unexpected results is described in Section \ref{sec:clusterbias}.
 
 \subsection{Checking rotational degrees of freedom}
+\label{sec:test_and_c5}
 The Next configuration tested is the result of a series of tests with various constraints, DoFs and alignable objects. In figure \ref{fig:TxZ} a new configuration called "Test3" is introduced and it is defined as
 
 \begin{lstlisting}[language=Python]
@@ -361,7 +362,7 @@ The orange measurement has a similar constraint added with Rz added to the DoFs 
 Comparing just these two configurations, regarding $Tx$ there is not a big difference.
 The last station has a little more separation in "config5 Rz", station 2 shows roughly the same performance and station one is also more split, in total approximately
 $\SI{0.5}{\micro\metre}$. The overall z-translation regressed by a small amount in every station while the layer spearation in station 3 improved.
-It can be sen, that both X-layers in T2 in the x-translation plot have a quite large RMS uncertainty which means the A-side and the C-side in the X-layers are quite far apart but the mean is right around 0. That is expected since the constraint added only brings the mean of the layer to 0. In future analyses new constraints will be added to bring the sides together.
+It can be seen, that both X-layers in T2 in the x-translation plot have a quite large RMS uncertainty which means the A-side and the C-side in the X-layers are quite far apart but the mean is right around 0. That is expected since the constraint added only brings the mean of the layer to 0. In future analyses new constraints will be added to bring the sides together.
 % config 5
 \begin{figure}
   \centering
@@ -383,8 +384,9 @@ It can be sen, that both X-layers in T2 in the x-translation plot have a quite l
 \end{figure}
 
 Rotations around $x$ will not be further analysed because it does not have a huge impact on the alignment quality and is also very well aligned. In $Rz$ a noticable gap
-between the two measurements can be seen. This is a result from the added $Rz$
-constraint on the last two layers. The expected rotation is small than shown in figure \ref{fig:config5_Rz} which is expected to be a result from bias in the clusters.
+between the two measurements can be seen. This is a result from the added $Rz$ constraint on the last two layers.
+The constraints used should result in a rotation smaller than what is seen in figure \ref{fig:config5_Rz}.
+A possible cause for that can be a bias inside the SciFi hit clusters and will be discussed later in section \ref{sec:clusterbias}.
 
 \begin{figure}
   \centering
@@ -406,9 +408,9 @@ constraint on the last two layers. The expected rotation is small than shown in 
 \end{figure}
 
 Regarding the goal to reduce the amount of rotation and translation in each station,
-the result is a small improvement in $Rz$ of around $\SI{0.005}{\milli\radian}$ in every layer. $Rx$ is mostly unchanged aswell as $Tx$.
+the result is a small improvement in $Rz$ of around $\SI{0.005}{\milli\radian}$ in every layer. $Rx$ is mostly unchanged as well as $Tx$.
 
-Translation constraints as well as rotation constraints are not the only constraints tested. There are also scaling- and shearing constraints that were analysed but seemed to have no major impact.
+Translation constraints as well as rotation constraints are not the only constraints tested. There are also scaling- and shearing constraints that were tested but seemed to have no major impact.
 
 \section{chi2 tests and weak modes}
 In this section, a $\chi^2$ analysis is performed in order to study the ``goodness'' of the alignment and determine the impact of potential weak modes also known as "correlated alignment parameters". There are several weak modes that could occur namely \textit{global translation}, \textit{shearing} and \textit{curvature bias}.
@@ -416,10 +418,12 @@ Weak modes are unaffected by the $\chi^2$ since the residuals do not change but 
 The effect weak modes have on the alignment are biases regarding track parameters and late convergences.
 There are different solutions that can be utilized to reduce the effect from weak modes such as
 \begin{itemize}
-  \item $\textbf{using other data-taking configurations like magnet off or mass plots for off-axis events}$
+  \item $\textbf{using other data-taking configurations like magnet off or mass plots \\for off-axis events}$
   \item $\textbf{utilizing other survey data sets}$
   \item $\textbf{using kinematic and vertex constraints}$
 \end{itemize}\,.
+
+Using magnet-off data can be helpfull as a comparison measurement since it can be utilized to constrain the curvature bias, which will not be element of this thesis but for future analyses.
 
 \begin{figure}
   \centering
@@ -430,18 +434,28 @@ There are different solutions that can be utilized to reduce the effect from wea
 
 The first test is the $\chi^2$-analysis for \textit{HighMomentumTTracks},
 6500 events and 2020 data plotted versus the iteration number during the
-alignment in figure \ref{fig:fig2}. In blue, stations and layers were aligned in $Tx$,
-$Tz$, $Rx$ and $Rz$ with the constraints being used from "config5". The orange
+alignment in figure \ref{fig:fig2}.
+This track selection was chosen because TTracks are mainly produced in secondary interactions and are identified by only having hits inside the T-stations as seen in figure \ref{fig:tracksel}.
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{plots/track_selection.png}
+    \caption{An illustration of different track types as well as the main B-field component ($B_y$) as a function of the $z$ coordinate.}
+    \label{fig:tracksel}
+\end{figure}
+Since the main B-field component is quite large inside the T-stations, \textit{HighMomentumTTracks} are especially useful for studies regarding magnet-off data because the difference between magnet-on and magnet-off is large.
+These measurements are interesting to compare with studies regarding the curvature bias in future analyses.
+In blue, stations and layers were aligned in $Tx$,
+$Tz$, $Rx$ and $Rz$ with the constraints being used from "config5" from section \ref{sec:test_and_c5}. The orange
 measurement is identical except for the degrees of freedom being only $Tx$ and $Rz$.
 In green and red the same measurements as in blue and orange were performed with
 the difference that that the modules are aligned as well.
 The purple measurement is the only one which covers 16 iterations and is otherwise identical to the orange one. That is also why the orange measurement is not visible since it lies behind the purple one for the first 10 iterations.
-the brown and pink measurements are done for 2019 data and are otherwise identical to the orange and red measurement regarding constraints and alignable degrees of freedom.
+the brown and pink measurements are done for simulated data with an older description of the detector geometry from 2019, and are otherwise identical to the orange and red measurement regarding constraints and alignable degrees of freedom.
 
 The spiky behavior in this plot is not what we expected and this might be the result of weak modes since the convergence is quite bad in all of the 2020 data which can be seen by the $\chi^2 / dofs$ not steadily decreasing.
 The 2019 measurements were performed as control measurements with and without
 module alignment. Here a clear decrease in the $\chi^2 / dofs$ is visible. This
-indicates that for the 2020 data additional analysis must be performed to gain further knowledge about the dataset since it shows some unclear findings.
+indicates that for the 2020 MC sample additional analysis must be performed to gain further knowledge about the MC data set since it shows some unclear findings.
 
 The idea to test $Tx$, $Tz$, $Rx$ and $Rz$ versus only one translation and one
 rotational degree of freedom was to analyse the effect regarding the convergence and the $\chi^2 / dofs$ itself. One could also argue that there was a quick convergence after three iterations when looking at the yellow measurement but something happened afterwards. This will be analysed in a future project.
@@ -453,14 +467,14 @@ A clear correlation between the $\chi^2 \ \text{dofs}$ and the number of tracks 
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/GL_HM_chi2_2020.png}
-  \caption{$\chi^2$-test versus number of tracks of different degrees of freedom, alignables and data samples but fewer.}
+  \caption{$\chi^2$-test versus number of tracks of different degrees of freedom, alignables and data samples.}
   \label{fig:chi2iter}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/nov_21/chi2_vs_ntracks_all.png}
-  \caption{$\chi^2$-test versus number of tracks of different degrees of freedom, alignables and data samples but fewer (redo with grid).}
+  \caption{$\chi^2$-test versus number of tracks of different degrees of freedom, alignables and data samples(redo with grid).}
   \label{fig:chi2tracks}
 \end{figure}
 
@@ -478,8 +492,8 @@ programming error.
 
 In figure \ref{fig:chi2tracksdec} a consistency check for figure
 \ref{fig:chi2iterdec} was performed. The number of tracks correlate well with
-the $\chi^2 / dofs$. The blue measurement is missing again which seems to be a
-programming error.
+the $\chi^2 / dofs$.
+% The blue measurement is missing again which seems to be a programming error.
 
 \begin{figure}
   \centering
@@ -488,8 +502,10 @@ programming error.
   \label{fig:chi2tracksdec}
 \end{figure}
 
+We found out that the MC sample from 2020 using the newer detector geometry contains some aspects that require more tests for example the spikey behavior of the $\chi^2 / \text{dof}$. Figure \ref{fig:chi2iter} shows the same measurements for GoodLongTracks in comparison to HighMomentumTTracks which made it even more clear that the MC sample from 2020 is problematic. The GoodLongTracks shows an early convergence which is good. It also shows that aligning the modules of the SciFi instead of the stations and the half-layers is slightly better for the alignment performance. Hints of potential weak modes could be the problem in the 2020 MC samples shown by the late convergence and the irregular behavior in the $\chi^2$ tests.
+
 \section{luminosity samples and chi2}
-For a cross check regarding upcoming studies the difference in $\chi^2 / dofs$ for samples of different luminosities are looked at.
+In order to get a clearer view of the difference in alignment quality, coming from the difference in luminosity during the ramp-up phase and the data taking phase, samples of different luminosities are looked at.
 Comparing two samples, one with a "ramp-up" luminosity with a parameter $\nu = 3.8$ also referred to as "low luminosity" and one for the luminosity used during the data taking
 with $\nu = 7.6$, called "normal luminosity".
 The $\chi^2 / dofs$ of these samples is plotted versus the iteration number \ref{fig:chi2iter_lumi_normal} and the number of tracks\ref{fig:chi2tracks_lumi_normal}.
@@ -507,15 +523,16 @@ and $\num{1.3067}$ for the low luminosity sample.
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/jan_17_2022/chi2_tracks_modulesOnly.png}
-  \caption{compare different luminosities and plot $\chi^2$ versus number of tracks as a measurement for weakmodes and alignment.}
+  \caption{compare different luminosities and plot $\chi^2$ versus number of tracks as a measurement for weak modes and alignment.}
   \label{fig:chi2tracks_lumi_normal}
 \end{figure}
 
+This short study shows, that the difference in alignment quality coming from different luminosities is small, which can be seen in the difference in $\chi^2 / \text{dofs}$. For both samples the convergence happend early, which is expected.
 
 \section{impact of the cluster bias}
 \label{sec:clusterbias}
 
-As mentioned earlier the clusterbias most certainly causes the shift in the rotation around $z$ for each layer so it does not reach 0.
+As mentioned earlier the cluster bias most certainly causes the shift in the rotation around $z$ for each layer so it does not reach 0.
 To test that a momentary fix was found and implemented. The workaround was to add a scaling for the \textit{m\_airgap}\cite{gap}.
 
 Figure \ref{fig:cbhack_on_off} shows the impact of the cluster bias fix regarding the rotation around $z$.

@@ -26,11 +26,11 @@
 \contentsline {section}{\numberline {4.3}Null tests with rotational constraints}{31}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Checking rotational degrees of freedom}{34}{subsection.4.3.1}%
 \contentsline {section}{\numberline {4.4}chi2 tests and weak modes}{36}{section.4.4}%
-\contentsline {section}{\numberline {4.5}luminosity samples and chi2}{40}{section.4.5}%
-\contentsline {section}{\numberline {4.6}impact of the cluster bias}{42}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Tests with input misalignments}{46}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Continuing Work}{47}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{49}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusion}{50}{chapter.7}%
-\contentsline {chapter}{\nonumberline Literatur}{52}{chapter*.40}%
+\contentsline {section}{\numberline {4.5}luminosity samples and chi2}{41}{section.4.5}%
+\contentsline {section}{\numberline {4.6}impact of the cluster bias}{43}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Tests with input misalignments}{47}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Continuing Work}{48}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{50}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusion}{51}{chapter.7}%
+\contentsline {chapter}{\nonumberline Literatur}{53}{chapter*.41}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

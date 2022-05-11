@@ -880,6 +880,9 @@ INPUT /home/nils/.local/texlive/2021/texmf-var/luatex-cache/generic/fonts/otl/lm
 INPUT ./plots/nov_19/Figure_2.png
 INPUT ./plots/nov_19/Figure_2.png
 INPUT ./plots/nov_19/Figure_2.png
+INPUT ./plots/track_selection.png
+INPUT ./plots/track_selection.png
+INPUT ./plots/track_selection.png
 INPUT ./plots/GL_HM_chi2_2020.png
 INPUT ./plots/GL_HM_chi2_2020.png
 INPUT ./plots/GL_HM_chi2_2020.png
