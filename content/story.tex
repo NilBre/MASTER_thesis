@@ -460,14 +460,14 @@ indicates that for the 2020 MC sample additional analysis must be performed to g
 The idea to test $Tx$, $Tz$, $Rx$ and $Rz$ versus only one translation and one
 rotational degree of freedom was to analyse the effect regarding the convergence and the $\chi^2 / dofs$ itself. One could also argue that there was a quick convergence after three iterations when looking at the yellow measurement but something happened afterwards. This will be analysed in a future project.
 
-In figure \ref{fig:chi2iter} a comparison between GoodLongTracks and HighMomentumTTracks for the same measurements was performed to to study the impact of different track selections. This shows, that the alignment quality for both track selections increases with the number of iterations.
+In figure \ref{fig:chi2iter} a comparison between GoodLongTracks (left) and HighMomentumTTracks (right) for the same measurements was performed to to study the impact of different track selections. This shows, that the alignment quality for both track selections increases with the number of iterations.
 The identical $\chi^2$ measurements for the HighMomentumTTracks were plotted against the number of tracks as seen in figure \ref{fig:chi2tracks} as an example.
 A clear correlation between the $\chi^2 \ \text{dofs}$ and the number of tracks can be seen.
 
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{plots/GL_HM_chi2_2020.png}
-  \caption{$\chi^2$-test versus number of tracks of different degrees of freedom, alignables and data samples.}
+  \caption{$\chi^2$-test comparing GoodLongTracks (left) and HighMomentumTTracks (left) for different alignables and degrees of freedom.}
   \label{fig:chi2iter}
 \end{figure}
 
@@ -502,7 +502,31 @@ the $\chi^2 / dofs$.
   \label{fig:chi2tracksdec}
 \end{figure}
 
-We found out that the MC sample from 2020 using the newer detector geometry contains some aspects that require more tests for example the spikey behavior of the $\chi^2 / \text{dof}$. Figure \ref{fig:chi2iter} shows the same measurements for GoodLongTracks in comparison to HighMomentumTTracks which made it even more clear that the MC sample from 2020 is problematic. The GoodLongTracks shows an early convergence which is good. It also shows that aligning the modules of the SciFi instead of the stations and the half-layers is slightly better for the alignment performance. Hints of potential weak modes could be the problem in the 2020 MC samples shown by the late convergence and the irregular behavior in the $\chi^2$ tests.
+We found out that the MC sample from 2020 using the newer detector geometry contains some aspects that require more tests for example the spikey behavior of the $\chi^2 / \text{dof}$. Figure \ref{fig:chi2iter} shows the same measurements for GoodLongTracks in comparison to HighMomentumTTracks which made it even more clear that the MC sample from 2020 is problematic. The GoodLongTracks shows an early convergence which is good. It also shows that aligning the modules of the SciFi instead of the stations and the half-layers is slightly better for the alignment performance. Hints of potential weak modes as well as the cluster bias could be the problem in the 2020 MC samples shown by the late convergence and the irregular behavior in the $\chi^2$ tests.
+
+\section{impact of the cluster bias}
+\label{sec:clusterbias}
+
+To test the impact of the cluster bias, a momentary fix was found and implemented. The workaround was to add a scaling for the \textit{m\_airgap}\cite{gap} which is the gap between the modules as seen in figure \ref{fig:module_gap}.
+As mentioned the cluster bias most certainly causes the shift in the rotation around $z$ for each layer so it does not reach 0.
+Figure \ref{fig:cbhack_on_off} shows the impact of the cluster bias fix regarding the rotation around $z$.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{plots/jan_24_2022/compare_with_without_hack.png}
+  \caption{Impact of the clusterbias for high and low luminosity samples.}
+  \label{fig:cbhack_on_off}
+\end{figure}
+
+As we expected, the amount of rotation was reduced to about
+$\SI{0.004}{\milli\radian}$ from the previous $\SI{0.01}{\milli\radian}$ which is more than a factor of 2 improvement. Because the rotation still does not reach zero, we know that this is not a true fix for the cluster bias, and further analysis will be needed to find the true source. That analysis is beyond the scope of this thesis.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{plots/module_gap.png}
+    \caption{Gap between the modules (orange). Borders (grey) are $\SI{6.8}{\milli\metre}$ apart from each other.}
+    \label{fig:module_gap}
+\end{figure}
 
 \section{luminosity samples and chi2}
 In order to get a clearer view of the difference in alignment quality, coming from the difference in luminosity during the ramp-up phase and the data taking phase, samples of different luminosities are looked at.
@@ -527,25 +551,7 @@ and $\num{1.3067}$ for the low luminosity sample.
   \label{fig:chi2tracks_lumi_normal}
 \end{figure}
 
-This short study shows, that the difference in alignment quality coming from different luminosities is small, which can be seen in the difference in $\chi^2 / \text{dofs}$. For both samples the convergence happend early, which is expected.
-
-\section{impact of the cluster bias}
-\label{sec:clusterbias}
-
-As mentioned earlier the cluster bias most certainly causes the shift in the rotation around $z$ for each layer so it does not reach 0.
-To test that a momentary fix was found and implemented. The workaround was to add a scaling for the \textit{m\_airgap}\cite{gap}.
-
-Figure \ref{fig:cbhack_on_off} shows the impact of the cluster bias fix regarding the rotation around $z$.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{plots/jan_24_2022/compare_with_without_hack.png}
-  \caption{Impact of the clusterbias for high and low luminosity samples.}
-  \label{fig:cbhack_on_off}
-\end{figure}
-
-As we expected, the amount of rotation was reduced to about
-$\SI{0.004}{\milli\radian}$ from the previous $\SI{0.01}{\milli\radian}$ which is more than a factor of 2 improvement. Because the rotation still does not reach zero, we know that this is not a true fix for the cluster bias, and further analysis will be needed to find the true source. That analysis is beyond the scope of this thesis.
+This short study shows, that the difference in alignment quality coming from different luminosities is small, which can be seen in the difference in $\chi^2 / \text{dofs}$. For both samples the convergence happened early, which is expected.
 
 Now that we know that the cluster bias can be reduced we take a closer look at samples of different luminosities since the LHC will not be operated at the maximum luminosity from the start, there is also the ramp up phase where the luminosity will be lower.
 
@@ -553,7 +559,7 @@ Since we want to know what the shifts in rotation and translation will look like
 Figure \ref{fig:lumi_low_normal_hack_on} shows the difference between a sample with ramp-up luminosity and a sample with the luminosity during the measurement phase.
 We see, that the layer separation is much more prominent in station 1 and 3 for the higher luminosity sample but slightly better behaved in station 2 when looking at x-translation.
 Regarding the z-rotation, the lower luminosity sample as slightly lower rotational shifts.
-The difference is so minute that it can be safely disregarded. (not sure about that)
+The difference is so minute that it can be safely disregarded.
 
 \begin{figure}
   \centering
@@ -610,4 +616,177 @@ What can be taken from this is that the removal of some constraints will help
 the alignment but the cause of some abnormalities require more testing.
 
 \section{Tests with input misalignments}
+\label{sec:misalignment}
+\subsection{Translation misalignment}
+\label{sec:misT}
+
 In order to evaluate the performance of the alignment with a given configuration in Monte Carlo simulations, input misalignments are used.
+
+Starting with translation misalignments for the configuration "config5 Rz". The input misalignment is a random gaussian generated distribution. The translation misalignment used were $\SI{0.001}{\micro\metre}$ and $\SI{200}{\micro\metre}$ in $Tx$, $Ty$ and $Tz$ for the modules. We tested very small misalignment to be sure that this small deviation has no major impact on the alignment quality. $\SI{200}{\micro\metre}$ translation misalignment was tested since the position of a module within a C-frame is known within $\SI{200}{\micro\metre}$.
+
+The differences between the misaligned "config5 Rz" and the normal configuration plotted for each of the used degrees of freedom are shown in the following figures \ref{fig:mis_Tx} to \ref{fig_mis_Rz}.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_transl/Tx_0001mu_translation.png}
+    \caption{$\SI{0.001}{\micro\metre}$ module translation misalignment.}
+    \label{fig:00001Tx}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_transl/Tx_200mu_translation.png}
+    \caption{$\SI{200}{\micro\metre}$ module translation misalignment.}
+    \label{fig:200Tx}
+  \end{subfigure}
+  \caption{Plotted is configuration "config5 Rz" (blue) versus itself with translation misalignments (orange). The alignment run used 10 iterations and 5000 events. The translation in $x$ is plotted against the group position in $z$.}
+  \label{fig:mis_Tx}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_transl/Tz_0001mu_translation.png}
+    \caption{$\SI{0.001}{\micro\metre}$ module translation misalignment.}
+    \label{fig:00001Tz}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_transl/Tz_200mu_translation.png}
+    \caption{$\SI{200}{\micro\metre}$ module translation misalignment.}
+    \label{fig:200Tz}
+  \end{subfigure}
+  \caption{Plotted is configuration "config5 Rz" (blue) versus itself with translation misalignments (orange). The alignment run used 10 iterations and 5000 events. The translation in $z$ is plotted against the group position in $z$.}
+  \label{fig:mis_Tz}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_transl/Rx_0001mu_translation.png}
+    \caption{$\SI{0.001}{\micro\metre}$ module translation misalignment.}
+    \label{fig:00001Rx}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_transl/Rx_200mu_translation.png}
+    \caption{$\SI{200}{\micro\metre}$ module translation misalignment.}
+    \label{fig:200Rx}
+  \end{subfigure}
+  \caption{Plotted is configuration "config5 Rz" (blue) versus itself with translation misalignments (orange). The alignment run used 10 iterations and 5000 events. The rotation around $x$ is plotted against the group position in $z$.}
+  \label{fig:mis_Rx}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_transl/Rz_0001mu_translation.png}
+    \caption{$\SI{0.001}{\micro\metre}$ module translation misalignment.}
+    \label{fig:00001Rz}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_transl/Rz_200mu_translation.png}
+    \caption{$\SI{200}{\micro\metre}$ module translation misalignment.}
+    \label{fig:200Rz}
+  \end{subfigure}
+  \caption{Plotted is configuration "config5 Rz" (blue) versus itself with translation misalignments (orange). The alignment run used 10 iterations and 5000 events. The rotation around $z$ is plotted against the group position in $z$.}
+  \label{fig:mis_Rz}
+\end{figure}
+
+It becomes clear, that the alignment for both amounts of input misalignment worked equally good. There is a little discrepancy to the non-misaligned configuration but the differences are small enough to be negligible.
+The chosen configuration is therefore capable of handling misalignments of $\SI{200}{\micro\metre}$.
+
+\subsection{Rotation misalignment}
+\label{sec:misR}
+
+Regarding rotation misalignments, the amount of misalignment chosen was based on the scale of $Rz$.
+The two input misalignments shown in the following plots are $\SI{0.01}{\milli\radian}$ and $\SI{0.1}{\milli\radian}$ gaussian generated distributions. The former is roughly the scale of $z$-rotation wheras the latter is scaled up by a factor of ten.
+
+% if i have time and lxplus lets me use my python scripts i will make them new. otherwise this is the comparisons we are using
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_rota/001_rot_Tx.png}
+    \caption{$\SI{0.01}{\milli\radian}$ module rotation misalignment.}
+    \label{fig:001Tx}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_rota/01_rot_Tx.png}
+    \caption{$\SI{0.1}{\milli\radian}$ module rotation misalignment.}
+    \label{fig:01Tx}
+  \end{subfigure}
+  \caption{Plotted is configuration "baseline" (blue) versus "config5 Rz" with translation misalignments (orange). The alignment run used 10 iterations and 5000 events. The translation in $x$ is plotted against the group position in $z$.}
+  \label{fig:mis_rot_Tx}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_rota/001_rot_Tz.png}
+    \caption{$\SI{0.01}{\milli\radian}$ module rotation misalignment.}
+    \label{fig:001Tz}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_rota/01_rot_Tz.png}
+    \caption{$\SI{0.1}{\milli\radian}$ module rotation misalignment.}
+    \label{fig:01Tz}
+  \end{subfigure}
+  \caption{Plotted is configuration "baseline" (blue) versus "config5 Rz" with translation misalignments (orange). The alignment run used 10 iterations and 5000 events. The translation in $z$ is plotted against the group position in $z$.}
+  \label{fig:mis_rot_Tx}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_rota/001_rot_Rx.png}
+    \caption{$\SI{0.01}{\milli\radian}$ module rotation misalignment.}
+    \label{fig:001Rx}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_rota/01_rot_Rx.png}
+    \caption{$\SI{0.1}{\milli\radian}$ module rotation misalignment.}
+    \label{fig:01Rx}
+  \end{subfigure}
+  \caption{Plotted is configuration "baseline" (blue) versus "config5 Rz" with translation misalignments (orange). The alignment run used 10 iterations and 5000 events. The rotation around $x$ is plotted against the group position in $z$.}
+  \label{fig:mis_rot_Rx}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_rota/001_rot_Rz.png}
+    \caption{$\SI{0.01}{\milli\radian}$ module rotation misalignment.}
+    \label{fig:001Rz}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/misalign_rota/01_rot_Rz.png}
+    \caption{$\SI{0.1}{\milli\radian}$ module rotation misalignment.}
+    \label{fig:01Rz}
+  \end{subfigure}
+  \caption{Plotted is configuration "baseline" (blue) versus "config5 Rz" with translation misalignments (orange). The alignment run used 10 iterations and 5000 events. The rotation around $z$ is plotted against the group position in $z$.}
+  \label{fig:mis_rot_Rz}
+\end{figure}
+
+It is clearly visible, that even a small rotation misalignment has an impact on the alignment quality. An input misalignment of $\SI{0.1}{\milli\radian}$ on the modules is enough to no longer be able to align the detector.
