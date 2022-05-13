@@ -162,25 +162,25 @@ The first three constraints on all stations regarding translations brings the mo
 Even though the alignment improved the amount of constraints cannot recover from potential misalignments because the constraints hinder the stations from moving.
 
 In an ideal alignment we want as few constraints as possible so that the alignable objects can be aligned and converge towards the optimal position based on the track reconstruction.
-This measurement only used 1000 events and is only used as a guideline to what the trend of the distribution looks like. The associated graphs for $Tx$ plotted against the group position in $z$ are shown in figure \ref{fig:june_2}.
+In this measurement 3000 events were used. The associated graphs for $Tx$ plotted against the group position in $z$ are shown in figure \ref{fig:june_2}.
 
 A prominent problem visible is the layer separation between the X-layers and the stereo layers as well as a separation between the C-frames inside each station.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{plots/june_21/Tx_noRota_allT_1000MU.png}
-  \caption{comparison of different configurations without rotational constraints in every station, magnet up and 1000 events. plotted is translation in x versus global z.}
+  \includegraphics[width=0.9\textwidth]{plots/renewed_plots/lxplus/4_3.jpeg}
+  \caption{comparison of different configurations without rotational constraints in every station, magnet up and 3000 events. plotted is translation in $x$ versus global $z$.}
   \label{fig:june_2}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{plots/june_21/Tx_noRota_allT_7000MU.png}
-  \caption{comparison of different configurations without rotational constraints in all stations, magnet up and 7000 events. plotted is x translation versus global z.}
+  \includegraphics[width=0.9\textwidth]{plots/renewed_plots/lxplus/4_4.jpeg}
+  \caption{comparison of different configurations without rotational constraints in all stations, magnet up and 3000 events. plotted is $z$ translation versus global $z$.}
   \label{fig:june_2_1}
 \end{figure}
 
-In figure \ref{fig:june_2_1} the same measurement was performed for 7000 events to get a better picture. In comparison to \ref{fig:june_2} an overall improvement of the baseline is visible and the layer-splitting is reduced but still prominent. The green measurement shows no direct improvement since the layers are already pretty close to zero in x-direction.
+In figure \ref{fig:june_2_1} the $z$-translation is plotted against the group position in $z$. In comparison to \ref{fig:june_2} an overall improvement of the baseline is visible and the layer-splitting is reduced but still prominent. The green measurement shows no direct improvement since the layers are already pretty close to zero in x-direction.
 Using 7000 events instead of 1000 events showed a more realistic picture but
 took more time to compute especially for 10 alignment iterations.
 For the following configuration, 3000 simulated events were used to shorten the computing time while still yielding an accurate representation of the situation.
@@ -220,14 +220,14 @@ Normally, an alignment job should converge after three to five iterations. If th
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{plots/june_21/allT_halfT3_n20_Tx.png}
-  \caption{analysed 20 iterations for x translation behavior for configuration "half C-frame".}
+  \includegraphics[width=0.9\textwidth]{plots/renewed_plots/lxplus/4_5.jpeg}
+  \caption{analysed 20 iterations for $x$ translation behavior for configuration "half C-frame" plotted against the baseline configuration.}
   \label{fig:june_3}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.75\textwidth]{plots/scatter_fig_4_4_convergence.png}
+  \includegraphics[width=0.9\textwidth]{plots/scatter_fig_4_4_convergence.png}
   \caption{convergence of the alignment after 12 iterations from configuration "half C-frame".}
   \label{fig:conv}
 \end{figure}
@@ -257,16 +257,16 @@ In figure \ref{fig:june_4} x-translation and z-translation with regards to the g
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.7\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{plots/june_21/allT_halfT3_Tx_vs_Flo.png}
+    \includegraphics[width=\textwidth]{plots/renewed_plots/lxplus/4_7_a.jpeg}
     \caption{x-translation versus group position in z.}
     \label{fig:june_4_1}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.7\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{plots/scatter_fig4_2.png}
+    \includegraphics[width=\textwidth]{plots/renewed_plots/lxplus/4_7_b.jpeg}
     \caption{z-translation versus group position in z.}
     \label{fig:june_4_2}
   \end{subfigure}
@@ -325,16 +325,16 @@ constraints = [
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.7\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{plots/july_28/Tx.png}
+    \includegraphics[width=\textwidth]{plots/renewed_plots/lxplus/4_10_a.jpeg}
     \caption{x-translation versus group position in z.}
     \label{fig:TxZ_1}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.7\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{plots/july_28/Tz.png}
+    \includegraphics[width=\textwidth]{plots/renewed_plots/lxplus/4_10_b.jpeg}
     \caption{z-translation versus group position in z.}
     \label{fig:TxZ_2}
   \end{subfigure}
@@ -366,14 +366,14 @@ It can be seen, that both X-layers in T2 in the x-translation plot have a quite 
 % config 5
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/renewed_plots/Tx_config5.png}
     \caption{x-translation versus group position in z.}
     \label{fig:config5_Tx}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/renewed_plots/Tz_config5.png}
     \caption{z-translation versus group position in z.}
@@ -390,14 +390,14 @@ A possible cause for that can be a bias inside the SciFi hit clusters and will b
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/renewed_plots/Rx_config5.png}
     \caption{x-rotation versus group position in z.}
     \label{fig:config5_Rx}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/renewed_plots/Rz_config5.png}
     \caption{z-rotation versus group position in z.}
@@ -433,8 +433,8 @@ Using magnet-off data can be helpfull as a comparison measurement since it can b
 \end{figure}
 
 The first test is the $\chi^2$-analysis for \textit{HighMomentumTTracks},
-6500 events and 2020 data plotted versus the iteration number during the
-alignment in figure \ref{fig:fig2}.
+6500 events and 2020 MC data plotted versus the iteration number during the
+alignment as shown in figure \ref{fig:fig2}.
 This track selection was chosen because TTracks are mainly produced in secondary interactions and are identified by only having hits inside the T-stations as seen in figure \ref{fig:tracksel}.
 \begin{figure}[!ht]
     \centering
@@ -480,8 +480,8 @@ A clear correlation between the $\chi^2 \ \text{dofs}$ and the number of tracks 
 
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{plots/LHCB_week_dec/chi2_vs_iter_normal.png}
-  \caption{$\chi^2 / dofs$ versus iteration number for different number of events.}
+  \includegraphics[width=\textwidth]{plots/renewed_plots/e5/4_17.png}
+  \caption{$\chi^2 / \text{dofs}$ versus iteration number for different number of events.}
   \label{fig:chi2iterdec}
 \end{figure}
 
@@ -492,13 +492,13 @@ programming error.
 
 In figure \ref{fig:chi2tracksdec} a consistency check for figure
 \ref{fig:chi2iterdec} was performed. The number of tracks correlate well with
-the $\chi^2 / dofs$.
+the $\chi^2 / \text{dofs}$.
 % The blue measurement is missing again which seems to be a programming error.
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{plots/LHCB_week_dec/chi2_vs_tracks_normal.png}
-  \caption{$\chi^2 / dofs$ versus number of Tracks for 6500 events and 10000 events.}
+  \caption{$\chi^2 / \text{dofs}$ versus number of Tracks for 6500 events and 10000 events.}
   \label{fig:chi2tracksdec}
 \end{figure}
 
@@ -513,9 +513,40 @@ Figure \ref{fig:cbhack_on_off} shows the impact of the cluster bias fix regardin
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{plots/jan_24_2022/compare_with_without_hack.png}
-  \caption{Impact of the clusterbias for high and low luminosity samples.}
-  \label{fig:cbhack_on_off}
+  \begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/renewed_plots/e5/4_19_3.png}
+    \caption{plotted is the x-translation versus the group position in $z$.}
+    \label{fig:cbTxlow}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/renewed_plots/e5/4_19_4.png}
+    \caption{plotted is the rotation around $z$ versus the group position in $z$.}
+    \label{fig:cbRzlow}
+  \end{subfigure}
+  \caption{Impact of the cluster bias for the lower luminosity sample plotted for $z$-rotation and $x$-translation against the group position in $z$. GoodLongTracks were used with "config5" and 5000 events for 10 iterations.}
+  \label{fig:cblow}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/renewed_plots/e5/4_19_1.png}
+    \caption{plotted is the x-translation versus the group position in $z$.}
+    \label{fig:cbTxlow}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/renewed_plots/e5/4_19_2.png}
+    \caption{plotted is the rotation around $z$ versus the group position in $z$.}
+    \label{fig:cbRzlow}
+  \end{subfigure}
+  \caption{Impact of the cluster bias for the normal luminosity sample plotted for $z$-rotation and $x$-translation against the group position in $z$. GoodLongTracks were used with "config5" and 5000 events for 10 iterations.}
+  \label{fig:cbnormal}
 \end{figure}
 
 As we expected, the amount of rotation was reduced to about
@@ -628,14 +659,14 @@ The differences between the misaligned "config5 Rz" and the normal configuration
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_transl/Tx_0001mu_translation.png}
     \caption{$\SI{0.001}{\micro\metre}$ module translation misalignment.}
     \label{fig:00001Tx}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_transl/Tx_200mu_translation.png}
     \caption{$\SI{200}{\micro\metre}$ module translation misalignment.}
@@ -647,14 +678,14 @@ The differences between the misaligned "config5 Rz" and the normal configuration
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_transl/Tz_0001mu_translation.png}
     \caption{$\SI{0.001}{\micro\metre}$ module translation misalignment.}
     \label{fig:00001Tz}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_transl/Tz_200mu_translation.png}
     \caption{$\SI{200}{\micro\metre}$ module translation misalignment.}
@@ -666,14 +697,14 @@ The differences between the misaligned "config5 Rz" and the normal configuration
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_transl/Rx_0001mu_translation.png}
     \caption{$\SI{0.001}{\micro\metre}$ module translation misalignment.}
     \label{fig:00001Rx}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_transl/Rx_200mu_translation.png}
     \caption{$\SI{200}{\micro\metre}$ module translation misalignment.}
@@ -685,14 +716,14 @@ The differences between the misaligned "config5 Rz" and the normal configuration
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_transl/Rz_0001mu_translation.png}
     \caption{$\SI{0.001}{\micro\metre}$ module translation misalignment.}
     \label{fig:00001Rz}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_transl/Rz_200mu_translation.png}
     \caption{$\SI{200}{\micro\metre}$ module translation misalignment.}
@@ -715,14 +746,14 @@ The two input misalignments shown in the following plots are $\SI{0.01}{\milli\r
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_rota/001_rot_Tx.png}
     \caption{$\SI{0.01}{\milli\radian}$ module rotation misalignment.}
     \label{fig:001Tx}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_rota/01_rot_Tx.png}
     \caption{$\SI{0.1}{\milli\radian}$ module rotation misalignment.}
@@ -734,14 +765,14 @@ The two input misalignments shown in the following plots are $\SI{0.01}{\milli\r
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_rota/001_rot_Tz.png}
     \caption{$\SI{0.01}{\milli\radian}$ module rotation misalignment.}
     \label{fig:001Tz}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_rota/01_rot_Tz.png}
     \caption{$\SI{0.1}{\milli\radian}$ module rotation misalignment.}
@@ -753,14 +784,14 @@ The two input misalignments shown in the following plots are $\SI{0.01}{\milli\r
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_rota/001_rot_Rx.png}
     \caption{$\SI{0.01}{\milli\radian}$ module rotation misalignment.}
     \label{fig:001Rx}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_rota/01_rot_Rx.png}
     \caption{$\SI{0.1}{\milli\radian}$ module rotation misalignment.}
@@ -772,14 +803,14 @@ The two input misalignments shown in the following plots are $\SI{0.01}{\milli\r
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_rota/001_rot_Rz.png}
     \caption{$\SI{0.01}{\milli\radian}$ module rotation misalignment.}
     \label{fig:001Rz}
   \end{subfigure}
   \hfill
-  \begin{subfigure}[b]{0.4\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{plots/misalign_rota/01_rot_Rz.png}
     \caption{$\SI{0.1}{\milli\radian}$ module rotation misalignment.}

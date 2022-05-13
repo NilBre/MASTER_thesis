@@ -23,16 +23,15 @@
 \contentsline {subsection}{\numberline {4.2.1}Software configurations and samples}{25}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Aligning with translations and constraints}{27}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}Aligning with translations, rotations, and constraints}{28}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Null tests with rotational constraints}{31}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Null tests with rotational constraints}{32}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Checking rotational degrees of freedom}{34}{subsection.4.3.1}%
-\contentsline {section}{\numberline {4.4}chi2 tests and weak modes}{36}{section.4.4}%
-\contentsline {section}{\numberline {4.5}impact of the cluster bias}{41}{section.4.5}%
-\contentsline {section}{\numberline {4.6}luminosity samples and chi2}{43}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Tests with input misalignments}{48}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Translation misalignment}{48}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}Rotation misalignment}{51}{subsection.4.7.2}%
-\contentsline {chapter}{\numberline {5}Continuing Work}{53}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{55}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusion}{56}{chapter.7}%
-\contentsline {chapter}{\nonumberline Literatur}{58}{chapter*.50}%
+\contentsline {section}{\numberline {4.4}chi2 tests and weak modes}{38}{section.4.4}%
+\contentsline {section}{\numberline {4.5}impact of the cluster bias}{43}{section.4.5}%
+\contentsline {section}{\numberline {4.6}luminosity samples and chi2}{45}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Tests with input misalignments}{50}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Translation misalignment}{50}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Rotation misalignment}{53}{subsection.4.7.2}%
+\contentsline {chapter}{\numberline {5}Continuing Work}{55}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{57}{chapter.6}%
+\contentsline {chapter}{\nonumberline Literatur}{59}{chapter*.51}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
