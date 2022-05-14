@@ -917,9 +917,12 @@ INPUT ./plots/renewed_plots/modules_chi2_c5.png
 INPUT ./plots/jan_17_2022/chi2_tracks_modulesOnly.png
 INPUT ./plots/jan_17_2022/chi2_tracks_modulesOnly.png
 INPUT ./plots/jan_17_2022/chi2_tracks_modulesOnly.png
-INPUT ./plots/jan_24_2022/low_normal_with_hack.png
-INPUT ./plots/jan_24_2022/low_normal_with_hack.png
-INPUT ./plots/jan_24_2022/low_normal_with_hack.png
+INPUT ./plots/jan_24_2022/tx_low_normal.png
+INPUT ./plots/jan_24_2022/tx_low_normal.png
+INPUT ./plots/jan_24_2022/tx_low_normal.png
+INPUT ./plots/jan_24_2022/rz_low_normal.png
+INPUT ./plots/jan_24_2022/rz_low_normal.png
+INPUT ./plots/jan_24_2022/rz_low_normal.png
 INPUT ./plots/feb_2_2022/GL_modules_c5_cb_hackactive_low_normal_lumi.png
 INPUT ./plots/feb_2_2022/GL_modules_c5_cb_hackactive_low_normal_lumi.png
 INPUT ./plots/feb_2_2022/GL_modules_c5_cb_hackactive_low_normal_lumi.png
@@ -990,6 +993,9 @@ INPUT ./content/danksagung.tex
 INPUT ./content/danksagung.tex
 INPUT ./content/eid_versicherung.tex
 INPUT ./content/eid_versicherung.tex
+INPUT ./Eidesstattliche_Versicherung.pdf
+INPUT ./Eidesstattliche_Versicherung.pdf
+INPUT ./Eidesstattliche_Versicherung.pdf
 INPUT build/thesis.aux
 INPUT build/thesis.aux
 INPUT build/thesis.toc

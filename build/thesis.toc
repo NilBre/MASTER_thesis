@@ -28,9 +28,9 @@
 \contentsline {section}{\numberline {4.4}chi2 tests and weak modes}{38}{section.4.4}%
 \contentsline {section}{\numberline {4.5}impact of the cluster bias}{43}{section.4.5}%
 \contentsline {section}{\numberline {4.6}luminosity samples and chi2}{45}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Tests with input misalignments}{50}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Translation misalignment}{50}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}Rotation misalignment}{53}{subsection.4.7.2}%
+\contentsline {section}{\numberline {4.7}Tests with input misalignments}{49}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Translation misalignment}{49}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Rotation misalignment}{52}{subsection.4.7.2}%
 \contentsline {chapter}{\numberline {5}Continuing Work}{55}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Conclusion}{57}{chapter.6}%
 \contentsline {chapter}{\nonumberline Literatur}{59}{chapter*.51}%

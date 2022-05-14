@@ -594,8 +594,20 @@ The difference is so minute that it can be safely disregarded.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{plots/jan_24_2022/low_normal_with_hack.png}
-  \caption{show difference between low and normal luminosity with clusterbias fix active.}
+  \begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/jan_24_2022/tx_low_normal.png}
+    \caption{plotted is the x-translation versus the group position in $z$.}
+    \label{fig:compare_tx}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{plots/jan_24_2022/rz_low_normal.png}
+    \caption{plotted is the rotation around $z$ versus the group position in $z$.}
+    \label{fig:compare_rz}
+  \end{subfigure}
+  \caption{Plotting the difference in $x$-translation and rotation around $z$ for low and normal luminosity sample for 10000 events and 10 iterations used. For this, the cluster bias fix is active.}
   \label{fig:lumi_low_normal_hack_on}
 \end{figure}
 
@@ -655,7 +667,7 @@ In order to evaluate the performance of the alignment with a given configuration
 
 Starting with translation misalignments for the configuration "config5 Rz". The input misalignment is a random gaussian generated distribution. The translation misalignment used were $\SI{0.001}{\micro\metre}$ and $\SI{200}{\micro\metre}$ in $Tx$, $Ty$ and $Tz$ for the modules. We tested very small misalignment to be sure that this small deviation has no major impact on the alignment quality. $\SI{200}{\micro\metre}$ translation misalignment was tested since the position of a module within a C-frame is known within $\SI{200}{\micro\metre}$.
 
-The differences between the misaligned "config5 Rz" and the normal configuration plotted for each of the used degrees of freedom are shown in the following figures \ref{fig:mis_Tx} to \ref{fig_mis_Rz}.
+The differences between the misaligned "config5 Rz" and the normal configuration plotted for each of the used degrees of freedom are shown in the following figures \ref{fig:mis_Tx} to \ref{fig:mis_Rz}.
 
 \begin{figure}
   \centering
