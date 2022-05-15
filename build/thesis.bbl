@@ -357,7 +357,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Science}
       \field{number}{6589}
-      \field{title}{High-precision measurement of the <i>W</i> boson mass with the CDF II detector}
+      \field{title}{High-precision measurement of the W boson mass with the CDF II detector}
       \field{volume}{376}
       \field{year}{2022}
       \field{pages}{170\bibrangedash 176}
@@ -415,10 +415,38 @@
       \field{urlyear}{2022}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb {\href{https://lhcb.web.cern.ch/lhcb/speakersbureau/html/bb\_ProductionAngles.html}{https://lhcb.web.cern.ch/lhcb/speakersbureau/html/bb\_ProductionAngles.html}}
+      \verb https://lhcb.web.cern.ch/speakersbureau/html/bb_productionangles.html
       \endverb
       \verb{url}
-      \verb %7B%5Chref%7Bhttps://lhcb.web.cern.ch/lhcb/speakersbureau/html/bb%5C_ProductionAngles.html%7D%7Bhttps://lhcb.web.cern.ch/lhcb/speakersbureau/html/bb%5C_ProductionAngles.html%7D%7D
+      \verb https://lhcb.web.cern.ch/speakersbureau/html/bb_productionangles.html
+      \endverb
+    \endentry
+    \entry{scififront}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=c070bce02d188088c1fb5ab55a72e200}{%
+           family={Hopchev},
+           familyi={H\bibinitperiod},
+           given={Plamen},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c070bce02d188088c1fb5ab55a72e200}
+      \strng{fullhash}{c070bce02d188088c1fb5ab55a72e200}
+      \strng{bibnamehash}{c070bce02d188088c1fb5ab55a72e200}
+      \strng{authorbibnamehash}{c070bce02d188088c1fb5ab55a72e200}
+      \strng{authornamehash}{c070bce02d188088c1fb5ab55a72e200}
+      \strng{authorfullhash}{c070bce02d188088c1fb5ab55a72e200}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{5th Large Hadron Collider Physics Conference}}
+      \field{eprintclass}{physics.ins-det}
+      \field{eprinttype}{arXiv}
+      \field{month}{10}
+      \field{title}{{SciFi: A large Scintillating Fibre Tracker for LHCb}}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1710.08325
       \endverb
     \endentry
     \entry{HULSBERGEN1}{article}{}

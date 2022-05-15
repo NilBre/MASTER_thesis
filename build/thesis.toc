@@ -5,33 +5,33 @@
 \contentsline {section}{\numberline {2.2}Particle decays and hadrons}{5}{section.2.2}%
 \contentsline {section}{\numberline {2.3}The LHC and LHCb}{6}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}The LHC}{6}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}The LHCb experiment}{7}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.2}The LHCb experiment}{6}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4}The SciFi Tracker}{10}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Layout of the SciFi Tracker}{10}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Scintillating Fibres}{11}{subsection.2.4.2}%
-\contentsline {chapter}{\numberline {3}The Theory of Alignment}{13}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Clustering of SciFi hits}{13}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Track Reconstruction}{15}{section.3.2}%
-\contentsline {section}{\numberline {3.3}The Kalman filter method}{17}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}First Step: Prediction}{17}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}second Step: Filter}{18}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}third Step: Smoother}{18}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Alignment with Kalman filter track fit}{19}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Alignment of the SciFi}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Alignment Configuration}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Null tests and software tests}{25}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Software configurations and samples}{25}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Aligning with translations and constraints}{27}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Aligning with translations, rotations, and constraints}{28}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Null tests with rotational constraints}{32}{section.4.3}%
+\contentsline {subsection}{\numberline {2.4.2}Scintillating Fibres}{13}{subsection.2.4.2}%
+\contentsline {chapter}{\numberline {3}The Theory of Alignment}{14}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Clustering of SciFi hits}{14}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Track Reconstruction}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.3}The Kalman filter method}{18}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}First Step: Prediction}{18}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Second Step: Filter}{19}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Third Step: Smoother}{19}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Alignment with Kalman filter track fit}{20}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Alignment of the SciFi}{24}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Alignment Configuration}{24}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Null tests and software tests}{26}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Software configurations and samples}{26}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Aligning with translations and constraints}{28}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Aligning with translations, rotations, and constraints}{31}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Null tests with rotational constraints}{33}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Checking rotational degrees of freedom}{34}{subsection.4.3.1}%
-\contentsline {section}{\numberline {4.4}chi2 tests and weak modes}{38}{section.4.4}%
-\contentsline {section}{\numberline {4.5}impact of the cluster bias}{43}{section.4.5}%
-\contentsline {section}{\numberline {4.6}luminosity samples and chi2}{45}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Tests with input misalignments}{49}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Translation misalignment}{49}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}Rotation misalignment}{52}{subsection.4.7.2}%
+\contentsline {section}{\numberline {4.4}$\mitchi ^2$ tests and weak modes}{39}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Impact of the cluster bias}{44}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Tests with input misalignments}{46}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Translation misalignment}{46}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Rotation misalignment}{49}{subsection.4.6.2}%
+\contentsline {section}{\numberline {4.7}Luminosity samples and $\mitchi ^2$}{51}{section.4.7}%
 \contentsline {chapter}{\numberline {5}Continuing Work}{55}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Conclusion}{57}{chapter.6}%
-\contentsline {chapter}{\nonumberline Literatur}{59}{chapter*.51}%
+\contentsline {chapter}{\nonumberline Literatur}{59}{chapter*.50}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

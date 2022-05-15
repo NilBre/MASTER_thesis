@@ -87,13 +87,15 @@ and vice versa occur, because baryons must have the baryon number $\symup{B} = 1
 \section{Particle decays and hadrons}
 \label{sec:decays}
 
+The particles of interest containing b- and c-quarks have short lifetimes which means they decay rapidly. The detector can only directly measure final state particles. These include Kaons, Pions, protons, electrons, muons and photons.
+In order to gather vital information about $B$ mesons an accurate momentum reconstruction of the decay products is needed. That is why Alignment is crucial for this.
+
 The LHCb experiment is especially designed for $\textit{b}$- and $\textit{c}$-hadrons because of the forward production, which is shown in figure \ref{fig:bbforward}.
 Measurements in the heavy quark flavour sector have shown observations of $\textit{B}_s^0 \to \mu^{+} \mu^{-}$ \cite{Bmumu} as well as measurements of the flavour changing neutral current (FCNC) anomaly in the
 $\textit{B}^0 \to \phi \mu^{+} \mu{-}$.
 The former one is a very rare leptonic decay and is CKM suppressed but it is sensitive to new physics.
 New physics can be in penguin decays which are forbidden at tree level in the SM.
 The latter is possible via penguin decays with very small branching fractions\cite{bsll}. The LHCb group also measured the $\textit{B}_s^0$ mass difference\cite{massdiff} $\Delta m_s$ through the oscillation frequency in $\textit{B}_s^0 \to \textit{D}_s^{\mp} \pi^{\pm}$ decays.
-
 
 \section{The LHC and LHCb}
 \label{sec:lhcandB}
@@ -173,6 +175,13 @@ $\nu = 3.8$ and $\nu = 7.6$ during the startup and the latter is the estimate fo
 
 \begin{figure}
   \centering
+  \includegraphics[width=0.8\textwidth]{plots/scifi_frontview.png}
+  \caption{A frontal view of the SciFi tracking stations. The stereolayers (U,V) are rotated and the X-layers (X1,X2) are vertical.}
+  \label{fig:scifront}
+\end{figure}
+
+\begin{figure}
+  \centering
   \includegraphics[width=0.8\textwidth]{plots/stereo_angles.png}
   \caption{Visualization of the stereo angles of the U- and V-layer with respect to the X-layers.}
   \label{fig:stereo}
@@ -182,6 +191,7 @@ The SciFi Tracker consists of three stations T1, T2 and T3 each having four laye
 Since the beampipe is not exactly parallel to the ground the vertical axis is
 defined as vertical on the z-axis of the beampipe.
 The tilted layers are called stereo layers, and are important for calculating the y-position of hits during tracking. A visualization of the stereo angle is shown in figure \ref{fig:stereo}.
+A schematic view of a SciFi tracking station\cite{scififront} from the front is shown in figure \ref{fig:scifront}.
 The layers are $\SI{20}{\milli\metre}$ apart from each other in $z$-direction within each station.
 Each layer in the first two stations has four quarters with each quarter having five modules, with the layers in station three having six modules. Each module is constructed from four fibre mats.
 A side view of the SciFi Tracker is displayed in figure\ref{fig:scifi}.

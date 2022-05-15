@@ -144,7 +144,7 @@ Here, $V_k$ is the measurement variance. With these metrics the minimal $\chi^2$
   \text{res}_k^{k-1} \left(\text{Cov}_{\text{res},k}^{k-1}\right)^{-1} \text{res}_k^{k-1}
 \end{equation*}
 
-\subsection{second Step: Filter}
+\subsection{Second Step: Filter}
 During the filter step, the track state is updated with the measurement information.
 Iteratively, each measurement is added and the filtered state $\vec{r}_k$ and the corresponding covariance matrix is calculated via
 \begin{align*}
@@ -165,7 +165,7 @@ The prediction and filter procedure is continued for all measurements until the 
 Because the last node at $k \, = \, n$ has the most information in it, a backward update is performed to infuse the previous nodes with the same information as in last node.
 This is called \textit{smoother}-step.
 
-\subsection{third Step: Smoother}
+\subsection{Third Step: Smoother}
 The smoother function returns the best possible estimate for track states at
 the previous nodes. The method used is called \textit{Rauch-Tung-Striebel}-smoother\cite{RTS}.
 The idea is to use backward information and construct a smoothed state vector and covariance matrix
