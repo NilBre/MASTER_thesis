@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.2.5)  15 MAY 2022 16:56
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021)  (format=lualatex 2022.2.5)  16 MAY 2022 01:50
  restricted system commands enabled.
 **thesis.tex
 (./thesis.tex
@@ -493,10 +493,10 @@ braces):
 >  {german/Localnumeral}  =>  {polyglossia@C@localnumeral}.
 Module polyglossia Info: Language data for german
 (polyglossia)            loader	loadhyph-de-1901.tex
-(polyglossia)            lefthyphenmin	2
-(polyglossia)            righthyphenmin	2
 (polyglossia)            hyphenation	
+(polyglossia)            righthyphenmin	2
 (polyglossia)            synonyms	
+(polyglossia)            lefthyphenmin	2
 (polyglossia)            patterns	hyph-de-1901.pat.txt on input line 10
 Module polyglossia Info: Language german was not yet loaded; created with id 2 o
 n input line 10
@@ -1605,12 +1605,35 @@ Package siunitx Info: Option "detect-all" has been deprecated in this release.
 Package siunitx Warning: Option "detect-display-math" has been removed in this
 (siunitx)                release.
 
-) (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.sty
+) (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2022/01/29 v0.5u Insert pages of external PDF documents (AM)
+
+(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen337
+\ESO@tempdimb=\dimen338
+)
+\AM@pagewidth=\dimen339
+\AM@pageheight=\dimen340
+\AM@fboxrule=\dimen341
+
+(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/pdfpages/ppluatex.def
+File: ppluatex.def 2022/01/29 v0.5u Pdfpages driver for LuaTeX (AM)
+)
+\pdfpages@includegraphics@status=\count359
+\AM@pagebox=\box90
+\AM@global@opts=\toks46
+\AM@pagecnt=\count360
+\AM@toc@title=\toks47
+\c@AM@survey=\count361
+\AM@templatesizebox=\box91
+)
+(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2022/02/02 v3.17 programmable bibliographies (PK/MW)
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count359
+\lrq@indent=\count362
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -1619,48 +1642,48 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \Urlmuskip=\muskip21
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count360
-\c@listtotal=\count361
-\c@listcount=\count362
-\c@liststart=\count363
-\c@liststop=\count364
-\c@citecount=\count365
-\c@citetotal=\count366
-\c@multicitecount=\count367
-\c@multicitetotal=\count368
-\c@instcount=\count369
-\c@maxnames=\count370
-\c@minnames=\count371
-\c@maxitems=\count372
-\c@minitems=\count373
-\c@citecounter=\count374
-\c@maxcitecounter=\count375
-\c@savedcitecounter=\count376
-\c@uniquelist=\count377
-\c@uniquename=\count378
-\c@refsection=\count379
-\c@refsegment=\count380
-\c@maxextratitle=\count381
-\c@maxextratitleyear=\count382
-\c@maxextraname=\count383
-\c@maxextradate=\count384
-\c@maxextraalpha=\count385
-\c@abbrvpenalty=\count386
-\c@highnamepenalty=\count387
-\c@lownamepenalty=\count388
-\c@maxparens=\count389
-\c@parenlevel=\count390
-\blx@tempcnta=\count391
-\blx@tempcntb=\count392
-\blx@tempcntc=\count393
-\c@blx@maxsection=\count394
-\c@blx@maxsegment@0=\count395
-\blx@notetype=\count396
-\blx@parenlevel@text=\count397
-\blx@parenlevel@foot=\count398
-\c@blx@sectionciteorder@0=\count399
-\blx@entrysetcounter=\count400
-\blx@biblioinstance=\count401
+\c@tabx@nest=\count363
+\c@listtotal=\count364
+\c@listcount=\count365
+\c@liststart=\count366
+\c@liststop=\count367
+\c@citecount=\count368
+\c@citetotal=\count369
+\c@multicitecount=\count370
+\c@multicitetotal=\count371
+\c@instcount=\count372
+\c@maxnames=\count373
+\c@minnames=\count374
+\c@maxitems=\count375
+\c@minitems=\count376
+\c@citecounter=\count377
+\c@maxcitecounter=\count378
+\c@savedcitecounter=\count379
+\c@uniquelist=\count380
+\c@uniquename=\count381
+\c@refsection=\count382
+\c@refsegment=\count383
+\c@maxextratitle=\count384
+\c@maxextratitleyear=\count385
+\c@maxextraname=\count386
+\c@maxextradate=\count387
+\c@maxextraalpha=\count388
+\c@abbrvpenalty=\count389
+\c@highnamepenalty=\count390
+\c@lownamepenalty=\count391
+\c@maxparens=\count392
+\c@parenlevel=\count393
+\blx@tempcnta=\count394
+\blx@tempcntb=\count395
+\blx@tempcntc=\count396
+\c@blx@maxsection=\count397
+\c@blx@maxsegment@0=\count398
+\blx@notetype=\count399
+\blx@parenlevel@text=\count400
+\blx@parenlevel@foot=\count401
+\c@blx@sectionciteorder@0=\count402
+\blx@entrysetcounter=\count403
+\blx@biblioinstance=\count404
 \labelnumberwidth=\skip76
 \labelalphawidth=\skip77
 \biblabelsep=\skip78
@@ -1672,9 +1695,9 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@bcfin=\read3
 \blx@bcfout=\write4
 \blx@langwohyphens=\language3
-\c@mincomprange=\count402
-\c@maxcomprange=\count403
-\c@mincompwidth=\count404
+\c@mincomprange=\count405
+\c@maxcomprange=\count406
+\c@mincompwidth=\count407
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1683,74 +1706,74 @@ File: blx-dm.def 2022/02/02 v3.17 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count405
-\c@savedafterword=\count406
-\c@annotator=\count407
-\c@savedannotator=\count408
-\c@author=\count409
-\c@savedauthor=\count410
-\c@bookauthor=\count411
-\c@savedbookauthor=\count412
-\c@commentator=\count413
-\c@savedcommentator=\count414
-\c@editor=\count415
-\c@savededitor=\count416
-\c@editora=\count417
-\c@savededitora=\count418
-\c@editorb=\count419
-\c@savededitorb=\count420
-\c@editorc=\count421
-\c@savededitorc=\count422
-\c@foreword=\count423
-\c@savedforeword=\count424
-\c@holder=\count425
-\c@savedholder=\count426
-\c@introduction=\count427
-\c@savedintroduction=\count428
-\c@namea=\count429
-\c@savednamea=\count430
-\c@nameb=\count431
-\c@savednameb=\count432
-\c@namec=\count433
-\c@savednamec=\count434
-\c@translator=\count435
-\c@savedtranslator=\count436
-\c@shortauthor=\count437
-\c@savedshortauthor=\count438
-\c@shorteditor=\count439
-\c@savedshorteditor=\count440
-\c@labelname=\count441
-\c@savedlabelname=\count442
-\c@institution=\count443
-\c@savedinstitution=\count444
-\c@lista=\count445
-\c@savedlista=\count446
-\c@listb=\count447
-\c@savedlistb=\count448
-\c@listc=\count449
-\c@savedlistc=\count450
-\c@listd=\count451
-\c@savedlistd=\count452
-\c@liste=\count453
-\c@savedliste=\count454
-\c@listf=\count455
-\c@savedlistf=\count456
-\c@location=\count457
-\c@savedlocation=\count458
-\c@organization=\count459
-\c@savedorganization=\count460
-\c@origlocation=\count461
-\c@savedoriglocation=\count462
-\c@origpublisher=\count463
-\c@savedorigpublisher=\count464
-\c@publisher=\count465
-\c@savedpublisher=\count466
-\c@language=\count467
-\c@savedlanguage=\count468
-\c@origlanguage=\count469
-\c@savedoriglanguage=\count470
-\c@pageref=\count471
-\c@savedpageref=\count472
+\c@afterword=\count408
+\c@savedafterword=\count409
+\c@annotator=\count410
+\c@savedannotator=\count411
+\c@author=\count412
+\c@savedauthor=\count413
+\c@bookauthor=\count414
+\c@savedbookauthor=\count415
+\c@commentator=\count416
+\c@savedcommentator=\count417
+\c@editor=\count418
+\c@savededitor=\count419
+\c@editora=\count420
+\c@savededitora=\count421
+\c@editorb=\count422
+\c@savededitorb=\count423
+\c@editorc=\count424
+\c@savededitorc=\count425
+\c@foreword=\count426
+\c@savedforeword=\count427
+\c@holder=\count428
+\c@savedholder=\count429
+\c@introduction=\count430
+\c@savedintroduction=\count431
+\c@namea=\count432
+\c@savednamea=\count433
+\c@nameb=\count434
+\c@savednameb=\count435
+\c@namec=\count436
+\c@savednamec=\count437
+\c@translator=\count438
+\c@savedtranslator=\count439
+\c@shortauthor=\count440
+\c@savedshortauthor=\count441
+\c@shorteditor=\count442
+\c@savedshorteditor=\count443
+\c@labelname=\count444
+\c@savedlabelname=\count445
+\c@institution=\count446
+\c@savedinstitution=\count447
+\c@lista=\count448
+\c@savedlista=\count449
+\c@listb=\count450
+\c@savedlistb=\count451
+\c@listc=\count452
+\c@savedlistc=\count453
+\c@listd=\count454
+\c@savedlistd=\count455
+\c@liste=\count456
+\c@savedliste=\count457
+\c@listf=\count458
+\c@savedlistf=\count459
+\c@location=\count460
+\c@savedlocation=\count461
+\c@organization=\count462
+\c@savedorganization=\count463
+\c@origlocation=\count464
+\c@savedoriglocation=\count465
+\c@origpublisher=\count466
+\c@savedorigpublisher=\count467
+\c@publisher=\count468
+\c@savedpublisher=\count469
+\c@language=\count470
+\c@savedlanguage=\count471
+\c@origlanguage=\count472
+\c@savedoriglanguage=\count473
+\c@pageref=\count474
+\c@savedpageref=\count475
 \shorthandwidth=\skip84
 \shortjournalwidth=\skip85
 \shortserieswidth=\skip86
@@ -1780,19 +1803,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
-\c@textcitecount=\count473
-\c@textcitetotal=\count474
-\c@textcitemaxnames=\count475
-\c@biburlbigbreakpenalty=\count476
-\c@biburlbreakpenalty=\count477
-\c@biburlnumpenalty=\count478
-\c@biburlucpenalty=\count479
-\c@biburllcpenalty=\count480
+\c@textcitecount=\count476
+\c@textcitetotal=\count477
+\c@textcitemaxnames=\count478
+\c@biburlbigbreakpenalty=\count479
+\c@biburlbreakpenalty=\count480
+\c@biburlnumpenalty=\count481
+\c@biburlucpenalty=\count482
+\c@biburllcpenalty=\count483
 \biburlbigskip=\muskip22
 \biburlnumskip=\muskip23
 \biburlucskip=\muskip24
 \biburllcskip=\muskip25
-\c@smartand=\count481
+\c@smartand=\count484
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1804,8 +1827,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count482
-\c@bbx:relatedtotal=\count483
+\c@bbx:relatedcount=\count485
+\c@bbx:relatedtotal=\count486
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1842,7 +1865,7 @@ Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
 ))
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of KOMA-Script class, that doesn't
-(scrhack)             need that hack, on input line 132.
+(scrhack)             need that hack, on input line 134.
  (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
 
@@ -1861,9 +1884,9 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 ) (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen337
-\Hy@linkcounter=\count484
-\Hy@pagecounter=\count485
+\@linkdim=\dimen342
+\Hy@linkcounter=\count487
+\Hy@pagecounter=\count488
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
@@ -1879,7 +1902,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/home/nils/.local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count486
+\Hy@SavedSpaceFactor=\count489
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
@@ -1893,16 +1916,16 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count487
+\c@Hy@tempcnt=\count490
 LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen338
+\XeTeXLinkMargin=\dimen343
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 )
-\Fld@menulength=\count488
-\Field@Width=\dimen339
-\Fld@charsize=\dimen340
+\Fld@menulength=\count491
+\Field@Width=\dimen344
+\Fld@charsize=\dimen345
 Package hyperref Info: Hyper figures OFF on input line 6076.
 Package hyperref Info: Link nesting OFF on input line 6081.
 Package hyperref Info: Hyper index ON on input line 6084.
@@ -1917,9 +1940,9 @@ LaTeX Info: Redefining \pageref on input line 6150.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count489
-\c@Item=\count490
-\c@Hfootnote=\count491
+\Hy@abspage=\count492
+\c@Item=\count493
+\c@Hfootnote=\count494
 )
 Package hyperref Info: Driver (autodetected): hluatex.
 
@@ -1930,15 +1953,15 @@ File: hluatex.def 2021-06-07 v7.00m Hyperref driver for luaTeX
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\Fld@listcount=\count492
-\c@bookmark@seq@number=\count493
+\Fld@listcount=\count495
+\c@bookmark@seq@number=\count496
 \Hy@SectionHShift=\skip98
 ) (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count494
+\BKM@id=\count497
 ))
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/ncctools/extdash.sty
 Package: extdash 2018/06/24 v1.3 Extended Dash Package (NCC)
@@ -1952,10 +1975,10 @@ LaTeX Info: Redefining \sffamily on input line 23.
 LaTeX Info: Redefining \ttfamily on input line 23.
 Module polyglossia Info: Language data for ngerman
 (polyglossia)            loader	loadhyph-de-1996.tex
-(polyglossia)            lefthyphenmin	2
-(polyglossia)            righthyphenmin	2
 (polyglossia)            hyphenation	
+(polyglossia)            righthyphenmin	2
 (polyglossia)            synonyms	
+(polyglossia)            lefthyphenmin	2
 (polyglossia)            patterns	hyph-de-1996.pat.txt on input line 23
 Module polyglossia Info: Language ngerman was not yet loaded; created with id 4 
 on input line 23
@@ -1978,43 +2001,43 @@ LaTeX Warning: Label `fig:mis_rot_Tx' multiply defined.
 )
 \openout1 = thesis.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-Package scrbase Info: activating german \contentsname on input line 153.
-Package scrbase Info: activating german \listfigurename on input line 153.
-Package scrbase Info: activating german \listtablename on input line 153.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+Package scrbase Info: activating german \contentsname on input line 155.
+Package scrbase Info: activating german \listfigurename on input line 155.
+Package scrbase Info: activating german \listtablename on input line 155.
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count495
-\scratchdimen=\dimen341
-\scratchbox=\box90
-\nofMPsegments=\count496
-\nofMParguments=\count497
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count498
-\MPscratchDim=\dimen342
-\MPnumerator=\count499
-\makeMPintoPDFobject=\count500
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count498
+\scratchdimen=\dimen346
+\scratchbox=\box92
+\nofMPsegments=\count499
+\nofMParguments=\count500
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count501
+\MPscratchDim=\dimen347
+\MPnumerator=\count502
+\makeMPintoPDFobject=\count503
+\everyMPtoPDFconversion=\toks49
 )
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base
 .sty
@@ -2039,18 +2062,18 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 153.
-Package microtype Info: Applying patch `item' on input line 153.
-Package microtype Info: Applying patch `toc' on input line 153.
-Package microtype Info: Applying patch `eqnum' on input line 153.
-Package microtype Info: Applying patch `footnote' on input line 153.
+LaTeX Info: Redefining \microtypecontext on input line 155.
+Package microtype Info: Applying patch `item' on input line 155.
+Package microtype Info: Applying patch `toc' on input line 155.
+Package microtype Info: Applying patch `eqnum' on input line 155.
+Package microtype Info: Applying patch `footnote' on input line 155.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 153.
+LaTeX Info: Redefining \showhyphens on input line 155.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
@@ -2062,19 +2085,19 @@ ern Roman (RS)
 )
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
 (Font)                  TU/LatinModernMath(1)/m/n --> TU/lmr/m/n on input line 
-153.
+155.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 153.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 155.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 153.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 155.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 153.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 155.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 153.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 155.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 153.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 155.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 153.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 155.
 
 
 Package unicode-math Warning: Using \overbracket and \underbracket from
@@ -2101,7 +2124,7 @@ File: translations-basic-dictionary-german.trsl (german translation file `trans
 lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `german'. on input line 153.
+or `german'. on input line 155.
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/translations/translations-
 basic-dictionary-english.trsl
@@ -2109,17 +2132,35 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 153.
+or `english'. on input line 155.
 
 
 Package tikz-feynman Warning: Consider loading TikZ-Feynman with \usepackage[co
 mpat=1.1.0]{tikz-feynman} so that you can be warned if TikZ-Feynman changes. on
- input line 153.
+ input line 155.
 
-\c@lstlisting=\count501
-Package scrhack Info: undefining \float@addtolists on input line 153.
+\c@lstlisting=\count504
+Package scrhack Info: undefining \float@addtolists on input line 155.
+(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+
+(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package scrhack Info: loading lscape hack on input line 77.
+
+(/home/nils/.local/texlive/2021/texmf-dist/tex/latex/koma-script/lscape.hak
+File: lscape.hak 2021/11/13 v3.35 KOMA-Script scrhack part (hacking package lsc
+ape)
+Package scrhack Info: \landscape patched to make \textheight change optional on
+ input line 90.
+\scrh@LT@textheight=\skip99
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
 Package biblatex Info: Trying to load language 'american'...
 Package biblatex Info: ... file 'american.lbx' found.
+
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/biblatex/lbx/american.lbx
 File: american.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 Package biblatex Info: Trying to load language 'english'...
@@ -2167,9 +2208,9 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
 
 (./build/thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 153.
-Package biblatex Info: Reference segment=0 on input line 153.
-Package hyperref Info: Link coloring OFF on input line 153.
+Package biblatex Info: Reference section=0 on input line 155.
+Package biblatex Info: Reference segment=0 on input line 155.
+Package hyperref Info: Link coloring OFF on input line 155.
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -2181,20 +2222,20 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 tring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count502
+\c@section@level=\count505
 )
-LaTeX Info: Redefining \ref on input line 153.
-LaTeX Info: Redefining \pageref on input line 153.
-LaTeX Info: Redefining \nameref on input line 153.
-LaTeX Info: Redefining \rmfamily on input line 153.
-LaTeX Info: Redefining \sffamily on input line 153.
-LaTeX Info: Redefining \ttfamily on input line 153.
+LaTeX Info: Redefining \ref on input line 155.
+LaTeX Info: Redefining \pageref on input line 155.
+LaTeX Info: Redefining \nameref on input line 155.
+LaTeX Info: Redefining \rmfamily on input line 155.
+LaTeX Info: Redefining \sffamily on input line 155.
+LaTeX Info: Redefining \ttfamily on input line 155.
 Module polyglossia Info: Language ngerman already loaded; id is 4 on input line 
-153
+155
 <logos/tu-logo.pdf, id=7, 339.2675pt x 55.20625pt>
 File: logos/tu-logo.pdf Graphic file (type pdf)
 <use logos/tu-logo.pdf>
-Package luatex.def Info: logos/tu-logo.pdf  used on input line 156.
+Package luatex.def Info: logos/tu-logo.pdf  used on input line 158.
 (luatex.def)             Requested size: 262.29283pt x 42.67912pt.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: TU).
@@ -2205,17 +2246,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 14.40152pt on input line 156.
+(Font)              scaled to size 14.40152pt on input line 158.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 156.
+(Font)              scaled to size 10.00107pt on input line 158.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 156.
+(Font)              scaled to size 7.00075pt on input line 158.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 14.39845pt on input line 156.
+(Font)              scaled to size 14.39845pt on input line 158.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 156.
+(Font)              scaled to size 9.99893pt on input line 158.
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 156.
+(Font)              scaled to size 6.99925pt on input line 158.
 
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -2238,7 +2279,7 @@ logos/tu-logo.pdf>] [2
 
 ]
 Package tocbasic Info: character protrusion at toc deactivated on input line 16
-4.
+6.
  (./build/thesis.toc
 LaTeX Info: Redefining \rmfamily on input line 1.
 LaTeX Info: Redefining \sffamily on input line 1.
@@ -2371,27 +2412,7 @@ Package luatex.def Info: plots/point_dofs.png  used on input line 104.
 (/home/nils/.local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-[27<./plots/point_dofs.png>]
-Overfull \hbox (12.98802pt too wide) in paragraph at lines 155--156
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (12.98802pt too wide) in paragraph at lines 156--157
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (12.98802pt too wide) in paragraph at lines 157--158
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (6.41797pt too wide) in paragraph at lines 158--159
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[28]
+[27<./plots/point_dofs.png>] [28]
 <plots/renewed_plots/lxplus/4_3.jpeg, id=430, 418.56375pt x 286.06876pt>
 File: plots/renewed_plots/lxplus/4_3.jpeg Graphic file (type jpg)
 <use plots/renewed_plots/lxplus/4_3.jpeg>
@@ -2404,418 +2425,400 @@ File: plots/renewed_plots/lxplus/4_4.jpeg Graphic file (type jpg)
 Package luatex.def Info: plots/renewed_plots/lxplus/4_4.jpeg  used on input lin
 e 180.
 (luatex.def)             Requested size: 354.91733pt x 237.04105pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29<./plots/renewed_plots/lxplus/4_3.jpeg>] [30<./plots/renewed_plots/lxplus/4_
-4.jpeg>]
-Overfull \hbox (65.54845pt too wide) in paragraph at lines 203--204
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (58.9784pt too wide) in paragraph at lines 204--205
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[31]
-<plots/renewed_plots/lxplus/4_5.jpeg, id=466, 416.30531pt x 283.81032pt>
+ [29<./plots/renewed_plots/lxplus/4_3.jpeg>]
+[30<./plots/renewed_plots/lxplus/4_4.jpeg>]
+<plots/renewed_plots/lxplus/4_5.jpeg, id=447, 416.30531pt x 283.81032pt>
 File: plots/renewed_plots/lxplus/4_5.jpeg Graphic file (type jpg)
 <use plots/renewed_plots/lxplus/4_5.jpeg>
 Package luatex.def Info: plots/renewed_plots/lxplus/4_5.jpeg  used on input lin
 e 225.
 (luatex.def)             Requested size: 354.91733pt x 241.97177pt.
-<plots/scatter_fig_4_4_convergence.png, id=467, 567.62062pt x 317.68687pt>
+<plots/scatter_fig_4_4_convergence.png, id=448, 567.62062pt x 317.68687pt>
 File: plots/scatter_fig_4_4_convergence.png Graphic file (type png)
 <use plots/scatter_fig_4_4_convergence.png>
 Package luatex.def Info: plots/scatter_fig_4_4_convergence.png  used on input l
 ine 232.
 (luatex.def)             Requested size: 354.91733pt x 198.64589pt.
- [32<./plots/renewed_plots/lxplus/4_5.jpeg>]
-Overfull \hbox (91.82866pt too wide) in paragraph at lines 251--252
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (91.82866pt too wide) in paragraph at lines 252--253
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (91.82866pt too wide) in paragraph at lines 253--254
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (85.2586pt too wide) in paragraph at lines 254--255
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[33<./plots/scatter_fig_4_4_convergence.png>]
-<plots/renewed_plots/lxplus/4_7_a.jpeg, id=491, 417.81094pt x 285.31593pt>
+ [31] [32<./plots/renewed_plots/lxplus/4_5.jpeg><./plots/scatter_fig_4_4_converg
+ence.png>]
+<plots/renewed_plots/lxplus/4_7_a.jpeg, id=474, 417.81094pt x 285.31593pt>
 File: plots/renewed_plots/lxplus/4_7_a.jpeg Graphic file (type jpg)
 <use plots/renewed_plots/lxplus/4_7_a.jpeg>
 Package luatex.def Info: plots/renewed_plots/lxplus/4_7_a.jpeg  used on input l
 ine 264.
 (luatex.def)             Requested size: 276.04749pt x 188.51807pt.
-<plots/renewed_plots/lxplus/4_7_b.jpeg, id=492, 423.08063pt x 285.31593pt>
+<plots/renewed_plots/lxplus/4_7_b.jpeg, id=475, 423.08063pt x 285.31593pt>
 File: plots/renewed_plots/lxplus/4_7_b.jpeg Graphic file (type jpg)
 <use plots/renewed_plots/lxplus/4_7_b.jpeg>
 Package luatex.def Info: plots/renewed_plots/lxplus/4_7_b.jpeg  used on input l
 ine 271.
 (luatex.def)             Requested size: 276.04749pt x 186.16713pt.
-<plots/renewed_plots/CA_allT_halfT3_Tz.png, id=497, 429.10312pt x 283.81032pt>
+<plots/renewed_plots/CA_allT_halfT3_Tz.png, id=480, 429.10312pt x 283.81032pt>
 File: plots/renewed_plots/CA_allT_halfT3_Tz.png Graphic file (type png)
 <use plots/renewed_plots/CA_allT_halfT3_Tz.png>
 Package luatex.def Info: plots/renewed_plots/CA_allT_halfT3_Tz.png  used on inp
 ut line 291.
 (luatex.def)             Requested size: 315.48541pt x 208.66519pt.
-
-Overfull \hbox (26.12813pt too wide) in paragraph at lines 312--313
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (26.12813pt too wide) in paragraph at lines 313--314
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (26.12813pt too wide) in paragraph at lines 314--315
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (19.55807pt too wide) in paragraph at lines 315--316
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-<plots/renewed_plots/lxplus/4_10_a.jpeg, id=500, 415.5525pt x 284.56313pt>
+ [33] [34<./plots/renewed_plots/lxplus/4_7_a.jpeg><./plots/renewed_plots/lxplus/
+4_7_b.jpeg>]
+<plots/renewed_plots/lxplus/4_10_a.jpeg, id=509, 415.5525pt x 284.56313pt>
 File: plots/renewed_plots/lxplus/4_10_a.jpeg Graphic file (type jpg)
 <use plots/renewed_plots/lxplus/4_10_a.jpeg>
 Package luatex.def Info: plots/renewed_plots/lxplus/4_10_a.jpeg  used on input 
 line 323.
 (luatex.def)             Requested size: 276.04749pt x 189.04105pt.
-<plots/renewed_plots/lxplus/4_10_b.jpeg, id=501, 423.08063pt x 282.30469pt>
+<plots/renewed_plots/lxplus/4_10_b.jpeg, id=510, 423.08063pt x 282.30469pt>
 File: plots/renewed_plots/lxplus/4_10_b.jpeg Graphic file (type jpg)
 <use plots/renewed_plots/lxplus/4_10_b.jpeg>
 Package luatex.def Info: plots/renewed_plots/lxplus/4_10_b.jpeg  used on input 
 line 330.
 (luatex.def)             Requested size: 276.04749pt x 184.20232pt.
-[34] [35<./plots/renewed_plots/lxplus/4_7_a.jpeg><./plots/renewed_plots/lxplus/4
-_7_b.jpeg>]
-Overfull \hbox (45.83829pt too wide) in paragraph at lines 347--348
+ [35<./plots/renewed_plots/CA_allT_halfT3_Tz.png>] [36<./plots/renewed_plots/lxp
+lus/4_10_a.jpeg><./plots/renewed_plots/lxplus/4_10_b.jpeg>]
+Overfull \hbox (32.69818pt too wide) in paragraph at lines 347--348
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (65.54845pt too wide) in paragraph at lines 352--353
+Overfull \hbox (52.40834pt too wide) in paragraph at lines 352--353
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<plots/renewed_plots/Tx_config5.png, id=533, 434.37282pt x 283.0575pt>
+<plots/renewed_plots/Tx_config5.png, id=539, 434.37282pt x 283.0575pt>
 File: plots/renewed_plots/Tx_config5.png Graphic file (type png)
 <use plots/renewed_plots/Tx_config5.png>
 Package luatex.def Info: plots/renewed_plots/Tx_config5.png  used on input line
  364.
 (luatex.def)             Requested size: 189.28883pt x 123.34927pt.
-<plots/renewed_plots/Tz_config5.png, id=534, 421.575pt x 283.81032pt>
+<plots/renewed_plots/Tz_config5.png, id=540, 421.575pt x 283.81032pt>
 File: plots/renewed_plots/Tz_config5.png Graphic file (type png)
 <use plots/renewed_plots/Tz_config5.png>
 Package luatex.def Info: plots/renewed_plots/Tz_config5.png  used on input line
  371.
 (luatex.def)             Requested size: 189.28883pt x 127.43196pt.
-[36<./plots/renewed_plots/CA_allT_halfT3_Tz.png>] [37<./plots/renewed_plots/lxpl
-us/4_10_a.jpeg><./plots/renewed_plots/lxplus/4_10_b.jpeg>]
-<plots/renewed_plots/Rx_config5.png, id=554, 435.87843pt x 282.30469pt>
+[37<./plots/renewed_plots/Tx_config5.png><./plots/renewed_plots/Tz_config5.png>]
+<plots/renewed_plots/Rx_config5.png, id=557, 435.87843pt x 282.30469pt>
 File: plots/renewed_plots/Rx_config5.png Graphic file (type png)
 <use plots/renewed_plots/Rx_config5.png>
 Package luatex.def Info: plots/renewed_plots/Rx_config5.png  used on input line
  388.
 (luatex.def)             Requested size: 189.28883pt x 122.59477pt.
-<plots/renewed_plots/Rz_config5.png, id=555, 478.03593pt x 323.70938pt>
+<plots/renewed_plots/Rz_config5.png, id=558, 478.03593pt x 323.70938pt>
 File: plots/renewed_plots/Rz_config5.png Graphic file (type png)
 <use plots/renewed_plots/Rz_config5.png>
 Package luatex.def Info: plots/renewed_plots/Rz_config5.png  used on input line
  395.
 (luatex.def)             Requested size: 189.28883pt x 128.17744pt.
- [38<./plots/renewed_plots/Tx_config5.png><./plots/renewed_plots/Tz_config5.png>
+ [38<./plots/renewed_plots/Rx_config5.png><./plots/renewed_plots/Rz_config5.png>
 ]
-<plots/nov_19/Figure_2.png, id=563, 462.528pt x 346.896pt>
+<plots/nov_19/Figure_2.png, id=566, 462.528pt x 346.896pt>
 File: plots/nov_19/Figure_2.png Graphic file (type png)
 <use plots/nov_19/Figure_2.png>
 Package luatex.def Info: plots/nov_19/Figure_2.png  used on input line 423.
 (luatex.def)             Requested size: 315.48541pt x 236.6272pt.
-<plots/track_selection.png, id=566, 338.01282pt x 341.77687pt>
+<plots/track_selection.png, id=569, 338.01282pt x 341.77687pt>
 File: plots/track_selection.png Graphic file (type png)
 <use plots/track_selection.png>
 Package luatex.def Info: plots/track_selection.png  used on input line 433.
 (luatex.def)             Requested size: 315.48541pt x 319.00694pt.
- [39<./plots/renewed_plots/Rx_config5.png><./plots/renewed_plots/Rz_config5.png>
-] [40<./plots/nov_19/Figure_2.png>] [41<./plots/track_selection.png>]
-<plots/GL_HM_chi2_2020.png, id=592, 837.88031pt x 387.69844pt>
+ [39<./plots/nov_19/Figure_2.png>] [40<./plots/track_selection.png>]
+<plots/GL_HM_chi2_2020.png, id=586, 837.88031pt x 387.69844pt>
 File: plots/GL_HM_chi2_2020.png Graphic file (type png)
 <use plots/GL_HM_chi2_2020.png>
 Package luatex.def Info: plots/GL_HM_chi2_2020.png  used on input line 461.
 (luatex.def)             Requested size: 354.91733pt x 164.22244pt.
-<plots/nov_21/chi2_vs_ntracks_all.png, id=593, 462.528pt x 346.896pt>
+<plots/nov_21/chi2_vs_ntracks_all.png, id=587, 462.528pt x 346.896pt>
 File: plots/nov_21/chi2_vs_ntracks_all.png Graphic file (type png)
 <use plots/nov_21/chi2_vs_ntracks_all.png>
 Package luatex.def Info: plots/nov_21/chi2_vs_ntracks_all.png  used on input li
 ne 468.
 (luatex.def)             Requested size: 315.48541pt x 236.6272pt.
-<plots/renewed_plots/e5/4_17.png, id=594, 712.16063pt x 370.38374pt>
+<plots/renewed_plots/e5/4_17.png, id=588, 712.16063pt x 370.38374pt>
 File: plots/renewed_plots/e5/4_17.png Graphic file (type png)
 <use plots/renewed_plots/e5/4_17.png>
 Package luatex.def Info: plots/renewed_plots/e5/4_17.png  used on input line 47
 5.
 (luatex.def)             Requested size: 394.35527pt x 205.09631pt.
-<plots/LHCB_week_dec/chi2_vs_tracks_normal.png, id=597, 874.76813pt x 378.66469
+<plots/LHCB_week_dec/chi2_vs_tracks_normal.png, id=591, 874.76813pt x 378.66469
 pt>
 File: plots/LHCB_week_dec/chi2_vs_tracks_normal.png Graphic file (type png)
 <use plots/LHCB_week_dec/chi2_vs_tracks_normal.png>
 Package luatex.def Info: plots/LHCB_week_dec/chi2_vs_tracks_normal.png  used on
  input line 490.
 (luatex.def)             Requested size: 394.35527pt x 170.70377pt.
- [42<./plots/GL_HM_chi2_2020.png>] [43<./plots/nov_21/chi2_vs_ntracks_all.png><.
-/plots/renewed_plots/e5/4_17.png>]
 
-LaTeX Warning: Reference `fig:cbhack_on_off' on page 44 undefined on input line
+[41<./plots/GL_HM_chi2_2020.png>] [42<./plots/nov_21/chi2_vs_ntracks_all.png><./
+plots/renewed_plots/e5/4_17.png>]
+
+LaTeX Warning: Reference `fig:cbhack_on_off' on page 43 undefined on input line
  502.
 
-<plots/module_gap.png, id=616, 398.23781pt x 295.1025pt>
+<plots/module_gap.png, id=611, 398.23781pt x 295.1025pt>
 File: plots/module_gap.png Graphic file (type png)
 <use plots/module_gap.png>
 Package luatex.def Info: plots/module_gap.png  used on input line 506.
 (luatex.def)             Requested size: 315.48541pt x 233.79033pt.
-<plots/renewed_plots/e5/4_19_3.png, id=617, 432.11438pt x 282.30469pt>
+<plots/renewed_plots/e5/4_19_3.png, id=612, 432.11438pt x 282.30469pt>
 File: plots/renewed_plots/e5/4_19_3.png Graphic file (type png)
 <use plots/renewed_plots/e5/4_19_3.png>
 Package luatex.def Info: plots/renewed_plots/e5/4_19_3.png  used on input line 
 515.
 (luatex.def)             Requested size: 189.28883pt x 123.66306pt.
-<plots/renewed_plots/e5/4_19_4.png, id=618, 427.5975pt x 282.30469pt>
+<plots/renewed_plots/e5/4_19_4.png, id=613, 427.5975pt x 282.30469pt>
 File: plots/renewed_plots/e5/4_19_4.png Graphic file (type png)
 <use plots/renewed_plots/e5/4_19_4.png>
 Package luatex.def Info: plots/renewed_plots/e5/4_19_4.png  used on input line 
 522.
 (luatex.def)             Requested size: 189.28883pt x 124.96826pt.
-<plots/renewed_plots/e5/4_19_1.png, id=619, 429.10312pt x 283.0575pt>
+<plots/renewed_plots/e5/4_19_1.png, id=614, 429.10312pt x 283.0575pt>
 File: plots/renewed_plots/e5/4_19_1.png Graphic file (type png)
 <use plots/renewed_plots/e5/4_19_1.png>
 Package luatex.def Info: plots/renewed_plots/e5/4_19_1.png  used on input line 
 534.
 (luatex.def)             Requested size: 189.28883pt x 124.86528pt.
-<plots/renewed_plots/e5/4_19_2.png, id=620, 431.36156pt x 282.30469pt>
+<plots/renewed_plots/e5/4_19_2.png, id=615, 431.36156pt x 282.30469pt>
 File: plots/renewed_plots/e5/4_19_2.png Graphic file (type png)
 <use plots/renewed_plots/e5/4_19_2.png>
 Package luatex.def Info: plots/renewed_plots/e5/4_19_2.png  used on input line 
 541.
 (luatex.def)             Requested size: 189.28883pt x 123.87845pt.
-[44<./plots/LHCB_week_dec/chi2_vs_tracks_normal.png>] [45<./plots/module_gap.png
+[43<./plots/LHCB_week_dec/chi2_vs_tracks_normal.png>] [44<./plots/module_gap.png
 ><./plots/renewed_plots/e5/4_19_3.png><./plots/renewed_plots/e5/4_19_4.png>]
-<plots/misalign_transl/Tx_0001mu_translation.png, id=640, 430.60875pt x 283.057
+<plots/misalign_transl/Tx_0001mu_translation.png, id=634, 430.60875pt x 283.057
 5pt>
 File: plots/misalign_transl/Tx_0001mu_translation.png Graphic file (type png)
 <use plots/misalign_transl/Tx_0001mu_translation.png>
 Package luatex.def Info: plots/misalign_transl/Tx_0001mu_translation.png  used 
-on input line 567.
+on input line 568.
 (luatex.def)             Requested size: 189.28883pt x 124.42906pt.
-<plots/misalign_transl/Tx_200mu_translation.png, id=641, 432.86719pt x 283.0575
+<plots/misalign_transl/Tx_200mu_translation.png, id=635, 432.86719pt x 283.0575
 pt>
 File: plots/misalign_transl/Tx_200mu_translation.png Graphic file (type png)
 <use plots/misalign_transl/Tx_200mu_translation.png>
 Package luatex.def Info: plots/misalign_transl/Tx_200mu_translation.png  used o
-n input line 574.
+n input line 575.
 (luatex.def)             Requested size: 189.28883pt x 123.77687pt.
-<plots/misalign_transl/Tz_0001mu_translation.png, id=642, 420.82219pt x 283.057
+<plots/misalign_transl/Tz_0001mu_translation.png, id=636, 420.82219pt x 283.057
 5pt>
 File: plots/misalign_transl/Tz_0001mu_translation.png Graphic file (type png)
 <use plots/misalign_transl/Tz_0001mu_translation.png>
 Package luatex.def Info: plots/misalign_transl/Tz_0001mu_translation.png  used 
-on input line 586.
+on input line 587.
 (luatex.def)             Requested size: 189.28883pt x 127.32286pt.
-<plots/misalign_transl/Tz_200mu_translation.png, id=643, 420.06938pt x 298.8665
+<plots/misalign_transl/Tz_200mu_translation.png, id=637, 420.06938pt x 298.8665
 6pt>
 File: plots/misalign_transl/Tz_200mu_translation.png Graphic file (type png)
 <use plots/misalign_transl/Tz_200mu_translation.png>
 Package luatex.def Info: plots/misalign_transl/Tz_200mu_translation.png  used o
-n input line 593.
+n input line 594.
 (luatex.def)             Requested size: 189.28883pt x 134.67111pt.
-<plots/misalign_transl/Rx_0001mu_translation.png, id=644, 435.87843pt x 282.304
+<plots/misalign_transl/Rx_0001mu_translation.png, id=638, 435.87843pt x 282.304
 69pt>
 File: plots/misalign_transl/Rx_0001mu_translation.png Graphic file (type png)
 <use plots/misalign_transl/Rx_0001mu_translation.png>
 Package luatex.def Info: plots/misalign_transl/Rx_0001mu_translation.png  used 
-on input line 605.
+on input line 606.
 (luatex.def)             Requested size: 189.28883pt x 122.59477pt.
-<plots/misalign_transl/Rx_200mu_translation.png, id=645, 434.37282pt x 282.3046
+<plots/misalign_transl/Rx_200mu_translation.png, id=639, 434.37282pt x 282.3046
 9pt>
 File: plots/misalign_transl/Rx_200mu_translation.png Graphic file (type png)
 <use plots/misalign_transl/Rx_200mu_translation.png>
 Package luatex.def Info: plots/misalign_transl/Rx_200mu_translation.png  used o
-n input line 612.
+n input line 613.
 (luatex.def)             Requested size: 189.28883pt x 123.02122pt.
-<plots/misalign_transl/Rz_0001mu_translation.png, id=646, 502.87875pt x 335.754
+<plots/misalign_transl/Rz_0001mu_translation.png, id=640, 502.87875pt x 335.754
 38pt>
 File: plots/misalign_transl/Rz_0001mu_translation.png Graphic file (type png)
 <use plots/misalign_transl/Rz_0001mu_translation.png>
 Package luatex.def Info: plots/misalign_transl/Rz_0001mu_translation.png  used 
-on input line 624.
+on input line 625.
 (luatex.def)             Requested size: 189.28883pt x 126.3789pt.
-<plots/misalign_transl/Rz_200mu_translation.png, id=647, 477.28313pt x 292.8440
+<plots/misalign_transl/Rz_200mu_translation.png, id=641, 477.28313pt x 292.8440
 6pt>
 File: plots/misalign_transl/Rz_200mu_translation.png Graphic file (type png)
 <use plots/misalign_transl/Rz_200mu_translation.png>
 Package luatex.def Info: plots/misalign_transl/Rz_200mu_translation.png  used o
-n input line 631.
+n input line 632.
 (luatex.def)             Requested size: 189.28883pt x 116.13908pt.
 
-[46<./plots/renewed_plots/e5/4_19_1.png><./plots/renewed_plots/e5/4_19_2.png>]
-[47<./plots/misalign_transl/Tx_0001mu_translation.png><./plots/misalign_transl/T
+[45<./plots/renewed_plots/e5/4_19_1.png><./plots/renewed_plots/e5/4_19_2.png>]
+[46<./plots/misalign_transl/Tx_0001mu_translation.png><./plots/misalign_transl/T
 x_200mu_translation.png><./plots/misalign_transl/Tz_0001mu_translation.png><./pl
-ots/misalign_transl/Tz_200mu_translation.png>] [48<./plots/misalign_transl/Rx_00
+ots/misalign_transl/Tz_200mu_translation.png>] [47<./plots/misalign_transl/Rx_00
 01mu_translation.png><./plots/misalign_transl/Rx_200mu_translation.png><./plots/
 misalign_transl/Rz_0001mu_translation.png><./plots/misalign_transl/Rz_200mu_tran
 slation.png>]
-<plots/misalign_rota/001_rot_Tx.png, id=677, 361.35pt x 247.67531pt>
+<plots/misalign_rota/001_rot_Tx.png, id=672, 361.35pt x 247.67531pt>
 File: plots/misalign_rota/001_rot_Tx.png Graphic file (type png)
 <use plots/misalign_rota/001_rot_Tx.png>
 Package luatex.def Info: plots/misalign_rota/001_rot_Tx.png  used on input line
- 654.
+ 655.
 (luatex.def)             Requested size: 189.28883pt x 129.74048pt.
-<plots/misalign_rota/01_rot_Tx.png, id=678, 392.96812pt x 261.97874pt>
+<plots/misalign_rota/01_rot_Tx.png, id=673, 392.96812pt x 261.97874pt>
 File: plots/misalign_rota/01_rot_Tx.png Graphic file (type png)
 <use plots/misalign_rota/01_rot_Tx.png>
 Package luatex.def Info: plots/misalign_rota/01_rot_Tx.png  used on input line 
-661.
+662.
 (luatex.def)             Requested size: 189.28883pt x 126.19608pt.
-<plots/misalign_rota/001_rot_Tz.png, id=679, 377.91188pt x 250.68657pt>
+<plots/misalign_rota/001_rot_Tz.png, id=674, 377.91188pt x 250.68657pt>
 File: plots/misalign_rota/001_rot_Tz.png Graphic file (type png)
 <use plots/misalign_rota/001_rot_Tz.png>
 Package luatex.def Info: plots/misalign_rota/001_rot_Tz.png  used on input line
- 673.
+ 674.
 (luatex.def)             Requested size: 189.28883pt x 125.56482pt.
-<plots/misalign_rota/01_rot_Tz.png, id=680, 393.72093pt x 258.9675pt>
+<plots/misalign_rota/01_rot_Tz.png, id=675, 393.72093pt x 258.9675pt>
 File: plots/misalign_rota/01_rot_Tz.png Graphic file (type png)
 <use plots/misalign_rota/01_rot_Tz.png>
 Package luatex.def Info: plots/misalign_rota/01_rot_Tz.png  used on input line 
-680.
+681.
 (luatex.def)             Requested size: 189.28883pt x 124.50055pt.
-<plots/misalign_rota/001_rot_Rx.png, id=681, 374.90062pt x 251.43938pt>
+<plots/misalign_rota/001_rot_Rx.png, id=676, 374.90062pt x 251.43938pt>
 File: plots/misalign_rota/001_rot_Rx.png Graphic file (type png)
 <use plots/misalign_rota/001_rot_Rx.png>
 Package luatex.def Info: plots/misalign_rota/001_rot_Rx.png  used on input line
- 692.
+ 693.
 (luatex.def)             Requested size: 189.28883pt x 126.95477pt.
-<plots/misalign_rota/01_rot_Rx.png, id=682, 398.99063pt x 261.97874pt>
+<plots/misalign_rota/01_rot_Rx.png, id=677, 398.99063pt x 261.97874pt>
 File: plots/misalign_rota/01_rot_Rx.png Graphic file (type png)
 <use plots/misalign_rota/01_rot_Rx.png>
 Package luatex.def Info: plots/misalign_rota/01_rot_Rx.png  used on input line 
-699.
+700.
 (luatex.def)             Requested size: 189.28883pt x 124.28929pt.
-<plots/misalign_rota/001_rot_Rz.png, id=683, 381.67593pt x 249.93375pt>
+<plots/misalign_rota/001_rot_Rz.png, id=678, 381.67593pt x 249.93375pt>
 File: plots/misalign_rota/001_rot_Rz.png Graphic file (type png)
 <use plots/misalign_rota/001_rot_Rz.png>
 Package luatex.def Info: plots/misalign_rota/001_rot_Rz.png  used on input line
- 711.
+ 712.
 (luatex.def)             Requested size: 189.28883pt x 123.95212pt.
-<plots/misalign_rota/01_rot_Rz.png, id=684, 391.4625pt x 259.7203pt>
+<plots/misalign_rota/01_rot_Rz.png, id=679, 391.4625pt x 259.7203pt>
 File: plots/misalign_rota/01_rot_Rz.png Graphic file (type png)
 <use plots/misalign_rota/01_rot_Rz.png>
 Package luatex.def Info: plots/misalign_rota/01_rot_Rz.png  used on input line 
-718.
+719.
 (luatex.def)             Requested size: 189.28883pt x 125.5877pt.
- [49<./plots/misalign_rota/001_rot_Tx.png><./plots/misalign_rota/01_rot_Tx.png><
-./plots/misalign_rota/001_rot_Tz.png><./plots/misalign_rota/01_rot_Tz.png>] [50
+ [48<./plots/misalign_rota/001_rot_Tx.png><./plots/misalign_rota/01_rot_Tx.png><
+./plots/misalign_rota/001_rot_Tz.png><./plots/misalign_rota/01_rot_Tz.png>] [49
 <./plots/misalign_rota/001_rot_Rx.png><./plots/misalign_rota/01_rot_Rx.png><./pl
 ots/misalign_rota/001_rot_Rz.png><./plots/misalign_rota/01_rot_Rz.png>]
-<plots/renewed_plots/modules_chi2_c5.png, id=709, 510.40688pt x 356.0803pt>
+<plots/renewed_plots/modules_chi2_c5.png, id=704, 510.40688pt x 356.0803pt>
 File: plots/renewed_plots/modules_chi2_c5.png Graphic file (type png)
 <use plots/renewed_plots/modules_chi2_c5.png>
 Package luatex.def Info: plots/renewed_plots/modules_chi2_c5.png  used on input
- line 739.
+ line 740.
 (luatex.def)             Requested size: 315.48541pt x 220.10464pt.
-<plots/jan_17_2022/chi2_tracks_modulesOnly.png, id=710, 613.54219pt x 354.57469
+<plots/jan_17_2022/chi2_tracks_modulesOnly.png, id=705, 613.54219pt x 354.57469
 pt>
 File: plots/jan_17_2022/chi2_tracks_modulesOnly.png Graphic file (type png)
 <use plots/jan_17_2022/chi2_tracks_modulesOnly.png>
 Package luatex.def Info: plots/jan_17_2022/chi2_tracks_modulesOnly.png  used on
- input line 746.
+ input line 747.
 (luatex.def)             Requested size: 315.48541pt x 182.32396pt.
- [51<./plots/renewed_plots/modules_chi2_c5.png>]
-<plots/jan_24_2022/tx_low_normal.png, id=720, 389.20406pt x 257.46187pt>
+ [50<./plots/renewed_plots/modules_chi2_c5.png>]
+<plots/jan_24_2022/tx_low_normal.png, id=715, 389.20406pt x 257.46187pt>
 File: plots/jan_24_2022/tx_low_normal.png Graphic file (type png)
 <use plots/jan_24_2022/tx_low_normal.png>
 Package luatex.def Info: plots/jan_24_2022/tx_low_normal.png  used on input lin
-e 765.
+e 766.
 (luatex.def)             Requested size: 189.28883pt x 125.21849pt.
-<plots/jan_24_2022/rz_low_normal.png, id=721, 389.95688pt x 256.70906pt>
+<plots/jan_24_2022/rz_low_normal.png, id=716, 389.95688pt x 256.70906pt>
 File: plots/jan_24_2022/rz_low_normal.png Graphic file (type png)
 <use plots/jan_24_2022/rz_low_normal.png>
 Package luatex.def Info: plots/jan_24_2022/rz_low_normal.png  used on input lin
-e 772.
+e 773.
 (luatex.def)             Requested size: 189.28883pt x 124.6095pt.
-<plots/feb_6_2022/100mu_misalignment_samples_compared.png, id=722, 477.28313pt 
+<plots/feb_6_2022/100mu_misalignment_samples_compared.png, id=717, 477.28313pt 
 x 355.3275pt>
 File: plots/feb_6_2022/100mu_misalignment_samples_compared.png Graphic file (ty
 pe png)
 <use plots/feb_6_2022/100mu_misalignment_samples_compared.png>
 Package luatex.def Info: plots/feb_6_2022/100mu_misalignment_samples_compared.p
-ng  used on input line 791.
+ng  used on input line 792.
 (luatex.def)             Requested size: 315.48541pt x 234.86928pt.
-<plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png, id=724, 688.82344
+<plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png, id=719, 688.82344
 pt x 353.06906pt>
 File: plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png Graphic file 
 (type png)
 <use plots/feb_6_2022/low_lumi_removed_constraints_vs_normal.png>
 Package luatex.def Info: plots/feb_6_2022/low_lumi_removed_constraints_vs_norma
-l.png  used on input line 808.
+l.png  used on input line 816.
 (luatex.def)             Requested size: 315.48541pt x 161.70798pt.
-)
-(./content/continuing_work.tex [52<./plots/jan_17_2022/chi2_tracks_modulesOnly.p
-ng>] [53<./plots/jan_24_2022/tx_low_normal.png><./plots/jan_24_2022/rz_low_norma
-l.png><./plots/feb_6_2022/100mu_misalignment_samples_compared.png>] [54<./plots/
-feb_6_2022/low_lumi_removed_constraints_vs_normal.png>]
+ [51<./plots/jan_17_2022/chi2_tracks_modulesOnly.png>] [52<./plots/jan_24_2022/t
+x_low_normal.png><./plots/jan_24_2022/rz_low_normal.png><./plots/feb_6_2022/100m
+u_misalignment_samples_compared.png>]) (./content/continuing_work.tex [53<./plot
+s/feb_6_2022/low_lumi_removed_constraints_vs_normal.png>]
 chapter 5.
-<plots/curvature_bias.png, id=748, 395.22656pt x 149.05687pt>
+<plots/curvature_bias.png, id=744, 395.22656pt x 149.05687pt>
 File: plots/curvature_bias.png Graphic file (type png)
 <use plots/curvature_bias.png>
 Package luatex.def Info: plots/curvature_bias.png  used on input line 15.
 (luatex.def)             Requested size: 315.48541pt x 118.98409pt.
-[55
+[54
 
-<./plots/curvature_bias.png>]) (./content/conclusion.tex [56]
+<./plots/curvature_bias.png>]) (./content/conclusion.tex [55]
 chapter 6.
-) [57
+) [56
 
-] [58]
+] [57]
 chapter without number
 
-Overfull \hbox (1.10768pt too wide) in paragraph at lines 185--185
+Overfull \hbox (1.10768pt too wide) in paragraph at lines 187--187
 \TU/lmr/m/n/10.95 and $\TU/LatinModernMath(1)/m/n/10.95 𝐵[] → 𝑓[](1525)
 𝜇[]𝜇[]$\TU/lmr/m/n/10.95 - De-cays“. In: \TU/lmr/m/it/10.95 Phys. Rev. 
 Lett. \TU/lmr/m/n/10.95 127.15 (2021), S. 151801.
  []
 
-[59
+[58
 
 
-] [60] (./content/danksagung.tex [61]) [62
+] [59] (./content/danksagung.tex [60]) [61
 
-] (./content/eid_versicherung.tex
-warning  (file Eidesstattliche_Versicherung.pdf) (pdf inclusion): PDF inclusion:
- found PDF version '1.6', but at most version '1.5' allowed
-<Eidesstattliche_Versicherung.pdf, id=853, 597.55244pt x 845.0772pt>
-File: Eidesstattliche_Versicherung.pdf Graphic file (type pdf)
-<use Eidesstattliche_Versicherung.pdf>
-Package luatex.def Info: Eidesstattliche_Versicherung.pdf  used on input line 3
-5.
-(luatex.def)             Requested size: 394.35527pt x 557.72688pt.
+] [62
 
-LaTeX Warning: Float too large for page by 2.72664pt on input line 36.
 
-)
+]
+(./content/eid_versicherung.tex
+warning  (file Eid_nils_breer.pdf) (pdf inclusion): PDF inclusion: found PDF ver
+sion '1.7', but at most version '1.5' allowed
+<Eid_nils_breer.pdf, id=853, 597.55246pt x 845.07724pt>
+File: Eid_nils_breer.pdf Graphic file (type pdf)
+<use Eid_nils_breer.pdf>
+Package luatex.def Info: Eid_nils_breer.pdf  used on input line 3.
+(luatex.def)             Requested size: 597.551pt x 845.07518pt.
+
+warning  (file Eid_nils_breer.pdf) (pdf inclusion): PDF inclusion: found PDF ver
+sion '1.7', but at most version '1.5' allowed
+File: Eid_nils_breer.pdf Graphic file (type pdf)
+<use Eid_nils_breer.pdf>
+Package luatex.def Info: Eid_nils_breer.pdf  used on input line 3.
+(luatex.def)             Requested size: 597.551pt x 845.07518pt.
+
+warning  (file Eid_nils_breer.pdf) (pdf inclusion): PDF inclusion: found PDF ver
+sion '1.7', but at most version '1.5' allowed
+
+warning  (file Eid_nils_breer.pdf) (pdf inclusion): PDF inclusion: found PDF ver
+sion '1.7', but at most version '1.5' allowed
+<Eid_nils_breer.pdf, id=856, page=1, 597.55246pt x 845.07724pt>
+File: Eid_nils_breer.pdf Graphic file (type pdf)
+<use Eid_nils_breer.pdf, page 1>
+Package luatex.def Info: Eid_nils_breer.pdf , page1 used on input line 3.
+(luatex.def)             Requested size: 597.551pt x 845.07518pt.
+File: Eid_nils_breer.pdf Graphic file (type pdf)
+<use Eid_nils_breer.pdf, page 1>
+Package luatex.def Info: Eid_nils_breer.pdf , page1 used on input line 3.
+(luatex.def)             Requested size: 597.57834pt x 845.11386pt.
+File: Eid_nils_breer.pdf Graphic file (type pdf)
+<use Eid_nils_breer.pdf, page 1>
+Package luatex.def Info: Eid_nils_breer.pdf , page1 used on input line 3.
+(luatex.def)             Requested size: 597.57834pt x 845.11386pt.
+File: Eid_nils_breer.pdf Graphic file (type pdf)
+<use Eid_nils_breer.pdf, page 1>
+Package luatex.def Info: Eid_nils_breer.pdf , page1 used on input line 3.
+(luatex.def)             Requested size: 597.57834pt x 845.11386pt.
+File: Eid_nils_breer.pdf Graphic file (type pdf)
+<use Eid_nils_breer.pdf, page 1>
+Package luatex.def Info: Eid_nils_breer.pdf , page1 used on input line 3.
+(luatex.def)             Requested size: 597.57834pt x 845.11386pt.
+[63<./Eid_nils_breer.pdf>])
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -2866,13 +2869,13 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
- [63<./Eidesstattliche_Versicherung.pdf>] (./build/thesis.aux
+ (./build/thesis.aux
 LaTeX Info: Redefining \rmfamily on input line 23.
 LaTeX Info: Redefining \sffamily on input line 23.
 LaTeX Info: Redefining \ttfamily on input line 23.
 )
 Package rerunfilecheck Info: File `thesis.aux' has not changed.
-(rerunfilecheck)             Checksum: 1A64654BFBD95B6D52D613364094E60A;49310.
+(rerunfilecheck)             Checksum: 5E79454F552E7FAB3E4ACBFA890E878E;49310.
 
 
 LaTeX Warning: There were undefined references.
@@ -2881,24 +2884,24 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `thesis.toc' has not changed.
-(rerunfilecheck)             Checksum: 4FD14FF643262A1BD8161BF97C805B17;3198.
+(rerunfilecheck)             Checksum: C5A82047E9474E271EAF938B61E20BFE;3198.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 
 \openout1 = thesis.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 71218 strings out of 477811
+ 72024 strings out of 477811
  100000,3417909 words of node,token memory allocated
- 1190 words of node memory still in use:
+ 1180 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 1 local_par, 10 glue, 4 kern, 1 penalty, 8 sub_mlis
-t, 3 glyph, 89 attribute, 78 glue_spec, 89 attribute_list, 4 write, 19 pdf_actio
+t, 3 glyph, 88 attribute, 78 glue_spec, 88 attribute_list, 2 write, 19 pdf_actio
 n nodes
-   avail lists: 1:9,2:1666,3:695,4:256,5:516,6:133,7:8470,8:138,9:1809,10:30,11:
-906,12:1
- 89330 multiletter control sequences out of 65536+600000
+   avail lists: 1:11,2:1802,3:698,4:258,5:534,6:141,7:8481,8:138,9:1890,10:30,11
+:906,12:1
+ 90055 multiletter control sequences out of 65536+600000
  123 fonts using 39645675 bytes
- 122i,20n,114p,10601b,2456s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 122i,20n,114p,10601b,2454s stack positions out of 5000i,500n,10000p,200000b,80000s
 </home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmromancaps1
 0-regular.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/l
 m/lmroman9-bold.otf></home/nils/.local/texlive/2021/texmf-dist/fonts/opentype/pu
@@ -2918,10 +2921,10 @@ xlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></home/nils
 /.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></hom
 e/nils/.local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.ot
 f>
-Output written on thesis.pdf (69 pages, 2917556 bytes).
+Output written on thesis.pdf (69 pages, 3240733 bytes).
 
-PDF statistics: 1052 PDF objects out of 1200 (max. 8388607)
- 802 compressed objects within 9 object streams
- 260 named destinations out of 1000 (max. 131072)
+PDF statistics: 1039 PDF objects out of 1200 (max. 8388607)
+ 791 compressed objects within 8 object streams
+ 259 named destinations out of 1000 (max. 131072)
  192 words of extra memory for PDF output out of 10000 (max. 100000000)
 

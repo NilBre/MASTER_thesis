@@ -117,11 +117,11 @@ On the left-hand side the measurement point is described through Cartesian coord
 Problems with the shearing constraints were seen in the VELO alignment, so that a similar analysis for the SciFi was considered.
 The parameters used for the VELO were changed to fit the SciFi Tracker and resulted in the following configuration:
 
-\begin{lstlisting}[language=Python]
-    dofs = "TxTzRxRz"
-    elements.FTStations(dofs)
-    elements.FTFrameLayers(dofs)
-    TrackSelections = GoodLongTracks()
+\begin{lstlisting}[language=Python, basicstyle=\footnotesize]
+dofs = "TxTzRxRz"
+elements.FTStations(dofs)
+elements.FTFrameLayers(dofs)
+TrackSelections = GoodLongTracks()
 \end{lstlisting}
 
 The dataset\footnote{upgrade\_DC19\_01\_MinBiasMU} used taken from the TestFileDB\cite{testDB} and will be used for the upcoming tests until a different set is mentioned.
@@ -143,20 +143,20 @@ The group position is the global position of the stations and layers inside the 
 
 The "noRotation" configuration is defined as:
 
-\begin{lstlisting}[language=Python]
-    dofs = "TxTz"
-    elements.FTStations(dofs)
-    elements.FTFramelayers(dofs)
-    TrackSelections = GoodLongTracks()
-    constraints = [
-        "station1 : FT/T1 : Tx Tz",
-        "station2 : FT/T2 : Tx Tz",
-        "station3 : FT/T3 : Tx Tz",
-        "frontCSide : FT/T3/Layer(X1|U)/Quarter(0|2) : Tx Tz",
-        "backCSide  : FT/T3/Layer(V|X2)/Quarter(0|2) : Tx Tz",
-        "frontASide : FT/T3/Layer(X1|U)/Quarter(1|3) : Tx Tz",
-        "backASide  : FT/T3/Layer(V|X2)/Quarter(1|3) : Tx Tz"
-    ]
+\begin{lstlisting}[language=Python, basicstyle=\footnotesize]
+dofs = "TxTz"
+elements.FTStations(dofs)
+elements.FTFramelayers(dofs)
+TrackSelections = GoodLongTracks()
+constraints = [
+    "station1 : FT/T1 : Tx Tz",
+    "station2 : FT/T2 : Tx Tz",
+    "station3 : FT/T3 : Tx Tz",
+    "frontCSide : FT/T3/Layer(X1|U)/Quarter(0|2) : Tx Tz",
+    "backCSide  : FT/T3/Layer(V|X2)/Quarter(0|2) : Tx Tz",
+    "frontASide : FT/T3/Layer(X1|U)/Quarter(1|3) : Tx Tz",
+    "backASide  : FT/T3/Layer(V|X2)/Quarter(1|3) : Tx Tz"
+]
 \end{lstlisting}
 
 The first three constraints on all stations regarding translations constrain the movement of the stations which can be seen clearly in figure\ref{fig:june_2}. The last four constraints restrict the sum of the movement of the half-layers inside each C-frame to be zero, which brings the x translation of the half-layers in station three even closer to zero.
@@ -191,17 +191,17 @@ For the following configuration, 3000 simulated events were used to shorten the 
 \subsection{Aligning with translations, rotations, and constraints}
 The next configuration tested will be called ``half C-frame''. This configuration is defined as
 
-\begin{lstlisting}[language=Python]
-    dofs = "TxTzRxRz"
-    elements.FTStations(dofs)
-    elements.FTFramelayers(dofs)
-    TrackSelections = GoodLongTracks()
-    constraints = [
-        "station1 : FT/T1 : Tx Tz",
-        "station2 : FT/T2 : Tx Tz",
-        "station3 : FT/T3 : Tx Tz",
-        "frontCSide : FT/T3/Layer(X1|U)/Quarter(0|2) : Tx Tz : total",
-        "backCSide  : FT/T3/Layer(V|X2)/Quarter(0|2) : Tx Tz : total"
+\begin{lstlisting}[language=Python, basicstyle=\footnotesize]
+dofs = "TxTzRxRz"
+elements.FTStations(dofs)
+elements.FTFramelayers(dofs)
+TrackSelections = GoodLongTracks()
+constraints = [
+    "station1 : FT/T1 : Tx Tz",
+    "station2 : FT/T2 : Tx Tz",
+    "station3 : FT/T3 : Tx Tz",
+    "frontCSide : FT/T3/Layer(X1|U)/Quarter(0|2) : Tx Tz : total",
+    "backCSide  : FT/T3/Layer(V|X2)/Quarter(0|2) : Tx Tz : total"
 ]
 \end{lstlisting}
 
@@ -239,20 +239,20 @@ In the previous section rotations were not used inside the constraints. Now the 
 
 Similar to the "noRotation" configuration the same constraints were used but for different degrees of freedom. The new configuration is called "Full DoF" which uses every degree of freedom and is defined as:
 
-\begin{lstlisting}[language=Python]
-    dofs = "TxTyTzRxRyRz"
-    elements.FTStations(dofs)
-    elements.FTFramelayers(dofs)
-    TrackSelections = GoodLongTracks()
-    constraints = [
-        "station1 : FT/T1 : Tx Ty Tz Rx Ry Rz",
-        "station2 : FT/T2 : Tx Ty Tz Rx Ry Rz",
-        "station3 : FT/T3 : Tx Ty Tz Rx Ry Rz",
-        "frontCSide : FT/T3/Layer(X1|U)/Quarter(0|2) : Tx Ty Tz Rx Ry Rz",
-        "backCSide  : FT/T3/Layer(V|X2)/Quarter(0|2) : Tx Ty Tz Rx Ry Rz",
-        "frontASide : FT/T3/Layer(X1|U)/Quarter(1|3) : Tx Ty Tz Rx Ry Rz",
-        "backASide  : FT/T3/Layer(V|X2)/Quarter(1|3) : Tx Ty Tz Rx Ry Rz"
-        ]
+\begin{lstlisting}[language=Python, basicstyle=\footnotesize]
+dofs = "TxTyTzRxRyRz"
+elements.FTStations(dofs)
+elements.FTFramelayers(dofs)
+TrackSelections = GoodLongTracks()
+constraints = [
+    "station1 : FT/T1 : Tx Ty Tz Rx Ry Rz",
+    "station2 : FT/T2 : Tx Ty Tz Rx Ry Rz",
+    "station3 : FT/T3 : Tx Ty Tz Rx Ry Rz",
+    "frontCSide : FT/T3/Layer(X1|U)/Quarter(0|2) : Tx Ty Tz Rx Ry Rz",
+    "backCSide  : FT/T3/Layer(V|X2)/Quarter(0|2) : Tx Ty Tz Rx Ry Rz",
+    "frontASide : FT/T3/Layer(X1|U)/Quarter(1|3) : Tx Ty Tz Rx Ry Rz",
+    "backASide  : FT/T3/Layer(V|X2)/Quarter(1|3) : Tx Ty Tz Rx Ry Rz"
+]
 \end{lstlisting}
 
 In figure \ref{fig:june_4} x-translation and z-translation with regards to the group position are shown.
@@ -302,7 +302,7 @@ In the next sections, more tests are described, while the underlying cause of th
 \label{sec:test_and_c5}
 The next configuration tested is the result of a series of tests with various constraints, DoFs and alignable objects. In figure \ref{fig:TxZ} a new configuration called "Test3" is introduced and it is defined as
 
-\begin{lstlisting}[language=Python]
+\begin{lstlisting}[language=Python, basicstyle=\footnotesize]
 dofs = "TxTzRxRz"
 elements.FTStations(dofs)
 elements.FTFramelayers(dofs)
@@ -313,7 +313,7 @@ constraints = [
     "backCSide  : FT/T3/Layer(V|X2)/Quarter(0|2) : Tx Tz Rx Rz",
     "frontASide : FT/T3/Layer(X1|U)/Quarter(1|3) : Tx Tz Rx Rz",
     "backASide  : FT/T3/Layer(V|X2)/Quarter(1|3) : Tx Tz Rx Rz"
-    ]
+]
 \end{lstlisting}
 
 \begin{figure}
@@ -344,12 +344,12 @@ when it comes to constructing a good configuration.
 The next configurations are called "config5" (blue) and "config5 Rz" (orange). The plots showing the translations are shown in figure \ref{fig:config5_tra} and the rotations are shown in figure \ref{fig:config5_rot}.
 The blue measurement has the same constraints as "Test3" with an added back C-frame constraint:
 \begin{lstlisting}[language=Python]
-  constraints.append("back_C_frame_T3 : FT/T3/Layer(V|X2) : Tx Tz")
+  constraints.append("backCframe_T3 : FT/T3/Layer(V|X2) : Tx Tz")
 \end{lstlisting}
 
 The orange measurement has a similar constraint added with Rz added to the DoFs inside the constraint:
 \begin{lstlisting}[language=Python]
-  constraints.append("back_C_frame_T3 : FT/T3/Layer(V|X2) : Tx Tz Rz")
+  constraints.append("backCframe_T3 : FT/T3/Layer(V|X2) : Tx Tz Rz")
 \end{lstlisting}
 
 Comparing just these two configurations, regarding $Tx$ there is not a big difference.
@@ -556,7 +556,8 @@ $\SI{0.004}{\milli\radian}$ from the previous $\SI{0.01}{\milli\radian}$ which i
 
 In order to evaluate the performance of the alignment with a given configuration in Monte Carlo simulations, input misalignments are used. The cluster bias fix is not activated here.
 
-Starting with translation misalignments for the configuration "config5 Rz". The input misalignment is a random gaussian generated distribution. The translation misalignment used were $\SI{0.001}{\micro\metre}$ and $\SI{200}{\micro\metre}$ in $Tx$, $Ty$ and $Tz$ for the modules. We tested very small misalignment to be sure that this small deviation has no major impact on the alignment quality. $\SI{200}{\micro\metre}$ translation misalignment was tested since the position of a module within a C-frame is known within $\SI{200}{\micro\metre}$.
+Starting with translation misalignments for the configuration "config5 Rz". The input misalignment is a random gaussian generated distribution with a central value of 0 and
+$\sigma = \SI{200}{\micro\metre}$. The translation misalignment used were $\SI{0.001}{\micro\metre}$ and $\SI{200}{\micro\metre}$ in $Tx$, $Ty$ and $Tz$ for the modules. We tested very small misalignment to be sure that this small deviation has no major impact on the alignment quality. $\SI{200}{\micro\metre}$ translation misalignment was tested since the position of a module within a C-frame is known within $\SI{200}{\micro\metre}$.
 
 The differences between the misaligned "config5 Rz" and the normal configuration plotted for each of the used degrees of freedom are shown in the following figures \ref{fig:mis_Tx} to \ref{fig:mis_Rz}.
 
@@ -643,7 +644,7 @@ The chosen configuration is therefore capable of handling translation misalignme
 \label{sec:misR}
 
 Regarding rotation misalignments, the amount of misalignment chosen was based on the scale of $Rz$.
-The two input misalignments shown in the following plots are $\SI{0.01}{\milli\radian}$ and $\SI{0.1}{\milli\radian}$ gaussian generated distributions. The former is roughly the scale of $z$-rotation whereas the latter is scaled up by a factor of ten.
+The two input misalignments shown in the following plots are $\SI{0.01}{\milli\radian}$ and $\SI{0.1}{\milli\radian}$ gaussian generated distributions with a central value of 0 and $\sigma = 0.01$ and $\sigma = 0.1$ respectively. The former is roughly the scale of $z$-rotation whereas the latter is scaled up by a factor of ten.
 
 % if i have time and lxplus lets me use my python scripts i will make them new. otherwise this is the comparisons we are using
 
@@ -796,7 +797,14 @@ The difference is so minute that it can be safely disregarded.
 Now, since the alignment works quite well with the current configuration we
 tested how translation misalignment affects the convergence by looking at the
 $\chi^2$, portrayed in figure \ref{fig:100muT}. For this figure, eight different samples of $\SI{100}{\micro\metre}$ module translation misalignment over all translatory
-degrees of freedom. The idea behind using different samples is to reduce errors
+degrees of freedom with a central value of 0 and $\sigma = \SI{100}{\micro\metre}$.
+From that, a random shift in each direction of translation is calculated with the random-normal distribution of size three, one for each translation. The function used is from \textit{numpy} and implemented as
+
+\begin{equation*}
+  random\_shift = \text{random.normal}(\mu, \sigma, 3)
+\end{equation*}
+
+The idea behind using different samples is to reduce errors
 from biased samples. The plot shows the total $\chi^2$ over degrees of freedom
 plotted against the number of iterations. We see no visible difference regarding
 the total $\chi^2$ between the samples which is good.

@@ -22,16 +22,16 @@
 \contentsline {section}{\numberline {4.2}Null tests and software tests}{26}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Software configurations and samples}{26}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Aligning with translations and constraints}{28}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Aligning with translations, rotations, and constraints}{31}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.3}Aligning with translations, rotations, and constraints}{29}{subsection.4.2.3}%
 \contentsline {section}{\numberline {4.3}Null tests with rotational constraints}{33}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Checking rotational degrees of freedom}{34}{subsection.4.3.1}%
-\contentsline {section}{\numberline {4.4}$\mitchi ^2$ tests and weak modes}{39}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Impact of the cluster bias}{44}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Tests with input misalignments}{46}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Translation misalignment}{46}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Rotation misalignment}{49}{subsection.4.6.2}%
-\contentsline {section}{\numberline {4.7}Luminosity samples and $\mitchi ^2$}{51}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Continuing Work}{55}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{57}{chapter.6}%
-\contentsline {chapter}{\nonumberline Literatur}{59}{chapter*.50}%
+\contentsline {subsection}{\numberline {4.3.1}Checking rotational degrees of freedom}{35}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}$\mitchi ^2$ tests and weak modes}{38}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Impact of the cluster bias}{43}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Tests with input misalignments}{45}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Translation misalignment}{45}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Rotation misalignment}{48}{subsection.4.6.2}%
+\contentsline {section}{\numberline {4.7}Luminosity samples and $\mitchi ^2$}{50}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Continuing Work}{54}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{56}{chapter.6}%
+\contentsline {chapter}{\nonumberline Literatur}{58}{chapter*.50}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
